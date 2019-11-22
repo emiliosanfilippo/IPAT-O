@@ -819,6 +819,12 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:comment>
     
 
 
+    <!-- http://www.univ-tours.fr/ipato#test- -->
+
+    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#test-"/>
+    
+
+
     <!-- http://www.univ-tours.fr/ipato#width -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#width">
