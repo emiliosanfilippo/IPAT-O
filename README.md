@@ -3,7 +3,9 @@ OWL ontology for cultural and natural heritage developed in the context of the A
 
 The ontology is currently under development. Reuse is NOT recommended at this stage.
 
-For info: emiliosanfilippo--you know what--dot gmail dot com
+For info: 
+emiliosanfilippo--you know what-- at gmail dot com
+perrine dot thuringer--you know what-- at univ-tours dot fr
 
 # CRMArcheo
 
