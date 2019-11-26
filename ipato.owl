@@ -52,7 +52,9 @@ CESR -- University of Tours, France</terms:creator>
 
     <!-- http://purl.org/dc/terms/creator -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator">
+        <rdfs:range rdf:resource="http://erlangen-crm.org/current/E71_Man-Made_Thing"/>
+    </owl:AnnotationProperty>
     
 
 
@@ -85,34 +87,32 @@ CESR -- University of Tours, France</terms:creator>
     
 
 
+    <!-- http://dbpedia.org/ontology/birthPlace -->
+
+    <owl:ObjectProperty rdf:about="http://dbpedia.org/ontology/birthPlace">
+        <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E21_Person"/>
+        <rdfs:range rdf:resource="http://erlangen-crm.org/current/E53_Place"/>
+        <rdfs:comment>From DBPedia ontology</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://dbpedia.org/ontology/deathPlace -->
+
+    <owl:ObjectProperty rdf:about="http://dbpedia.org/ontology/deathPlace">
+        <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E21_Person"/>
+        <rdfs:range rdf:resource="http://erlangen-crm.org/current/E53_Place"/>
+        <rdfs:comment>From DBPedia ontology</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.org/dc/terms/creator -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/creator">
         <owl:inverseOf rdf:resource="http://www.univ-tours.fr/ipato#created_by"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E39_Actor"/>
-        <rdfs:range rdf:resource="http://erlangen-crm.org/current/E71_Man-Made_Thing"/>
     </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.org/vocab/frbr/core#realization -->
-
-    <owl:ObjectProperty rdf:about="http://purl.org/vocab/frbr/core#realization">
-        <owl:inverseOf rdf:resource="http://purl.org/vocab/frbr/core#realizationOf"/>
-        <rdfs:domain rdf:resource="http://purl.org/vocab/frbr/core#Work"/>
-        <rdfs:range rdf:resource="http://purl.org/vocab/frbr/core#Expression"/>
-        <rdfs:comment>A work realized through an expression.</rdfs:comment>
-        <rdfs:comment>Relation taken from the core structure of FRBR
-
-https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:comment>
-        <rdfs:label>has_realization</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.org/vocab/frbr/core#realizationOf -->
-
-    <owl:ObjectProperty rdf:about="http://purl.org/vocab/frbr/core#realizationOf"/>
     
 
 
@@ -140,10 +140,19 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:comment>
     
 
 
-    <!-- http://www.univ-tours.fr/ipato#editedBy -->
+    <!-- http://www.univ-tours.fr/ipato#edited_by -->
 
-    <owl:ObjectProperty rdf:about="http://www.univ-tours.fr/ipato#editedBy">
+    <owl:ObjectProperty rdf:about="http://www.univ-tours.fr/ipato#edited_by">
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E21_Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.univ-tours.fr/ipato#has_act_form -->
+
+    <owl:ObjectProperty rdf:about="http://www.univ-tours.fr/ipato#has_act_form">
+        <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E84_Information_Carrier"/>
+        <rdfs:range rdf:resource="http://www.univ-tours.fr/ipato#Document_Type"/>
     </owl:ObjectProperty>
     
 
@@ -153,22 +162,6 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:comment>
     <owl:ObjectProperty rdf:about="http://www.univ-tours.fr/ipato#has_social_role">
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E21_Person"/>
         <rdfs:range rdf:resource="http://www.univ-tours.fr/ipato#Social_role"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#has_status -->
-
-    <owl:ObjectProperty rdf:about="http://www.univ-tours.fr/ipato#has_status">
-        <rdfs:range rdf:resource="http://erlangen-crm.org/current/E55_Type"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#transcribed_by -->
-
-    <owl:ObjectProperty rdf:about="http://www.univ-tours.fr/ipato#transcribed_by">
-        <rdfs:range rdf:resource="http://erlangen-crm.org/current/E21_Person"/>
     </owl:ObjectProperty>
     
 
@@ -306,31 +299,7 @@ http://purl.org/dc/terms/subject</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.org/vocab/frbr/core#Expression">
         <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E73_Information_Object"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/vocab/frbr/core#realizationOf"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/vocab/frbr/core#Work"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="http://purl.org/vocab/frbr/core#Work"/>
         <rdfs:comment>Class taken from core structure of FRBR
-
-https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/vocab/frbr/core#Work -->
-
-    <owl:Class rdf:about="http://purl.org/vocab/frbr/core#Work">
-        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E89_Propositional_Object"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/vocab/frbr/core#realization"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/vocab/frbr/core#Expression"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment>Class taken from the core of FRBR
 
 https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:comment>
     </owl:Class>
@@ -345,11 +314,22 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:comment>
     
 
 
-    <!-- http://www.univ-tours.fr/ipato#Folio -->
+    <!-- http://www.univ-tours.fr/ipato#Document_Type -->
 
-    <owl:Class rdf:about="http://www.univ-tours.fr/ipato#Folio">
-        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E84_Information_Carrier"/>
-        <rdfs:comment>Use the relation P46i_forms_part_of to model the part-of relation between an instance of Folio and the instance of Information Carrier to which the folio belongs</rdfs:comment>
+    <owl:Class rdf:about="http://www.univ-tours.fr/ipato#Document_Type">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E55_Type"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://erlangen-crm.org/current/P2i_is_type_of"/>
+                <owl:someValuesFrom rdf:resource="http://erlangen-crm.org/current/E84_Information_Carrier"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://erlangen-crm.org/current/P2i_is_type_of"/>
+                <owl:allValuesFrom rdf:resource="http://erlangen-crm.org/current/E84_Information_Carrier"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -357,7 +337,15 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:comment>
     <!-- http://www.univ-tours.fr/ipato#Letter -->
 
     <owl:Class rdf:about="http://www.univ-tours.fr/ipato#Letter">
-        <rdfs:subClassOf rdf:resource="http://purl.org/vocab/frbr/core#Expression"/>
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E84_Information_Carrier"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.univ-tours.fr/ipato#Letter_Patent -->
+
+    <owl:Class rdf:about="http://www.univ-tours.fr/ipato#Letter_Patent">
+        <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Letter"/>
     </owl:Class>
     
 
@@ -367,6 +355,7 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:comment>
     <owl:Class rdf:about="http://www.univ-tours.fr/ipato#Lettre_Close">
         <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Letter"/>
         <skos:altLabel xml:lang="fr">lettre close</skos:altLabel>
+        <skos:altLabel xml:lang="en">lettre de cachet</skos:altLabel>
         <skos:altLabel xml:lang="fr">lettre de cachet</skos:altLabel>
         <skos:altLabel xml:lang="fr">lettre fermée</skos:altLabel>
     </owl:Class>
@@ -381,20 +370,34 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:comment>
     
 
 
-    <!-- http://www.univ-tours.fr/ipato#Notary_Act -->
+    <!-- http://www.univ-tours.fr/ipato#Notarial_Deed -->
 
-    <owl:Class rdf:about="http://www.univ-tours.fr/ipato#Notary_Act">
-        <rdfs:subClassOf rdf:resource="http://purl.org/vocab/frbr/core#Expression"/>
+    <owl:Class rdf:about="http://www.univ-tours.fr/ipato#Notarial_Deed">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E84_Information_Carrier"/>
     </owl:Class>
     
 
 
-    <!-- http://www.univ-tours.fr/ipato#Political_Correspondence -->
+    <!-- http://www.univ-tours.fr/ipato#Notarial_Minute -->
 
-    <owl:Class rdf:about="http://www.univ-tours.fr/ipato#Political_Correspondence">
-        <rdfs:subClassOf rdf:resource="http://purl.org/vocab/frbr/core#Expression"/>
-        <rdfs:comment>testing. perhaps different approach is needed, see shared document for more info</rdfs:comment>
-        <skos:altLabel xml:lang="fr">correspondance politique</skos:altLabel>
+    <owl:Class rdf:about="http://www.univ-tours.fr/ipato#Notarial_Minute">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E84_Information_Carrier"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.univ-tours.fr/ipato#Private_Account_Register -->
+
+    <owl:Class rdf:about="http://www.univ-tours.fr/ipato#Private_Account_Register">
+        <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Register"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.univ-tours.fr/ipato#Private_Act -->
+
+    <owl:Class rdf:about="http://www.univ-tours.fr/ipato#Private_Act">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E84_Information_Carrier"/>
     </owl:Class>
     
 
@@ -402,7 +405,15 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:comment>
     <!-- http://www.univ-tours.fr/ipato#Register -->
 
     <owl:Class rdf:about="http://www.univ-tours.fr/ipato#Register">
-        <rdfs:subClassOf rdf:resource="http://purl.org/vocab/frbr/core#Expression"/>
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E84_Information_Carrier"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.univ-tours.fr/ipato#Resolution_Register -->
+
+    <owl:Class rdf:about="http://www.univ-tours.fr/ipato#Resolution_Register">
+        <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Register"/>
     </owl:Class>
     
 
@@ -593,6 +604,22 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:comment>
     
 
 
+    <!-- http://www.univ-tours.fr/ipato#administrative_correspondance -->
+
+    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#administrative_correspondance">
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Document_Type"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.univ-tours.fr/ipato#apprenticeship_contract -->
+
+    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#apprenticeship_contract">
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Document_Type"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.univ-tours.fr/ipato#archive_AD_18 -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#archive_AD_18">
@@ -610,26 +637,10 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:comment>
     
 
 
-    <!-- http://www.univ-tours.fr/ipato#copie_1 -->
+    <!-- http://www.univ-tours.fr/ipato#contract -->
 
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#copie_1">
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E55_Type"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#copie_2 -->
-
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#copie_2">
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E55_Type"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#copie_3 -->
-
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#copie_3">
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E55_Type"/>
+    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#contract">
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Document_Type"/>
     </owl:NamedIndividual>
     
 
@@ -650,178 +661,87 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:comment>
     
 
 
-    <!-- http://www.univ-tours.fr/ipato#lettre_id11256_carrier -->
+    <!-- http://www.univ-tours.fr/ipato#lease -->
 
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#lettre_id11256_carrier">
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E84_Information_Carrier"/>
-        <current:P128_carries rdf:resource="http://www.univ-tours.fr/ipato#lettre_id11256_document"/>
-        <current:P43_has_dimension rdf:resource="http://www.univ-tours.fr/ipato#lettre_id11256_carrier_height"/>
-        <current:P43_has_dimension rdf:resource="http://www.univ-tours.fr/ipato#lettre_id11256_carrier_width"/>
-        <archieved_in rdf:resource="http://www.univ-tours.fr/ipato#archive_AD_18"/>
-        <current:P3_has_note rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">paper</current:P3_has_note>
-        <dc:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">8_G_434</dc:identifier>
+    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#lease">
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Document_Type"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.univ-tours.fr/ipato#lettre_id11256_carrier_height -->
+    <!-- http://www.univ-tours.fr/ipato#lettre_631967 -->
 
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#lettre_id11256_carrier_height">
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E54_Dimension"/>
-        <current:P2_has_type rdf:resource="http://www.univ-tours.fr/ipato#height"/>
-        <current:P91_has_unit rdf:resource="http://www.univ-tours.fr/ipato#Millimetre"/>
-        <current:P90_has_value rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">245</current:P90_has_value>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#lettre_id11256_carrier_width -->
-
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#lettre_id11256_carrier_width">
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E54_Dimension"/>
-        <current:P2_has_type rdf:resource="http://www.univ-tours.fr/ipato#width"/>
-        <current:P91_has_unit rdf:resource="http://www.univ-tours.fr/ipato#Millimetre"/>
-        <current:P90_has_value rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">195</current:P90_has_value>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#lettre_id11256_document -->
-
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#lettre_id11256_document">
+    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#lettre_631967">
         <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Lettre_Close"/>
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Political_Correspondence"/>
-        <current:P128i_is_carried_by rdf:resource="http://www.univ-tours.fr/ipato#lettre_id11256_carrier"/>
+        <archieved_in rdf:resource="http://www.univ-tours.fr/ipato#Bourges"/>
+        <archieved_in rdf:resource="http://www.univ-tours.fr/ipato#France"/>
+        <archieved_in rdf:resource="http://www.univ-tours.fr/ipato#archive_AD_18"/>
         <created_by rdf:resource="http://www.univ-tours.fr/ipato#Anne_de_Bretagne"/>
         <created_by rdf:resource="http://www.univ-tours.fr/ipato#Marchant"/>
         <created_in rdf:resource="http://www.univ-tours.fr/ipato#Vincennes"/>
-        <editedBy rdf:resource="http://www.univ-tours.fr/ipato#David_Rivaud"/>
-        <has_status rdf:resource="http://www.univ-tours.fr/ipato#original"/>
+        <edited_by rdf:resource="http://www.univ-tours.fr/ipato#David_Rivaud"/>
+        <has_act_form rdf:resource="http://www.univ-tours.fr/ipato#political_correspondence"/>
+        <dc:identifier>8_G_434</dc:identifier>
         <terms:created rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">1513-06-25</terms:created>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.univ-tours.fr/ipato#lettre_id12230_carrier -->
+    <!-- http://www.univ-tours.fr/ipato#lettre_632985 -->
 
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#lettre_id12230_carrier">
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E84_Information_Carrier"/>
-        <current:P10_falls_within rdf:resource="http://www.univ-tours.fr/ipato#lettre_id12230_carrier_box"/>
-        <current:P128_carries rdf:resource="http://www.univ-tours.fr/ipato#lettre_id12230_document"/>
-        <archieved_in rdf:resource="http://www.univ-tours.fr/ipato#Tours_AM"/>
-        <dc:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">EE 6*</dc:identifier>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#lettre_id12230_carrier_box -->
-
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#lettre_id12230_carrier_box">
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E22_Man-Made_Object"/>
-        <current:P82a_begin_of_the_begin rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">1567-10-15</current:P82a_begin_of_the_begin>
-        <current:P82b_end_of_the_end rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">1569-09-21</current:P82b_end_of_the_end>
-        <dc:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">EE 6*</dc:identifier>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#lettre_id12230_document -->
-
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#lettre_id12230_document">
+    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#lettre_632985">
         <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Letter"/>
-        <current:P128i_is_carried_by rdf:resource="http://www.univ-tours.fr/ipato#lettre_id12230_carrier"/>
+        <archieved_in rdf:resource="http://www.univ-tours.fr/ipato#France"/>
+        <archieved_in rdf:resource="http://www.univ-tours.fr/ipato#Tours"/>
+        <archieved_in rdf:resource="http://www.univ-tours.fr/ipato#Tours_AM"/>
         <created_by rdf:resource="http://www.univ-tours.fr/ipato#Angers_corps_de_ville"/>
         <created_in rdf:resource="http://www.univ-tours.fr/ipato#Tours"/>
-        <has_status rdf:resource="http://www.univ-tours.fr/ipato#original"/>
-        <current:P3_has_note rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Encre sur papier</current:P3_has_note>
+        <edited_by rdf:resource="http://www.univ-tours.fr/ipato#Jerome_Salmon"/>
+        <dc:identifier>EE_6*</dc:identifier>
         <terms:created rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">1568-01-22</terms:created>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.univ-tours.fr/ipato#original -->
+    <!-- http://www.univ-tours.fr/ipato#marriage_contract -->
 
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#original">
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E55_Type"/>
+    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#marriage_contract">
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Document_Type"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.univ-tours.fr/ipato#registre_id15310_carrier -->
+    <!-- http://www.univ-tours.fr/ipato#political_correspondence -->
 
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#registre_id15310_carrier">
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E84_Information_Carrier"/>
-        <current:P128_carries rdf:resource="http://www.univ-tours.fr/ipato#registre_id15310_document"/>
-        <current:P43_has_dimension rdf:resource="http://www.univ-tours.fr/ipato#registre_id15310_carrier_depth"/>
-        <current:P43_has_dimension rdf:resource="http://www.univ-tours.fr/ipato#registre_id15310_carrier_height"/>
-        <current:P43_has_dimension rdf:resource="http://www.univ-tours.fr/ipato#registre_id15310_carrier_width"/>
+    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#political_correspondence">
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Document_Type"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.univ-tours.fr/ipato#registre_636305 -->
+
+    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#registre_636305">
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Resolution_Register"/>
+        <archieved_in rdf:resource="http://www.univ-tours.fr/ipato#Amboise"/>
         <archieved_in rdf:resource="http://www.univ-tours.fr/ipato#Amboise_AM"/>
-        <current:P3_has_note rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Registre en papier, 396 feuillets</current:P3_has_note>
-        <dc:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">BB_6</dc:identifier>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#registre_id15310_carrier_depth -->
-
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#registre_id15310_carrier_depth">
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E54_Dimension"/>
-        <current:P2_has_type rdf:resource="http://www.univ-tours.fr/ipato#depth"/>
-        <current:P91_has_unit rdf:resource="http://www.univ-tours.fr/ipato#centimetre"/>
-        <current:P90_has_value rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">9</current:P90_has_value>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#registre_id15310_carrier_folio -->
-
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#registre_id15310_carrier_folio">
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E84_Information_Carrier"/>
-        <current:P46i_forms_part_of rdf:resource="http://www.univ-tours.fr/ipato#registre_id15310_carrier"/>
-        <current:P3_has_note rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">f° 272 v°</current:P3_has_note>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#registre_id15310_carrier_height -->
-
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#registre_id15310_carrier_height">
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E54_Dimension"/>
-        <current:P2_has_type rdf:resource="http://www.univ-tours.fr/ipato#height"/>
-        <current:P91_has_unit rdf:resource="http://www.univ-tours.fr/ipato#centimetre"/>
-        <current:P90_has_value rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">30</current:P90_has_value>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#registre_id15310_carrier_width -->
-
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#registre_id15310_carrier_width">
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E54_Dimension"/>
-        <current:P2_has_type rdf:resource="http://www.univ-tours.fr/ipato#width"/>
-        <current:P91_has_unit rdf:resource="http://www.univ-tours.fr/ipato#centimetre"/>
-        <current:P90_has_value rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">28</current:P90_has_value>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#registre_id15310_document -->
-
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#registre_id15310_document">
-        <rdf:type rdf:resource="http://purl.org/vocab/frbr/core#Expression"/>
-        <current:P128i_is_carried_by rdf:resource="http://www.univ-tours.fr/ipato#registre_id15310_carrier"/>
+        <archieved_in rdf:resource="http://www.univ-tours.fr/ipato#France"/>
         <created_by rdf:resource="http://www.univ-tours.fr/ipato#Amboise_corps_de_ville"/>
         <created_in rdf:resource="http://www.univ-tours.fr/ipato#Amboise"/>
-        <editedBy rdf:resource="http://www.univ-tours.fr/ipato#Casimir_Chevalier"/>
-        <editedBy rdf:resource="http://www.univ-tours.fr/ipato#Lea_Dupuis"/>
+        <edited_by rdf:resource="http://www.univ-tours.fr/ipato#Casimir_Chevalier"/>
+        <edited_by rdf:resource="http://www.univ-tours.fr/ipato#Lea_Dupuis"/>
+        <has_act_form rdf:resource="http://www.univ-tours.fr/ipato#political_correspondence"/>
+        <dc:identifier>BB_6</dc:identifier>
         <terms:created rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">1560-11-28</terms:created>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.univ-tours.fr/ipato#test- -->
+    <!-- http://www.univ-tours.fr/ipato#transfer -->
 
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#test-"/>
+    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#transfer">
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Document_Type"/>
+    </owl:NamedIndividual>
     
 
 
