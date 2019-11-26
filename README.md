@@ -9,4 +9,4 @@ perrine dot thuringer--you know what-- at univ-tours dot fr
 
 # CRM Extensions
 
-The CRM Extensions folder stores CIDOC CMR extensions found at http://www.cidoc-crm.org/collaboration_resources. Differently from the official releases, we re-engineer them in OWL and align them to the Erlangen formalization of CIDOC v.6.2. 
+The CRM Extensions folder stores CIDOC CMR extensions found at http://www.cidoc-crm.org/collaboration_resources. Differently from the official releases, we re-engineer the extensions in OWL and align them to the Erlangen formalization of CIDOC v.6.2. 
