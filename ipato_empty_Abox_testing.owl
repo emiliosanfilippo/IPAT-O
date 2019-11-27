@@ -432,122 +432,6 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:comment>
     
 
 
-    <!-- http://www.univ-tours.fr/ipato#Amboise -->
-
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Amboise"/>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#Amboise_AM -->
-
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Amboise_AM">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Archive"/>
-        <current:P89_falls_within rdf:resource="http://www.univ-tours.fr/ipato#Amboise"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#Amboise_corps_de_ville -->
-
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Amboise_corps_de_ville">
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E40_Legal_Body"/>
-        <current:P74_has_current_or_former_residence rdf:resource="http://www.univ-tours.fr/ipato#Amboise"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#Angers -->
-
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Angers">
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E53_Place"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#Angers_corps_de_ville -->
-
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Angers_corps_de_ville">
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E40_Legal_Body"/>
-        <current:P74_has_current_or_former_residence rdf:resource="http://www.univ-tours.fr/ipato#Angers"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#Anne_de_Bretagne -->
-
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Anne_de_Bretagne">
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E21_Person"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#Bourges -->
-
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Bourges">
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E53_Place"/>
-        <current:P89_falls_within rdf:resource="http://www.univ-tours.fr/ipato#France"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#Casimir_Chevalier -->
-
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Casimir_Chevalier">
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E21_Person"/>
-        <foaf:firstName rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Casimir</foaf:firstName>
-        <foaf:lastName rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Chevalier</foaf:lastName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#David_Rivaud -->
-
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#David_Rivaud">
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E21_Person"/>
-        <foaf:firstName rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">David</foaf:firstName>
-        <foaf:lastName rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Rivaud</foaf:lastName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#France -->
-
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#France">
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E53_Place"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#Jerome_Salmon -->
-
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Jerome_Salmon">
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E21_Person"/>
-        <foaf:firstName rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Jérôme</foaf:firstName>
-        <foaf:lastName rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Salmon</foaf:lastName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#Lea_Dupuis -->
-
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Lea_Dupuis">
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E21_Person"/>
-        <foaf:firstName rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Léa</foaf:firstName>
-        <foaf:lastName rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Dupuis</foaf:lastName>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#Marchant -->
-
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Marchant">
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E21_Person"/>
-        <has_social_role rdf:resource="http://www.univ-tours.fr/ipato#Notary"/>
-        <has_social_role rdf:resource="http://www.univ-tours.fr/ipato#Royal_Secretary"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.univ-tours.fr/ipato#Millimetre -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Millimetre">
@@ -574,31 +458,6 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:comment>
     
 
 
-    <!-- http://www.univ-tours.fr/ipato#Tours -->
-
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Tours">
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E53_Place"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#Tours_AM -->
-
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Tours_AM">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Archive"/>
-        <current:P89_falls_within rdf:resource="http://www.univ-tours.fr/ipato#Tours"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#Vincennes -->
-
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Vincennes">
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E53_Place"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.univ-tours.fr/ipato#administrative_correspondance -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#administrative_correspondance">
@@ -611,15 +470,6 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#apprenticeship_contract">
         <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Document_Type"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#archive_AD_18 -->
-
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#archive_AD_18">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Archive"/>
-        <current:P89_falls_within rdf:resource="http://www.univ-tours.fr/ipato#Bourges"/>
     </owl:NamedIndividual>
     
 
@@ -664,40 +514,6 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:comment>
     
 
 
-    <!-- http://www.univ-tours.fr/ipato#lettre_631967 -->
-
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#lettre_631967">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Lettre_Close"/>
-        <archieved_in rdf:resource="http://www.univ-tours.fr/ipato#Bourges"/>
-        <archieved_in rdf:resource="http://www.univ-tours.fr/ipato#France"/>
-        <archieved_in rdf:resource="http://www.univ-tours.fr/ipato#archive_AD_18"/>
-        <created_by rdf:resource="http://www.univ-tours.fr/ipato#Anne_de_Bretagne"/>
-        <created_by rdf:resource="http://www.univ-tours.fr/ipato#Marchant"/>
-        <created_in rdf:resource="http://www.univ-tours.fr/ipato#Vincennes"/>
-        <edited_by rdf:resource="http://www.univ-tours.fr/ipato#David_Rivaud"/>
-        <has_act_form rdf:resource="http://www.univ-tours.fr/ipato#political_correspondence"/>
-        <terms:created rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">1513-06-25</terms:created>
-        <terms:identifier>8_G_434</terms:identifier>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#lettre_632985 -->
-
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#lettre_632985">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Letter"/>
-        <archieved_in rdf:resource="http://www.univ-tours.fr/ipato#France"/>
-        <archieved_in rdf:resource="http://www.univ-tours.fr/ipato#Tours"/>
-        <archieved_in rdf:resource="http://www.univ-tours.fr/ipato#Tours_AM"/>
-        <created_by rdf:resource="http://www.univ-tours.fr/ipato#Angers_corps_de_ville"/>
-        <created_in rdf:resource="http://www.univ-tours.fr/ipato#Tours"/>
-        <edited_by rdf:resource="http://www.univ-tours.fr/ipato#Jerome_Salmon"/>
-        <terms:created rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">1568-01-22</terms:created>
-        <terms:identifier>EE_6*</terms:identifier>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.univ-tours.fr/ipato#marriage_contract -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#marriage_contract">
@@ -710,24 +526,6 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#political_correspondence">
         <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Document_Type"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#registre_636305 -->
-
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#registre_636305">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Resolution_Register"/>
-        <archieved_in rdf:resource="http://www.univ-tours.fr/ipato#Amboise"/>
-        <archieved_in rdf:resource="http://www.univ-tours.fr/ipato#Amboise_AM"/>
-        <archieved_in rdf:resource="http://www.univ-tours.fr/ipato#France"/>
-        <created_by rdf:resource="http://www.univ-tours.fr/ipato#Amboise_corps_de_ville"/>
-        <created_in rdf:resource="http://www.univ-tours.fr/ipato#Amboise"/>
-        <edited_by rdf:resource="http://www.univ-tours.fr/ipato#Casimir_Chevalier"/>
-        <edited_by rdf:resource="http://www.univ-tours.fr/ipato#Lea_Dupuis"/>
-        <has_act_form rdf:resource="http://www.univ-tours.fr/ipato#political_correspondence"/>
-        <terms:created rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">1560-11-28</terms:created>
-        <terms:identifier>BB_6</terms:identifier>
     </owl:NamedIndividual>
     
 
