@@ -27,7 +27,10 @@ ipato:archieved_in ?custody_country_uri.
 a crm:E21_Person;
 foaf:firstName ?author_firstName;
 foaf:lastName ?author_lastName;
-ipato:has_role ?role.
+ipato:has_role ?author_role_uri.
+
+?author_role_uri
+a bf:Role.
 
 ?editor_uri
 a crm:E21_Person;
@@ -62,7 +65,8 @@ WHERE {
 BIND(IRI(CONCAT("http://www.univ-tours.fr/ipato#",fun:XPath(?author,"/author/*[namespace-uri()='http://purl.org/dc/terms/' and local-name()='creator']/text()"))) AS ?author_uri)
 BIND(fun:XPath(?author,"/author/*[namespace-uri()='http://xmlns.com/foaf/0.1/' and local-name()='firstName']/text()") AS ?author_firstName)
 BIND(fun:XPath(?author,"/author/*[namespace-uri()='http://xmlns.com/foaf/0.1/' and local-name()='lastName']/text()") AS ?author_lastName)
-BIND(fun:XPath(?author_role,"/*[namespace-uri()='http://id.loc.gov/ontologies/bibframe/' and local-name()='role']/text()") AS ?role)
+
+BIND(IRI(CONCAT("http://www.univ-tours.fr/ipato#",fun:XPath(?author_role,"/*[namespace-uri()='http://id.loc.gov/ontologies/bibframe/' and local-name()='role']/text()"))) AS ?author_role_uri)
 
 
 BIND(IRI(CONCAT("http://www.univ-tours.fr/ipato#",fun:XPath(?editor,"/renumar_editor/*[namespace-uri()='https://schema.org/' and local-name()='editor']/text()"))) AS ?editor_uri)

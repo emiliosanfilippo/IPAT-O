@@ -28,10 +28,15 @@ ipato:Jerome_Salmon  a  crm:E21_Person ;
         foaf:firstName  "Jerome" ;
         foaf:lastName   "Salmon" .
 
+ipato:secretaire_du_roi
+        a       bf:Role .
+
 ipato:Jaloignes_Jean  a  crm:E21_Person ;
-        ipato:has_role  "secretaire_du_roi" , "notaire" ;
+        ipato:has_role  ipato:secretaire_du_roi , ipato:notaire ;
         foaf:firstName  "Jean" ;
         foaf:lastName   "Jaloignes" .
+
+ipato:notaire  a  bf:Role .
 
 ipato:Tours  a                dbo:City ;
         rdfs:label            "Tours" ;
