@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet type="text/xsl" href="/webservices/catalog/xsl/searchRetrieveResponse.xsl"?>
+<searchRetrieveResponse 
+    xmlns:bf="http://id.loc.gov/ontologies/bibframe/" 
+    xmlns:arco="https://w3id.org/arco/ontology/arco/" 
+    xmlns:foaf="http://xmlns.com/foaf/0.1/" 
+    xmlns:dcterms="http://purl.org/dc/terms/" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:dbo="http://dbpedia.org/ontology/" 
+    xmlns:schema="https://schema.org/"> 
+
+    <document>
+        <dcterms:title>Tours_AD_37_3E1/2</dcterms:title>
+        <dcterms:alternative>Tours_1474_2septembre</dcterms:alternative>
+        
+        <dcterms:type>Minute_notariale</dcterms:type>
+        <dcterms:subject>Ventes</dcterms:subject> 
+        
+        <dcterms:extent>30*28*9_cm</dcterms:extent>
+        <dcterms:medium>Registre en papier</dcterms:medium>
+        <bf:part>f_272_v</bf:part>
+        <dcterms:language>français</dcterms:language>
+        <bf:SupplementaryContent>Inventaire .....</bf:SupplementaryContent>
+        <dcterms:description>empty</dcterms:description>
+        <dcterms:description>original</dcterms:description>
+        <dcterms:description>Encre sur papier</dcterms:description>
+        
+        <creation>
+            <dcterms:created>1513-06-25</dcterms:created>
+            <dbo:city>Tours</dbo:city>
+        </creation>
+        
+        <author>
+            <dcterms:creator>Jaloignes_Jean</dcterms:creator>
+            <foaf:firstName>Jean</foaf:firstName>
+            <foaf:lastName>Jaloignes</foaf:lastName>
+            <bf:role>notaire</bf:role>
+            <bf:role>secretaire_du_roi</bf:role>
+        </author>  
+        
+        <custody>
+            <dbo:country>France</dbo:country>
+            <dbo:city>Tours</dbo:city>
+            <bf:organization>AM_Tours</bf:organization>
+            <bf:shelfMark>8_G_434</bf:shelfMark>
+            
+            <arco:startTime>1567-10-15</arco:startTime>
+            <arco:endTime>1569-09-21</arco:endTime>
+        </custody>
+        
+        <renumar_editor>
+            <schema:editor>Jerome_Salmon</schema:editor>
+            <foaf:firstName>Jerome</foaf:firstName>
+            <foaf:lastName>Salmon</foaf:lastName>
+        </renumar_editor>
+    </document>  
+    
+    <file>
+        <dcterms:available>2016</dcterms:available>
+        <dcterms:identifier>TIPO468592</dcterms:identifier>
+        <dcterms:rights>description of copyright</dcterms:rights>
+    </file>
+    
+</searchRetrieveResponse>
+
+
+

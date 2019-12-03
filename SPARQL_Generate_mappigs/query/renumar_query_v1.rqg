@@ -1,0 +1,99 @@
+PREFIX fun:<http://w3id.org/sparql-generate/fn/>
+PREFIX iter:<http://w3id.org/sparql-generate/iter/>
+PREFIX foaf:<http://xmlns.com/foaf/0.1/>
+PREFIX crm:<http://erlangen-crm.org/current/>
+PREFIX dc: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ipato:<http://www.univ-tours.fr/ipato#>
+PREFIX place:<http://www.univ-tours.fr/ipato/place#>
+PREFIX person:<http://www.univ-tours.fr/ipato/person#>
+
+GENERATE {
+
+?author_uri
+a crm:E21_Person;
+foaf:name ?author_name.
+
+?document_uri
+a ipato:Lettre_close;
+ipato:has_act_form ipato:political_correspondance;
+ipato:created_by ?author_uri;
+ipato:created_in ?creation_place_uri;
+ipato:archieved_in ?repository_uri;
+ipato:archieved_in ?settlement_uri;
+ipato:archieved_in ?country_uri;
+dc:date ?creation_date;
+ipato:edited_by ?editor_uri;
+dc:identifier ?cote.
+
+?creation_place_uri
+a crm:E53_Place;
+rdfs:label ?creation_place_name.
+
+?repository_uri
+a crm:E53_Place;
+crm:P89_falls_within ?settlement_uri.
+
+?settlement_uri
+a crm:E53_Place;
+crm:P89_falls_within ?country_uri.
+
+?country_uri
+a crm:E53_Place.
+
+?editor_uri
+foaf:lastName ?editor_surname;
+foaf:firstName ?editor_forename.
+}
+
+SOURCE<data/in/11256_TIPO2631967.xml> AS ?source
+ITERATOR iter:XPath (?source, "/TEI/teiHeader/fileDesc/sourceDesc/msDesc/msContents/p/biblFull/sourceDesc/biblStruct/monogr/author") AS ?author
+ITERATOR iter:XPath (?source, "/TEI/teiHeader/fileDesc/titleStmt/respStmt") AS ?editor
+
+
+WHERE {
+
+BIND(IRI(CONCAT("http://www.univ-tours.fr/ipato/person#",fun:XPath(?author,"/author/persName/text()"))) AS ?author_uri)
+BIND(fun:XPath(?author,"/author/persName/text()") AS ?author_name)
+
+BIND(IRI(CONCAT("http://www.univ-tours.fr/ipato#",fun:XPath(?source,"/TEI/text/@*[namespace-uri()='http://www.w3.org/XML/1998/namespace' and local-name()='id']"))) AS ?document_uri)
+
+BIND(IRI(CONCAT("http://www.univ-tours.fr/ipato/place#",fun:XPath(?source,"/TEI/teiHeader/fileDesc/sourceDesc/msDesc/msContents/p/biblFull/sourceDesc/biblStruct/monogr/imprint/pubPlace/text()"))) AS ?creation_place_uri)
+BIND(fun:XPath(?source,"/TEI/teiHeader/fileDesc/sourceDesc/msDesc/msContents/p/biblFull/sourceDesc/biblStruct/monogr/imprint/pubPlace/text()") AS ?creation_place_name)
+
+BIND(IRI(CONCAT("http://www.univ-tours.fr/ipato/place#",fun:XPath(?source,"/TEI/teiHeader/fileDesc/sourceDesc/msDesc/msIdentifier/repository/text()"))) AS ?repository_uri)
+BIND(IRI(CONCAT("http://www.univ-tours.fr/ipato/place#",fun:XPath(?source,"/TEI/teiHeader/fileDesc/sourceDesc/msDesc/msIdentifier/settlement/text()"))) AS ?settlement_uri)
+BIND(IRI(CONCAT("http://www.univ-tours.fr/ipato/place#",fun:XPath(?source,"/TEI/teiHeader/fileDesc/sourceDesc/msDesc/msIdentifier/country/text()"))) AS ?country_uri)
+
+BIND(fun:XPath(?source,"/TEI/teiHeader/fileDesc/sourceDesc/msDesc/msContents/p/biblFull/sourceDesc/biblStruct/monogr/imprint/date/@when") AS ?creation_date)
+
+BIND(IRI(CONCAT("http://www.univ-tours.fr/ipato/person#",fun:XPath(?editor,"/respStmt/persName/surname/text()"))) AS ?editor_uri)
+BIND(fun:XPath(?editor,"/respStmt/persName/surname/text()") AS ?editor_surname)
+BIND(fun:XPath(?editor,"/respStmt/persName/forename/text()") AS ?editor_forename)
+
+BIND(fun:XPath(?source,"/TEI/teiHeader/fileDesc/sourceDesc/msDesc/msIdentifier/idno/text()") AS ?cote)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

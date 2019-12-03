@@ -1,0 +1,38 @@
+@prefix dbo:   <http://dbpedia.org/ontology/> .
+@prefix schema: <https://schema.org/> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
+@prefix ipato: <http://www.univ-tours.fr/ipato#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix iter:  <http://w3id.org/sparql-generate/iter/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix fun:   <http://w3id.org/sparql-generate/fn/> .
+@prefix crm:   <http://erlangen-crm.org/current/> .
+
+ipato:AM_Tours  a             dbo:Archive ;
+        crm:P89_falls_within  ipato:Tours .
+
+ipato:France  a     dbo:Country ;
+        rdfs:label  "France" .
+
+ipato:TIPO468592  a         crm:E84_Information_Carrier ;
+        rdfs:label          "Tours_AD_37_3E1/2" ;
+        bf:ShelfMark        "8_G_434" ;
+        dcterms:created     "1513-06-25" ;
+        ipato:archieved_in  ipato:Tours , ipato:AM_Tours , ipato:France ;
+        ipato:created_by    ipato:Jaloignes_Jean ;
+        ipato:created_in    ipato:Tours ;
+        ipato:edited_by     ipato:Jerome_Salmon .
+
+ipato:Jerome_Salmon  a  crm:E21_Person ;
+        foaf:firstName  "Jerome" ;
+        foaf:lastName   "Salmon" .
+
+ipato:Jaloignes_Jean  a  crm:E21_Person ;
+        ipato:has_role  "secretaire_du_roi" , "notaire" ;
+        foaf:firstName  "Jean" ;
+        foaf:lastName   "Jaloignes" .
+
+ipato:Tours  a                dbo:City ;
+        rdfs:label            "Tours" ;
+        crm:P89_falls_within  ipato:France .

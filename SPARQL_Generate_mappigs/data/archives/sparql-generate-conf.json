@@ -1,0 +1,17 @@
+{
+  "query": "foaf_renumar.rqg",
+  "namedqueries": [
+    {
+      "uri": "data/in/foaf_renumar.rqg",
+      "path": "data/in/foaf_renumar.rqg"
+    }
+  ],
+  "documentset": [
+    {
+      "uri": "data/in/foaf_renumar.xml",
+      "mediatype": "text/plain",
+      "path": "data/in/foaf_renumar.xml"
+    }
+  ],
+  "log": "5"
+}
