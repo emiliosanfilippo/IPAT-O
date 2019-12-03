@@ -1,5 +1,5 @@
 # IPAT-O
-OWL ontology for cultural and natural heritage developed in the context of the ARD Intelligence des Patrimoines program at the CESR University of Tours.
+OWL ontology for cultural and natural heritage developed in the context of the program ARD Intelligence des Patrimoines at the CESR University of Tours.
 
 The ontology is currently under development. Reuse is NOT recommended at this stage.
 
