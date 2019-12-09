@@ -8,11 +8,12 @@ PREFIX ipato:<http://www.univ-tours.fr/ipato#>
 PREFIX bf: <http://id.loc.gov/ontologies/bibframe/>
 PREFIX schema: <https://schema.org/>
 PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX frbr: <http://purl.org/vocab/frbr/core#>
 
 GENERATE {
 
 ?document_uri
-a crm:E84_Information_Carrier;
+a frbr:Expression;
 rdfs:label ?document_title;
 ipato:created_by ?author_uri;
 ipato:created_in ?creation_place_uri;

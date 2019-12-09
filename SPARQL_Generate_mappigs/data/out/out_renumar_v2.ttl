@@ -5,6 +5,7 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix iter:  <http://w3id.org/sparql-generate/iter/> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix frbr:  <http://purl.org/vocab/frbr/core#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
 @prefix fun:   <http://w3id.org/sparql-generate/fn/> .
 @prefix crm:   <http://erlangen-crm.org/current/> .
@@ -15,7 +16,7 @@ ipato:AM_Tours  a             dbo:Archive ;
 ipato:France  a     dbo:Country ;
         rdfs:label  "France" .
 
-ipato:TIPO468592  a         crm:E84_Information_Carrier ;
+ipato:TIPO468592  a         frbr:Expression ;
         rdfs:label          "Tours_AD_37_3E1/2" ;
         bf:ShelfMark        "8_G_434" ;
         dcterms:created     "1513-06-25" ;

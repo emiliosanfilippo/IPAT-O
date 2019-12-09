@@ -182,7 +182,6 @@ http://purl.org/dc/terms</rdfs:comment>
     <!-- http://www.univ-tours.fr/ipato#has_act_form -->
 
     <owl:ObjectProperty rdf:about="http://www.univ-tours.fr/ipato#has_act_form">
-        <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E84_Information_Carrier"/>
         <rdfs:range rdf:resource="http://www.univ-tours.fr/ipato#Document_Subject"/>
         <rdfs:comment>This relation is introduced to match experts&apos; terminology with respect to the RENUMAR project</rdfs:comment>
     </owl:ObjectProperty>
@@ -403,32 +402,6 @@ http://wit.istc.cnr.it/arco</rdfs:comment>
     
 
 
-    <!-- http://purl.bioontology.org/ontology/NCBITAXON/412099 -->
-
-    <owl:Class rdf:about="http://purl.bioontology.org/ontology/NCBITAXON/412099">
-        <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002303"/>
-                <owl:someValuesFrom rdf:resource="http://www.univ-tours.fr/ipato#Hardwood"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002303"/>
-                <owl:allValuesFrom rdf:resource="http://www.univ-tours.fr/ipato#Hardwood"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:isDefinedBy>National Center for Biotechnology Information (NCBI) Organismal Classification.
-https://bioportal.bioontology.org/ontologies/NCBITAXON</rdfs:isDefinedBy>
-        <rdfs:label>Calathus rotundicollis</rdfs:label>
-        <rdfs:seeAlso>Entry in catalogueoflife.org:
-
-http://www.catalogueoflife.org/annual-checklist/2019/details/species/id/aeaeebe9876a15abe0a40bb95c2625be</rdfs:seeAlso>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/ENVO_01000739 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000739">
@@ -457,9 +430,84 @@ This class is an ontologically irrelevant partitioning node. It is used for impr
 
     <owl:Class rdf:about="http://purl.org/vocab/frbr/core#Expression">
         <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E73_Information_Object"/>
-        <rdfs:comment>Class taken from core structure of FRBR
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://erlangen-crm.org/current/P128i_is_carried_by"/>
+                <owl:someValuesFrom rdf:resource="http://erlangen-crm.org/current/E84_Information_Carrier"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>Class taken from core structure of FRBR
 
-https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:comment>
+https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://taxref.mnhn.fr/lod/taxon/195344/10.0 -->
+
+    <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/195344/10.0">
+        <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
+        <rdfs:label>Ocydromus</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://taxref.mnhn.fr/lod/taxon/222358/10.0 -->
+
+    <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/222358/10.0">
+        <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002303"/>
+                <owl:someValuesFrom rdf:resource="http://www.univ-tours.fr/ipato#Hardwood"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002303"/>
+                <owl:allValuesFrom rdf:resource="http://www.univ-tours.fr/ipato#Hardwood"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Calathus rotundicollis</rdfs:label>
+        <rdfs:seeAlso>Entry in catalogueoflife.org:
+
+http://www.catalogueoflife.org/annual-checklist/2019/details/species/id/aeaeebe9876a15abe0a40bb95c2625be</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://taxref.mnhn.fr/lod/taxon/222532/10.0 -->
+
+    <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/222532/10.0">
+        <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
+        <rdfs:label>Panagaeus bipustulatus</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://taxref.mnhn.fr/lod/taxon/222539/10.0 -->
+
+    <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/222539/10.0">
+        <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
+        <rdfs:label>Poecilus cupreus</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://taxref.mnhn.fr/lod/taxon/8526/10.0 -->
+
+    <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/8526/10.0">
+        <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
+        <rdfs:label>Notiophilus biguttatus</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://taxref.mnhn.fr/lod/taxon/9231/10.0 -->
+
+    <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/9231/10.0">
+        <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
+        <rdfs:label>Amara similata</rdfs:label>
     </owl:Class>
     
 
@@ -503,27 +551,31 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:comment>
     <!-- http://www.univ-tours.fr/ipato#Letter -->
 
     <owl:Class rdf:about="http://www.univ-tours.fr/ipato#Letter">
-        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E84_Information_Carrier"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/vocab/frbr/core#Expression"/>
     </owl:Class>
     
 
 
-    <!-- http://www.univ-tours.fr/ipato#Letter_Patent -->
+    <!-- http://www.univ-tours.fr/ipato#Letter_patent -->
 
-    <owl:Class rdf:about="http://www.univ-tours.fr/ipato#Letter_Patent">
+    <owl:Class rdf:about="http://www.univ-tours.fr/ipato#Letter_patent">
         <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Letter"/>
     </owl:Class>
     
 
 
-    <!-- http://www.univ-tours.fr/ipato#Lettre_Close -->
+    <!-- http://www.univ-tours.fr/ipato#Lettre_close -->
 
-    <owl:Class rdf:about="http://www.univ-tours.fr/ipato#Lettre_Close">
+    <owl:Class rdf:about="http://www.univ-tours.fr/ipato#Lettre_close">
         <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Letter"/>
-        <skos:altLabel xml:lang="fr">lettre close</skos:altLabel>
-        <skos:altLabel xml:lang="en">lettre de cachet</skos:altLabel>
-        <skos:altLabel xml:lang="fr">lettre de cachet</skos:altLabel>
-        <skos:altLabel xml:lang="fr">lettre fermée</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.univ-tours.fr/ipato#Lettre_de_cachet -->
+
+    <owl:Class rdf:about="http://www.univ-tours.fr/ipato#Lettre_de_cachet">
+        <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Letter"/>
     </owl:Class>
     
 
@@ -536,34 +588,34 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:comment>
     
 
 
-    <!-- http://www.univ-tours.fr/ipato#Notarial_Deed -->
+    <!-- http://www.univ-tours.fr/ipato#Notarial_deed -->
 
-    <owl:Class rdf:about="http://www.univ-tours.fr/ipato#Notarial_Deed">
-        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E84_Information_Carrier"/>
+    <owl:Class rdf:about="http://www.univ-tours.fr/ipato#Notarial_deed">
+        <rdfs:subClassOf rdf:resource="http://purl.org/vocab/frbr/core#Expression"/>
     </owl:Class>
     
 
 
-    <!-- http://www.univ-tours.fr/ipato#Notarial_Minute -->
+    <!-- http://www.univ-tours.fr/ipato#Notarial_minute -->
 
-    <owl:Class rdf:about="http://www.univ-tours.fr/ipato#Notarial_Minute">
-        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E84_Information_Carrier"/>
+    <owl:Class rdf:about="http://www.univ-tours.fr/ipato#Notarial_minute">
+        <rdfs:subClassOf rdf:resource="http://purl.org/vocab/frbr/core#Expression"/>
     </owl:Class>
     
 
 
-    <!-- http://www.univ-tours.fr/ipato#Private_Account_Register -->
+    <!-- http://www.univ-tours.fr/ipato#Private_account_register -->
 
-    <owl:Class rdf:about="http://www.univ-tours.fr/ipato#Private_Account_Register">
+    <owl:Class rdf:about="http://www.univ-tours.fr/ipato#Private_account_register">
         <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Register"/>
     </owl:Class>
     
 
 
-    <!-- http://www.univ-tours.fr/ipato#Private_Act -->
+    <!-- http://www.univ-tours.fr/ipato#Private_act -->
 
-    <owl:Class rdf:about="http://www.univ-tours.fr/ipato#Private_Act">
-        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E84_Information_Carrier"/>
+    <owl:Class rdf:about="http://www.univ-tours.fr/ipato#Private_act">
+        <rdfs:subClassOf rdf:resource="http://purl.org/vocab/frbr/core#Expression"/>
     </owl:Class>
     
 
@@ -571,14 +623,14 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:comment>
     <!-- http://www.univ-tours.fr/ipato#Register -->
 
     <owl:Class rdf:about="http://www.univ-tours.fr/ipato#Register">
-        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E84_Information_Carrier"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/vocab/frbr/core#Expression"/>
     </owl:Class>
     
 
 
-    <!-- http://www.univ-tours.fr/ipato#Resolution_Register -->
+    <!-- http://www.univ-tours.fr/ipato#Resolution_register -->
 
-    <owl:Class rdf:about="http://www.univ-tours.fr/ipato#Resolution_Register">
+    <owl:Class rdf:about="http://www.univ-tours.fr/ipato#Resolution_register">
         <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Register"/>
     </owl:Class>
     
@@ -865,7 +917,7 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:comment>
     <!-- http://www.univ-tours.fr/ipato#lettre_631967 -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#lettre_631967">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Lettre_Close"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Lettre_close"/>
         <archieved_in rdf:resource="http://www.univ-tours.fr/ipato#Bourges"/>
         <archieved_in rdf:resource="http://www.univ-tours.fr/ipato#France"/>
         <archieved_in rdf:resource="http://www.univ-tours.fr/ipato#archive_AD_18"/>
@@ -915,7 +967,7 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:comment>
     <!-- http://www.univ-tours.fr/ipato#registre_636305 -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#registre_636305">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Resolution_Register"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Resolution_register"/>
         <archieved_in rdf:resource="http://www.univ-tours.fr/ipato#Amboise"/>
         <archieved_in rdf:resource="http://www.univ-tours.fr/ipato#Amboise_AM"/>
         <archieved_in rdf:resource="http://www.univ-tours.fr/ipato#France"/>
