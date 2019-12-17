@@ -16,17 +16,7 @@
         <dcterms:type>Minute_notariale</dcterms:type>
         <dcterms:subject>Ventes</dcterms:subject>
 
-        <dcterms:extent>30*28*9_cm</dcterms:extent>
-        <dcterms:medium>Registre en papier</dcterms:medium>
-        <bf:part>f_272_v</bf:part>
-        <dcterms:language>français</dcterms:language>
-        <bf:SupplementaryContent>Inventaire .....</bf:SupplementaryContent>
-        <dcterms:description>empty</dcterms:description>
-        <dcterms:description>original</dcterms:description>
-        <dcterms:description>Encre sur papier</dcterms:description>
-
         <creation>
-            <dcterms:created>1513-06-25</dcterms:created>
             <dbo:city>Tours</dbo:city>
         </creation>
 
@@ -40,10 +30,8 @@
 
         <custody>
             <dbo:country>France</dbo:country>
-            <dbo:city>Tours</dbo:city>
             <bf:organization>AM_Tours</bf:organization>
             <bf:shelfMark>8_G_434</bf:shelfMark>
-
             <arco:startTime>1567-10-15</arco:startTime>
             <arco:endTime>1569-09-21</arco:endTime>
         </custody>
@@ -68,33 +56,23 @@
         <dcterms:type>test-type</dcterms:type>
         <dcterms:subject>Correspondance politique</dcterms:subject>
 
-        <creation>
-            <dcterms:created>1593-01-04</dcterms:created>
-            <dbo:city>Angers</dbo:city>
-        </creation>
-
         <author>
-            <dcterms:creator>Louise-Marguerite_de_Lorraine</dcterms:creator>
-            <bf:role>princesse_de_Conti </bf:role>
+            <dcterms:creator></dcterms:creator>
+            <bf:role></bf:role>
         </author>
 
         <custody>
-            <dbo:country>France</dbo:country>
-            <dbo:city>Tours</dbo:city>
-            <bf:organization>AM_Tours</bf:organization>
-            <bf:shelfMark>AA 10</bf:shelfMark>
+            <dbo:country>Italy</dbo:country>
+            <dbo:city>Trento</dbo:city>
+            <bf:organization>AM_Trento</bf:organization>
+            <bf:shelfMark>BT_10</bf:shelfMark>
         </custody>
-
+        
+      
         <renumar_editor>
-            <schema:editor>Victor_Luzarche</schema:editor>
-            <foaf:firstName>Victor</foaf:firstName>
-            <foaf:lastName>Luzarche</foaf:lastName>
-        </renumar_editor>
-
-        <renumar_editor>
-            <schema:editor>Léa_Dupuis</schema:editor>
-            <foaf:firstName>Léa</foaf:firstName>
-            <foaf:lastName>Dupuis</foaf:lastName>
+            <schema:editor></schema:editor>
+            <foaf:firstName></foaf:firstName>
+            <foaf:lastName></foaf:lastName>
         </renumar_editor>
 
     <file>

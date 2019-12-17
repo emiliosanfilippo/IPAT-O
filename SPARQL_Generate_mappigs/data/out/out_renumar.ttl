@@ -10,20 +10,28 @@
 @prefix fun:   <http://w3id.org/sparql-generate/fn/> .
 @prefix crm:   <http://erlangen-crm.org/current/> .
 
-ipato:AM_Tours  a             dbo:Archive ;
-        crm:P89_falls_within  ipato:Tours .
+ipato:AM_Tours  a  dbo:Archive .
+
+ipato:AM_Trento  a            dbo:Archive ;
+        crm:P89_falls_within  ipato:Trento .
+
+ipato:Italy  a      dbo:Country ;
+        rdfs:label  "Italy" .
 
 ipato:France  a     dbo:Country ;
         rdfs:label  "France" .
 
-ipato:TIPO468592  a         frbr:Expression ;
+ipato:TIPO468592  a         ipato:Notarial_act ;
         rdfs:label          "Tours_AD_37_3E1/2" ;
         bf:ShelfMark        "8_G_434" ;
-        dcterms:created     "1513-06-25" ;
-        ipato:archieved_in  ipato:Tours , ipato:AM_Tours , ipato:France ;
+        ipato:archieved_in  ipato:France , ipato:AM_Tours ;
         ipato:created_by    ipato:Jaloignes_Jean ;
         ipato:created_in    ipato:Tours ;
         ipato:edited_by     ipato:Jerome_Salmon .
+
+ipato:Trento  a               dbo:City ;
+        rdfs:label            "Trento" ;
+        crm:P89_falls_within  ipato:Italy .
 
 ipato:Jerome_Salmon  a  crm:E21_Person ;
         foaf:firstName  "Jerome" ;
@@ -33,12 +41,14 @@ ipato:secretaire_du_roi
         a       bf:Role .
 
 ipato:Jaloignes_Jean  a  crm:E21_Person ;
-        ipato:has_role  ipato:secretaire_du_roi , ipato:notaire ;
-        foaf:firstName  "Jean" ;
-        foaf:lastName   "Jaloignes" .
+        ipato:has_role  ipato:secretaire_du_roi , ipato:notaire .
 
 ipato:notaire  a  bf:Role .
 
-ipato:Tours  a                dbo:City ;
-        rdfs:label            "Tours" ;
-        crm:P89_falls_within  ipato:France .
+ipato:TIPO634195  a         frbr:Expression ;
+        rdfs:label          "Tours AM Tours, AA 10" ;
+        bf:ShelfMark        "BT_10" ;
+        ipato:archieved_in  ipato:Italy , ipato:Trento , ipato:AM_Trento .
+
+ipato:Tours  a      dbo:City ;
+        rdfs:label  "Tours" .

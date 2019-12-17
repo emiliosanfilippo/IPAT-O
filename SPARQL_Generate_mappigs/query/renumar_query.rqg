@@ -26,8 +26,6 @@ ipato:archieved_in ?custody_country_uri.
 
 ?author_uri
 a crm:E21_Person;
-foaf:firstName ?author_firstName;
-foaf:lastName ?author_lastName;
 ipato:has_role ?author_role_uri.
 
 ?author_role_uri
@@ -40,7 +38,7 @@ foaf:lastName ?editor_lastName.
 
 ?creation_place_uri
 a dbo:City;
-rdfs:label ?city_name.
+rdfs:label ?creation_place_name.
 
 ?repository_uri
 a dbo:Archive;
@@ -73,20 +71,17 @@ BIND(IF(?doc_type = "Letter", ipato:Letter,
 
 
 BIND(IRI(CONCAT("http://www.univ-tours.fr/ipato#",fun:XPath(?author,"/author/*[namespace-uri()='http://purl.org/dc/terms/' and local-name()='creator']/text()"))) AS ?author_uri)
-BIND(fun:XPath(?author,"/author/*[namespace-uri()='http://xmlns.com/foaf/0.1/' and local-name()='firstName']/text()") AS ?author_firstName)
-BIND(fun:XPath(?author,"/author/*[namespace-uri()='http://xmlns.com/foaf/0.1/' and local-name()='lastName']/text()") AS ?author_lastName)
 BIND(IRI(CONCAT("http://www.univ-tours.fr/ipato#",fun:XPath(?author_role,"/*[namespace-uri()='http://id.loc.gov/ontologies/bibframe/' and local-name()='role']/text()"))) AS ?author_role_uri)
 
-BIND(IRI(CONCAT("http://www.univ-tours.fr/ipato#",fun:XPath(?editor,"/renumar_editor/*[namespace-uri()='https://schema.org/' and local-name()='editor']/text()"))) AS ?editor_uri)
+BIND(IRI(CONCAT("http://www.univ-tours.fr/ipato#",fun:XPath(?document,"/document/renumar_editor/*[namespace-uri()='https://schema.org/' and local-name()='editor']/text()"))) AS ?editor_uri)
 BIND(fun:XPath(?editor,"/renumar_editor/*[namespace-uri()='http://xmlns.com/foaf/0.1/' and local-name()='firstName']/text()") AS ?editor_firstName)
 BIND(fun:XPath(?editor,"/renumar_editor/*[namespace-uri()='http://xmlns.com/foaf/0.1/' and local-name()='lastName']/text()") AS ?editor_lastName)
 
 BIND(IRI(CONCAT("http://www.univ-tours.fr/ipato#",fun:XPath(?document,"/document/file/*[namespace-uri()='http://purl.org/dc/terms/' and local-name()='identifier']/text()"))) AS ?document_uri)
 BIND(fun:XPath(?document, "/document/*[namespace-uri()='http://purl.org/dc/terms/' and local-name()='title']/text()") AS ?document_title)
 
-BIND(IRI(CONCAT("http://www.univ-tours.fr/ipato#",fun:XPath(?source,"/searchRetrieveResponse/document/creation/*[namespace-uri()='http://dbpedia.org/ontology/' and local-name()='city']/text()"))) AS ?creation_place_uri)
-
-BIND(fun:XPath(?document,"/document/creation/*[namespace-uri()='http://dbpedia.org/ontology/' and local-name()='city']/text()") AS ?city_name)
+BIND(IRI(CONCAT("http://www.univ-tours.fr/ipato#",fun:XPath(?document,"/document/creation/*[namespace-uri()='http://dbpedia.org/ontology/' and local-name()='city']/text()"))) AS ?creation_place_uri)
+BIND(fun:XPath(?document,"/document/creation/*[namespace-uri()='http://dbpedia.org/ontology/' and local-name()='city']/text()") AS ?creation_place_name)
 
 BIND(fun:XPath(?document,"/document/creation/*[namespace-uri()='http://purl.org/dc/terms/' and local-name()='created']/text()") AS ?creation_date)
 
@@ -99,10 +94,5 @@ BIND(fun:XPath(?document,"/document/custody/*[namespace-uri()='http://dbpedia.or
 
 BIND(IRI(CONCAT("http://www.univ-tours.fr/ipato#",fun:XPath(?document,"/document/custody/*[namespace-uri()='http://dbpedia.org/ontology/' and local-name()='country']/text()"))) AS ?custody_country_uri)
 BIND(fun:XPath(?document,"/document/custody/*[namespace-uri()='http://dbpedia.org/ontology/' and local-name()='country']/text()") AS ?custody_country_name)
-
-
-
-
-
 
 }
