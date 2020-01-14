@@ -59,9 +59,21 @@ CESR -- University of Tours, France</terms:creator>
     
 
 
+    <!-- http://purl.org/dc/terms/identifier -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/identifier"/>
+    
+
+
     <!-- http://purl.org/dc/terms/title -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://www.univ-tours.fr/ipato#taxRef_identifier -->
+
+    <owl:AnnotationProperty rdf:about="http://www.univ-tours.fr/ipato#taxRef_identifier"/>
     
 
 
@@ -257,10 +269,7 @@ http://purl.org/dc/terms</rdfs:comment>
 
     <!-- http://purl.org/dc/terms/identifier -->
 
-    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/identifier">
-        <rdfs:comment>Imported from Dublin Core.
-http://purl.org/dc/terms</rdfs:comment>
-    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/identifier"/>
     
 
 
@@ -421,7 +430,7 @@ https://bioportal.bioontology.org/ontologies/ENVO</rdfs:isDefinedBy>
         <rdfs:isDefinedBy>Class imported from BioTop. 
 https://bioportal.bioontology.org/ontologies/BT</rdfs:isDefinedBy>
         <skos:definition>Subclasses of this class groups organisms according to their membership to a biological taxon.
-This class is an ontologically irrelevant partitioning node. It is used for improving the organization of the ontology only.</skos:definition>
+This class is an ontologically irrelevant partitioning node. It is used for improving the organization of the ontology.</skos:definition>
     </owl:Class>
     
 
@@ -443,35 +452,110 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:isDefinedB
     
 
 
-    <!-- http://taxref.mnhn.fr/lod/taxon/195344/10.0 -->
-
-    <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/195344/10.0">
-        <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
-        <rdfs:label>Ocydromus</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://taxref.mnhn.fr/lod/taxon/222358/10.0 -->
 
     <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/222358/10.0">
         <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002303"/>
-                <owl:someValuesFrom rdf:resource="http://www.univ-tours.fr/ipato#Hardwood"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002303"/>
-                <owl:allValuesFrom rdf:resource="http://www.univ-tours.fr/ipato#Hardwood"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label>Calathus rotundicollis</rdfs:label>
-        <rdfs:seeAlso>Entry in catalogueoflife.org:
+        <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">222358</taxRef_identifier>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/222358</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/222358/tab/taxo</rdfs:seeAlso>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Calathus rotundicollis</skos:prefLabel>
+    </owl:Class>
+    
 
-http://www.catalogueoflife.org/annual-checklist/2019/details/species/id/aeaeebe9876a15abe0a40bb95c2625be</rdfs:seeAlso>
+
+    <!-- http://taxref.mnhn.fr/lod/taxon/222374/10.0 -->
+
+    <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/222374/10.0">
+        <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
+        <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">222374</taxRef_identifier>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/222374/tab/taxo</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/222374?lg%3Den</rdfs:seeAlso>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Oxypselaphus obscurus</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://taxref.mnhn.fr/lod/taxon/222375/10.0 -->
+
+    <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/222375/10.0">
+        <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
+        <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">222375</taxRef_identifier>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/222375/tab/taxo</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/222375?lg%3Den</rdfs:seeAlso>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Paranchus albipes</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://taxref.mnhn.fr/lod/taxon/222381/10.0 -->
+
+    <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/222381/10.0">
+        <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
+        <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">222381</taxRef_identifier>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">https://inpn.mnhn.fr/espece/cd_nom/222381/tab/taxo</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/222381?lg%3Den</rdfs:seeAlso>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Platynus livens</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://taxref.mnhn.fr/lod/taxon/222391/10.0 -->
+
+    <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/222391/10.0">
+        <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
+        <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">222391</taxRef_identifier>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/222391</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/222391/tab/taxo</rdfs:seeAlso>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Agonum afrum</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://taxref.mnhn.fr/lod/taxon/222402/10.0 -->
+
+    <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/222402/10.0">
+        <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
+        <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">222402</taxRef_identifier>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/222402/tab/taxo?lg=en</rdfs:seeAlso>
+        <skos:altLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Europhilus micans (Espèce TaxRef CD_NOM = 886465)</skos:altLabel>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Agonum micans</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://taxref.mnhn.fr/lod/taxon/222441/10.0 -->
+
+    <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/222441/10.0">
+        <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
+        <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">222441</taxRef_identifier>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/222441/tab/taxo</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/222441?lg%3Den</rdfs:seeAlso>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Parophonus maculicornis</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://taxref.mnhn.fr/lod/taxon/222466/10.0 -->
+
+    <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/222466/10.0">
+        <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
+        <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">222466</taxRef_identifier>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/222466/tab/taxo</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/222466?lg%3Den</rdfs:seeAlso>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Pseudoophonus rufipes</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://taxref.mnhn.fr/lod/taxon/222508/10.0 -->
+
+    <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/222508/10.0">
+        <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
+        <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">222508</taxRef_identifier>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/222508/tab/taxo</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/222508?lg%3Den</rdfs:seeAlso>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Badister bullatus</skos:prefLabel>
     </owl:Class>
     
 
@@ -480,7 +564,10 @@ http://www.catalogueoflife.org/annual-checklist/2019/details/species/id/aeaeebe9
 
     <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/222532/10.0">
         <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
-        <rdfs:label>Panagaeus bipustulatus</rdfs:label>
+        <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">222532</taxRef_identifier>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/222532/tab/taxo</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/222532?lg%3Den</rdfs:seeAlso>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Panagaeus bipustulatus</skos:prefLabel>
     </owl:Class>
     
 
@@ -489,7 +576,136 @@ http://www.catalogueoflife.org/annual-checklist/2019/details/species/id/aeaeebe9
 
     <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/222539/10.0">
         <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
-        <rdfs:label>Poecilus cupreus</rdfs:label>
+        <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">222539</taxRef_identifier>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/222539/tab/taxo</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/222539?lg%3Den</rdfs:seeAlso>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Poecilus cupreus</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://taxref.mnhn.fr/lod/taxon/222557/10.0 -->
+
+    <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/222557/10.0">
+        <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
+        <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">222557</taxRef_identifier>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/222557</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/222557/tab/taxo</rdfs:seeAlso>
+        <skos:altLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Platysma nigrum (Espèce TaxRef CD_NOM = 886474)</skos:altLabel>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Pterostichus niger</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://taxref.mnhn.fr/lod/taxon/222558/10.0 -->
+
+    <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/222558/10.0">
+        <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
+        <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">222558</taxRef_identifier>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/222558</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/222558/tab/taxo?lg=en</rdfs:seeAlso>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Pterostichus melanarius</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://taxref.mnhn.fr/lod/taxon/222559/10.0 -->
+
+    <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/222559/10.0">
+        <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
+        <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">222559</taxRef_identifier>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/222559</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/222559?lg=en</rdfs:seeAlso>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Pterostichus anthracinus</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://taxref.mnhn.fr/lod/taxon/222940/10.0 -->
+
+    <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/222940/10.0">
+        <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
+        <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">222940</taxRef_identifier>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/222940</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/222940/tab/taxo</rdfs:seeAlso>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Asaphidion curtum</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://taxref.mnhn.fr/lod/taxon/780498/10.0 -->
+
+    <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/780498/10.0">
+        <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
+        <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">780498</taxRef_identifier>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/780498</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/780498/tab/taxo</rdfs:seeAlso>
+        <skos:altLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Ocydromus tetracolus (TaxRef CD_NOM = 222887)</skos:altLabel>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Bembidion tetracolum</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://taxref.mnhn.fr/lod/taxon/794280/10.0 -->
+
+    <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/794280/10.0">
+        <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
+        <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">794280</taxRef_identifier>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/794280</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/794280/tab/taxo</rdfs:seeAlso>
+        <skos:altLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">cydromus deletus (Espèce TaxRef CD_NOM = 222871)</skos:altLabel>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Bembidion deletum</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://taxref.mnhn.fr/lod/taxon/794293/10.0 -->
+
+    <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/794293/10.0">
+        <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
+        <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">794293</taxRef_identifier>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/794293</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/794293/tab/taxo</rdfs:seeAlso>
+        <skos:altLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Philochthus biguttatus (Espèce TaxRef CD_NOM = 222903)</skos:altLabel>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Bembidion biguttatum</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://taxref.mnhn.fr/lod/taxon/794296/10.0 -->
+
+    <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/794296/10.0">
+        <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
+        <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">794296</taxRef_identifier>
+        <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Philochthus lunulatus (Espèce TaxRef CD_NOM = 8589)</taxRef_identifier>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/794296</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/794296/tab/taxo</rdfs:seeAlso>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Bembidion lunulatum</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://taxref.mnhn.fr/lod/taxon/794300/10.0 -->
+
+    <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/794300/10.0">
+        <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
+        <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">794300</taxRef_identifier>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/794300/tab/taxo?lg=en</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/794300?lg%3Den</rdfs:seeAlso>
+        <skos:altLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Trepanes gilvipes (TaxRef CD_NOM = 222908)</skos:altLabel>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Bembidion gilvipes</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://taxref.mnhn.fr/lod/taxon/794337/10.0 -->
+
+    <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/794337/10.0">
+        <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
+        <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">794337</taxRef_identifier>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/794337/tab/taxo</rdfs:seeAlso>
+        <skos:altLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Chlaeniellus tibialis (Espèce TaxRef CD_NOM = 274880)</skos:altLabel>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Chlaenius tibialis</skos:prefLabel>
     </owl:Class>
     
 
@@ -498,7 +714,85 @@ http://www.catalogueoflife.org/annual-checklist/2019/details/species/id/aeaeebe9
 
     <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/8526/10.0">
         <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
-        <rdfs:label>Notiophilus biguttatus</rdfs:label>
+        <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">8526</taxRef_identifier>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/8526?lg%3Den</rdfs:seeAlso>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Notiophilus biguttatus</skos:prefLabel>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/8526/tab/taxo</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://taxref.mnhn.fr/lod/taxon/8540/10.0 -->
+
+    <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/8540/10.0">
+        <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
+        <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">8540</taxRef_identifier>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/251340/tab/taxo</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/8540?lg%3Den</rdfs:seeAlso>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Loricera pilicornis</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://taxref.mnhn.fr/lod/taxon/8558/10.0 -->
+
+    <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/8558/10.0">
+        <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
+        <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">8558</taxRef_identifier>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/8558</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/8558/tab/taxo?lg=en</rdfs:seeAlso>
+        <skos:altLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Dyschiriodes globosus (Espèce TaxRef CD_NOM = 222959)</skos:altLabel>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Dyschirius globosus</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://taxref.mnhn.fr/lod/taxon/8619/10.0 -->
+
+    <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/8619/10.0">
+        <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
+        <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">8619</taxRef_identifier>
+        <skos:altLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Eupetedromus dentellum (Espèce TaxRef CD_NOM = 887287)</skos:altLabel>
+        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/8619/tab/taxo</skos:altLabel>
+        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/8619?lg%3Den</skos:altLabel>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Bembidion dentellum</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://taxref.mnhn.fr/lod/taxon/8816/10.0 -->
+
+    <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/8816/10.0">
+        <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
+        <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">8816</taxRef_identifier>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/8816</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/8816/tab/taxo</rdfs:seeAlso>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Agonum lugens</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://taxref.mnhn.fr/lod/taxon/8838/10.0 -->
+
+    <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/8838/10.0">
+        <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
+        <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">8838</taxRef_identifier>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/8838</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/8838/tab/taxo</rdfs:seeAlso>
+        <skos:altLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Platynus assimile (Espèce TaxRef CD_NOM = 886466)</skos:altLabel>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">Platynus assimilis</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://taxref.mnhn.fr/lod/taxon/9103/10.0 -->
+
+    <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/9103/10.0">
+        <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
+        <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">9103</taxRef_identifier>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/9103/tab/taxo</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/9103?lg%3Den</rdfs:seeAlso>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Pterostichus strenuus</skos:prefLabel>
     </owl:Class>
     
 
@@ -507,7 +801,60 @@ http://www.catalogueoflife.org/annual-checklist/2019/details/species/id/aeaeebe9
 
     <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/9231/10.0">
         <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
-        <rdfs:label>Amara similata</rdfs:label>
+        <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">9231</taxRef_identifier>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/9231</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/9231/tab/taxo</rdfs:seeAlso>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Amara similata</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://taxref.mnhn.fr/lod/taxon/9316/10.0 -->
+
+    <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/9316/10.0">
+        <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
+        <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">9316</taxRef_identifier>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/9316/tab/taxo</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/9316?lg%3Den</rdfs:seeAlso>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Harpalus tardus</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://taxref.mnhn.fr/lod/taxon/9371/10.0 -->
+
+    <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/9371/10.0">
+        <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
+        <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">9371</taxRef_identifier>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/9371/tab/taxo</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/9371?lg%3Den</rdfs:seeAlso>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Oodes helopioides</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://taxref.mnhn.fr/lod/taxon/9380/10.0 -->
+
+    <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/9380/10.0">
+        <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
+        <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">9380</taxRef_identifier>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/9380/tab/taxo</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/9380?lg%3Den</rdfs:seeAlso>
+        <skos:altLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Chlaeniellus nigricornis (Espèce TaxRef CD_NOM = 222523)</skos:altLabel>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Chlaenius nigricornis</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://taxref.mnhn.fr/lod/taxon/9389/10.0 -->
+
+    <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/9389/10.0">
+        <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
+        <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">9389</taxRef_identifier>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/9389/tab/taxo?lg=en</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/9389?lg%3Den</rdfs:seeAlso>
+        <skos:altLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Chlaeniellus vestitus (Espèce TaxRef CD_NOM = 222528)</skos:altLabel>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Chlaenius vestitus</skos:prefLabel>
     </owl:Class>
     
 
@@ -1017,6 +1364,10 @@ http://www.catalogueoflife.org/annual-checklist/2019/details/species/id/aeaeebe9
 
     <rdf:Description rdf:about="http://purl.org/dc/terms/creator">
         <rdfs:label>creates</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/terms/identifier">
+        <rdfs:comment>Imported from Dublin Core.
+http://purl.org/dc/terms</rdfs:comment>
     </rdf:Description>
 </rdf:RDF>
 
