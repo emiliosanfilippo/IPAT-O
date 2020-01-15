@@ -452,6 +452,18 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:isDefinedB
     
 
 
+    <!-- http://taxref.mnhn.fr/lod/taxon/222308/10.0 -->
+
+    <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/222308/10.0">
+        <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
+        <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">222308</taxRef_identifier>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/222308</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/222308/tab/taxo</rdfs:seeAlso>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Lionychus quadrillum</skos:prefLabel>
+    </owl:Class>
+    
+
+
     <!-- http://taxref.mnhn.fr/lod/taxon/222358/10.0 -->
 
     <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/222358/10.0">
@@ -512,6 +524,18 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:isDefinedB
     
 
 
+    <!-- http://taxref.mnhn.fr/lod/taxon/222395/10.0 -->
+
+    <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/222395/10.0">
+        <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
+        <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">222395</taxRef_identifier>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/222395/tab/taxo</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/222395?lg%3Den</rdfs:seeAlso>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Agonum permoestum</skos:prefLabel>
+    </owl:Class>
+    
+
+
     <!-- http://taxref.mnhn.fr/lod/taxon/222402/10.0 -->
 
     <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/222402/10.0">
@@ -532,6 +556,19 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:isDefinedB
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/222441/tab/taxo</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/222441?lg%3Den</rdfs:seeAlso>
         <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Parophonus maculicornis</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://taxref.mnhn.fr/lod/taxon/222459/10.0 -->
+
+    <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/222459/10.0">
+        <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
+        <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">222459</taxRef_identifier>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/222459</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/222459/tab/taxo</rdfs:seeAlso>
+        <skos:altLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Argutor vernalis (Espèce TaxRef CD_NOM = 809509)</skos:altLabel>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Harpalus pumilus</skos:prefLabel>
     </owl:Class>
     
 
@@ -710,6 +747,18 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:isDefinedB
     
 
 
+    <!-- http://taxref.mnhn.fr/lod/taxon/8341/10.0 -->
+
+    <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/8341/10.0">
+        <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
+        <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">8341</taxRef_identifier>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/8341/tab/taxo</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/8341?lg%3Den</rdfs:seeAlso>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Omophron limbatum</skos:prefLabel>
+    </owl:Class>
+    
+
+
     <!-- http://taxref.mnhn.fr/lod/taxon/8526/10.0 -->
 
     <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/8526/10.0">
@@ -718,6 +767,18 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:isDefinedB
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/8526?lg%3Den</rdfs:seeAlso>
         <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Notiophilus biguttatus</skos:prefLabel>
         <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/8526/tab/taxo</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://taxref.mnhn.fr/lod/taxon/8536/10.0 -->
+
+    <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/8536/10.0">
+        <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
+        <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">8536</taxRef_identifier>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/8536/tab/taxo</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/8536?lg%3Den</rdfs:seeAlso>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Elaphrus cupreus</skos:prefLabel>
     </owl:Class>
     
 
@@ -743,6 +804,31 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:isDefinedB
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/8558/tab/taxo?lg=en</rdfs:seeAlso>
         <skos:altLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Dyschiriodes globosus (Espèce TaxRef CD_NOM = 222959)</skos:altLabel>
         <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Dyschirius globosus</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://taxref.mnhn.fr/lod/taxon/8598/10.0 -->
+
+    <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/8598/10.0">
+        <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
+        <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">8598</taxRef_identifier>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/8598</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/8598/tab/taxo</rdfs:seeAlso>
+        <skos:altLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Diplocampa assimilis (Espèce TaxRef CD_NOM = 844827)</skos:altLabel>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Bembidion assimile</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://taxref.mnhn.fr/lod/taxon/8617/10.0 -->
+
+    <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/8617/10.0">
+        <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
+        <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">8617</taxRef_identifier>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/8617/tab/taxo</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/8617?lg%3Den</rdfs:seeAlso>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Bembidion quadrimaculatum</skos:prefLabel>
     </owl:Class>
     
 
@@ -797,6 +883,18 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:isDefinedB
     
 
 
+    <!-- http://taxref.mnhn.fr/lod/taxon/9136/10.0 -->
+
+    <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/9136/10.0">
+        <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
+        <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">9136</taxRef_identifier>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/9136/tab/taxo</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/9136?lg%3Den</rdfs:seeAlso>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Pterostichus vernalis</skos:prefLabel>
+    </owl:Class>
+    
+
+
     <!-- http://taxref.mnhn.fr/lod/taxon/9231/10.0 -->
 
     <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/9231/10.0">
@@ -809,6 +907,30 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:isDefinedB
     
 
 
+    <!-- http://taxref.mnhn.fr/lod/taxon/9291/10.0 -->
+
+    <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/9291/10.0">
+        <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
+        <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">9291</taxRef_identifier>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/9291/tab/taxo</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/9291?lg%3Den</rdfs:seeAlso>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Anisodactylus binotatus</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://taxref.mnhn.fr/lod/taxon/9304/10.0 -->
+
+    <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/9304/10.0">
+        <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
+        <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">9304</taxRef_identifier>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/9304/tab/taxo</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/9304?lg%3Den</rdfs:seeAlso>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Harpalus dimidiatus</skos:prefLabel>
+    </owl:Class>
+    
+
+
     <!-- http://taxref.mnhn.fr/lod/taxon/9316/10.0 -->
 
     <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/9316/10.0">
@@ -817,6 +939,18 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:isDefinedB
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/9316/tab/taxo</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/9316?lg%3Den</rdfs:seeAlso>
         <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Harpalus tardus</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://taxref.mnhn.fr/lod/taxon/9327/10.0 -->
+
+    <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/9327/10.0">
+        <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
+        <taxRef_identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">9327</taxRef_identifier>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/9327/tab/taxo</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/9327?lg%3Den</rdfs:seeAlso>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Harpalus rubripes</skos:prefLabel>
     </owl:Class>
     
 
