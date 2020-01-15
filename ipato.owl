@@ -505,7 +505,7 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:isDefinedB
     <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/222381/10.0">
         <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
         <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">222381</taxRef_identifier>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">https://inpn.mnhn.fr/espece/cd_nom/222381/tab/taxo</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/222381/tab/taxo</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/222381?lg%3Den</rdfs:seeAlso>
         <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Platynus livens</skos:prefLabel>
     </owl:Class>
@@ -866,7 +866,7 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:isDefinedB
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/8838</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/8838/tab/taxo</rdfs:seeAlso>
         <skos:altLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Platynus assimile (Espèce TaxRef CD_NOM = 886466)</skos:altLabel>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">Platynus assimilis</skos:prefLabel>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Platynus assimilis</skos:prefLabel>
     </owl:Class>
     
 
@@ -947,7 +947,7 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:isDefinedB
 
     <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/9327/10.0">
         <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
-        <taxRef_identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">9327</taxRef_identifier>
+        <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">9327</taxRef_identifier>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/9327/tab/taxo</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/9327?lg%3Den</rdfs:seeAlso>
         <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Harpalus rubripes</skos:prefLabel>
@@ -1145,7 +1145,7 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:isDefinedB
 
     <owl:Class rdf:about="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod">
         <rdfs:subClassOf rdf:resource="http://purl.org/biotop/biotop.owl#OrganismByTaxonPartition"/>
-        <rdfs:label>Terrestrial macro-arthropod</rdfs:label>
+        <skos:prefLabel>Terrestrial macro-arthropod</skos:prefLabel>
     </owl:Class>
     
 
