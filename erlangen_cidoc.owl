@@ -5446,7 +5446,7 @@ E15(x) ⊃ E13(x)</rdfs:comment>
     <!-- http://erlangen-crm.org/current/E16_Measurement -->
 
     <owl:Class rdf:about="http://erlangen-crm.org/current/E16_Measurement">
-        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E13_Attribute_Assignment"/>
+        <rdfs:subClassOf rdf:resource="http://www.ics.forth.gr/isl/CRMsci/S4_Observation"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://erlangen-crm.org/current/P40_observed_dimension"/>
@@ -7769,6 +7769,14 @@ In First Order Logic:
 E9(x) ⊃ E7(x)</rdfs:comment>
         <rdfs:label xml:lang="en">E9 Move</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E9</skos:notation>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ics.forth.gr/isl/CRMsci/S4_Observation -->
+
+    <owl:Class rdf:about="http://www.ics.forth.gr/isl/CRMsci/S4_Observation">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E13_Attribute_Assignment"/>
     </owl:Class>
 </rdf:RDF>
 

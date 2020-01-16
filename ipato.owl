@@ -173,7 +173,11 @@ http://purl.org/dc/terms</rdfs:comment>
 
     <!-- http://www.ics.forth.gr/isl/CRMsci/O8_observed -->
 
-    <owl:ObjectProperty rdf:about="http://www.ics.forth.gr/isl/CRMsci/O8_observed"/>
+    <owl:ObjectProperty rdf:about="http://www.ics.forth.gr/isl/CRMsci/O8_observed">
+        <owl:inverseOf rdf:resource="http://www.ics.forth.gr/isl/CRMsci/O8i_was_observed_by"/>
+        <rdfs:domain rdf:resource="http://www.ics.forth.gr/isl/CRMsci/S4_Observation"/>
+        <rdfs:range rdf:resource="http://erlangen-crm.org/current/E1_CRM_Entity"/>
+    </owl:ObjectProperty>
     
 
 
@@ -181,7 +185,7 @@ http://purl.org/dc/terms</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="http://www.ics.forth.gr/isl/CRMsci/O8i_was_observed_by">
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E1_CRM_Entity"/>
-        <rdfs:range rdf:resource="http://erlangen-crm.org/current/E7_Activity"/>
+        <rdfs:range rdf:resource="http://www.ics.forth.gr/isl/CRMsci/S4_Observation"/>
     </owl:ObjectProperty>
     
 
@@ -189,6 +193,15 @@ http://purl.org/dc/terms</rdfs:comment>
     <!-- http://www.univ-tours.fr/ipato#OWLObjectProperty_00000001 -->
 
     <owl:ObjectProperty rdf:about="http://www.univ-tours.fr/ipato#OWLObjectProperty_00000001">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://erlangen-crm.org/current/E27_Site"/>
+                    <rdf:Description rdf:about="http://erlangen-crm.org/current/E53_Place"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000001"/>
         <skos:prefLabel>has habitat type</skos:prefLabel>
     </owl:ObjectProperty>
     
@@ -223,6 +236,7 @@ http://purl.org/dc/terms</rdfs:comment>
     <!-- http://www.univ-tours.fr/ipato#OWLObjectProperty_00000006 -->
 
     <owl:ObjectProperty rdf:about="http://www.univ-tours.fr/ipato#OWLObjectProperty_00000006">
+        <owl:inverseOf rdf:resource="http://www.univ-tours.fr/ipato#OWLObjectProperty_00000020"/>
         <rdfs:domain rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000006"/>
         <rdfs:range>
             <owl:Class>
@@ -232,7 +246,7 @@ http://purl.org/dc/terms</rdfs:comment>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
-        <skos:prefLabel>determines_biological_species_of</skos:prefLabel>
+        <skos:prefLabel>establishes_species_of</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -240,15 +254,16 @@ http://purl.org/dc/terms</rdfs:comment>
     <!-- http://www.univ-tours.fr/ipato#OWLObjectProperty_00000007 -->
 
     <owl:ObjectProperty rdf:about="http://www.univ-tours.fr/ipato#OWLObjectProperty_00000007">
-        <rdfs:range>
+        <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://erlangen-crm.org/current/E21_Person"/>
-                    <rdf:Description rdf:about="http://www.univ-tours.fr/ipato#OWLClass_00000006"/>
+                    <rdf:Description rdf:about="http://www.univ-tours.fr/ipato#OWLClass_00000002"/>
+                    <rdf:Description rdf:about="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
                 </owl:unionOf>
             </owl:Class>
-        </rdfs:range>
-        <skos:prefLabel>species_classified_by</skos:prefLabel>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://erlangen-crm.org/current/E21_Person"/>
+        <skos:prefLabel>classified_by</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -256,6 +271,8 @@ http://purl.org/dc/terms</rdfs:comment>
     <!-- http://www.univ-tours.fr/ipato#OWLObjectProperty_00000008 -->
 
     <owl:ObjectProperty rdf:about="http://www.univ-tours.fr/ipato#OWLObjectProperty_00000008">
+        <rdfs:domain rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000006"/>
+        <rdfs:range rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000005"/>
         <skos:prefLabel>classification judgment</skos:prefLabel>
     </owl:ObjectProperty>
     
@@ -272,7 +289,84 @@ http://purl.org/dc/terms</rdfs:comment>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <skos:prefLabel>populated_by</skos:prefLabel>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://erlangen-crm.org/current/E20_Biological_Object"/>
+                    <rdf:Description rdf:about="http://www.univ-tours.fr/ipato#OWLClass_00000002"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <skos:prefLabel>is_found_with</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.univ-tours.fr/ipato#OWLObjectProperty_00000020 -->
+
+    <owl:ObjectProperty rdf:about="http://www.univ-tours.fr/ipato#OWLObjectProperty_00000020">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.univ-tours.fr/ipato#OWLClass_00000002"/>
+                    <rdf:Description rdf:about="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000006"/>
+        <skos:prefLabel>species_established_during</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.univ-tours.fr/ipato#OWLObjectProperty_00000021 -->
+
+    <owl:ObjectProperty rdf:about="http://www.univ-tours.fr/ipato#OWLObjectProperty_00000021">
+        <owl:inverseOf rdf:resource="http://www.univ-tours.fr/ipato#OWLObjectProperty_00000022"/>
+        <rdfs:domain rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000018"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.univ-tours.fr/ipato#OWLClass_00000002"/>
+                    <rdf:Description rdf:about="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <skos:prefLabel>sampled</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.univ-tours.fr/ipato#OWLObjectProperty_00000022 -->
+
+    <owl:ObjectProperty rdf:about="http://www.univ-tours.fr/ipato#OWLObjectProperty_00000022">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.univ-tours.fr/ipato#OWLClass_00000002"/>
+                    <rdf:Description rdf:about="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000018"/>
+        <skos:prefLabel>sampled_during</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.univ-tours.fr/ipato#OWLObjectProperty_00000023 -->
+
+    <owl:ObjectProperty rdf:about="http://www.univ-tours.fr/ipato#OWLObjectProperty_00000023">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.univ-tours.fr/ipato#OWLClass_00000002"/>
+                    <rdf:Description rdf:about="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://erlangen-crm.org/current/E21_Person"/>
+        <skos:prefLabel>sampled_by</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -394,6 +488,14 @@ http://purl.org/dc/terms</rdfs:comment>
     <!-- http://www.univ-tours.fr/ipato#OWLDataProperty_00000001 -->
 
     <owl:DatatypeProperty rdf:about="http://www.univ-tours.fr/ipato#OWLDataProperty_00000001">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://erlangen-crm.org/current/E27_Site"/>
+                    <rdf:Description rdf:about="http://erlangen-crm.org/current/E53_Place"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <skos:prefLabel>X_WGS_84</skos:prefLabel>
     </owl:DatatypeProperty>
     
@@ -402,6 +504,14 @@ http://purl.org/dc/terms</rdfs:comment>
     <!-- http://www.univ-tours.fr/ipato#OWLDataProperty_00000002 -->
 
     <owl:DatatypeProperty rdf:about="http://www.univ-tours.fr/ipato#OWLDataProperty_00000002">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://erlangen-crm.org/current/E27_Site"/>
+                    <rdf:Description rdf:about="http://erlangen-crm.org/current/E53_Place"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <skos:prefLabel>Y_WGS_84</skos:prefLabel>
     </owl:DatatypeProperty>
     
@@ -410,7 +520,7 @@ http://purl.org/dc/terms</rdfs:comment>
     <!-- http://www.univ-tours.fr/ipato#OWLDataProperty_00000003 -->
 
     <owl:DatatypeProperty rdf:about="http://www.univ-tours.fr/ipato#OWLDataProperty_00000003">
-        <skos:prefLabel>measurement_date</skos:prefLabel>
+        <skos:prefLabel>sampling_date</skos:prefLabel>
     </owl:DatatypeProperty>
     
 
@@ -1127,6 +1237,16 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:isDefinedB
     
 
 
+    <!-- http://www.ics.forth.gr/isl/CRMsci/S4_Observation -->
+
+    <owl:Class rdf:about="http://www.ics.forth.gr/isl/CRMsci/S4_Observation">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E13_Attribute_Assignment"/>
+        <rdfs:comment>This class comprises the activity of gaining scientific knowledge about particular states of physical reality gained by empirical evidence, experiments and by measurements. We define observation in the sense of natural sciences, as a kind of human activity: at some Place and within some Time-Span, certain Physical Things and their behavior and interactions are observed, either directly by human sensory impression, or enhanced with tools and measurement devices. The output of the internal processes of measurement devices that do not require additional human interaction are in general regarded as part of the observation and not as additional inference. Manual recordings may serve as additional evidence. Measurements and witnessing of events are special cases of observations. Observations result in a belief about certain propositions. In this model, the degree of confidence in the observed properties is regarded to be “true” per default, but could be described differently by adding a property P3 has note to an instance of S4 Observation, or by reification of the property O16 observed value. Primary data from measurement devices are regarded in this model to be results of observation and can be interpreted as propositions believed to be true within the (known) tolerances and degree of reliability of the device. Observations represent the transition between reality and propositions in the form of instances of a formal ontology, and can be subject to data evaluation from this point on.</rdfs:comment>
+        <rdfs:isDefinedBy>CRMSci</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
     <!-- http://www.univ-tours.fr/ipato#Document_Subject -->
 
     <owl:Class rdf:about="http://www.univ-tours.fr/ipato#Document_Subject">
@@ -1208,6 +1328,18 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:isDefinedB
 
     <owl:Class rdf:about="http://www.univ-tours.fr/ipato#OWLClass_00000002">
         <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E18_Physical_Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.univ-tours.fr/ipato#OWLObjectProperty_00000002"/>
+                <owl:someValuesFrom rdf:resource="http://erlangen-crm.org/current/E20_Biological_Object"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.univ-tours.fr/ipato#OWLObjectProperty_00000002"/>
+                <owl:allValuesFrom rdf:resource="http://erlangen-crm.org/current/E20_Biological_Object"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <skos:prefLabel>Group</skos:prefLabel>
     </owl:Class>
     
@@ -1259,7 +1391,7 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:isDefinedB
 
     <owl:Class rdf:about="http://www.univ-tours.fr/ipato#OWLClass_00000005">
         <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E55_Type"/>
-        <skos:prefLabel>Classification_Type_Judgment</skos:prefLabel>
+        <skos:prefLabel>Classification Judgment</skos:prefLabel>
     </owl:Class>
     
 
@@ -1267,8 +1399,30 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:isDefinedB
     <!-- http://www.univ-tours.fr/ipato#OWLClass_00000006 -->
 
     <owl:Class rdf:about="http://www.univ-tours.fr/ipato#OWLClass_00000006">
-        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E16_Measurement"/>
+        <rdfs:subClassOf rdf:resource="http://www.ics.forth.gr/isl/CRMsci/S4_Observation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.univ-tours.fr/ipato#OWLObjectProperty_00000006"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://erlangen-crm.org/current/E20_Biological_Object"/>
+                            <rdf:Description rdf:about="http://www.univ-tours.fr/ipato#OWLClass_00000002"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <skos:prefLabel>Biological Classification Activity</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.univ-tours.fr/ipato#OWLClass_00000018 -->
+
+    <owl:Class rdf:about="http://www.univ-tours.fr/ipato#OWLClass_00000018">
+        <rdfs:subClassOf rdf:resource="http://www.ics.forth.gr/isl/CRMsci/S4_Observation"/>
+        <skos:prefLabel>Sampling</skos:prefLabel>
     </owl:Class>
     
 
@@ -1465,9 +1619,7 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:isDefinedB
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000001">
         <rdf:type rdf:resource="http://erlangen-crm.org/current/E27_Site"/>
-        <CRMsci:O8i_was_observed_by rdf:resource="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000002"/>
         <OWLObjectProperty_00000001 rdf:resource="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000007"/>
-        <OWLObjectProperty_00000017 rdf:resource="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000009"/>
         <OWLDataProperty_00000001 rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">1,635581994</OWLDataProperty_00000001>
         <OWLDataProperty_00000002 rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">47,769843</OWLDataProperty_00000002>
         <skos:prefLabel>2018_BD_01t</skos:prefLabel>
@@ -1478,12 +1630,12 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:isDefinedB
     <!-- http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000002 -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000002">
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E16_Measurement"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000018"/>
         <current:P14_carried_out_by rdf:resource="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000015"/>
         <CRMsci:O8_observed rdf:resource="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000001"/>
-        <CRMsci:O8_observed rdf:resource="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000009"/>
+        <OWLObjectProperty_00000021 rdf:resource="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000009"/>
         <OWLDataProperty_00000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-8-23</OWLDataProperty_00000003>
-        <skos:prefLabel>measurement process id00000002</skos:prefLabel>
+        <skos:prefLabel>sampling process id00000002</skos:prefLabel>
     </owl:NamedIndividual>
     
 
@@ -1546,10 +1698,10 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:isDefinedB
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000009">
         <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000004"/>
-        <CRMsci:O8i_was_observed_by rdf:resource="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000002"/>
         <OWLObjectProperty_00000004 rdf:resource="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000001"/>
-        <OWLObjectProperty_00000007 rdf:resource="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000010"/>
-        <OWLDataProperty_00000004 rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">5</OWLDataProperty_00000004>
+        <OWLObjectProperty_00000007 rdf:resource="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000014"/>
+        <OWLObjectProperty_00000023 rdf:resource="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000015"/>
+        <OWLDataProperty_00000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</OWLDataProperty_00000004>
         <skos:prefLabel>group of insects 00000009</skos:prefLabel>
     </owl:NamedIndividual>
     
@@ -1563,7 +1715,7 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:isDefinedB
         <OWLObjectProperty_00000006 rdf:resource="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000009"/>
         <OWLObjectProperty_00000008 rdf:resource="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000011"/>
         <OWLDataProperty_00000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#gYearMonth">2018-12</OWLDataProperty_00000005>
-        <skos:prefLabel>classification process 00000010</skos:prefLabel>
+        <skos:prefLabel>classification activity 00000010</skos:prefLabel>
     </owl:NamedIndividual>
     
 
