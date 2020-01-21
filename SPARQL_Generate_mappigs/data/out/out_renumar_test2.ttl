@@ -1,0 +1,113 @@
+@prefix schema: <https://schema.org/> .
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix ipato: <http://www.univ-tours.fr/ipato#> .
+@prefix iter:  <http://w3id.org/sparql-generate/iter/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix frbr:  <http://purl.org/vocab/frbr/core#> .
+@prefix dcelement: <http://purl.org/dc/elements/1.1/> .
+@prefix dbo:   <http://dbpedia.org/ontology/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix fun:   <http://w3id.org/sparql-generate/fn/> .
+@prefix crm:   <http://erlangen-crm.org/current/> .
+
+ipato:commissaire  a  bf:Role .
+
+ipato:Loches  a               dbo:City ;
+        crm:P89_falls_within  ipato:France ;
+        skos:prefLabel        "Loches" .
+
+ipato:France  a         dbo:Country ;
+        skos:prefLabel  "France" .
+
+ipato:632218  a                         ipato:OWLClass_00000010 ;
+        bf:ShelfMark                    "E_DEPOT_132/AA_2" ;
+        dcelement:title                 "Tours__ad_37__e_depot_132/aa_2" ;
+        dcterms:created                 "1572-07-12" ;
+        ipato:OWLDataProperty_00000006  "632218" ;
+        ipato:OWLObjectProperty_00000012
+                ipato:France , ipato:Ad_37 , ipato:Tours ;
+        ipato:OWLObjectProperty_00000013
+                ipato:Seigneuret ;
+        ipato:OWLObjectProperty_00000014
+                ipato:Tours ;
+        ipato:OWLObjectProperty_00000015
+                ipato:Jérôme_Salmon ;
+        ipato:OWLObjectProperty_00000016
+                ipato:Correspondance_politique ;
+        schema:url                      "http://renumar.univ-tours.fr/xtf/view?docId=tei/TIPO632218.xml;chunk.id=n1;toc.depth=1;toc.id=n1;brand=default" .
+
+ipato:contrôleur_général_de_l_approvisionnement_de_l_armée_royale
+        a       bf:Role .
+
+ipato:Jérôme_Salmon  a  crm:E21_Person ;
+        foaf:firstName  "Jérôme" ;
+        foaf:lastName   "Salmon" .
+
+ipato:Jaloignes_jean_notaire_à_tours
+        a               crm:E21_Person ;
+        ipato:OWLObjectProperty_00000017
+                ipato:notaire_à_tours ;
+        foaf:firstName  "Jean" ;
+        foaf:lastName   "Jaloignes" .
+
+ipato:minute_634750  a                  ipato:OWLClass_00000010 ;
+        bf:ShelfMark                    "E_DEPOT_132/EE_14" ;
+        dcelement:title                 "Tours__ad_37__e_depot_132/ee_14" ;
+        dcterms:created                 "1574-04-23" ;
+        ipato:OWLDataProperty_00000006  "minute_634750" ;
+        ipato:OWLObjectProperty_00000012
+                ipato:Loches , ipato:Ad_37 , ipato:France ;
+        ipato:OWLObjectProperty_00000013
+                ipato:Loches__corps_de_ville ;
+        ipato:OWLObjectProperty_00000014
+                ipato:Tours ;
+        ipato:OWLObjectProperty_00000015
+                ipato:Jérôme_Salmon ;
+        ipato:OWLObjectProperty_00000016
+                ipato:Correspondance_administrative ;
+        schema:url                      "http://renumar.univ-tours.fr/xtf/view?docId=tei/TIPO634750.xml;chunk.id=n1;toc.depth=1;toc.id=n1;brand=default" .
+
+ipato:minute_468942  a                  ipato:OWLClass_00000013 ;
+        bf:ShelfMark                    "3E1/2" ;
+        dcelement:title                 "Tours__ad_37__3e1/2" ;
+        dcterms:created                 "1474-09-22" ;
+        ipato:OWLDataProperty_00000006  "minute_468942" ;
+        ipato:OWLObjectProperty_00000012
+                ipato:Ad_37 , ipato:Tours , ipato:France ;
+        ipato:OWLObjectProperty_00000013
+                ipato:Jaloignes_jean_notaire_à_tours ;
+        ipato:OWLObjectProperty_00000014
+                ipato:Tours ;
+        ipato:OWLObjectProperty_00000015
+                ipato:Emilio_Sanfilippo ;
+        ipato:OWLObjectProperty_00000016
+                ipato:OWLNamedIndividual_00000073 ;
+        schema:url                      "http://renumar.univ-tours.fr/xtf/view?docId=tei/TIPO468942.xml;chunk.id=n1;toc.depth=1;toc.id=n1;brand=default" .
+
+ipato:Emilio_Sanfilippo
+        a               crm:E21_Person ;
+        foaf:firstName  "Emilio" ;
+        foaf:lastName   "Sanfilippo" .
+
+ipato:Seigneuret  a    crm:E21_Person ;
+        ipato:OWLObjectProperty_00000017
+                ipato:contrôleur_général_de_l_approvisionnement_de_l_armée_royale , ipato:commissaire ;
+        foaf:lastName  "Seigneuret" .
+
+ipato:Loches__corps_de_ville
+        a               crm:E40_Legal_Body ;
+        skos:prefLabel  "Loches__corps_de_ville" .
+
+ipato:Ad_37  a                dbo:Archive ;
+        crm:P89_falls_within  ipato:Loches , ipato:Tours ;
+        skos:prefLabel        "Ad_37" .
+
+ipato:notaire_à_tours
+        a       bf:Role .
+
+ipato:Tours  a                dbo:City ;
+        crm:P89_falls_within  ipato:France ;
+        skos:prefLabel        "Tours" .

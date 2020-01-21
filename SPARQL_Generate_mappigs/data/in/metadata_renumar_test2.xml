@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<searchRetrieveResponse xmlns:schema="https://schema.org/" xmlns:arco="https://w3id.org/arco/ontology/arco/" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:dbo="http://dbpedia.org/ontology/" xmlns:bf="http://id.loc.gov/ontologies/bibframe/" xmlns:dcterms="http://purl.org/dc/terms/">
+    <documents>
+        <document>
+            <dcterms:title>Tours__ad_37__3e1/2</dcterms:title>
+            <dcterms:alternative>Tours_:_1474__22_septembre</dcterms:alternative>
+            <dcterms:type>Minute_notariale</dcterms:type>
+            <dcterms:subject>Vente</dcterms:subject>
+            <dcterms:extent/>
+            <dcterms:medium/>
+            <bf:part>Foliotation absente mais le cahier allant du 15 août au 4 décembre 1474 a été numérisé et est disponible sur le site des Archives Départementales d'Indre-et-Loire. L'acte se trouve à la page 24. </bf:part>
+            <dcterms:language>Français</dcterms:language>
+            <bf:SupplementaryContent/>
+            <dcterms:description/>
+            <creation>
+                <dcterms:created>1474-09-22</dcterms:created>
+                <dbo:city>Tours</dbo:city>
+            </creation>
+            <author>
+                <dcterms:creator>Jaloignes_jean_notaire_à_tours</dcterms:creator>
+                <foaf:firstName>Jean</foaf:firstName>
+                <foaf:lastName>Jaloignes</foaf:lastName>
+                <bf:organization/>
+                <bf:role>notaire_à_tours</bf:role>
+                <bf:role2/>
+            </author>
+            <custody>
+                <dbo:country>France</dbo:country>
+                <dbo:city>Tours</dbo:city>
+                <bf:organization>Ad_37</bf:organization>
+                <bf:shelfMark>3E1/2</bf:shelfMark>
+                <arco:startTime/>
+                <arco:endTime/>
+            </custody>
+            <renumar_editor>
+                <schema:editor>Emilio_Sanfilippo</schema:editor>
+                <foaf:firstName>Emilio</foaf:firstName> 
+                <foaf:lastName>Sanfilippo</foaf:lastName>
+            </renumar_editor>
+            <file>
+                <dcterms:available>2016</dcterms:available>
+                <dcterms:identifier>minute_468942</dcterms:identifier>
+                <dcterms:rights>Creative Commons Attribution - Pas d’Utilisation Commerciale - Partage dans les Mêmes Conditions 4.0 (CC BY-NC-SA 4.0).                      
+                    2016</dcterms:rights>
+                <schema:url>http://renumar.univ-tours.fr/xtf/view?docId=tei/TIPO468942.xml;chunk.id=n1;toc.depth=1;toc.id=n1;brand=default</schema:url>
+            </file>
+        </document>
+        
+        <document>
+            <dcterms:title>Tours__ad_37__e_depot_132/ee_14</dcterms:title>
+            <dcterms:alternative>Loches_:_1574__23_avril</dcterms:alternative>
+            <dcterms:type>Lettre</dcterms:type>
+            <dcterms:subject>Correspondance_administrative</dcterms:subject>
+            <dcterms:extent/>
+            <dcterms:medium>Un feuillet de papier adressé.</dcterms:medium>
+            <bf:part/>
+            <dcterms:language>Français</dcterms:language>
+            <bf:SupplementaryContent/>
+            <dcterms:description>copie 1</dcterms:description>
+            <creation>
+                <dcterms:created>1574-04-23</dcterms:created>
+                <dbo:city>Tours</dbo:city>
+            </creation>
+            <author>
+                <dcterms:creator></dcterms:creator>
+                <foaf:firstName/>
+                <foaf:lastName/>
+                <bf:organization>Loches__corps_de_ville</bf:organization>
+                <bf:role/>
+                <bf:role2/>
+            </author>
+            <custody>
+                <dbo:country>France</dbo:country>
+                <dbo:city>Loches</dbo:city>
+                <bf:organization>Ad_37</bf:organization>
+                <bf:shelfMark>E_DEPOT_132/EE_14</bf:shelfMark>
+                <arco:startTime/>
+                <arco:endTime/>
+            </custody>
+            <renumar_editor>
+                <schema:editor>Jérôme_Salmon</schema:editor>
+                <foaf:firstName>Jérôme</foaf:firstName>
+                <foaf:lastName>Salmon</foaf:lastName>
+            </renumar_editor>
+            <file>
+                <dcterms:available>2018</dcterms:available>
+                <dcterms:identifier>minute_634750</dcterms:identifier>
+                <dcterms:rights>Creative Commons Attribution - Pas d’Utilisation Commerciale - Partage dans les Mêmes Conditions 4.0 (CC BY-NC-SA 4.0).                      
+                    2018</dcterms:rights>
+                <schema:url>http://renumar.univ-tours.fr/xtf/view?docId=tei/TIPO634750.xml;chunk.id=n1;toc.depth=1;toc.id=n1;brand=default</schema:url>
+            </file>
+        </document>    
+        
+        
+        <document>
+            <dcterms:title>Tours__ad_37__e_depot_132/aa_2</dcterms:title>
+            <dcterms:alternative>Tours_:_1572__12_juillet</dcterms:alternative>
+            <dcterms:type>Lettre</dcterms:type>
+            <dcterms:subject>Correspondance_politique</dcterms:subject>
+            <dcterms:extent/>
+            <dcterms:medium/>
+            <bf:part>Lettre n° 119</bf:part>
+            <dcterms:language>Français</dcterms:language>
+            <bf:SupplementaryContent/>
+            <dcterms:description>original</dcterms:description>
+            <creation>
+                <dcterms:created>1572-07-12</dcterms:created>
+                <dbo:city>Tours</dbo:city>
+            </creation>
+            <author>
+                <dcterms:creator>Seigneuret</dcterms:creator>
+                <foaf:firstName/>
+                <foaf:lastName>Seigneuret</foaf:lastName>
+                <bf:organization/>
+                <bf:role>commissaire</bf:role>
+                <bf:role>contrôleur_général_de_l_approvisionnement_de_l_armée_royale</bf:role>
+            </author>
+            <custody>
+                <dbo:country>France</dbo:country>
+                <dbo:city>Tours</dbo:city>
+                <bf:organization>Ad_37</bf:organization>
+                <bf:shelfMark>E_DEPOT_132/AA_2</bf:shelfMark>
+                <arco:startTime/>
+                <arco:endTime/>
+            </custody>
+            <renumar_editor>
+                <schema:editor>Jérôme_Salmon</schema:editor>
+                <foaf:firstName>Jérôme</foaf:firstName>
+                <foaf:lastName>Salmon</foaf:lastName>
+            </renumar_editor>
+            <file>
+                <dcterms:available>2017</dcterms:available>
+                <dcterms:identifier>632218</dcterms:identifier>
+                <dcterms:rights>Creative Commons Attribution - Pas d’Utilisation Commerciale - Partage dans les Mêmes Conditions 4.0 (CC BY-NC-SA 4.0).                      
+                    2017</dcterms:rights>
+                <schema:url>http://renumar.univ-tours.fr/xtf/view?docId=tei/TIPO632218.xml;chunk.id=n1;toc.depth=1;toc.id=n1;brand=default</schema:url>
+            </file>
+        </document>
+        
+        
+        
+        
+        
+    </documents>
+</searchRetrieveResponse>
