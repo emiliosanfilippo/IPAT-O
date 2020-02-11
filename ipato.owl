@@ -17,7 +17,8 @@
      xmlns:bibframe="http://id.loc.gov/ontologies/bibframe/">
     <owl:Ontology rdf:about="http://www.univ-tours.fr/ipato">
         <owl:imports rdf:resource="http://erlangen-crm.org/current/"/>
-        <terms:contributor xml:lang="en">Marion Lamé, Damien Vurpillot
+        <terms:contributor xml:lang="en">Damien Vurpillot
+Johann Forte
 CESR -- University of Tours, France</terms:contributor>
         <terms:creator xml:lang="en">Developed by:
 Emilio M. Sanfilippo and Perrine Thuringer
@@ -152,10 +153,20 @@ CESR -- University of Tours, France</terms:creator>
     
 
 
+    <!-- http://purl.org/cerif/frapo/isEmployedBy -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/cerif/frapo/isEmployedBy">
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://sparontologies.github.io/frapo/current/frapo.html</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.org/dc/terms/creator -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/creator">
-        <owl:inverseOf rdf:resource="http://www.univ-tours.fr/ipato#OWLObjectProperty_00000013"/>
+        <owl:inverseOf rdf:resource="http://www.univ-tours.fr/ipato#created_by"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E39_Actor"/>
     </owl:ObjectProperty>
     
@@ -164,7 +175,7 @@ CESR -- University of Tours, France</terms:creator>
     <!-- http://purl.org/dc/terms/subject -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/subject">
-        <owl:equivalentProperty rdf:resource="http://www.univ-tours.fr/ipato#OWLObjectProperty_00000016"/>
+        <owl:equivalentProperty rdf:resource="http://www.univ-tours.fr/ipato#has_act_form"/>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/dc/terms</rdfs:isDefinedBy>
     </owl:ObjectProperty>
     
@@ -193,35 +204,100 @@ CESR -- University of Tours, France</terms:creator>
     
 
 
-    <!-- http://www.univ-tours.fr/ipato#OWLObjectProperty_00000001 -->
+    <!-- http://www.univ-tours.fr/ipato#archieved_in -->
 
-    <owl:ObjectProperty rdf:about="http://www.univ-tours.fr/ipato#OWLObjectProperty_00000001">
+    <owl:ObjectProperty rdf:about="http://www.univ-tours.fr/ipato#archieved_in">
+        <rdfs:range rdf:resource="http://erlangen-crm.org/current/E53_Place"/>
+        <skos:prefLabel xml:lang="en">archieved in</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.univ-tours.fr/ipato#classification_judgment -->
+
+    <owl:ObjectProperty rdf:about="http://www.univ-tours.fr/ipato#classification_judgment">
+        <rdfs:domain rdf:resource="http://www.univ-tours.fr/ipato#Biological_classification_activity"/>
+        <rdfs:range rdf:resource="http://www.univ-tours.fr/ipato#Classification_judgment"/>
+        <skos:prefLabel xml:lang="en">classification judgment</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.univ-tours.fr/ipato#classified_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.univ-tours.fr/ipato#classified_by">
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://erlangen-crm.org/current/E27_Site"/>
-                    <rdf:Description rdf:about="http://erlangen-crm.org/current/E53_Place"/>
+                    <rdf:Description rdf:about="http://www.univ-tours.fr/ipato#AnimalGroup"/>
+                    <rdf:Description rdf:about="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000001"/>
-        <skos:prefLabel xml:lang="en">has habitat type</skos:prefLabel>
+        <rdfs:range rdf:resource="http://erlangen-crm.org/current/E21_Person"/>
+        <skos:prefLabel xml:lang="en">classified by</skos:prefLabel>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.univ-tours.fr/ipato#OWLObjectProperty_00000002 -->
+    <!-- http://www.univ-tours.fr/ipato#coordinates -->
 
-    <owl:ObjectProperty rdf:about="http://www.univ-tours.fr/ipato#OWLObjectProperty_00000002">
-        <skos:prefLabel xml:lang="en">has member</skos:prefLabel>
+    <owl:ObjectProperty rdf:about="http://www.univ-tours.fr/ipato#coordinates">
+        <owl:inverseOf rdf:resource="http://www.univ-tours.fr/ipato#is_coordinated_by"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.univ-tours.fr/ipato#OWLObjectProperty_00000003 -->
+    <!-- http://www.univ-tours.fr/ipato#created_by -->
 
-    <owl:ObjectProperty rdf:about="http://www.univ-tours.fr/ipato#OWLObjectProperty_00000003">
-        <owl:inverseOf rdf:resource="http://www.univ-tours.fr/ipato#OWLObjectProperty_00000007"/>
+    <owl:ObjectProperty rdf:about="http://www.univ-tours.fr/ipato#created_by">
+        <rdfs:range rdf:resource="http://erlangen-crm.org/current/E39_Actor"/>
+        <skos:prefLabel xml:lang="en">created by</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.univ-tours.fr/ipato#created_in -->
+
+    <owl:ObjectProperty rdf:about="http://www.univ-tours.fr/ipato#created_in">
+        <rdfs:range rdf:resource="http://erlangen-crm.org/current/E53_Place"/>
+        <skos:prefLabel xml:lang="en">created in</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.univ-tours.fr/ipato#edited_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.univ-tours.fr/ipato#edited_by">
+        <rdfs:range rdf:resource="http://erlangen-crm.org/current/E21_Person"/>
+        <skos:prefLabel xml:lang="en">edited by</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">edits</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.univ-tours.fr/ipato#establishes_species_of -->
+
+    <owl:ObjectProperty rdf:about="http://www.univ-tours.fr/ipato#establishes_species_of">
+        <owl:inverseOf rdf:resource="http://www.univ-tours.fr/ipato#species_established_during"/>
+        <rdfs:domain rdf:resource="http://www.univ-tours.fr/ipato#Biological_classification_activity"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.univ-tours.fr/ipato#AnimalGroup"/>
+                    <rdf:Description rdf:about="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <skos:prefLabel xml:lang="en">establishes species of</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.univ-tours.fr/ipato#found_at -->
+
+    <owl:ObjectProperty rdf:about="http://www.univ-tours.fr/ipato#found_at">
+        <owl:inverseOf rdf:resource="http://www.univ-tours.fr/ipato#is_found_with"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E18_Physical_Thing"/>
         <rdfs:range>
             <owl:Class>
@@ -236,54 +312,119 @@ CESR -- University of Tours, France</terms:creator>
     
 
 
-    <!-- http://www.univ-tours.fr/ipato#OWLObjectProperty_00000004 -->
+    <!-- http://www.univ-tours.fr/ipato#has_act_form -->
 
-    <owl:ObjectProperty rdf:about="http://www.univ-tours.fr/ipato#OWLObjectProperty_00000004">
-        <owl:inverseOf rdf:resource="http://www.univ-tours.fr/ipato#OWLObjectProperty_00000008"/>
-        <rdfs:domain rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000006"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.univ-tours.fr/ipato#OWLClass_00000002"/>
-                    <rdf:Description rdf:about="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
-        <skos:prefLabel xml:lang="en">establishes species of</skos:prefLabel>
+    <owl:ObjectProperty rdf:about="http://www.univ-tours.fr/ipato#has_act_form">
+        <rdfs:range rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
+        <rdfs:comment>This relation is introduced to match experts&apos; terminology with respect to the RENUMAR project</rdfs:comment>
+        <skos:prefLabel xml:lang="en">has act from</skos:prefLabel>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.univ-tours.fr/ipato#OWLObjectProperty_00000005 -->
+    <!-- http://www.univ-tours.fr/ipato#has_funding_agency -->
 
-    <owl:ObjectProperty rdf:about="http://www.univ-tours.fr/ipato#OWLObjectProperty_00000005">
+    <owl:ObjectProperty rdf:about="http://www.univ-tours.fr/ipato#has_funding_agency">
+        <owl:inverseOf rdf:resource="http://www.univ-tours.fr/ipato#isFundingAgencyFor"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Project"/>
+        <rdfs:range rdf:resource="http://www.univ-tours.fr/ipato#FundingAgency"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.univ-tours.fr/ipato#has_habitat_type -->
+
+    <owl:ObjectProperty rdf:about="http://www.univ-tours.fr/ipato#has_habitat_type">
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.univ-tours.fr/ipato#OWLClass_00000002"/>
-                    <rdf:Description rdf:about="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
+                    <rdf:Description rdf:about="http://erlangen-crm.org/current/E27_Site"/>
+                    <rdf:Description rdf:about="http://erlangen-crm.org/current/E53_Place"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range rdf:resource="http://erlangen-crm.org/current/E21_Person"/>
-        <skos:prefLabel xml:lang="en">classified by</skos:prefLabel>
+        <rdfs:range rdf:resource="http://www.univ-tours.fr/ipato#Habitat_type"/>
+        <skos:prefLabel xml:lang="en">has habitat type</skos:prefLabel>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.univ-tours.fr/ipato#OWLObjectProperty_00000006 -->
+    <!-- http://www.univ-tours.fr/ipato#has_member -->
 
-    <owl:ObjectProperty rdf:about="http://www.univ-tours.fr/ipato#OWLObjectProperty_00000006">
-        <rdfs:domain rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000006"/>
-        <rdfs:range rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000005"/>
-        <skos:prefLabel xml:lang="en">classification judgment</skos:prefLabel>
+    <owl:ObjectProperty rdf:about="http://www.univ-tours.fr/ipato#has_member">
+        <skos:prefLabel xml:lang="en">has member</skos:prefLabel>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.univ-tours.fr/ipato#OWLObjectProperty_00000007 -->
+    <!-- http://www.univ-tours.fr/ipato#has_participant -->
 
-    <owl:ObjectProperty rdf:about="http://www.univ-tours.fr/ipato#OWLObjectProperty_00000007">
+    <owl:ObjectProperty rdf:about="http://www.univ-tours.fr/ipato#has_participant">
+        <owl:inverseOf rdf:resource="http://www.univ-tours.fr/ipato#participates_in"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Project"/>
+        <rdfs:range rdf:resource="http://erlangen-crm.org/current/E39_Actor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.univ-tours.fr/ipato#has_role -->
+
+    <owl:ObjectProperty rdf:about="http://www.univ-tours.fr/ipato#has_role">
+        <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E21_Person"/>
+        <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Role"/>
+        <skos:prefLabel xml:lang="en">has role</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.univ-tours.fr/ipato#has_scientific_domain -->
+
+    <owl:ObjectProperty rdf:about="http://www.univ-tours.fr/ipato#has_scientific_domain">
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Project"/>
+        <rdfs:range rdf:resource="http://www.univ-tours.fr/ipato#Scientific_domain"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.univ-tours.fr/ipato#isFundingAgencyFor -->
+
+    <owl:ObjectProperty rdf:about="http://www.univ-tours.fr/ipato#isFundingAgencyFor">
+        <rdfs:domain rdf:resource="http://www.univ-tours.fr/ipato#FundingAgency"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Project"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.univ-tours.fr/ipato#is_about -->
+
+    <owl:ObjectProperty rdf:about="http://www.univ-tours.fr/ipato#is_about">
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Project"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.univ-tours.fr/ipato#is_associated_to -->
+
+    <owl:ObjectProperty rdf:about="http://www.univ-tours.fr/ipato#is_associated_to">
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Project"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Group"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.univ-tours.fr/ipato#is_coordinated_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.univ-tours.fr/ipato#is_coordinated_by">
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Project"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.univ-tours.fr/ipato#is_found_with -->
+
+    <owl:ObjectProperty rdf:about="http://www.univ-tours.fr/ipato#is_found_with">
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -296,7 +437,7 @@ CESR -- University of Tours, France</terms:creator>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://erlangen-crm.org/current/E20_Biological_Object"/>
-                    <rdf:Description rdf:about="http://www.univ-tours.fr/ipato#OWLClass_00000002"/>
+                    <rdf:Description rdf:about="http://www.univ-tours.fr/ipato#AnimalGroup"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
@@ -305,32 +446,21 @@ CESR -- University of Tours, France</terms:creator>
     
 
 
-    <!-- http://www.univ-tours.fr/ipato#OWLObjectProperty_00000008 -->
+    <!-- http://www.univ-tours.fr/ipato#participates_in -->
 
-    <owl:ObjectProperty rdf:about="http://www.univ-tours.fr/ipato#OWLObjectProperty_00000008">
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.univ-tours.fr/ipato#OWLClass_00000002"/>
-                    <rdf:Description rdf:about="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:range rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000006"/>
-        <skos:prefLabel xml:lang="en">species established during</skos:prefLabel>
-    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://www.univ-tours.fr/ipato#participates_in"/>
     
 
 
-    <!-- http://www.univ-tours.fr/ipato#OWLObjectProperty_00000009 -->
+    <!-- http://www.univ-tours.fr/ipato#sampled -->
 
-    <owl:ObjectProperty rdf:about="http://www.univ-tours.fr/ipato#OWLObjectProperty_00000009">
-        <owl:inverseOf rdf:resource="http://www.univ-tours.fr/ipato#OWLObjectProperty_00000010"/>
-        <rdfs:domain rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000007"/>
+    <owl:ObjectProperty rdf:about="http://www.univ-tours.fr/ipato#sampled">
+        <owl:inverseOf rdf:resource="http://www.univ-tours.fr/ipato#sampled_during"/>
+        <rdfs:domain rdf:resource="http://www.univ-tours.fr/ipato#Sampling"/>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.univ-tours.fr/ipato#OWLClass_00000002"/>
+                    <rdf:Description rdf:about="http://www.univ-tours.fr/ipato#AnimalGroup"/>
                     <rdf:Description rdf:about="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
                 </owl:unionOf>
             </owl:Class>
@@ -340,30 +470,13 @@ CESR -- University of Tours, France</terms:creator>
     
 
 
-    <!-- http://www.univ-tours.fr/ipato#OWLObjectProperty_00000010 -->
+    <!-- http://www.univ-tours.fr/ipato#sampled_by -->
 
-    <owl:ObjectProperty rdf:about="http://www.univ-tours.fr/ipato#OWLObjectProperty_00000010">
+    <owl:ObjectProperty rdf:about="http://www.univ-tours.fr/ipato#sampled_by">
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.univ-tours.fr/ipato#OWLClass_00000002"/>
-                    <rdf:Description rdf:about="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:range rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000007"/>
-        <skos:prefLabel xml:lang="en">sampled during</skos:prefLabel>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#OWLObjectProperty_00000011 -->
-
-    <owl:ObjectProperty rdf:about="http://www.univ-tours.fr/ipato#OWLObjectProperty_00000011">
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.univ-tours.fr/ipato#OWLClass_00000002"/>
+                    <rdf:Description rdf:about="http://www.univ-tours.fr/ipato#AnimalGroup"/>
                     <rdf:Description rdf:about="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
                 </owl:unionOf>
             </owl:Class>
@@ -374,67 +487,48 @@ CESR -- University of Tours, France</terms:creator>
     
 
 
-    <!-- http://www.univ-tours.fr/ipato#OWLObjectProperty_00000012 -->
+    <!-- http://www.univ-tours.fr/ipato#sampled_during -->
 
-    <owl:ObjectProperty rdf:about="http://www.univ-tours.fr/ipato#OWLObjectProperty_00000012">
-        <rdfs:range rdf:resource="http://erlangen-crm.org/current/E53_Place"/>
-        <skos:prefLabel xml:lang="en">archieved in</skos:prefLabel>
+    <owl:ObjectProperty rdf:about="http://www.univ-tours.fr/ipato#sampled_during">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.univ-tours.fr/ipato#AnimalGroup"/>
+                    <rdf:Description rdf:about="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.univ-tours.fr/ipato#Sampling"/>
+        <skos:prefLabel xml:lang="en">sampled during</skos:prefLabel>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.univ-tours.fr/ipato#OWLObjectProperty_00000013 -->
+    <!-- http://www.univ-tours.fr/ipato#species_established_during -->
 
-    <owl:ObjectProperty rdf:about="http://www.univ-tours.fr/ipato#OWLObjectProperty_00000013">
-        <rdfs:range rdf:resource="http://erlangen-crm.org/current/E39_Actor"/>
-        <skos:prefLabel xml:lang="en">created by</skos:prefLabel>
+    <owl:ObjectProperty rdf:about="http://www.univ-tours.fr/ipato#species_established_during">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.univ-tours.fr/ipato#AnimalGroup"/>
+                    <rdf:Description rdf:about="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.univ-tours.fr/ipato#Biological_classification_activity"/>
+        <skos:prefLabel xml:lang="en">species established during</skos:prefLabel>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.univ-tours.fr/ipato#OWLObjectProperty_00000014 -->
+    <!-- http://www.w3.org/ns/dcat#dataset -->
 
-    <owl:ObjectProperty rdf:about="http://www.univ-tours.fr/ipato#OWLObjectProperty_00000014">
-        <rdfs:range rdf:resource="http://erlangen-crm.org/current/E53_Place"/>
-        <skos:prefLabel xml:lang="en">created in</skos:prefLabel>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#OWLObjectProperty_00000015 -->
-
-    <owl:ObjectProperty rdf:about="http://www.univ-tours.fr/ipato#OWLObjectProperty_00000015">
-        <owl:inverseOf rdf:resource="http://www.univ-tours.fr/ipato#OWLObjectProperty_00000018"/>
-        <rdfs:range rdf:resource="http://erlangen-crm.org/current/E21_Person"/>
-        <skos:prefLabel xml:lang="en">edited by</skos:prefLabel>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#OWLObjectProperty_00000016 -->
-
-    <owl:ObjectProperty rdf:about="http://www.univ-tours.fr/ipato#OWLObjectProperty_00000016">
-        <rdfs:range rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000018"/>
-        <rdfs:comment>This relation is introduced to match experts&apos; terminology with respect to the RENUMAR project</rdfs:comment>
-        <skos:prefLabel xml:lang="en">has act from</skos:prefLabel>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#OWLObjectProperty_00000017 -->
-
-    <owl:ObjectProperty rdf:about="http://www.univ-tours.fr/ipato#OWLObjectProperty_00000017">
-        <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E21_Person"/>
-        <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Role"/>
-        <skos:prefLabel xml:lang="en">has role</skos:prefLabel>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#OWLObjectProperty_00000018 -->
-
-    <owl:ObjectProperty rdf:about="http://www.univ-tours.fr/ipato#OWLObjectProperty_00000018">
-        <skos:prefLabel xml:lang="en">edits</skos:prefLabel>
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/dcat#dataset">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A collection of data that is listed in the catalog</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.w3.org/TR/vocab-dcat-2/</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.w3.org/ns/dcat.html</rdfs:isDefinedBy>
     </owl:ObjectProperty>
     
 
@@ -493,6 +587,14 @@ http://id.loc.gov/ontologies/bibframe.html#</rdfs:comment>
     
 
 
+    <!-- http://purl.org/dc/terms/description -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/description">
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/dc/terms</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://purl.org/dc/terms/identifier -->
 
     <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/identifier"/>
@@ -505,6 +607,14 @@ http://id.loc.gov/ontologies/bibframe.html#</rdfs:comment>
     
 
 
+    <!-- http://schema.org/email -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/email">
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://schema.org/</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://schema.org/url -->
 
     <owl:DatatypeProperty rdf:about="http://schema.org/url">
@@ -513,9 +623,9 @@ http://id.loc.gov/ontologies/bibframe.html#</rdfs:comment>
     
 
 
-    <!-- http://www.univ-tours.fr/ipato#OWLDataProperty_00000001 -->
+    <!-- http://www.univ-tours.fr/ipato#X_WGS_84 -->
 
-    <owl:DatatypeProperty rdf:about="http://www.univ-tours.fr/ipato#OWLDataProperty_00000001">
+    <owl:DatatypeProperty rdf:about="http://www.univ-tours.fr/ipato#X_WGS_84">
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -529,9 +639,9 @@ http://id.loc.gov/ontologies/bibframe.html#</rdfs:comment>
     
 
 
-    <!-- http://www.univ-tours.fr/ipato#OWLDataProperty_00000002 -->
+    <!-- http://www.univ-tours.fr/ipato#Y_WGS_84 -->
 
-    <owl:DatatypeProperty rdf:about="http://www.univ-tours.fr/ipato#OWLDataProperty_00000002">
+    <owl:DatatypeProperty rdf:about="http://www.univ-tours.fr/ipato#Y_WGS_84">
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -545,34 +655,44 @@ http://id.loc.gov/ontologies/bibframe.html#</rdfs:comment>
     
 
 
-    <!-- http://www.univ-tours.fr/ipato#OWLDataProperty_00000003 -->
+    <!-- http://www.univ-tours.fr/ipato#classification_date -->
 
-    <owl:DatatypeProperty rdf:about="http://www.univ-tours.fr/ipato#OWLDataProperty_00000003">
-        <skos:prefLabel xml:lang="en">sampling date</skos:prefLabel>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#OWLDataProperty_00000004 -->
-
-    <owl:DatatypeProperty rdf:about="http://www.univ-tours.fr/ipato#OWLDataProperty_00000004">
-        <skos:prefLabel xml:lang="en">number of individuals</skos:prefLabel>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#OWLDataProperty_00000005 -->
-
-    <owl:DatatypeProperty rdf:about="http://www.univ-tours.fr/ipato#OWLDataProperty_00000005">
+    <owl:DatatypeProperty rdf:about="http://www.univ-tours.fr/ipato#classification_date">
         <skos:prefLabel xml:lang="en">classification date</skos:prefLabel>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.univ-tours.fr/ipato#OWLDataProperty_00000006 -->
+    <!-- http://www.univ-tours.fr/ipato#number_of_individuals -->
 
-    <owl:DatatypeProperty rdf:about="http://www.univ-tours.fr/ipato#OWLDataProperty_00000006">
+    <owl:DatatypeProperty rdf:about="http://www.univ-tours.fr/ipato#number_of_individuals">
+        <skos:prefLabel xml:lang="en">number of individuals</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">status:testing</skos:prefLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.univ-tours.fr/ipato#renumar_identifier -->
+
+    <owl:DatatypeProperty rdf:about="http://www.univ-tours.fr/ipato#renumar_identifier">
         <skos:prefLabel xml:lang="en">renumar identifier</skos:prefLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.univ-tours.fr/ipato#sampling_date -->
+
+    <owl:DatatypeProperty rdf:about="http://www.univ-tours.fr/ipato#sampling_date">
+        <skos:prefLabel xml:lang="en">sampling date</skos:prefLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#accessURL -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/dcat#accessURL">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.w3.org/TR/vocab-dcat-2/</rdfs:isDefinedBy>
     </owl:DatatypeProperty>
     
 
@@ -598,7 +718,6 @@ http://id.loc.gov/ontologies/bibframe.html#</rdfs:comment>
     <!-- http://xmlns.com/foaf/0.1/name -->
 
     <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/name">
-        <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E21_Person"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://xmlns.com/foaf/spec/</rdfs:comment>
     </owl:DatatypeProperty>
     
@@ -663,6 +782,22 @@ http://id.loc.gov/ontologies/bibframe.html#</rdfs:comment>
     
 
 
+    <!-- http://erlangen-crm.org/current/E21_Person -->
+
+    <rdf:Description rdf:about="http://erlangen-crm.org/current/E21_Person">
+        <owl:equivalentClass rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://erlangen-crm.org/current/E39_Actor -->
+
+    <rdf:Description rdf:about="http://erlangen-crm.org/current/E39_Actor">
+        <owl:equivalentClass rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    </rdf:Description>
+    
+
+
     <!-- http://erlangen-crm.org/current/E70_Thing -->
 
     <rdf:Description rdf:about="http://erlangen-crm.org/current/E70_Thing">
@@ -681,10 +816,18 @@ http://id.loc.gov/ontologies/bibframe.html#</rdfs:comment>
     <rdf:Description rdf:about="http://erlangen-crm.org/current/E71_Man-Made_Thing">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.univ-tours.fr/ipato#OWLObjectProperty_00000013"/>
+                <owl:onProperty rdf:resource="http://www.univ-tours.fr/ipato#created_by"/>
                 <owl:someValuesFrom rdf:resource="http://erlangen-crm.org/current/E39_Actor"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://erlangen-crm.org/current/E74_Group -->
+
+    <rdf:Description rdf:about="http://erlangen-crm.org/current/E74_Group">
+        <owl:equivalentClass rdf:resource="http://xmlns.com/foaf/0.1/Group"/>
     </rdf:Description>
     
 
@@ -1278,121 +1421,9 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:isDefinedB
     
 
 
-    <!-- http://www.univ-tours.fr/ipato#OWLClass_00000001 -->
+    <!-- http://www.univ-tours.fr/ipato#Acte_privé -->
 
-    <owl:Class rdf:about="http://www.univ-tours.fr/ipato#OWLClass_00000001">
-        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E55_Type"/>
-        <skos:prefLabel xml:lang="en">Habitat Type</skos:prefLabel>
-    </owl:Class>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#OWLClass_00000002 -->
-
-    <owl:Class rdf:about="http://www.univ-tours.fr/ipato#OWLClass_00000002">
-        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E18_Physical_Thing"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.univ-tours.fr/ipato#OWLObjectProperty_00000002"/>
-                <owl:someValuesFrom rdf:resource="http://erlangen-crm.org/current/E20_Biological_Object"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.univ-tours.fr/ipato#OWLObjectProperty_00000002"/>
-                <owl:allValuesFrom rdf:resource="http://erlangen-crm.org/current/E20_Biological_Object"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <skos:prefLabel>Group</skos:prefLabel>
-    </owl:Class>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#OWLClass_00000003 -->
-
-    <owl:Class rdf:about="http://www.univ-tours.fr/ipato#OWLClass_00000003">
-        <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000002"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.univ-tours.fr/ipato#OWLObjectProperty_00000002"/>
-                <owl:someValuesFrom rdf:resource="http://taxref.mnhn.fr/lod/taxon/222391/10.0"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.univ-tours.fr/ipato#OWLObjectProperty_00000002"/>
-                <owl:allValuesFrom rdf:resource="http://taxref.mnhn.fr/lod/taxon/222391/10.0"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <skos:prefLabel>Group of Agonum afrum</skos:prefLabel>
-    </owl:Class>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#OWLClass_00000004 -->
-
-    <owl:Class rdf:about="http://www.univ-tours.fr/ipato#OWLClass_00000004">
-        <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000002"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.univ-tours.fr/ipato#OWLObjectProperty_00000002"/>
-                <owl:someValuesFrom rdf:resource="http://taxref.mnhn.fr/lod/taxon/222358/10.0"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.univ-tours.fr/ipato#OWLObjectProperty_00000002"/>
-                <owl:allValuesFrom rdf:resource="http://taxref.mnhn.fr/lod/taxon/222358/10.0"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <skos:prefLabel>Group of Calathus rotundicollis</skos:prefLabel>
-    </owl:Class>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#OWLClass_00000005 -->
-
-    <owl:Class rdf:about="http://www.univ-tours.fr/ipato#OWLClass_00000005">
-        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E55_Type"/>
-        <skos:prefLabel xml:lang="en">Classification Judgment</skos:prefLabel>
-    </owl:Class>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#OWLClass_00000006 -->
-
-    <owl:Class rdf:about="http://www.univ-tours.fr/ipato#OWLClass_00000006">
-        <rdfs:subClassOf rdf:resource="http://www.ics.forth.gr/isl/CRMsci/S4_Observation"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.univ-tours.fr/ipato#OWLObjectProperty_00000004"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://erlangen-crm.org/current/E20_Biological_Object"/>
-                            <rdf:Description rdf:about="http://www.univ-tours.fr/ipato#OWLClass_00000002"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <skos:prefLabel>Biological Classification Activity</skos:prefLabel>
-    </owl:Class>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#OWLClass_00000007 -->
-
-    <owl:Class rdf:about="http://www.univ-tours.fr/ipato#OWLClass_00000007">
-        <rdfs:subClassOf rdf:resource="http://www.ics.forth.gr/isl/CRMsci/S4_Observation"/>
-        <skos:prefLabel>Sampling</skos:prefLabel>
-    </owl:Class>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#OWLClass_00000008 -->
-
-    <owl:Class rdf:about="http://www.univ-tours.fr/ipato#OWLClass_00000008">
+    <owl:Class rdf:about="http://www.univ-tours.fr/ipato#Acte_privé">
         <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E31_Document"/>
         <rdfs:seeAlso xml:lang="en">https://legal-dictionary.thefreedictionary.com/Private+act</rdfs:seeAlso>
         <skos:altLabel xml:lang="fr">Private act</skos:altLabel>
@@ -1405,9 +1436,51 @@ operates on the whole community</skos:definition>
     
 
 
-    <!-- http://www.univ-tours.fr/ipato#OWLClass_00000009 -->
+    <!-- http://www.univ-tours.fr/ipato#AnimalGroup -->
 
-    <owl:Class rdf:about="http://www.univ-tours.fr/ipato#OWLClass_00000009">
+    <owl:Class rdf:about="http://www.univ-tours.fr/ipato#AnimalGroup">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E77_Persistent_Item"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This class is not subsumed by E74 Group because it does not commit to the agentivity of groups whose members are non-human animals</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">status: testing</rdfs:comment>
+        <skos:prefLabel xml:lang="en">Animal group</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.univ-tours.fr/ipato#Biological_classification_activity -->
+
+    <owl:Class rdf:about="http://www.univ-tours.fr/ipato#Biological_classification_activity">
+        <rdfs:subClassOf rdf:resource="http://www.ics.forth.gr/isl/CRMsci/S4_Observation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.univ-tours.fr/ipato#establishes_species_of"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://erlangen-crm.org/current/E20_Biological_Object"/>
+                            <rdf:Description rdf:about="http://www.univ-tours.fr/ipato#AnimalGroup"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos:prefLabel>Biological Classification Activity</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.univ-tours.fr/ipato#Classification_judgment -->
+
+    <owl:Class rdf:about="http://www.univ-tours.fr/ipato#Classification_judgment">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E55_Type"/>
+        <skos:prefLabel xml:lang="en">Classification Judgment</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.univ-tours.fr/ipato#Expédition_notariale -->
+
+    <owl:Class rdf:about="http://www.univ-tours.fr/ipato#Expédition_notariale">
         <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E31_Document"/>
         <skos:altLabel xml:lang="fr">Notarial deed</skos:altLabel>
         <skos:definition xml:lang="fr">Acte notarié qui est adressé à un particulier et qui témoigne de l&apos;accord 
@@ -1417,97 +1490,9 @@ passé devant le notaire.</skos:definition>
     
 
 
-    <!-- http://www.univ-tours.fr/ipato#OWLClass_00000010 -->
+    <!-- http://www.univ-tours.fr/ipato#Forme_de_acte -->
 
-    <owl:Class rdf:about="http://www.univ-tours.fr/ipato#OWLClass_00000010">
-        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E31_Document"/>
-        <skos:definition xml:lang="fr">Acte épistolaire de nature privée.</skos:definition>
-        <skos:prefLabel xml:lang="fr">Lettre</skos:prefLabel>
-    </owl:Class>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#OWLClass_00000011 -->
-
-    <owl:Class rdf:about="http://www.univ-tours.fr/ipato#OWLClass_00000011">
-        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E31_Document"/>
-        <skos:definition xml:lang="fr">Lettre du roi à une autorité collective comme à un individu, exprimant un ordre, et expédiée fermée du sceau du secret de cire rouge et présentant certains caractères diplomatiques nettement caractérisés (petite dimension, propos courts, précédés de l&apos;expression &quot;De par le roy&quot;, formule de corroboration, ni d&apos;annonce de sceau).</skos:definition>
-        <skos:prefLabel xml:lang="fr">Lettre close</skos:prefLabel>
-    </owl:Class>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#OWLClass_00000012 -->
-
-    <owl:Class rdf:about="http://www.univ-tours.fr/ipato#OWLClass_00000012">
-        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E31_Document"/>
-        <skos:definition xml:lang="fr">Terme générique pour désigner un acte de chancellerie, dans lequel souverain rend public une décision, un droit, un privilège, ou une action particulière.</skos:definition>
-        <skos:prefLabel xml:lang="fr">Lettres patentes</skos:prefLabel>
-    </owl:Class>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#OWLClass_00000013 -->
-
-    <owl:Class rdf:about="http://www.univ-tours.fr/ipato#OWLClass_00000013">
-        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E31_Document"/>
-        <skos:definition xml:lang="fr">Classe générique qui désigne tout acte issu de l&apos;écrit notarial.</skos:definition>
-        <skos:prefLabel xml:lang="fr">Minute notariale</skos:prefLabel>
-    </owl:Class>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#OWLClass_00000014 -->
-
-    <owl:Class rdf:about="http://www.univ-tours.fr/ipato#OWLClass_00000014">
-        <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000016"/>
-        <skos:definition xml:lang="fr">Cahier qui enregistre et fait foi tous les actes de délibération d&apos;un corps de 
-ville, ainsi qu&apos;un certain nombre d&apos;acte complémentaires (lettres patentes ou closes, morceaux de comptabilité...)</skos:definition>
-        <skos:prefLabel xml:lang="fr">Registre de délibération</skos:prefLabel>
-    </owl:Class>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#OWLClass_00000015 -->
-
-    <owl:Class rdf:about="http://www.univ-tours.fr/ipato#OWLClass_00000015">
-        <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000016"/>
-        <skos:definition xml:lang="fr">Cahier qui enregistre et fait foi tous les actes de la comptabilité d&apos;une autorité (un corps de ville, un chapitre...) pour une année ou une partie d&apos;année, ou pour seulement une partie des comptes (recettes, dépenses...)</skos:definition>
-        <skos:prefLabel xml:lang="fr">Registre particulier de comptes</skos:prefLabel>
-    </owl:Class>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#OWLClass_00000016 -->
-
-    <owl:Class rdf:about="http://www.univ-tours.fr/ipato#OWLClass_00000016">
-        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E31_Document"/>
-        <skos:definition xml:lang="fr">Classe générique pour désigner toute archive sous forme de cahier.</skos:definition>
-        <skos:prefLabel xml:lang="fr">Registre</skos:prefLabel>
-    </owl:Class>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#OWLClass_00000017 -->
-
-    <owl:Class rdf:about="http://www.univ-tours.fr/ipato#OWLClass_00000017">
-        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E31_Document"/>
-        <skos:altLabel xml:lang="fr">lettre close</skos:altLabel>
-        <skos:altLabel xml:lang="fr">lettre fermée</skos:altLabel>
-        <skos:definition xml:lang="fr">Une lettre de cachet  est, sous l’Ancien Régime 
-en France, une lettre servant à la 
-transmission d’un ordre particulier du roi, 
-permettant par exemple l&apos;incarcération sans jugement, 
-l&apos;exil ou encore l&apos;internement de personnes jugées 
-indésirables par le pouvoir.</skos:definition>
-        <skos:prefLabel xml:lang="fr">Lettre de cachet</skos:prefLabel>
-    </owl:Class>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#OWLClass_00000018 -->
-
-    <owl:Class rdf:about="http://www.univ-tours.fr/ipato#OWLClass_00000018">
+    <owl:Class rdf:about="http://www.univ-tours.fr/ipato#Forme_de_acte">
         <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E55_Type"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -1527,12 +1512,233 @@ indésirables par le pouvoir.</skos:definition>
     
 
 
+    <!-- http://www.univ-tours.fr/ipato#FundingAgency -->
+
+    <owl:Class rdf:about="http://www.univ-tours.fr/ipato#FundingAgency">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://sparontologies.github.io/frapo/current/frapo.html</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.univ-tours.fr/ipato#Habitat_type -->
+
+    <owl:Class rdf:about="http://www.univ-tours.fr/ipato#Habitat_type">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E55_Type"/>
+        <skos:prefLabel xml:lang="en">Habitat Type</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.univ-tours.fr/ipato#Lettre -->
+
+    <owl:Class rdf:about="http://www.univ-tours.fr/ipato#Lettre">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E31_Document"/>
+        <skos:definition xml:lang="fr">Acte épistolaire de nature privée.</skos:definition>
+        <skos:prefLabel xml:lang="fr">Lettre</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.univ-tours.fr/ipato#Lettre_close -->
+
+    <owl:Class rdf:about="http://www.univ-tours.fr/ipato#Lettre_close">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E31_Document"/>
+        <skos:definition xml:lang="fr">Lettre du roi à une autorité collective comme à un individu, exprimant un ordre, et expédiée fermée du sceau du secret de cire rouge et présentant certains caractères diplomatiques nettement caractérisés (petite dimension, propos courts, précédés de l&apos;expression &quot;De par le roy&quot;, formule de corroboration, ni d&apos;annonce de sceau).</skos:definition>
+        <skos:prefLabel xml:lang="fr">Lettre close</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.univ-tours.fr/ipato#Lettre_de_cachet -->
+
+    <owl:Class rdf:about="http://www.univ-tours.fr/ipato#Lettre_de_cachet">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E31_Document"/>
+        <skos:altLabel xml:lang="fr">lettre close</skos:altLabel>
+        <skos:altLabel xml:lang="fr">lettre fermée</skos:altLabel>
+        <skos:definition xml:lang="fr">Une lettre de cachet  est, sous l’Ancien Régime 
+en France, une lettre servant à la 
+transmission d’un ordre particulier du roi, 
+permettant par exemple l&apos;incarcération sans jugement, 
+l&apos;exil ou encore l&apos;internement de personnes jugées 
+indésirables par le pouvoir.</skos:definition>
+        <skos:prefLabel xml:lang="fr">Lettre de cachet</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.univ-tours.fr/ipato#Lettres_patentes -->
+
+    <owl:Class rdf:about="http://www.univ-tours.fr/ipato#Lettres_patentes">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E31_Document"/>
+        <skos:definition xml:lang="fr">Terme générique pour désigner un acte de chancellerie, dans lequel souverain rend public une décision, un droit, un privilège, ou une action particulière.</skos:definition>
+        <skos:prefLabel xml:lang="fr">Lettres patentes</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.univ-tours.fr/ipato#Minute_notariale -->
+
+    <owl:Class rdf:about="http://www.univ-tours.fr/ipato#Minute_notariale">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E31_Document"/>
+        <skos:definition xml:lang="fr">Classe générique qui désigne tout acte issu de l&apos;écrit notarial.</skos:definition>
+        <skos:prefLabel xml:lang="fr">Minute notariale</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.univ-tours.fr/ipato#OWLClass_00000003 -->
+
+    <owl:Class rdf:about="http://www.univ-tours.fr/ipato#OWLClass_00000003">
+        <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#AnimalGroup"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.univ-tours.fr/ipato#has_member"/>
+                <owl:someValuesFrom rdf:resource="http://taxref.mnhn.fr/lod/taxon/222391/10.0"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.univ-tours.fr/ipato#has_member"/>
+                <owl:allValuesFrom rdf:resource="http://taxref.mnhn.fr/lod/taxon/222391/10.0"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">status:testing</rdfs:comment>
+        <skos:prefLabel>Group of Agonum afrum</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.univ-tours.fr/ipato#OWLClass_00000004 -->
+
+    <owl:Class rdf:about="http://www.univ-tours.fr/ipato#OWLClass_00000004">
+        <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#AnimalGroup"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.univ-tours.fr/ipato#has_member"/>
+                <owl:someValuesFrom rdf:resource="http://taxref.mnhn.fr/lod/taxon/222358/10.0"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.univ-tours.fr/ipato#has_member"/>
+                <owl:allValuesFrom rdf:resource="http://taxref.mnhn.fr/lod/taxon/222358/10.0"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">status:testing</rdfs:comment>
+        <skos:prefLabel>Group of Calathus rotundicollis</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.univ-tours.fr/ipato#Registre -->
+
+    <owl:Class rdf:about="http://www.univ-tours.fr/ipato#Registre">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E31_Document"/>
+        <skos:definition xml:lang="fr">Classe générique pour désigner toute archive sous forme de cahier.</skos:definition>
+        <skos:prefLabel xml:lang="fr">Registre</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.univ-tours.fr/ipato#Registre_de_délibération -->
+
+    <owl:Class rdf:about="http://www.univ-tours.fr/ipato#Registre_de_délibération">
+        <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Registre"/>
+        <skos:definition xml:lang="fr">Cahier qui enregistre et fait foi tous les actes de délibération d&apos;un corps de 
+ville, ainsi qu&apos;un certain nombre d&apos;acte complémentaires (lettres patentes ou closes, morceaux de comptabilité...)</skos:definition>
+        <skos:prefLabel xml:lang="fr">Registre de délibération</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.univ-tours.fr/ipato#Registre_particulier_de_comptes -->
+
+    <owl:Class rdf:about="http://www.univ-tours.fr/ipato#Registre_particulier_de_comptes">
+        <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Registre"/>
+        <skos:definition xml:lang="fr">Cahier qui enregistre et fait foi tous les actes de la comptabilité d&apos;une autorité (un corps de ville, un chapitre...) pour une année ou une partie d&apos;année, ou pour seulement une partie des comptes (recettes, dépenses...)</skos:definition>
+        <skos:prefLabel xml:lang="fr">Registre particulier de comptes</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.univ-tours.fr/ipato#Sampling -->
+
+    <owl:Class rdf:about="http://www.univ-tours.fr/ipato#Sampling">
+        <rdfs:subClassOf rdf:resource="http://www.ics.forth.gr/isl/CRMsci/S4_Observation"/>
+        <skos:prefLabel>Sampling</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.univ-tours.fr/ipato#Scientific_domain -->
+
+    <owl:Class rdf:about="http://www.univ-tours.fr/ipato#Scientific_domain"/>
+    
+
+
     <!-- http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod -->
 
     <owl:Class rdf:about="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod">
         <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E20_Biological_Object"/>
         <skos:prefLabel>Terrestrial macro-arthropod</skos:prefLabel>
     </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#Catalog -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/dcat#Catalog">
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.w3.org/TR/vocab-dcat-2/</rdfs:isDefinedBy>
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A curated collection of metadata about resources (e.g., datasets and data services in the context of a data catalog)</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#Dataset -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/dcat#Dataset">
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.w3.org/TR/vocab-dcat-2/</rdfs:isDefinedBy>
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A collection of data, published or curated by a single agent, and available for access or download in one or more representations.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Agent -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Agent">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E77_Persistent_Item"/>
+    </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Group -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Group">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E39_Actor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Organization -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Organization">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E39_Actor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Person -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E20_Biological_Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Project -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Project"/>
     
 
 
@@ -1544,6 +1750,18 @@ indésirables par le pouvoir.</skos:definition>
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://www.univ-tours.fr/ipato#Accord -->
+
+    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Accord">
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
+        <skos:altLabel xml:lang="en">Contract</skos:altLabel>
+        <skos:definition xml:lang="en">A deed by which at least two individuals, acting in their own name or as representatives of a group of persons, agree on a negotiation of any kind (commercial, financial, legal, etc.).</skos:definition>
+        <skos:definition xml:lang="fr">Acte par lequel au moins deux individus, agissant en leur nom propre ou comme représentants d&apos;un groupe de personnes, s&apos;entendent sur une négociation de quelque nature qu&apos;elle soit (commerciale, financière, juridique, etc.).</skos:definition>
+        <skos:prefLabel xml:lang="fr">Accord</skos:prefLabel>
+    </owl:NamedIndividual>
     
 
 
@@ -1617,6 +1835,15 @@ indésirables par le pouvoir.</skos:definition>
     
 
 
+    <!-- http://www.univ-tours.fr/ipato#Considerable_doubt_about_species -->
+
+    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Considerable_doubt_about_species">
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Classification_judgment"/>
+        <skos:prefLabel>Considerable doubt about the species</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.univ-tours.fr/ipato#David_Rivaud -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#David_Rivaud">
@@ -1655,12 +1882,21 @@ indésirables par le pouvoir.</skos:definition>
     
 
 
+    <!-- http://www.univ-tours.fr/ipato#Low_doubt_about_species -->
+
+    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Low_doubt_about_species">
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Classification_judgment"/>
+        <skos:prefLabel>Low doubt about the species</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.univ-tours.fr/ipato#Marchant -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Marchant">
         <rdf:type rdf:resource="http://erlangen-crm.org/current/E21_Person"/>
-        <OWLObjectProperty_00000017 rdf:resource="http://www.univ-tours.fr/ipato#Notary"/>
-        <OWLObjectProperty_00000017 rdf:resource="http://www.univ-tours.fr/ipato#Royal_Secretary"/>
+        <has_role rdf:resource="http://www.univ-tours.fr/ipato#Notary"/>
+        <has_role rdf:resource="http://www.univ-tours.fr/ipato#Royal_Secretary"/>
     </owl:NamedIndividual>
     
 
@@ -1675,6 +1911,15 @@ indésirables par le pouvoir.</skos:definition>
     
 
 
+    <!-- http://www.univ-tours.fr/ipato#No_doubt_about_species -->
+
+    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#No_doubt_about_species">
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Classification_judgment"/>
+        <skos:prefLabel>No doubt about the species</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.univ-tours.fr/ipato#Notary -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Notary">
@@ -1683,172 +1928,10 @@ indésirables par le pouvoir.</skos:definition>
     
 
 
-    <!-- http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000001 -->
-
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000001">
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E27_Site"/>
-        <OWLObjectProperty_00000001 rdf:resource="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000007"/>
-        <OWLDataProperty_00000001 rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">1,635581994</OWLDataProperty_00000001>
-        <OWLDataProperty_00000002 rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">47,769843</OWLDataProperty_00000002>
-        <skos:prefLabel>2018_BD_01t</skos:prefLabel>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000002 -->
-
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000002">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000007"/>
-        <current:P14_carried_out_by rdf:resource="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000015"/>
-        <CRMsci:O8_observed rdf:resource="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000001"/>
-        <OWLObjectProperty_00000009 rdf:resource="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000009"/>
-        <OWLDataProperty_00000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-8-23</OWLDataProperty_00000003>
-        <skos:prefLabel>sampling process id00000002</skos:prefLabel>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000003 -->
-
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000003">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000001"/>
-        <skos:prefLabel>softwood</skos:prefLabel>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000004 -->
-
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000004">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000001"/>
-        <skos:prefLabel>soft_shrubby_wood</skos:prefLabel>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000005 -->
-
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000005">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000001"/>
-        <skos:prefLabel>shore</skos:prefLabel>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000006 -->
-
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000006">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000001"/>
-        <skos:prefLabel>meadow</skos:prefLabel>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000007 -->
-
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000007">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000001"/>
-        <skos:prefLabel>hardwood</skos:prefLabel>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000008 -->
-
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000008">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000001"/>
-        <skos:prefLabel>dry_channel</skos:prefLabel>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000009 -->
-
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000009">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000004"/>
-        <OWLObjectProperty_00000003 rdf:resource="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000001"/>
-        <OWLObjectProperty_00000005 rdf:resource="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000014"/>
-        <OWLObjectProperty_00000011 rdf:resource="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000015"/>
-        <OWLDataProperty_00000004 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</OWLDataProperty_00000004>
-        <skos:prefLabel>group of insects 00000009</skos:prefLabel>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000010 -->
-
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000010">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000006"/>
-        <current:P14_carried_out_by rdf:resource="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000014"/>
-        <OWLObjectProperty_00000004 rdf:resource="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000009"/>
-        <OWLObjectProperty_00000006 rdf:resource="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000011"/>
-        <OWLDataProperty_00000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#gYearMonth">2018-12</OWLDataProperty_00000005>
-        <skos:prefLabel>classification activity 00000010</skos:prefLabel>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000011 -->
-
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000011">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000005"/>
-        <skos:prefLabel>No doubt about the species</skos:prefLabel>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000012 -->
-
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000012">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000005"/>
-        <skos:prefLabel>Low doubt about the species</skos:prefLabel>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000013 -->
-
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000013">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000005"/>
-        <skos:prefLabel>Considerable doubt about the species</skos:prefLabel>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000014 -->
-
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000014">
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E21_Person"/>
-        <skos:prefLabel>Olivier DENUX</skos:prefLabel>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000015 -->
-
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000015">
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E21_Person"/>
-        <skos:prefLabel>Sébastien DAMOISEAU</skos:prefLabel>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000018 -->
-
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000018">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000018"/>
-        <skos:altLabel xml:lang="en">Contract</skos:altLabel>
-        <skos:definition xml:lang="en">A deed by which at least two individuals, acting in their own name or as representatives of a group of persons, agree on a negotiation of any kind (commercial, financial, legal, etc.).</skos:definition>
-        <skos:definition xml:lang="fr">Acte par lequel au moins deux individus, agissant en leur nom propre ou comme représentants d&apos;un groupe de personnes, s&apos;entendent sur une négociation de quelque nature qu&apos;elle soit (commerciale, financière, juridique, etc.).</skos:definition>
-        <skos:prefLabel xml:lang="fr">Accord</skos:prefLabel>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000019 -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000019">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000018"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
         <skos:altLabel xml:lang="en">Act of renoun</skos:altLabel>
         <skos:altLabel xml:lang="en">Deed of notoriety</skos:altLabel>
         <skos:definition xml:lang="fr">Témoignage écrit par lequel une ou plusieurs personnes attestent un fait, un statut individuel, par exemple, comme connu et avéré, faute d&apos;une preuve écrite.</skos:definition>
@@ -1861,7 +1944,7 @@ indésirables par le pouvoir.</skos:definition>
     <!-- http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000020 -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000020">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000018"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
         <skos:altLabel xml:lang="en">Summons to appear</skos:altLabel>
         <skos:definition xml:lang="en">A deed by which a person is formally summoned before a legal body, whether local, in the context of seigniorial justice for example, or at the level of the kingdom in the case of a summons to appear before a Parliament.</skos:definition>
         <skos:definition xml:lang="fr">Acte par lequel une personne est formellement convoquée devant une instance juridique qu&apos;elle soit locale, dans le cadre de la justice seigneuriale par exemple, ou à l&apos;échelle du royaume s&apos;il s&apos;agit d&apos;une convocation devant un Parlement.</skos:definition>
@@ -1873,7 +1956,7 @@ indésirables par le pouvoir.</skos:definition>
     <!-- http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000021 -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000021">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000018"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
         <skos:altLabel xml:lang="en">Collaboration</skos:altLabel>
         <skos:definition xml:lang="en">Acte par lequel au moins deux individus mettent en commun des moyens fonciers et/ou matériels pour la réalisation d&apos;une entreprise, le plus souvent commerciale.</skos:definition>
         <skos:definition xml:lang="en">Deed by which at least two individuals pool property and/or material resources to carry out a venture, most often a commercial one.</skos:definition>
@@ -1885,7 +1968,7 @@ indésirables par le pouvoir.</skos:definition>
     <!-- http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000022 -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000022">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000018"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
         <skos:altLabel xml:lang="en">Declaration</skos:altLabel>
         <skos:definition xml:lang="en">Declaration of possession of land or real estate attached to a fief formulated by a vassal to his suzerain.</skos:definition>
         <skos:definition xml:lang="en">Déclaration de possession d&apos;un bien foncier ou immobilier rattaché à un fief formulée par un vassal à son suzerain.</skos:definition>
@@ -1897,7 +1980,7 @@ indésirables par le pouvoir.</skos:definition>
     <!-- http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000023 -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000023">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000018"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
         <skos:altLabel xml:lang="en">Lease</skos:altLabel>
         <skos:definition xml:lang="en">Contract by which one of the parties (called lessor), landowner or real estate owner, undertakes to transfer the occupation of his movable or immovable property to a third party (the lessee) for a limited period of time in return for the payment of a rent.</skos:definition>
         <skos:definition xml:lang="fr">Contrat par lequel l&apos;une des parties (appelée bailleur), propriétaire foncier ou immobilier, s&apos;engage à céder pour un temps délimité, l&apos;occupation de son bien mobilier ou immobilier à une tierce personne (le prenneur) moyennant le versement d&apos;un loyer.</skos:definition>
@@ -1909,7 +1992,7 @@ indésirables par le pouvoir.</skos:definition>
     <!-- http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000024 -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000024">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000018"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
         <skos:altLabel xml:lang="en">Cens lease</skos:altLabel>
         <skos:definition xml:lang="en">Contract by which one of the parties (called the lessor), owner of land or property, undertakes to transfer the occupation of his property to a third person (the lessee) in return for the payment of a cens.</skos:definition>
         <skos:definition xml:lang="fr">Contrat par lequel l&apos;une des parties (appelée bailleur), propriétaire foncier ou immobilier, s&apos;engage à céder l&apos;occupation de son bien à une tierce personne (le prenneur) moyennant le versement d&apos;un cens.</skos:definition>
@@ -1921,7 +2004,7 @@ indésirables par le pouvoir.</skos:definition>
     <!-- http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000025 -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000025">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000018"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
         <skos:definition xml:lang="en">Contract by which one of the parties (called the lessor), a land or property owner, undertakes to transfer the occupation of a property placed under the lease system to a third party (the lessee) and which defines the financial and material terms and conditions for the occupation and management of the property.</skos:definition>
         <skos:definition xml:lang="fr">Contrat par lequel l&apos;une des parties (appelée bailleur), propriétaire foncier ou immobilier, s&apos;engage à céder l&apos;occupation d&apos;un bien placé sous le régime de l&apos;affermage à une tierce personne (le prenneur) et qui définit les modalités financières et matérielles de l&apos;occupation et de la gestion du bien.</skos:definition>
         <skos:prefLabel xml:lang="fr">Bail à ferme</skos:prefLabel>
@@ -1932,7 +2015,7 @@ indésirables par le pouvoir.</skos:definition>
     <!-- http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000026 -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000026">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000018"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
         <skos:definition xml:lang="fr">Contrat par lequel l&apos;une des parties (appelée bailleur), propriétaire foncier ou immobilier, s&apos;engage à céder l&apos;occupation d&apos;un bien placé sous le régime de la métairie à une tierce personne (le prenneur) et qui définit les modalités financières et matérielles de l&apos;occupation et de la gestion du bien.</skos:definition>
         <skos:prefLabel xml:lang="fr">Bail à métairie</skos:prefLabel>
     </owl:NamedIndividual>
@@ -1942,7 +2025,7 @@ indésirables par le pouvoir.</skos:definition>
     <!-- http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000027 -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000027">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000018"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
         <skos:definition xml:lang="fr">Contrat d’aliénation d’un immeuble (généralement une terre ou une maison) sur lequel le bailleur se réserve le droit de percevoir une partie des revenus, sous la forme d’une redevance (la rente) annuelle et perpétuelle</skos:definition>
         <skos:prefLabel xml:lang="fr">Bail à rente</skos:prefLabel>
     </owl:NamedIndividual>
@@ -1952,7 +2035,7 @@ indésirables par le pouvoir.</skos:definition>
     <!-- http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000028 -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000028">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000018"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
         <skos:definition xml:lang="fr">Contrat illimité dans le temps par lequel l&apos;une des parties (appelée bailleur), propriétaire foncier ou immobilier, s&apos;engage à céder l&apos;occupation d&apos;un bien à une tierce personne (le prenneur) et qui définit les modalités financières et matérielles de l&apos;occupation et de la gestion du bien.</skos:definition>
         <skos:prefLabel xml:lang="fr">Bail perpétuel</skos:prefLabel>
     </owl:NamedIndividual>
@@ -1962,7 +2045,7 @@ indésirables par le pouvoir.</skos:definition>
     <!-- http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000029 -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000029">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000018"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
         <skos:definition xml:lang="fr">Acte par lequel une personne se porte financièrement garante d&apos;une seconde, pour une somme précise et définie, dans le cadre d&apos;une transaction commerciale, le plus souvent.</skos:definition>
         <skos:prefLabel xml:lang="fr">Cautionnement</skos:prefLabel>
     </owl:NamedIndividual>
@@ -1972,7 +2055,7 @@ indésirables par le pouvoir.</skos:definition>
     <!-- http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000030 -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000030">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000018"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
         <skos:altLabel xml:lang="en">Transfer</skos:altLabel>
         <skos:definition xml:lang="fr">Acte par lequel une personne transfère gratuitement à une autre un bien foncier, un bien meuble ou immeuble, un ou plusieurs droits, etc.</skos:definition>
         <skos:prefLabel xml:lang="fr">Cession</skos:prefLabel>
@@ -1983,7 +2066,7 @@ indésirables par le pouvoir.</skos:definition>
     <!-- http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000031 -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000031">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000018"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
         <skos:definition xml:lang="fr">Document qui liste de façon plus ou moins détaillée des sommes d&apos;argent reçues et/ou dépensées dans un cadre spécifique généralement précisée en début et qui sert à de sfins de vérification et de gestion comptable et financière.</skos:definition>
         <skos:prefLabel xml:lang="fr">Compte</skos:prefLabel>
     </owl:NamedIndividual>
@@ -1993,7 +2076,7 @@ indésirables par le pouvoir.</skos:definition>
     <!-- http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000032 -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000032">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000018"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
         <skos:definition xml:lang="fr">Acte par lequel une personne accepte officiellement une transaction, un accord, etc.</skos:definition>
         <skos:prefLabel xml:lang="fr">Consentement</skos:prefLabel>
     </owl:NamedIndividual>
@@ -2003,7 +2086,7 @@ indésirables par le pouvoir.</skos:definition>
     <!-- http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000033 -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000033">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000018"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
         <skos:definition xml:lang="fr">Acte par lequel une personne assujetti un bien foncier ou immobilier à une rente, c&apos;est-à-dire à une redevance généralement annuelle due par l&apos;occupant du bien à son propriétaire.</skos:definition>
         <skos:prefLabel xml:lang="fr">Constitution de rente</skos:prefLabel>
     </owl:NamedIndividual>
@@ -2013,7 +2096,7 @@ indésirables par le pouvoir.</skos:definition>
     <!-- http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000035 -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000035">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000018"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
         <skos:altLabel xml:lang="en">Contract</skos:altLabel>
         <skos:definition xml:lang="fr">Acte juridique établissant les modalités de toutes transaction ou de relation entre personnes.</skos:definition>
         <skos:prefLabel xml:lang="fr">Contrat</skos:prefLabel>
@@ -2024,7 +2107,7 @@ indésirables par le pouvoir.</skos:definition>
     <!-- http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000036 -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000036">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000018"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
         <skos:altLabel xml:lang="en">Apprenticeship contract</skos:altLabel>
         <skos:definition xml:lang="fr">Acte établissant les modalités temporelles, morales, matérielles et financières de la prise en charge par un artisan établi d&apos;un apprenti.</skos:definition>
         <skos:prefLabel xml:lang="fr">Contrat d&apos;apprentissage</skos:prefLabel>
@@ -2035,7 +2118,7 @@ indésirables par le pouvoir.</skos:definition>
     <!-- http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000037 -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000037">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000018"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
         <skos:altLabel xml:lang="en">Marriage contract</skos:altLabel>
         <skos:definition xml:lang="en">Acte établissant les modalités morales, matérielles et financières d&apos;une union maritale entre deux personnes.</skos:definition>
         <skos:prefLabel xml:lang="fr">Contrat de mariage</skos:prefLabel>
@@ -2046,7 +2129,7 @@ indésirables par le pouvoir.</skos:definition>
     <!-- http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000038 -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000038">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000018"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
         <skos:altLabel xml:lang="en">Administrative correspondance</skos:altLabel>
         <skos:altLabel xml:lang="fr">Ensemble des échanges épistolaires entre des personnes d&apos;une même autorité administrative pour le bon fonctionnement de l&apos;autorité en question.</skos:altLabel>
         <skos:prefLabel xml:lang="fr">Correspondance administrative</skos:prefLabel>
@@ -2057,7 +2140,7 @@ indésirables par le pouvoir.</skos:definition>
     <!-- http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000039 -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000039">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000018"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
         <skos:altLabel xml:lang="en">Political correspondance</skos:altLabel>
         <skos:definition xml:lang="fr">Ensemble des échanges épistolaires qui ont eu lieu entre des autorités politiques différentes via leurs représentants.</skos:definition>
         <skos:prefLabel xml:lang="fr">Correspondance politique</skos:prefLabel>
@@ -2068,7 +2151,7 @@ indésirables par le pouvoir.</skos:definition>
     <!-- http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000040 -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000040">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000018"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
         <skos:definition xml:lang="fr">Ensemble des débats et des prises de décision qui ont lieu au sein d&apos;une autorité municipale à l&apos;occasion des conseils du corps de ville.</skos:definition>
         <skos:prefLabel xml:lang="fr">Délibération de corps de ville</skos:prefLabel>
     </owl:NamedIndividual>
@@ -2078,7 +2161,7 @@ indésirables par le pouvoir.</skos:definition>
     <!-- http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000041 -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000041">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000018"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
         <skos:definition xml:lang="fr">Acte par lequel une personne fournit à une autorité judiciaire ou juridique son témoignange sur un fait.</skos:definition>
         <skos:prefLabel xml:lang="fr">Déposition</skos:prefLabel>
     </owl:NamedIndividual>
@@ -2088,7 +2171,7 @@ indésirables par le pouvoir.</skos:definition>
     <!-- http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000042 -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000042">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000018"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
         <skos:altLabel xml:lang="en">Deed of gift</skos:altLabel>
         <skos:definition xml:lang="fr">Acte témoignant d&apos;une donation.</skos:definition>
         <skos:prefLabel xml:lang="fr">Don</skos:prefLabel>
@@ -2099,7 +2182,7 @@ indésirables par le pouvoir.</skos:definition>
     <!-- http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000043 -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000043">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000018"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
         <skos:definition xml:lang="fr">Acte par lequel une personne cède de façon gratuite à une autre personne ou à un ensemble de personnes un bien, des droits, une charge, etc.</skos:definition>
         <skos:prefLabel xml:lang="fr">Donation</skos:prefLabel>
     </owl:NamedIndividual>
@@ -2109,7 +2192,7 @@ indésirables par le pouvoir.</skos:definition>
     <!-- http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000044 -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000044">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000018"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
         <skos:definition xml:lang="fr">Transaction par laquelle deux personnes se donnent mutuellement un ou plusieurs biens ou droits fonciers, mobiliers et/ou immobiliers de valeurs équivalentes, sans engagement de numéraire sauf dans le cas d&apos;une compensation en cas d&apos;inégalité de valeur.</skos:definition>
         <skos:prefLabel xml:lang="fr">Echange</skos:prefLabel>
     </owl:NamedIndividual>
@@ -2119,7 +2202,7 @@ indésirables par le pouvoir.</skos:definition>
     <!-- http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000045 -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000045">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000018"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
         <skos:definition xml:lang="fr">Document non officiel livrant de sinformations sur l&apos;individualité de la personne rédactrice.</skos:definition>
         <skos:prefLabel xml:lang="fr">Ecrits du for privé</skos:prefLabel>
     </owl:NamedIndividual>
@@ -2129,7 +2212,7 @@ indésirables par le pouvoir.</skos:definition>
     <!-- http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000046 -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000046">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000018"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
         <skos:definition xml:lang="fr">Document par lequel une personne commande à une communauté religieuse régulière ou séculière la prononciation d&apos;une ou plusieurs messes, le plus souvent pour le salut post mortem de son âme et/ou pour le souvenir de ses proches défunts, en échange d&apos;une contrepartie financière pouvant prendre plusieurs formes.</skos:definition>
         <skos:prefLabel xml:lang="fr">Fondation</skos:prefLabel>
     </owl:NamedIndividual>
@@ -2139,7 +2222,7 @@ indésirables par le pouvoir.</skos:definition>
     <!-- http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000047 -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000047">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000018"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
         <skos:definition xml:lang="fr">Liste des biens mobiliers, le plus souvent, détenus par une personne décédée dans sa ou ses résidences à des fins de partage ultérieur.</skos:definition>
         <skos:prefLabel xml:lang="fr">Inventaire après décès</skos:prefLabel>
     </owl:NamedIndividual>
@@ -2149,7 +2232,7 @@ indésirables par le pouvoir.</skos:definition>
     <!-- http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000048 -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000048">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000018"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
         <skos:definition xml:lang="fr">Donation régie par prédisposition testamentaire.</skos:definition>
         <skos:prefLabel xml:lang="fr">Leg</skos:prefLabel>
     </owl:NamedIndividual>
@@ -2159,7 +2242,7 @@ indésirables par le pouvoir.</skos:definition>
     <!-- http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000049 -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000049">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000018"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
         <skos:definition xml:lang="fr">Acte par lequel une personne ordonne le payement d&apos;une somme précise.</skos:definition>
         <skos:prefLabel xml:lang="fr">Mandement de paiement</skos:prefLabel>
     </owl:NamedIndividual>
@@ -2169,7 +2252,7 @@ indésirables par le pouvoir.</skos:definition>
     <!-- http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000050 -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000050">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000018"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
         <skos:definition xml:lang="fr">Acte par lequel une personne passe commande auprès d&apos;un artiste ou d&apos;un artisan.</skos:definition>
         <skos:prefLabel xml:lang="fr">Marché</skos:prefLabel>
     </owl:NamedIndividual>
@@ -2179,7 +2262,7 @@ indésirables par le pouvoir.</skos:definition>
     <!-- http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000051 -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000051">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000018"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
         <skos:definition xml:lang="fr">Acte par lequel un propriétaire foncier place la gestion agricole de sa terre sous le régime de la métairie.</skos:definition>
         <skos:prefLabel xml:lang="fr">Métayage</skos:prefLabel>
     </owl:NamedIndividual>
@@ -2189,7 +2272,7 @@ indésirables par le pouvoir.</skos:definition>
     <!-- http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000052 -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000052">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000018"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
         <skos:definition xml:lang="fr">Acte par lequel une personne s&apos;engage officiellement à peyer une somme d&apos;argent définie en prenant un bien ou plusieurs biens fonciers ou immeubles de valeur équivalente à la dette comme garantie de payement.</skos:definition>
         <skos:prefLabel xml:lang="fr">Obligation</skos:prefLabel>
     </owl:NamedIndividual>
@@ -2199,7 +2282,7 @@ indésirables par le pouvoir.</skos:definition>
     <!-- http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000053 -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000053">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000018"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
         <skos:definition xml:lang="fr">Acte de chancellerie qui étend les effets d&apos;une délibération royale ou princière à tout un territoire.</skos:definition>
         <skos:prefLabel xml:lang="fr">Ordonnance</skos:prefLabel>
     </owl:NamedIndividual>
@@ -2209,7 +2292,7 @@ indésirables par le pouvoir.</skos:definition>
     <!-- http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000054 -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000054">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000018"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
         <skos:definition xml:lang="fr">Acte par lequel au moins deux personnes se divisent un bien foncier ou immobilier, ou un ensemble de bien comme, par exemple, dans le cadre d&apos;une succession.</skos:definition>
         <skos:prefLabel xml:lang="fr">Partage</skos:prefLabel>
     </owl:NamedIndividual>
@@ -2219,7 +2302,7 @@ indésirables par le pouvoir.</skos:definition>
     <!-- http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000055 -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000055">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000018"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
         <skos:definition xml:lang="fr">Acte établissant l&apos;argumentaire d&apos;une personne devant une instance juridique.</skos:definition>
         <skos:prefLabel xml:lang="fr">Plaidoyer</skos:prefLabel>
     </owl:NamedIndividual>
@@ -2229,7 +2312,7 @@ indésirables par le pouvoir.</skos:definition>
     <!-- http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000056 -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000056">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000018"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
         <skos:prefLabel xml:lang="fr">Procès-verbal</skos:prefLabel>
     </owl:NamedIndividual>
     
@@ -2238,7 +2321,7 @@ indésirables par le pouvoir.</skos:definition>
     <!-- http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000057 -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000057">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000018"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
         <skos:definition xml:lang="fr">Acte par lequel une personne délègue à une autre personne tout ou partie de ses droits pour la représenter devant toute instance officielle.</skos:definition>
         <skos:prefLabel xml:lang="fr">Procuration</skos:prefLabel>
     </owl:NamedIndividual>
@@ -2248,7 +2331,7 @@ indésirables par le pouvoir.</skos:definition>
     <!-- http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000058 -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000058">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000018"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
         <skos:definition xml:lang="fr">Acte par lequel l&apos;acheteur d&apos;un bien, le plus souvent foncier, accorde à son vendeur l&apos;extension dans le temps de sa faculté de récupérer de façon onéreuse le bien vendu, au-delà de la clause initialement contractualisée.</skos:definition>
         <skos:prefLabel xml:lang="fr">Prolongation de réméré</skos:prefLabel>
     </owl:NamedIndividual>
@@ -2258,148 +2341,79 @@ indésirables par le pouvoir.</skos:definition>
     <!-- http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000059 -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000059">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000018"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
         <skos:definition xml:lang="fr">Acte par lequel une personne s&apos;engage officiellement auprès d&apos;une autre personne pour une transaction gratuite ou onéreuse.</skos:definition>
         <skos:prefLabel xml:lang="fr">Promesse</skos:prefLabel>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000060 -->
+    <!-- http://www.univ-tours.fr/ipato#Promesse_de_vente -->
 
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000060">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000018"/>
+    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Promesse_de_vente">
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
         <skos:definition xml:lang="fr">Acte par lequel un vendeur s&apos;engage auprès d&apos;un acheteur à lui vendre un bien immobilier, principalement.</skos:definition>
         <skos:prefLabel xml:lang="fr">Promesse de vente</skos:prefLabel>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000061 -->
+    <!-- http://www.univ-tours.fr/ipato#Provision_office -->
 
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000061">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000018"/>
+    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Provision_office">
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
         <skos:definition xml:lang="fr">Acte délivré par me pouvoir royal par lequel une personne est officiellement investie d&apos;un charge ou d&apos;une fonction délivrée</skos:definition>
         <skos:prefLabel xml:lang="fr">Provision d&apos;office</skos:prefLabel>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000062 -->
+    <!-- http://www.univ-tours.fr/ipato#Quittance -->
 
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000062">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000018"/>
+    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Quittance">
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
         <skos:definition xml:lang="fr">Document attestant du verseent ou de la réception d&apos;une somme d&apos;argent, le plus souvent.</skos:definition>
         <skos:prefLabel xml:lang="fr">Quittance</skos:prefLabel>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000063 -->
+    <!-- http://www.univ-tours.fr/ipato#Ratification -->
 
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000063">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000018"/>
+    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Ratification">
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
         <skos:definition xml:lang="fr">Acte par lequel une personne valide la signature d&apos;un acte initialement contracté par une tierce personne la représentant auprès d&apos;une instance juridique.</skos:definition>
         <skos:prefLabel xml:lang="fr">Ratification</skos:prefLabel>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000064 -->
+    <!-- http://www.univ-tours.fr/ipato#Reconnaissance -->
 
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000064">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000018"/>
+    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Reconnaissance">
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
         <skos:definition xml:lang="fr">Acte par lequel une personne reconnait quelque chose.</skos:definition>
         <skos:prefLabel xml:lang="fr">Reconnaissance</skos:prefLabel>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000065 -->
+    <!-- http://www.univ-tours.fr/ipato#Reconnaissance_de_dette -->
 
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000065">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000018"/>
+    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Reconnaissance_de_dette">
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
         <skos:definition xml:lang="fr">Acte par lequel une personne agissant en son nom propre ou pour le compte d&apos;un groupe de personnes atteste devoir à une autre personne une somme qui luia été prêtée ou qui reste à payer sur un marché.</skos:definition>
         <skos:prefLabel xml:lang="fr">Reconnaissance de dette</skos:prefLabel>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000066 -->
+    <!-- http://www.univ-tours.fr/ipato#Renonciation -->
 
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000066">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000018"/>
+    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Renonciation">
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
         <skos:definition xml:lang="fr">Acte par lequel une personne renonce définitivement à un droit, un bien ou une fonction, par exemple.</skos:definition>
         <skos:prefLabel xml:lang="fr">Renonciation</skos:prefLabel>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000067 -->
-
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000067">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000018"/>
-        <skos:definition xml:lang="fr">Acte par lequel une personne détentrice d&apos;une charge ou d&apos;une fonction en signifie son abandon définitif.</skos:definition>
-        <skos:prefLabel xml:lang="fr">Révocation</skos:prefLabel>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000068 -->
-
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000068">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000018"/>
-        <skos:definition xml:lang="fr">Acte par lequel une instance juridique rend son jugement officiel à l&apos;encontre d&apos;une des parties mises en cause.</skos:definition>
-        <skos:prefLabel xml:lang="fr">Sentence</skos:prefLabel>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000069 -->
-
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000069">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000018"/>
-        <skos:definition xml:lang="fr">Document officiel par lequel une personne fait part de ses dernières volontés. Un testament peu faire l&apos;objet de plusieurs versions.</skos:definition>
-        <skos:prefLabel xml:lang="fr">Testament</skos:prefLabel>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000070 -->
-
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000070">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000018"/>
-        <skos:prefLabel xml:lang="fr">Transfert</skos:prefLabel>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000071 -->
-
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000071">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000018"/>
-        <skos:definition xml:lang="fr">Acte par lequel une personne détentrice des droits de recouvrement d&apos;une dette auprès d&apos;une autre personne ou groupe de personnes cède gratuitement ses droits à un tiers.</skos:definition>
-        <skos:prefLabel xml:lang="fr">Transfert de dette</skos:prefLabel>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000072 -->
-
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000072">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000018"/>
-        <skos:definition xml:lang="fr">Acte par lequel une personne détentrice des droits de propriété d&apos;une rente assujettie à un bien foncier ou immobilier cède gratuitement ses droits à une autre personne.</skos:definition>
-        <skos:prefLabel xml:lang="fr">Transfert de rente</skos:prefLabel>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000073 -->
-
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000073">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000018"/>
-        <skos:definition xml:lang="fr">Acte par lequel une personne ou un enesemble de personnes cède de façon onéreuse à une autre personne ou un autre ensemble de personne un bien foncier, mobilier ou immobilier.</skos:definition>
-        <skos:prefLabel xml:lang="fr">Vente</skos:prefLabel>
     </owl:NamedIndividual>
     
 
@@ -2408,6 +2422,36 @@ indésirables par le pouvoir.</skos:definition>
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Royal_Secretary">
         <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Role"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.univ-tours.fr/ipato#Révocation -->
+
+    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Révocation">
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
+        <skos:definition xml:lang="fr">Acte par lequel une personne détentrice d&apos;une charge ou d&apos;une fonction en signifie son abandon définitif.</skos:definition>
+        <skos:prefLabel xml:lang="fr">Révocation</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.univ-tours.fr/ipato#Sentence -->
+
+    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Sentence">
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
+        <skos:definition xml:lang="fr">Acte par lequel une instance juridique rend son jugement officiel à l&apos;encontre d&apos;une des parties mises en cause.</skos:definition>
+        <skos:prefLabel xml:lang="fr">Sentence</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.univ-tours.fr/ipato#Testament -->
+
+    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Testament">
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
+        <skos:definition xml:lang="fr">Document officiel par lequel une personne fait part de ses dernières volontés. Un testament peu faire l&apos;objet de plusieurs versions.</skos:definition>
+        <skos:prefLabel xml:lang="fr">Testament</skos:prefLabel>
     </owl:NamedIndividual>
     
 
@@ -2425,6 +2469,45 @@ indésirables par le pouvoir.</skos:definition>
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Tours_AM">
         <rdf:type rdf:resource="http://dbpedia.org/ontology/Archive"/>
         <current:P89_falls_within rdf:resource="http://www.univ-tours.fr/ipato#Tours"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.univ-tours.fr/ipato#Transfert -->
+
+    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Transfert">
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
+        <skos:prefLabel xml:lang="fr">Transfert</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.univ-tours.fr/ipato#Transfert_de_dette -->
+
+    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Transfert_de_dette">
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
+        <skos:definition xml:lang="fr">Acte par lequel une personne détentrice des droits de recouvrement d&apos;une dette auprès d&apos;une autre personne ou groupe de personnes cède gratuitement ses droits à un tiers.</skos:definition>
+        <skos:prefLabel xml:lang="fr">Transfert de dette</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.univ-tours.fr/ipato#Transfert_de_rente -->
+
+    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Transfert_de_rente">
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
+        <skos:definition xml:lang="fr">Acte par lequel une personne détentrice des droits de propriété d&apos;une rente assujettie à un bien foncier ou immobilier cède gratuitement ses droits à une autre personne.</skos:definition>
+        <skos:prefLabel xml:lang="fr">Transfert de rente</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.univ-tours.fr/ipato#Vente -->
+
+    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Vente">
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
+        <skos:definition xml:lang="fr">Acte par lequel une personne ou un enesemble de personnes cède de façon onéreuse à une autre personne ou un autre ensemble de personne un bien foncier, mobilier ou immobilier.</skos:definition>
+        <skos:prefLabel xml:lang="fr">Vente</skos:prefLabel>
     </owl:NamedIndividual>
     
 
@@ -2462,6 +2545,24 @@ indésirables par le pouvoir.</skos:definition>
     
 
 
+    <!-- http://www.univ-tours.fr/ipato#dry_channel -->
+
+    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#dry_channel">
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Habitat_type"/>
+        <skos:prefLabel>dry_channel</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.univ-tours.fr/ipato#hardwood -->
+
+    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#hardwood">
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Habitat_type"/>
+        <skos:prefLabel>hardwood</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.univ-tours.fr/ipato#height -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#height">
@@ -2473,15 +2574,15 @@ indésirables par le pouvoir.</skos:definition>
     <!-- http://www.univ-tours.fr/ipato#lettre_631967 -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#lettre_631967">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000011"/>
-        <OWLObjectProperty_00000012 rdf:resource="http://www.univ-tours.fr/ipato#Bourges"/>
-        <OWLObjectProperty_00000012 rdf:resource="http://www.univ-tours.fr/ipato#France"/>
-        <OWLObjectProperty_00000012 rdf:resource="http://www.univ-tours.fr/ipato#archive_AD_18"/>
-        <OWLObjectProperty_00000013 rdf:resource="http://www.univ-tours.fr/ipato#Anne_de_Bretagne"/>
-        <OWLObjectProperty_00000013 rdf:resource="http://www.univ-tours.fr/ipato#Marchant"/>
-        <OWLObjectProperty_00000014 rdf:resource="http://www.univ-tours.fr/ipato#Vincennes"/>
-        <OWLObjectProperty_00000015 rdf:resource="http://www.univ-tours.fr/ipato#David_Rivaud"/>
-        <OWLObjectProperty_00000016 rdf:resource="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000039"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Lettre_close"/>
+        <archieved_in rdf:resource="http://www.univ-tours.fr/ipato#Bourges"/>
+        <archieved_in rdf:resource="http://www.univ-tours.fr/ipato#France"/>
+        <archieved_in rdf:resource="http://www.univ-tours.fr/ipato#archive_AD_18"/>
+        <created_by rdf:resource="http://www.univ-tours.fr/ipato#Anne_de_Bretagne"/>
+        <created_by rdf:resource="http://www.univ-tours.fr/ipato#Marchant"/>
+        <created_in rdf:resource="http://www.univ-tours.fr/ipato#Vincennes"/>
+        <edited_by rdf:resource="http://www.univ-tours.fr/ipato#David_Rivaud"/>
+        <has_act_form rdf:resource="http://www.univ-tours.fr/ipato#OWLNamedIndividual_00000039"/>
         <bibframe:ShelfMark rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">8_G_434</bibframe:ShelfMark>
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1513-06-25</terms:created>
         <skos:prefLabel xml:lang="en">lettre 631967</skos:prefLabel>
@@ -2492,13 +2593,13 @@ indésirables par le pouvoir.</skos:definition>
     <!-- http://www.univ-tours.fr/ipato#lettre_632985 -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#lettre_632985">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000010"/>
-        <OWLObjectProperty_00000012 rdf:resource="http://www.univ-tours.fr/ipato#France"/>
-        <OWLObjectProperty_00000012 rdf:resource="http://www.univ-tours.fr/ipato#Tours"/>
-        <OWLObjectProperty_00000012 rdf:resource="http://www.univ-tours.fr/ipato#Tours_AM"/>
-        <OWLObjectProperty_00000013 rdf:resource="http://www.univ-tours.fr/ipato#Angers_corps_de_ville"/>
-        <OWLObjectProperty_00000014 rdf:resource="http://www.univ-tours.fr/ipato#Tours"/>
-        <OWLObjectProperty_00000015 rdf:resource="http://www.univ-tours.fr/ipato#Jerome_Salmon"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Lettre"/>
+        <archieved_in rdf:resource="http://www.univ-tours.fr/ipato#France"/>
+        <archieved_in rdf:resource="http://www.univ-tours.fr/ipato#Tours"/>
+        <archieved_in rdf:resource="http://www.univ-tours.fr/ipato#Tours_AM"/>
+        <created_by rdf:resource="http://www.univ-tours.fr/ipato#Angers_corps_de_ville"/>
+        <created_in rdf:resource="http://www.univ-tours.fr/ipato#Tours"/>
+        <edited_by rdf:resource="http://www.univ-tours.fr/ipato#Jerome_Salmon"/>
         <bibframe:ShelfMark rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">EE_6*</bibframe:ShelfMark>
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1568-01-22</terms:created>
         <skos:prefLabel xml:lang="en">lettre 632985</skos:prefLabel>
@@ -2509,7 +2610,32 @@ indésirables par le pouvoir.</skos:definition>
     <!-- http://www.univ-tours.fr/ipato#marriage_contract -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#marriage_contract">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#OWLClass_00000018"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.univ-tours.fr/ipato#meadow -->
+
+    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#meadow">
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Habitat_type"/>
+        <skos:prefLabel>meadow</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.univ-tours.fr/ipato#project_coordinator -->
+
+    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#project_coordinator">
+        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Role"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.univ-tours.fr/ipato#project_participant -->
+
+    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#project_participant">
+        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Role"/>
     </owl:NamedIndividual>
     
 
@@ -2517,15 +2643,42 @@ indésirables par le pouvoir.</skos:definition>
     <!-- http://www.univ-tours.fr/ipato#registre_636305 -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#registre_636305">
-        <OWLObjectProperty_00000012 rdf:resource="http://www.univ-tours.fr/ipato#Amboise"/>
-        <OWLObjectProperty_00000012 rdf:resource="http://www.univ-tours.fr/ipato#Amboise_AM"/>
-        <OWLObjectProperty_00000012 rdf:resource="http://www.univ-tours.fr/ipato#France"/>
-        <OWLObjectProperty_00000013 rdf:resource="http://www.univ-tours.fr/ipato#Amboise_corps_de_ville"/>
-        <OWLObjectProperty_00000014 rdf:resource="http://www.univ-tours.fr/ipato#Amboise"/>
-        <OWLObjectProperty_00000015 rdf:resource="http://www.univ-tours.fr/ipato#Casimir_Chevalier"/>
-        <OWLObjectProperty_00000015 rdf:resource="http://www.univ-tours.fr/ipato#Lea_Dupuis"/>
+        <archieved_in rdf:resource="http://www.univ-tours.fr/ipato#Amboise"/>
+        <archieved_in rdf:resource="http://www.univ-tours.fr/ipato#Amboise_AM"/>
+        <archieved_in rdf:resource="http://www.univ-tours.fr/ipato#France"/>
+        <created_by rdf:resource="http://www.univ-tours.fr/ipato#Amboise_corps_de_ville"/>
+        <created_in rdf:resource="http://www.univ-tours.fr/ipato#Amboise"/>
+        <edited_by rdf:resource="http://www.univ-tours.fr/ipato#Casimir_Chevalier"/>
+        <edited_by rdf:resource="http://www.univ-tours.fr/ipato#Lea_Dupuis"/>
         <terms:created rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">1560-11-28</terms:created>
         <terms:identifier>BB_6</terms:identifier>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.univ-tours.fr/ipato#shore -->
+
+    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#shore">
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Habitat_type"/>
+        <skos:prefLabel>shore</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.univ-tours.fr/ipato#soft_shrubby_wood -->
+
+    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#soft_shrubby_wood">
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Habitat_type"/>
+        <skos:prefLabel>soft_shrubby_wood</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.univ-tours.fr/ipato#softwood -->
+
+    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#softwood">
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Habitat_type"/>
+        <skos:prefLabel>softwood</skos:prefLabel>
     </owl:NamedIndividual>
     
 

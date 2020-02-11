@@ -19,6 +19,7 @@
             </creation>
             <author>
                 <dcterms:creator>Jaloignes_jean_notaire_à_tours</dcterms:creator>
+                <foaf:name> Jean_Jalognes </foaf:name>
                 <foaf:firstName>Jean</foaf:firstName>
                 <foaf:lastName>Jaloignes</foaf:lastName>
                 <bf:organization/>

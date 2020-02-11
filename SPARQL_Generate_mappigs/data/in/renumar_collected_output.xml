@@ -34549,8 +34549,8 @@ Ce cahier a été numérisé et est disponible sur le site des Archives Départe
     </document>
    
     <document>
-      <dcterms:title>Tours__ad_37__e_depot_132/ee_14</dcterms:title>
-      <dcterms:alternative>Loches_:_1574__23_avril</dcterms:alternative>
+      <dcterms:title>Tours ad 37 e depot 132/ee 14</dcterms:title>
+      <dcterms:alternative>Loches:1574 23 avril</dcterms:alternative>
       <dcterms:type>Lettre</dcterms:type>
       <dcterms:subject>Correspondance_administrative</dcterms:subject>
       <dcterms:extent/>
@@ -34564,7 +34564,7 @@ Ce cahier a été numérisé et est disponible sur le site des Archives Départe
         <dbo:city>Tours</dbo:city>
       </creation>
       <author>
-        <dcterms:creator>Loches,_corps_de_ville</dcterms:creator>
+        <dcterms:creator></dcterms:creator>
         <foaf:firstName/>
         <foaf:lastName/>
         <bf:organization>Loches__corps_de_ville</bf:organization>
@@ -34586,7 +34586,8 @@ Ce cahier a été numérisé et est disponible sur le site des Archives Départe
       </renumar_editor>
       <file>
         <dcterms:available>2018</dcterms:available>
-        <dcterms:identifier>634750</dcterms:identifier>
+        <dcterms:identifier>minute_634750</dcterms:identifier>
+        
         <dcterms:rights>Creative Commons Attribution - Pas d’Utilisation Commerciale - Partage dans les Mêmes Conditions 4.0 (CC BY-NC-SA 4.0).                      
           2018</dcterms:rights>
         <schema:url>http://renumar.univ-tours.fr/xtf/view?docId=tei/TIPO634750.xml;chunk.id=n1;toc.depth=1;toc.id=n1;brand=default</schema:url>
