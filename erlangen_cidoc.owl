@@ -18,8 +18,8 @@
         <rdfs:comment xml:lang="en">Erlangen CRM / OWL - An OWL DL 1.0 implementation of the CIDOC Conceptual Reference Model, based on: Nick Crofts, Martin Doerr, Tony Gill, Stephen Stead, Matthew Stiff (eds.): Definition of the CIDOC Conceptual Reference Model (http://cidoc-crm.org/).
 This implementation has been originally created by Bernhard Schiemann, Martin Oischinger and Günther Görz at the Friedrich-Alexander-University of Erlangen-Nuremberg, Department of Computer Science, Chair of Computer Science 8 (Artificial Intelligence) in cooperation with the Department of Museum Informatics of the Germanisches Nationalmuseum Nuremberg and the Department of Biodiversity Informatics of the Zoologisches Forschungsmuseum Alexander Koenig Bonn.
 The Erlangen CRM / OWL implementation of the CIDOC Conceptual Reference Model is licensed under a Creative Commons Attribution-ShareAlike 3.0 Unported License.</rdfs:comment>
-        <rdfs:label xml:lang="en">Erlangen CRM / OWL</rdfs:label>
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECRM 160714 / CIDOC-CRM 6.2.1</owl:versionInfo>
+        <skos:prefLabel xml:lang="en">Erlangen CRM / OWL</skos:prefLabel>
     </owl:Ontology>
     
 
@@ -38,6 +38,12 @@ The Erlangen CRM / OWL implementation of the CIDOC Conceptual Reference Model is
     <!-- http://www.w3.org/2004/02/skos/core#notation -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#notation"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel"/>
     
 
 
@@ -67,8 +73,8 @@ This is not intended for use with general Natural History material, only people.
 
 Examples:
 - Mozart&apos;s death (E69) was death of Mozart (E21)</rdfs:comment>
-        <rdfs:label xml:lang="en">P100 was death of</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P100</skos:notation>
+        <skos:prefLabel xml:lang="en">P100 was death of</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -79,8 +85,8 @@ Examples:
         <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P93i_was_taken_out_of_existence_by"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E21_Person"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E69_Death"/>
-        <rdfs:label xml:lang="en">P100 died in</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P100i</skos:notation>
+        <skos:prefLabel xml:lang="en">P100 died in</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -104,8 +110,8 @@ P102(x,y) ⊃ E71(x)
 P102(x,y) ⊃ E35(y)
 P102(x,y,z) ⊃ [P102(x,y) ∧ E55(z)]
 P102(x,y) ⊃ P1(x,y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P101 had as general use</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P101</skos:notation>
+        <skos:prefLabel xml:lang="en">P101 had as general use</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -115,8 +121,8 @@ P102(x,y) ⊃ P1(x,y)</rdfs:comment>
     <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P101i_was_use_of">
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E55_Type"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E70_Thing"/>
-        <rdfs:label xml:lang="en">P101 was use of</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P101i</skos:notation>
+        <skos:prefLabel xml:lang="en">P101 was use of</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -144,8 +150,8 @@ P102(x,y,z) ⊃ [P102(x,y) ∧ E55(z)]
 P102(x,y) ⊃ P1(x,y)
 
 Properties: P102.1 has type: E55 Type</rdfs:comment>
-        <rdfs:label xml:lang="en">P102 has title</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P102</skos:notation>
+        <skos:prefLabel xml:lang="en">P102 has title</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -156,8 +162,8 @@ Properties: P102.1 has type: E55 Type</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P1i_identifies"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E35_Title"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E71_Man-Made_Thing"/>
-        <rdfs:label xml:lang="en">P102 is title of</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P102i</skos:notation>
+        <skos:prefLabel xml:lang="en">P102 is title of</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -179,8 +185,8 @@ Examples:
 In First Order Logic:
 P103(x,y) ⊃ E71(x)
 P103(x,y) ⊃ E55(y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P103 was intended for</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P103</skos:notation>
+        <skos:prefLabel xml:lang="en">P103 was intended for</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -190,8 +196,8 @@ P103(x,y) ⊃ E55(y)</rdfs:comment>
     <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P103i_was_intention_of">
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E55_Type"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E71_Man-Made_Thing"/>
-        <rdfs:label xml:lang="en">P103 was intention of</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P103i</skos:notation>
+        <skos:prefLabel xml:lang="en">P103 was intention of</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -213,8 +219,8 @@ Examples:
 In First Order Logic:
 P104(x,y) ⊃ E72(x)
 P104(x,y) ⊃ E30(y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P104 is subject to</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P104</skos:notation>
+        <skos:prefLabel xml:lang="en">P104 is subject to</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -224,8 +230,8 @@ P104(x,y) ⊃ E30(y)</rdfs:comment>
     <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P104i_applies_to">
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E30_Right"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdfs:label xml:lang="en">P104 applies to</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P104i</skos:notation>
+        <skos:prefLabel xml:lang="en">P104 applies to</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -248,8 +254,8 @@ Examples:
 In First Order Logic:
 P105(x,y) ⊃ E72(x)
 P105(x,y) ⊃ E39(y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P105 right held by</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P105</skos:notation>
+        <skos:prefLabel xml:lang="en">P105 right held by</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -259,8 +265,8 @@ P105(x,y) ⊃ E39(y)</rdfs:comment>
     <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P105i_has_right_on">
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E39_Actor"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdfs:label xml:lang="en">P105 has right on</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P105i</skos:notation>
+        <skos:prefLabel xml:lang="en">P105 has right on</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -282,8 +288,8 @@ Examples:
 In First Order Logic:
 P106(x,y) ⊃ E90(x)
 P106(x,y) ⊃ E90(y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P106 is composed of</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P106</skos:notation>
+        <skos:prefLabel xml:lang="en">P106 is composed of</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -294,8 +300,8 @@ P106(x,y) ⊃ E90(y)</rdfs:comment>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
-        <rdfs:label xml:lang="en">P106 forms part of</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P106i</skos:notation>
+        <skos:prefLabel xml:lang="en">P106 forms part of</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -325,8 +331,8 @@ P107(x,y) ⊃ E39(y)
 P107(x,y,z) ⊃ [P107(x,y) ∧ E55(z)]
 
 Properties: P107.1 kind of member: E55 Type</rdfs:comment>
-        <rdfs:label xml:lang="en">P107 has current or former member</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P107</skos:notation>
+        <skos:prefLabel xml:lang="en">P107 has current or former member</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -336,8 +342,8 @@ Properties: P107.1 kind of member: E55 Type</rdfs:comment>
     <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P107i_is_current_or_former_member_of">
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E39_Actor"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E74_Group"/>
-        <rdfs:label xml:lang="en">P107 is current or former member of</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P107i</skos:notation>
+        <skos:prefLabel xml:lang="en">P107 is current or former member of</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -362,8 +368,8 @@ P108(x,y) ⊃ E12(x)
 P108(x,y) ⊃ E24(y)
 P108(x,y) ⊃ P31(x,y)
 P108(x,y) ⊃ P92(x,y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P108 has produced</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P108</skos:notation>
+        <skos:prefLabel xml:lang="en">P108 has produced</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -375,8 +381,8 @@ P108(x,y) ⊃ P92(x,y)</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P92i_was_brought_into_existence_by"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E24_Physical_Man-Made_Thing"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E12_Production"/>
-        <rdfs:label xml:lang="en">P108 was produced by</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P108i</skos:notation>
+        <skos:prefLabel xml:lang="en">P108 was produced by</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -401,8 +407,8 @@ In First Order Logic:
 P109(x,y) ⊃ E78(x)
 P109(x,y) ⊃ E39(y)
 P109(x,y) ⊃ P49(x,y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P109 has current or former curator</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P109</skos:notation>
+        <skos:prefLabel xml:lang="en">P109 has current or former curator</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -413,8 +419,8 @@ P109(x,y) ⊃ P49(x,y)</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P49i_is_former_or_current_keeper_of"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E39_Actor"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E78_Collection"/>
-        <rdfs:label xml:lang="en">P109 is current or former curator of</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P109i</skos:notation>
+        <skos:prefLabel xml:lang="en">P109 is current or former curator of</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -435,8 +441,8 @@ Examples:
 In First Order Logic:
 P10(x,y) ⊃ E92(x)
 P10(x,y) ⊃ E92(y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P10 falls within</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P10</skos:notation>
+        <skos:prefLabel xml:lang="en">P10 falls within</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -447,8 +453,8 @@ P10(x,y) ⊃ E92(y)</rdfs:comment>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E92_Spacetime_Volume"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E92_Spacetime_Volume"/>
-        <rdfs:label xml:lang="en">P10 contains</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P10i</skos:notation>
+        <skos:prefLabel xml:lang="en">P10 contains</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -472,8 +478,8 @@ In First Order Logic:
 P110(x,y) ⊃ E79(x)
 P110(x,y) ⊃ E24(y)
 P110(x,y) ⊃ P31(x,y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P110 augmented</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P110</skos:notation>
+        <skos:prefLabel xml:lang="en">P110 augmented</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -484,8 +490,8 @@ P110(x,y) ⊃ P31(x,y)</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P31i_was_modified_by"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E24_Physical_Man-Made_Thing"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E79_Part_Addition"/>
-        <rdfs:label xml:lang="en">P110 was augmented by</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P110i</skos:notation>
+        <skos:prefLabel xml:lang="en">P110 was augmented by</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -508,8 +514,8 @@ P111(x,y) ⊃ E79(x)
 P111(x,y) ⊃ E18(y)
 P111(x,y) ⊃ P12(x,y)
 P111(x,y) ⊃ P16(x,y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P111 added</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P111</skos:notation>
+        <skos:prefLabel xml:lang="en">P111 added</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -520,8 +526,8 @@ P111(x,y) ⊃ P16(x,y)</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P16i_was_used_for"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E18_Physical_Thing"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E79_Part_Addition"/>
-        <rdfs:label xml:lang="en">P111 was added by</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P111i</skos:notation>
+        <skos:prefLabel xml:lang="en">P111 was added by</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -545,8 +551,8 @@ In First Order Logic:
 P112(x,y) ⊃ E80(x)
 P112(x,y) ⊃ E24(y)
 P112(x,y) ⊃ P31(x,y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P112 diminished</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P112</skos:notation>
+        <skos:prefLabel xml:lang="en">P112 diminished</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -557,8 +563,8 @@ P112(x,y) ⊃ P31(x,y)</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P31i_was_modified_by"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E24_Physical_Man-Made_Thing"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E80_Part_Removal"/>
-        <rdfs:label xml:lang="en">P112 was diminished by</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P112i</skos:notation>
+        <skos:prefLabel xml:lang="en">P112 was diminished by</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -580,8 +586,8 @@ In First Order Logic:
 P113(x,y) ⊃ E80(x)
 P113(x,y) ⊃ E18(y)
 P113(x,y) ⊃ P12(x,y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P113 removed</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P113</skos:notation>
+        <skos:prefLabel xml:lang="en">P113 removed</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -592,8 +598,8 @@ P113(x,y) ⊃ P12(x,y)</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P12i_was_present_at"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E18_Physical_Thing"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E80_Part_Removal"/>
-        <rdfs:label xml:lang="en">P113 was removed by</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P113i</skos:notation>
+        <skos:prefLabel xml:lang="en">P113 was removed by</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -620,8 +626,8 @@ In First Order Logic:
 P114(x,y) ⊃ E2(x)
 P114(x,y) ⊃ E2(y)
 P114(x,y) ⊃ P114(y,x)</rdfs:comment>
-        <rdfs:label xml:lang="en">P114 is equal in time to</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P114</skos:notation>
+        <skos:prefLabel xml:lang="en">P114 is equal in time to</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -645,8 +651,8 @@ Examples:
 In First Order Logic:
 P115(x,y) ⊃ E2(x)
 P115(x,y) ⊃ E2(y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P115 finishes</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P115</skos:notation>
+        <skos:prefLabel xml:lang="en">P115 finishes</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -657,8 +663,8 @@ P115(x,y) ⊃ E2(y)</rdfs:comment>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E2_Temporal_Entity"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E2_Temporal_Entity"/>
-        <rdfs:label xml:lang="en">P115 is finished by</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P115i</skos:notation>
+        <skos:prefLabel xml:lang="en">P115 is finished by</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -681,8 +687,8 @@ Examples:
 In First Order Logic:
 P116(x,y) ⊃ E2(x)
 P116(x,y) ⊃ E2(y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P116 starts</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P116</skos:notation>
+        <skos:prefLabel xml:lang="en">P116 starts</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -693,8 +699,8 @@ P116(x,y) ⊃ E2(y)</rdfs:comment>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E2_Temporal_Entity"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E2_Temporal_Entity"/>
-        <rdfs:label xml:lang="en">P116 is started by</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P116i</skos:notation>
+        <skos:prefLabel xml:lang="en">P116 is started by</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -717,8 +723,8 @@ Examples:
 In First Order Logic:
 P117(x,y) ⊃ E2(x)
 P117(x,y) ⊃ E2(y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P117 occurs during</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P117</skos:notation>
+        <skos:prefLabel xml:lang="en">P117 occurs during</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -729,8 +735,8 @@ P117(x,y) ⊃ E2(y)</rdfs:comment>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E2_Temporal_Entity"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E2_Temporal_Entity"/>
-        <rdfs:label xml:lang="en">P117 includes</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P117i</skos:notation>
+        <skos:prefLabel xml:lang="en">P117 includes</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -754,8 +760,8 @@ Examples:
 In First Order Logic:
 P118(x,y) ⊃ E2(x)
 P118(x,y) ⊃ E2(y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P118 overlaps in time with</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P118</skos:notation>
+        <skos:prefLabel xml:lang="en">P118 overlaps in time with</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -765,8 +771,8 @@ P118(x,y) ⊃ E2(y)</rdfs:comment>
     <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P118i_is_overlapped_in_time_by">
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E2_Temporal_Entity"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E2_Temporal_Entity"/>
-        <rdfs:label xml:lang="en">P118 is overlapped in time by</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P118i</skos:notation>
+        <skos:prefLabel xml:lang="en">P118 is overlapped in time by</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -790,8 +796,8 @@ Examples:
 In First Order Logic:
 P119(x,y) ⊃ E2(x)
 P119(x,y) ⊃ E2(y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P119 meets in time with</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P119</skos:notation>
+        <skos:prefLabel xml:lang="en">P119 meets in time with</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -801,8 +807,8 @@ P119(x,y) ⊃ E2(y)</rdfs:comment>
     <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P119i_is_met_in_time_by">
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E2_Temporal_Entity"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E2_Temporal_Entity"/>
-        <rdfs:label xml:lang="en">P119 is met in time by</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P119i</skos:notation>
+        <skos:prefLabel xml:lang="en">P119 is met in time by</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -827,8 +833,8 @@ In First Order Logic:
 P11(x,y) ⊃ E5(x)
 P11(x,y) ⊃ E39(y)
 P11(x,y) ⊃ P12(x,y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P11 had participant</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P11</skos:notation>
+        <skos:prefLabel xml:lang="en">P11 had participant</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -839,8 +845,8 @@ P11(x,y) ⊃ P12(x,y)</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P12i_was_present_at"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E39_Actor"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E5_Event"/>
-        <rdfs:label xml:lang="en">P11 participated in</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P11i</skos:notation>
+        <skos:prefLabel xml:lang="en">P11 participated in</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -865,8 +871,8 @@ Examples:
 In First Order Logic:
 P120(x,y) ⊃ E2(x)
 P120(x,y) ⊃ E2(y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P120 occurs before</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P120</skos:notation>
+        <skos:prefLabel xml:lang="en">P120 occurs before</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -877,8 +883,8 @@ P120(x,y) ⊃ E2(y)</rdfs:comment>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E2_Temporal_Entity"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E2_Temporal_Entity"/>
-        <rdfs:label xml:lang="en">P120 occurs after</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P120i</skos:notation>
+        <skos:prefLabel xml:lang="en">P120 occurs after</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -902,8 +908,8 @@ In First Order Logic:
 P121(x,y) ⊃ E53(x)
 P121(x,y) ⊃ E53(y)
 P121(x,y) ⊃ P121(y,x)</rdfs:comment>
-        <rdfs:label xml:lang="en">P121 overlaps with</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P121</skos:notation>
+        <skos:prefLabel xml:lang="en">P121 overlaps with</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -927,8 +933,8 @@ In First Order Logic:
 P122(x,y) ⊃ E53(x)
 P122(x,y) ⊃ E53(y)
 P122(x,y) ⊃ P122(y,x)</rdfs:comment>
-        <rdfs:label xml:lang="en">P122 borders with</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P122</skos:notation>
+        <skos:prefLabel xml:lang="en">P122 borders with</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -953,8 +959,8 @@ In First Order Logic:
 P123(x,y) ⊃ E81(x)
 P123(x,y) ⊃ E77(y)
 P123(x,y) ⊃ P92(x,y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P123 resulted in</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P123</skos:notation>
+        <skos:prefLabel xml:lang="en">P123 resulted in</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -965,8 +971,8 @@ P123(x,y) ⊃ P92(x,y)</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P92i_was_brought_into_existence_by"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E77_Persistent_Item"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E81_Transformation"/>
-        <rdfs:label xml:lang="en">P123 resulted from</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P123i</skos:notation>
+        <skos:prefLabel xml:lang="en">P123 resulted from</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -991,8 +997,8 @@ In First Order Logic:
 P124(x,y) ⊃ E81(x)
 P124(x,y) ⊃ E77(y)
 P124(x,y) ⊃ P93(x,y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P124 transformed</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P124</skos:notation>
+        <skos:prefLabel xml:lang="en">P124 transformed</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -1003,8 +1009,8 @@ P124(x,y) ⊃ P93(x,y)</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P93i_was_taken_out_of_existence_by"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E77_Persistent_Item"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E81_Transformation"/>
-        <rdfs:label xml:lang="en">P124 was transformed by</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P124i</skos:notation>
+        <skos:prefLabel xml:lang="en">P124 was transformed by</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -1024,8 +1030,8 @@ Examples:
 In First Order Logic:
 P125(x,y) ⊃ E7(x)
 P125(x,y) ⊃ E55(y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P125 used object of type</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P125</skos:notation>
+        <skos:prefLabel xml:lang="en">P125 used object of type</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -1035,8 +1041,8 @@ P125(x,y) ⊃ E55(y)</rdfs:comment>
     <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P125i_was_type_of_object_used_in">
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E55_Type"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E7_Activity"/>
-        <rdfs:label xml:lang="en">P125 was type of object used in</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P125i</skos:notation>
+        <skos:prefLabel xml:lang="en">P125 was type of object used in</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -1059,8 +1065,8 @@ Examples:
 In First Order Logic:
 P126(x,y) ⊃ E11(x)
 P126(x,y) ⊃ E57(y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P126 employed</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P126</skos:notation>
+        <skos:prefLabel xml:lang="en">P126 employed</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -1070,8 +1076,8 @@ P126(x,y) ⊃ E57(y)</rdfs:comment>
     <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P126i_was_employed_in">
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E57_Material"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E11_Modification"/>
-        <rdfs:label xml:lang="en">P126 was employed in</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P126i</skos:notation>
+        <skos:prefLabel xml:lang="en">P126 was employed in</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -1094,8 +1100,8 @@ Examples:
 In First Order Logic:
 P127(x,y) ⊃ E55(x)
 P127(x,y) ⊃ E55(y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P127 has broader term</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P127</skos:notation>
+        <skos:prefLabel xml:lang="en">P127 has broader term</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -1106,8 +1112,8 @@ P127(x,y) ⊃ E55(y)</rdfs:comment>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E55_Type"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E55_Type"/>
-        <rdfs:label xml:lang="en">P127 has narrower term</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P127i</skos:notation>
+        <skos:prefLabel xml:lang="en">P127 has narrower term</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -1130,8 +1136,8 @@ In First Order Logic:
 P128(x,y) ⊃ E18(x)
 P128(x,y) ⊃ E90(y)
 P128(x,y) ⊃ P130(x,y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P128 carries</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P128</skos:notation>
+        <skos:prefLabel xml:lang="en">P128 carries</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -1142,8 +1148,8 @@ P128(x,y) ⊃ P130(x,y)</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P130i_features_are_also_found_on"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E89_Propositional_Object"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E24_Physical_Man-Made_Thing"/>
-        <rdfs:label xml:lang="en">P128 is carried by</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P128i</skos:notation>
+        <skos:prefLabel xml:lang="en">P128 is carried by</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -1167,8 +1173,8 @@ In First Order Logic:
 P129(x,y) ⊃ E89(x)
 P129(x,y) ⊃ E1(y)
 P129(x,y) ⊃ P67(x,y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P129 is about</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P129</skos:notation>
+        <skos:prefLabel xml:lang="en">P129 is about</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -1179,8 +1185,8 @@ P129(x,y) ⊃ P67(x,y)</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P67i_is_referred_to_by"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E1_CRM_Entity"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E89_Propositional_Object"/>
-        <rdfs:label xml:lang="en">P129 is subject of</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P129i</skos:notation>
+        <skos:prefLabel xml:lang="en">P129 is subject of</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -1202,8 +1208,8 @@ Examples:
 In First Order Logic:
 P12(x,y) ⊃ E5(x)
 P12(x,y) ⊃ E77(y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P12 occurred in the presence of</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P12</skos:notation>
+        <skos:prefLabel xml:lang="en">P12 occurred in the presence of</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -1213,8 +1219,8 @@ P12(x,y) ⊃ E77(y)</rdfs:comment>
     <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P12i_was_present_at">
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E77_Persistent_Item"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E5_Event"/>
-        <rdfs:label xml:lang="en">P12 was present at</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P12i</skos:notation>
+        <skos:prefLabel xml:lang="en">P12 was present at</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -1239,8 +1245,8 @@ P130(x,y,z) ⊃ [P130(x,y) ∧ E55(z)]
 P130(x,y) ⊃ P130(y,x)
 
 Properties: P130.1 kind of similarity: E55 Type</rdfs:comment>
-        <rdfs:label xml:lang="en">P130 shows features of</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P130</skos:notation>
+        <skos:prefLabel xml:lang="en">P130 shows features of</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -1250,8 +1256,8 @@ Properties: P130.1 kind of similarity: E55 Type</rdfs:comment>
     <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P130i_features_are_also_found_on">
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E70_Thing"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E70_Thing"/>
-        <rdfs:label xml:lang="en">P130 features are also found on</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P130i</skos:notation>
+        <skos:prefLabel xml:lang="en">P130 features are also found on</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -1275,8 +1281,8 @@ In First Order Logic:
 P131(x,y) ⊃ E39(x)
 P131(x,y) ⊃ E82(y)
 P131(x,y) ⊃ P1(x,y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P131 is identified by</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P131</skos:notation>
+        <skos:prefLabel xml:lang="en">P131 is identified by</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -1287,8 +1293,8 @@ P131(x,y) ⊃ P1(x,y)</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P1i_identifies"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E82_Actor_Appellation"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E39_Actor"/>
-        <rdfs:label xml:lang="en">P131 identifies</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P131i</skos:notation>
+        <skos:prefLabel xml:lang="en">P131 identifies</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -1306,12 +1312,12 @@ This symmetric property associates two instances of E92 Spacetime Volume that ha
 Examples:
 - the &quot;Urnfield&quot; period (E4) overlaps with the &quot;Hallstatt&quot; period (E4)
 
-In First Order Logic: 
-P132(x,y) ⊃ E92(x) 
-P132(x,y) ⊃ E92(y) 
+In First Order Logic:
+P132(x,y) ⊃ E92(x)
+P132(x,y) ⊃ E92(y)
 P132(x,y) ⊃ P132(y,x)</rdfs:comment>
-        <rdfs:label xml:lang="en">P132 overlaps with</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P132</skos:notation>
+        <skos:prefLabel xml:lang="en">P132 overlaps with</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -1330,11 +1336,11 @@ Examples:
 - the &quot;Hallstatt&quot; period (E4) is separated from the &quot;La Tène&quot; era (E4)
 
 In First Order Logic:
-P133(x,y) ⊃ E92(x) 
-P133(x,y) ⊃ E92(y) 
+P133(x,y) ⊃ E92(x)
+P133(x,y) ⊃ E92(y)
 P133(x,y) ⊃ P133(y,x)</rdfs:comment>
-        <rdfs:label xml:lang="en">P133 is separated from</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P133</skos:notation>
+        <skos:prefLabel xml:lang="en">P133 is separated from</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -1356,8 +1362,8 @@ In First Order Logic:
 P134(x,y) ⊃ E7(x)
 P134(x,y)⊃ E7(y)
 P134(x,y) ⊃ P15(x,y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P134 continued</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P134</skos:notation>
+        <skos:prefLabel xml:lang="en">P134 continued</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -1368,8 +1374,8 @@ P134(x,y) ⊃ P15(x,y)</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P15i_influenced"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E7_Activity"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E7_Activity"/>
-        <rdfs:label xml:lang="en">P134 was continued by</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P134i</skos:notation>
+        <skos:prefLabel xml:lang="en">P134 was continued by</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -1391,8 +1397,8 @@ In First Order Logic:
 P135(x,y) ⊃ E83(x)
 P135(x,y) ⊃ E55(y)
 P135(x,y) ⊃ P94(x,y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P135 created type</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P135</skos:notation>
+        <skos:prefLabel xml:lang="en">P135 created type</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -1403,8 +1409,8 @@ P135(x,y) ⊃ P94(x,y)</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P94i_was_created_by"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E55_Type"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E83_Type_Creation"/>
-        <rdfs:label xml:lang="en">P135 was created by</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P135i</skos:notation>
+        <skos:prefLabel xml:lang="en">P135 was created by</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -1431,8 +1437,8 @@ P136(x,y,z) ⊃ [P136(x,y) ∧ E55(z)]
 P136(x,y) ⊃ P15(x,y)
 
 Properties: P136.1 in the taxonomic role: E55 Type</rdfs:comment>
-        <rdfs:label xml:lang="en">P136 was based on</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P136</skos:notation>
+        <skos:prefLabel xml:lang="en">P136 was based on</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -1443,8 +1449,8 @@ Properties: P136.1 in the taxonomic role: E55 Type</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P15i_influenced"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E1_CRM_Entity"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E83_Type_Creation"/>
-        <rdfs:label xml:lang="en">P136 supported type creation</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P136i</skos:notation>
+        <skos:prefLabel xml:lang="en">P136 supported type creation</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -1470,8 +1476,8 @@ P137(x,y,z) ⊃ [P137(x,y) ∧ E55(z)]
 P137(x,y) ⊃ P2(x,y)
 
 Properties: P137.1 in the taxonomic role: E55 Type</rdfs:comment>
-        <rdfs:label xml:lang="en">P137 exemplifies</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P137</skos:notation>
+        <skos:prefLabel xml:lang="en">P137 exemplifies</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -1482,8 +1488,8 @@ Properties: P137.1 in the taxonomic role: E55 Type</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P2i_is_type_of"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E55_Type"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E1_CRM_Entity"/>
-        <rdfs:label xml:lang="en">P137 is exemplified by</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P137i</skos:notation>
+        <skos:prefLabel xml:lang="en">P137 is exemplified by</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -1513,8 +1519,8 @@ P138(x,y) ⊃ E36(x)
 P138(x,y) ⊃ E1(y)
 P138(x,y,z) ⊃ [P138(x,y) ∧ E55(z)]
 P138(x,y) ⊃ P67(x,y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P138 represents</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P138</skos:notation>
+        <skos:prefLabel xml:lang="en">P138 represents</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -1525,8 +1531,8 @@ P138(x,y) ⊃ P67(x,y)</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P67i_is_referred_to_by"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E1_CRM_Entity"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E36_Visual_Item"/>
-        <rdfs:label xml:lang="en">P138 has representation</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P138i</skos:notation>
+        <skos:prefLabel xml:lang="en">P138 has representation</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -1555,8 +1561,8 @@ P139(x,y,z) ⊃ [P139(x,y) ∧ E55(z)]
 P139(x,y) ⊃ P139(y,x)
 
 Properties: P139.1 has type: E55 Type</rdfs:comment>
-        <rdfs:label xml:lang="en">P139 has alternative form</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P139</skos:notation>
+        <skos:prefLabel xml:lang="en">P139 has alternative form</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -1579,8 +1585,8 @@ In First Order Logic:
 P13 (x,y) ⊃ E6 (x)
 P13 (x,y) ⊃ E18(y)
 P13 (x,y) ⊃ P93(x,y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P13 destroyed</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P13</skos:notation>
+        <skos:prefLabel xml:lang="en">P13 destroyed</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -1591,8 +1597,8 @@ P13 (x,y) ⊃ P93(x,y)</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P93i_was_taken_out_of_existence_by"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E18_Physical_Thing"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E6_Destruction"/>
-        <rdfs:label xml:lang="en">P13 was destroyed by</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P13i</skos:notation>
+        <skos:prefLabel xml:lang="en">P13 was destroyed by</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -1613,8 +1619,8 @@ Examples:
 In First Order Logic:
 P140(x,y) ⊃ E13(x)
 P140(x,y) ⊃ E1(y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P140 assigned attribute to</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P140</skos:notation>
+        <skos:prefLabel xml:lang="en">P140 assigned attribute to</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -1624,8 +1630,8 @@ P140(x,y) ⊃ E1(y)</rdfs:comment>
     <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P140i_was_attributed_by">
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E1_CRM_Entity"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E13_Attribute_Assignment"/>
-        <rdfs:label xml:lang="en">P140 was attributed by</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P140i</skos:notation>
+        <skos:prefLabel xml:lang="en">P140 was attributed by</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -1646,8 +1652,8 @@ Examples:
 In First Order Logic:
 P141(x,y) ⊃ E13(x)
 P141(x,y) ⊃ E1(y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P141 assigned</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P141</skos:notation>
+        <skos:prefLabel xml:lang="en">P141 assigned</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -1657,8 +1663,8 @@ P141(x,y) ⊃ E1(y)</rdfs:comment>
     <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P141i_was_assigned_by">
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E1_CRM_Entity"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E13_Attribute_Assignment"/>
-        <rdfs:label xml:lang="en">P141 was assigned by</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P141i</skos:notation>
+        <skos:prefLabel xml:lang="en">P141 was assigned by</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -1671,21 +1677,21 @@ P141(x,y) ⊃ E1(y)</rdfs:comment>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E15_Identifier_Assignment"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
         <rdfs:comment xml:lang="en">Scope note:
-This property associates the event of assigning an instance of E42 Identifier with the instances of E90 Symbolic Object that were used as constituents of the identifier. 
+This property associates the event of assigning an instance of E42 Identifier with the instances of E90 Symbolic Object that were used as constituents of the identifier.
 
 Examples:
-- On June 1, 2001 assigning the personal name identifier “Guillaume, de Machaut, ca. 1300-1377” (E15) used constituent “ca. 1300-1377” (E49) 
-- Assigning a uniform title to the anonymous textual work known as ‘The Adoration of the Shepherds’(E15) used constituent ‘Coventry’ (E48) 
-- Assigning a uniform title to Pina Bausch’s choreographic work entitled ‘Rite of spring’ (E15) used constituent ‘(Choreographic Work: Bausch)’(E90) 
-- Assigning a uniform title to the motion picture directed in 1933 by Merian C. Cooper and Ernest B. Schoedsack and entitled ‘King Kong’ (E15) used constituent ‘1933’ (E50) 
+- On June 1, 2001 assigning the personal name identifier “Guillaume, de Machaut, ca. 1300-1377” (E15) used constituent “ca. 1300-1377” (E49)
+- Assigning a uniform title to the anonymous textual work known as ‘The Adoration of the Shepherds’(E15) used constituent ‘Coventry’ (E48)
+- Assigning a uniform title to Pina Bausch’s choreographic work entitled ‘Rite of spring’ (E15) used constituent ‘(Choreographic Work: Bausch)’(E90)
+- Assigning a uniform title to the motion picture directed in 1933 by Merian C. Cooper and Ernest B. Schoedsack and entitled ‘King Kong’ (E15) used constituent ‘1933’ (E50)
 - Assigning the corporate name identifier ‘Univerza v Ljubljani. Oddelek za bibliotekarstvo’ to The Department for library science of the University of Ljubljana (E15) used constituent ‘Univerza v Ljubljani’ (E42)
 
 In First Order Logic:
 P142(x,y) ⊃ E15(x)
 P142(x,y) ⊃ E90(y)
 P142(x,y) ⊃ P16(x,y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P142 used constituent</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P142</skos:notation>
+        <skos:prefLabel xml:lang="en">P142 used constituent</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -1696,8 +1702,8 @@ P142(x,y) ⊃ P16(x,y)</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P16i_was_used_for"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E15_Identifier_Assignment"/>
-        <rdfs:label xml:lang="en">P142 was used in</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P142i</skos:notation>
+        <skos:prefLabel xml:lang="en">P142 was used in</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -1722,8 +1728,8 @@ In First Order Logic:
 P143(x,y) ⊃ E85(x)
 P143(x,y) ⊃ E39(y)
 P143(x,y) ⊃ P11(x,y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P143 joined</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P143</skos:notation>
+        <skos:prefLabel xml:lang="en">P143 joined</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -1734,8 +1740,8 @@ P143(x,y) ⊃ P11(x,y)</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P11i_participated_in"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E39_Actor"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E85_Joining"/>
-        <rdfs:label xml:lang="en">P143 was joined by</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P143i</skos:notation>
+        <skos:prefLabel xml:lang="en">P143 was joined by</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -1767,8 +1773,8 @@ P144(x,y,z) ⊃ [P144(x,y) ∧ E55(z)]
 P144(x,y) ⊃ P11(x,y)
 
 Properties: P144.1 kind of member: E55 Type</rdfs:comment>
-        <rdfs:label xml:lang="en">P144 joined with</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P144</skos:notation>
+        <skos:prefLabel xml:lang="en">P144 joined with</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -1779,8 +1785,8 @@ Properties: P144.1 kind of member: E55 Type</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P11i_participated_in"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E74_Group"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E85_Joining"/>
-        <rdfs:label xml:lang="en">P144 gained member by</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P144i</skos:notation>
+        <skos:prefLabel xml:lang="en">P144 gained member by</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -1803,8 +1809,8 @@ In First Order Logic:
 P145(x,y) ⊃ E86(x)
 P145(x,y) ⊃ E39(y)
 P145(x,y) ⊃ P11(x,y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P145 separated</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P145</skos:notation>
+        <skos:prefLabel xml:lang="en">P145 separated</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -1815,8 +1821,8 @@ P145(x,y) ⊃ P11(x,y)</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P11i_participated_in"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E39_Actor"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E86_Leaving"/>
-        <rdfs:label xml:lang="en">P145 left by</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P145i</skos:notation>
+        <skos:prefLabel xml:lang="en">P145 left by</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -1842,8 +1848,8 @@ In First Order Logic:
 P146(x,y) ⊃ E86(x)
 P146(x,y) ⊃ E74(y)
 P146(x,y) ⊃ P11(x,y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P146 separated from</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P146</skos:notation>
+        <skos:prefLabel xml:lang="en">P146 separated from</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -1854,8 +1860,8 @@ P146(x,y) ⊃ P11(x,y)</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P11i_participated_in"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E74_Group"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E86_Leaving"/>
-        <rdfs:label xml:lang="en">P146 lost member by</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P146i</skos:notation>
+        <skos:prefLabel xml:lang="en">P146 lost member by</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -1867,7 +1873,7 @@ P146(x,y) ⊃ P11(x,y)</rdfs:comment>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E87_Curation_Activity"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E78_Collection"/>
         <rdfs:comment xml:lang="en">Scope note:
-This property associates an instance of E87 Curation Activity with the instance of E78 Collection or collections with that is subject of athat curation activity following some implicit or explicit curation plan. 
+This property associates an instance of E87 Curation Activity with the instance of E78 Collection or collections with that is subject of athat curation activity following some implicit or explicit curation plan.
 
 Examples:
 - The activities (E87) by the Benaki Museum curated the acquisition of dolls and games of urban and folk manufacture dating from the 17th to the 20th century, from England, France and Germany for the &quot;Toys, Games and Childhood Collection (E78) of the Museum
@@ -1877,8 +1883,8 @@ Examples:
 In First Order Logic:
 P147(x,y) ⊃ E87(x)
 P147(x,y) ⊃ E78(y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P147 curated</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P147</skos:notation>
+        <skos:prefLabel xml:lang="en">P147 curated</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -1888,8 +1894,8 @@ P147(x,y) ⊃ E78(y)</rdfs:comment>
     <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P147i_was_curated_by">
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E78_Collection"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E87_Curation_Activity"/>
-        <rdfs:label xml:lang="en">P147 was curated by</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P147i</skos:notation>
+        <skos:prefLabel xml:lang="en">P147 was curated by</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -1910,8 +1916,8 @@ Examples:
 In First Order Logic:
 P148(x,y) ⊃ E89(x)
 P148(x,y) ⊃ E89(y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P148 has component</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P148</skos:notation>
+        <skos:prefLabel xml:lang="en">P148 has component</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -1922,8 +1928,8 @@ P148(x,y) ⊃ E89(y)</rdfs:comment>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E89_Propositional_Object"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E89_Propositional_Object"/>
-        <rdfs:label xml:lang="en">P148 is component of</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P148i</skos:notation>
+        <skos:prefLabel xml:lang="en">P148 is component of</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -1945,8 +1951,8 @@ In First Order Logic:
 P149(x,y) ⊃ E28(x)
 P149(x,y) ⊃ E75(y)
 P149(x,y) ⊃ P1(x,y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P149 is identified by</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P149</skos:notation>
+        <skos:prefLabel xml:lang="en">P149 is identified by</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -1957,8 +1963,8 @@ P149(x,y) ⊃ P1(x,y)</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P1i_identifies"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E75_Conceptual_Object_Appellation"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdfs:label xml:lang="en">P149 identifies</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P149i</skos:notation>
+        <skos:prefLabel xml:lang="en">P149 identifies</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -1982,8 +1988,8 @@ P14 (x,y) ⊃ E7(x)
 P14 (x,y)⊃ E39(y)
 P14 (x,y) ⊃ P11(x,y)
 P14(x,y,z) ⊃ [P14(x,y) ∧ E55(z)]</rdfs:comment>
-        <rdfs:label xml:lang="en">P14 carried out by</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P14</skos:notation>
+        <skos:prefLabel xml:lang="en">P14 carried out by</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -1993,8 +1999,8 @@ P14(x,y,z) ⊃ [P14(x,y) ∧ E55(z)]</rdfs:comment>
     <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P14i_performed">
         <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P11i_participated_in"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E7_Activity"/>
-        <rdfs:label xml:lang="en">P14 performed</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P14i</skos:notation>
+        <skos:prefLabel xml:lang="en">P14 performed</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -2006,7 +2012,7 @@ P14(x,y,z) ⊃ [P14(x,y) ∧ E55(z)]</rdfs:comment>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E55_Type"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E55_Type"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scope note: 
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scope note:
 This property associates an instance of E55 Type “A” with an instance of E55 Type “B”, when items of type “A” typically form part of items of type “B”, such as “car motors” and “cars”. It allows types to be organised into hierarchies based on one type describing a typical part of another. This property is equivalent to &quot;broader term partitive (BTP)&quot; as defined in ISO 2788 and “broaderPartitive” in SKOS.
 
 Examples:
@@ -2015,8 +2021,8 @@ Examples:
 In First Order Logic:
 P150(x,y) ⊃ (E55 Type)
 P150(x,y) ⊃ E55(y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P150 defines typical parts of</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P150</skos:notation>
+        <skos:prefLabel xml:lang="en">P150 defines typical parts of</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -2027,8 +2033,8 @@ P150(x,y) ⊃ E55(y)</rdfs:comment>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E55_Type"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E55_Type"/>
-        <rdfs:label xml:lang="en">P150 defines typical wholes for</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P150i</skos:notation>
+        <skos:prefLabel xml:lang="en">P150 defines typical wholes for</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -2051,8 +2057,8 @@ In First Order Logic:
 P151(x,y) ⊃ E66(x)
 P151(x,y) ⊃ E74(y)
 P151(x,y) ⊃ P11(x,y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P151 was formed from</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P151</skos:notation>
+        <skos:prefLabel xml:lang="en">P151 was formed from</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -2063,8 +2069,8 @@ P151(x,y) ⊃ P11(x,y)</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P11i_participated_in"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E74_Group"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E66_Formation"/>
-        <rdfs:label xml:lang="en">P151 participated in</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P151i</skos:notation>
+        <skos:prefLabel xml:lang="en">P151 participated in</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -2088,8 +2094,8 @@ Examples:
 In First Order Logic:
 P152(x,y) ⊃ E21(x)
 P152(x,y) ⊃ E21(y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P152 has parent</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P152</skos:notation>
+        <skos:prefLabel xml:lang="en">P152 has parent</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -2099,8 +2105,8 @@ P152(x,y) ⊃ E21(y)</rdfs:comment>
     <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P152i_is_parent_of">
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E21_Person"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E21_Person"/>
-        <rdfs:label xml:lang="en">P152 is parent of</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P152i</skos:notation>
+        <skos:prefLabel xml:lang="en">P152 is parent of</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -2123,8 +2129,8 @@ In contrast to P156 occupies, the property P53 has former or current location id
 
 In First Order Logic:
 P156 (x,y) = [E18(x) ∧ E53(y) ∧ P161(x,y) ∧ P157(y,x)]</rdfs:comment>
-        <rdfs:label xml:lang="en">P156 occupies</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P156</skos:notation>
+        <skos:prefLabel xml:lang="en">P156 occupies</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -2145,8 +2151,8 @@ Examples:
 In First Order Logic:
 P157(x,y) ⊃ E53(x)
 P157(x,y) ⊃ E18(y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P157 is at rest relative to</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P157</skos:notation>
+        <skos:prefLabel xml:lang="en">P157 is at rest relative to</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -2156,8 +2162,8 @@ P157(x,y) ⊃ E18(y)</rdfs:comment>
     <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P157i_provides_reference_space_for">
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E18_Physical_Thing"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E53_Place"/>
-        <rdfs:label xml:lang="en">P157 provides reference space for</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P157i</skos:notation>
+        <skos:prefLabel xml:lang="en">P157 provides reference space for</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -2176,11 +2182,11 @@ The property has more specific sub properties.
 Examples:
 - the designing of the Sydney Harbour Bridge (E7) was influenced by the Tyne bridge (E22)
 
-FOL: 
+FOL:
 P15 (x,y) ⊃ E7(x)
 P15 (x,y) ⊃ E1(y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P15 was influenced by</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P15</skos:notation>
+        <skos:prefLabel xml:lang="en">P15 was influenced by</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -2190,8 +2196,8 @@ P15 (x,y) ⊃ E1(y)</rdfs:comment>
     <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P15i_influenced">
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E1_CRM_Entity"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E7_Activity"/>
-        <rdfs:label xml:lang="en">P15 influenced</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P15i</skos:notation>
+        <skos:prefLabel xml:lang="en">P15 influenced</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -2209,8 +2215,8 @@ Example:
 In First Order Logic:
 P160(x,y) ⊃ E92(x)
 P160(x,y)⊃ E52(y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P160 has temporal projection</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P160</skos:notation>
+        <skos:prefLabel xml:lang="en">P160 has temporal projection</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -2221,7 +2227,7 @@ P160(x,y)⊃ E52(y)</rdfs:comment>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E92_Spacetime_Volume"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E53_Place"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scope note:
-This property associates an instance of a E92 Spacetime Volume with an instance of E53 Place that is the result of the spatial projection of the instance of a E92 Spacetime Volume on a reference space. In general there can be more than one useful reference space to describe the spatial projection of a spacetime volume, such as that of a battle ship versus that of the seafloor. Therefore the projection is not unique. 
+This property associates an instance of a E92 Spacetime Volume with an instance of E53 Place that is the result of the spatial projection of the instance of a E92 Spacetime Volume on a reference space. In general there can be more than one useful reference space to describe the spatial projection of a spacetime volume, such as that of a battle ship versus that of the seafloor. Therefore the projection is not unique.
 This is part of the fully developed path that is shortcut by P7took place at (witnessed. The more fully developed path from E4 Period through P161 has spatial projection, E53 Place, P89 falls within (contains) to E53 Place.
 
 Example
@@ -2229,8 +2235,8 @@ Example
 In First Order Logic:
 P161(x,y) ⊃ E92(x)
 P161(x,y) ⊃ E53(y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P161 has spatial projection</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P161</skos:notation>
+        <skos:prefLabel xml:lang="en">P161 has spatial projection</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -2248,8 +2254,8 @@ Examples:
 In First Order Logic:
 P164 (x,y) ⊃ E93(x)
 P164 (x,y) ⊃ E52(y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P164 is restricted by</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P164</skos:notation>
+        <skos:prefLabel xml:lang="en">P164 is restricted by</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -2270,13 +2276,13 @@ P164 (x,y) ⊃ E52(y)</rdfs:comment>
         <owl:inverseOf rdf:resource="http://erlangen-crm.org/current/P165i_is_incorporated_in"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E73_Information_Object"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scope note: 
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scope note:
 This property associates an instance of E73 Information Object with an instance of E90 Symbolic Object (or any of its subclasses) that was included in it.
 This property makes it possible to recognise the autonomous status of the incorporated signs, which were created in a distinct context, and can be incorporated in many distinct self-contained expressions, and to highlight the difference between structural and accidental whole-part relationships between conceptual entities. It accounts for many cultural facts that are quite frequent and significant: the inclusion of a poem in an anthology, the re-use of an operatic aria in a new opera, the use of a reproduction of a painting for a book cover or a CD booklet, the integration of textual quotations, the presence of lyrics in a song that sets those lyrics to music, the presence of the text of a play in a movie based on that play, etc. In particular, this property allows for modelling relationships of different levels of symbolic specificity, such as the natural language words making up a particular text, the characters making up the words and punctuation, the choice of fonts and page layout for the characters.
 A digital photograph of a manuscript page incorporates the text of the manuscript page
 It is an implicit transitive property.
 
-Examples:	
+Examples:
 
 - The content of Charles-Moïse Briquet’s ‘Les Filigranes: dictionnaire historique des marques du papier’ (E32) P165 incorporates the visual aspect of the watermark used around 1358-61 by some Spanish papermaker(s) and identified as ‘Briquet 4019’ (E37)
 - The visual content of Jacopo Amigoni’s painting known as ‘The Singer Farinelli and friends’ (E38) P165 incorporates the musical notation of Farinelli’s musical work entitled ‘La Partenza’ (E73)
@@ -2329,7 +2335,7 @@ P166(x,y) ⊃ E92(y)</rdfs:comment>
         <owl:inverseOf rdf:resource="http://erlangen-crm.org/current/P167i_was_place_of"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E93_Presence"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E53_Place"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scope Note:      
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scope Note:
 This property points to a wider area in which my thing /event was ...
 
 In First Order Logic:
@@ -2369,14 +2375,14 @@ mode of use Typing Tool; Storage Medium (E55)
 - the people of Iraq calling the place identified by TGN &apos;7017998&apos; (E7) used specific object
 &quot;Quyunjig&quot; (E44) mode of use Current; Vernacular (E55)
 
-FOL: 
+FOL:
 P16 (x,y) ⊃ E7(x)
 P16 (x,y) ⊃ E70(y)
 P16 (x,y) ⊃ P12(x,y)
 P16 (x,y) ⊃ P15(x,y)
 P16(x,y,z) ⊃ [P16(x,y) ∧ E55(z)]</rdfs:comment>
-        <rdfs:label xml:lang="en">P16 used specific object</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P16</skos:notation>
+        <skos:prefLabel xml:lang="en">P16 used specific object</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -2388,8 +2394,8 @@ P16(x,y,z) ⊃ [P16(x,y) ∧ E55(z)]</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P15i_influenced"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E70_Thing"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E7_Activity"/>
-        <rdfs:label xml:lang="en">P16 was used for</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P16i</skos:notation>
+        <skos:prefLabel xml:lang="en">P16 was used for</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -2410,12 +2416,12 @@ Examples:
 - the resignation of the chief executive (E7) was motivated by the collapse of Swiss Air (E68).
 - the coronation of Elizabeth II (E7) was motivated by the death of George VI (E69)
 
-FOL: 
+FOL:
 P17(x,y) ⊃ E7(x)
 P17(x,y) ⊃ E1(y)
 P17 (x,y) ⊃ P15(x,y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P17 was motivated by</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P17</skos:notation>
+        <skos:prefLabel xml:lang="en">P17 was motivated by</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -2426,8 +2432,8 @@ P17 (x,y) ⊃ P15(x,y)</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P15i_influenced"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E1_CRM_Entity"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E7_Activity"/>
-        <rdfs:label xml:lang="en">P17 motivated</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P17i</skos:notation>
+        <skos:prefLabel xml:lang="en">P17 motivated</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -2446,14 +2452,14 @@ This is distinct from the intended use of an item in some general type of activi
 Examples:
 - Lady Diana Spencer&apos;s wedding dress (E71) was made for Wedding of Prince Charles and Lady Diana Spencer (E7) mode of use To Be Worn (E55)
 
-FOL: 
+FOL:
 P19(x,y) ⊃ E7(x)
 P19(x,y) ⊃ E71(y)
 P19(x,y,z) ⊃ [P19(x,y) ∧ E55(z)]
 
 Properties: P19.1 mode of use: E55 Type</rdfs:comment>
-        <rdfs:label xml:lang="en">P19 was intended use of</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P19</skos:notation>
+        <skos:prefLabel xml:lang="en">P19 was intended use of</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -2463,8 +2469,8 @@ Properties: P19.1 mode of use: E55 Type</rdfs:comment>
     <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P19i_was_made_for">
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E71_Man-Made_Thing"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E7_Activity"/>
-        <rdfs:label xml:lang="en">P19 was made for</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P19i</skos:notation>
+        <skos:prefLabel xml:lang="en">P19 was made for</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -2487,8 +2493,8 @@ Examples:
 In First Order Logic:
 P1(x,y) ⊃ E1(x)
 P1(x,y) ⊃ E41(y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P1 is identified by</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P1</skos:notation>
+        <skos:prefLabel xml:lang="en">P1 is identified by</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -2498,8 +2504,8 @@ P1(x,y) ⊃ E41(y)</rdfs:comment>
     <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P1i_identifies">
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E41_Appellation"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E1_CRM_Entity"/>
-        <rdfs:label xml:lang="en">P1 identifies</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P1i</skos:notation>
+        <skos:prefLabel xml:lang="en">P1 identifies</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -2523,8 +2529,8 @@ Examples:
 In First Order Logic:
 P21(x,y) ⊃ E7(x)
 P21(x,y) ⊃ E55(y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P20 had specific purpose</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P20</skos:notation>
+        <skos:prefLabel xml:lang="en">P20 had specific purpose</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -2534,8 +2540,8 @@ P21(x,y) ⊃ E55(y)</rdfs:comment>
     <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P20i_was_purpose_of">
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E5_Event"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E7_Activity"/>
-        <rdfs:label xml:lang="en">P20 was purpose of</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P20i</skos:notation>
+        <skos:prefLabel xml:lang="en">P20 was purpose of</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -2559,8 +2565,8 @@ Examples:
 In First Order Logic:
 P21(x,y) ⊃ E7(x)
 P21(x,y) ⊃ E55(y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P21 had general purpose</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P21</skos:notation>
+        <skos:prefLabel xml:lang="en">P21 had general purpose</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -2570,8 +2576,8 @@ P21(x,y) ⊃ E55(y)</rdfs:comment>
     <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P21i_was_purpose_of">
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E55_Type"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E7_Activity"/>
-        <rdfs:label xml:lang="en">P21 was purpose of</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P21i</skos:notation>
+        <skos:prefLabel xml:lang="en">P21 was purpose of</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -2597,8 +2603,8 @@ In First Order Logic:
 P22(x,y) ⊃ E8(x)
 P22(x,y) ⊃ E39(y)
 P22 (x,y) ⊃ P14(x,y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P22 transferred title to</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P22</skos:notation>
+        <skos:prefLabel xml:lang="en">P22 transferred title to</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -2609,8 +2615,8 @@ P22 (x,y) ⊃ P14(x,y)</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P14i_performed"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E8_Acquisition"/>
-        <rdfs:label xml:lang="en">P22 acquired title through</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P22i</skos:notation>
+        <skos:prefLabel xml:lang="en">P22 acquired title through</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -2633,8 +2639,8 @@ In First Order Logic:
 P23(x,y) ⊃ E8(x)
 P23(x,y) ⊃ E39(y)
 P23 (x,y) ⊃ P14(x,y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P23 transferred title from</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P23</skos:notation>
+        <skos:prefLabel xml:lang="en">P23 transferred title from</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -2644,8 +2650,8 @@ P23 (x,y) ⊃ P14(x,y)</rdfs:comment>
     <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P23i_surrendered_title_through">
         <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P14i_performed"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E8_Acquisition"/>
-        <rdfs:label xml:lang="en">P23 surrendered title through</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P23i</skos:notation>
+        <skos:prefLabel xml:lang="en">P23 surrendered title through</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -2667,8 +2673,8 @@ Examples:
 In First Order Logic:
 P24(x,y) ⊃ E8(x)
 P24(x,y) ⊃ E18(y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P24 transferred title of</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P24</skos:notation>
+        <skos:prefLabel xml:lang="en">P24 transferred title of</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -2678,8 +2684,8 @@ P24(x,y) ⊃ E18(y)</rdfs:comment>
     <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P24i_changed_ownership_through">
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E18_Physical_Thing"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E8_Acquisition"/>
-        <rdfs:label xml:lang="en">P24 changed ownership through</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P24i</skos:notation>
+        <skos:prefLabel xml:lang="en">P24 changed ownership through</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -2703,8 +2709,8 @@ In First Order Logic:
 P25(x,y) ⊃ E9(x)
 P25(x,y) ⊃ E19(y)
 P25(x,y) ⊃ P12(x,y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P25 moved</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P25</skos:notation>
+        <skos:prefLabel xml:lang="en">P25 moved</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -2715,8 +2721,8 @@ P25(x,y) ⊃ P12(x,y)</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P12i_was_present_at"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E19_Physical_Object"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E9_Move"/>
-        <rdfs:label xml:lang="en">P25 moved by</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P25i</skos:notation>
+        <skos:prefLabel xml:lang="en">P25 moved by</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -2740,8 +2746,8 @@ In First Order Logic:
 P26(x,y) ⊃ E9(x)
 P26(x,y) ⊃ E53(y)
 P26(x,y) ⊃ (z)[ E53(z) ∧ P7(x,z) ∧ P89(y,z)]</rdfs:comment>
-        <rdfs:label xml:lang="en">P26 moved to</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P26</skos:notation>
+        <skos:prefLabel xml:lang="en">P26 moved to</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -2752,8 +2758,8 @@ P26(x,y) ⊃ (z)[ E53(z) ∧ P7(x,z) ∧ P89(y,z)]</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P7i_witnessed"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E53_Place"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E9_Move"/>
-        <rdfs:label xml:lang="en">P26 was destination of</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P26i</skos:notation>
+        <skos:prefLabel xml:lang="en">P26 was destination of</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -2778,8 +2784,8 @@ In First Order Logic:
 P27(x,y) ⊃ E9(x)
 P27(x,y) ⊃ E53(y)
 P27(x,y) ⊃ (z)[ E53(z) ∧ P7(x,z) ∧ P89(y,z)]</rdfs:comment>
-        <rdfs:label xml:lang="en">P27 moved from</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P27</skos:notation>
+        <skos:prefLabel xml:lang="en">P27 moved from</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -2791,8 +2797,8 @@ P27(x,y) ⊃ (z)[ E53(z) ∧ P7(x,z) ∧ P89(y,z)]</rdfs:comment>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E53_Place"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E9_Move"/>
-        <rdfs:label xml:lang="en">P27 was origin of</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P27i</skos:notation>
+        <skos:prefLabel xml:lang="en">P27 was origin of</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -2816,8 +2822,8 @@ In First Order Logic:
 P28(x,y) ⊃ E10(x)
 P28(x,y) ⊃ E39(y)
 P28(x,y) ⊃ P14(x,y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P28 custody surrendered by</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P28</skos:notation>
+        <skos:prefLabel xml:lang="en">P28 custody surrendered by</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -2827,8 +2833,8 @@ P28(x,y) ⊃ P14(x,y)</rdfs:comment>
     <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P28i_surrendered_custody_through">
         <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P14i_performed"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E10_Transfer_of_Custody"/>
-        <rdfs:label xml:lang="en">P28 surrendered custody through</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P28i</skos:notation>
+        <skos:prefLabel xml:lang="en">P28 surrendered custody through</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -2852,8 +2858,8 @@ In First Order Logic:
 P29 (x,y) ⊃ E10(x)
 P29 (x,y) ⊃ E39(y)
 P29(x,y) ⊃ P14(x,y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P29 custody received by</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P29</skos:notation>
+        <skos:prefLabel xml:lang="en">P29 custody received by</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -2863,8 +2869,8 @@ P29(x,y) ⊃ P14(x,y)</rdfs:comment>
     <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P29i_received_custody_through">
         <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P14i_performed"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E10_Transfer_of_Custody"/>
-        <rdfs:label xml:lang="en">P29 received custody through</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P29i</skos:notation>
+        <skos:prefLabel xml:lang="en">P29 received custody through</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -2886,8 +2892,8 @@ Examples:
 In First Order Logic:
 P2(x,y) ⊃ E1(x)
 P2(x,y) ⊃ E55(y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P2 has type</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P2</skos:notation>
+        <skos:prefLabel xml:lang="en">P2 has type</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -2897,8 +2903,8 @@ P2(x,y) ⊃ E55(y)</rdfs:comment>
     <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P2i_is_type_of">
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E55_Type"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E1_CRM_Entity"/>
-        <rdfs:label xml:lang="en">P2 is type of</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P2i</skos:notation>
+        <skos:prefLabel xml:lang="en">P2 is type of</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -2920,8 +2926,8 @@ Examples:
 In First Order Logic:
 P30 (x,y) ⊃ E10(x)
 P30 (x,y) ⊃ E18(y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P30 transferred custody of</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P30</skos:notation>
+        <skos:prefLabel xml:lang="en">P30 transferred custody of</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -2931,8 +2937,8 @@ P30 (x,y) ⊃ E18(y)</rdfs:comment>
     <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P30i_custody_transferred_through">
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E18_Physical_Thing"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E10_Transfer_of_Custody"/>
-        <rdfs:label xml:lang="en">P30 custody transferred through</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P30i</skos:notation>
+        <skos:prefLabel xml:lang="en">P30 custody transferred through</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -2956,8 +2962,8 @@ In First Order Logic:
 P31(x,y) ⊃ E11(x)
 P31(x,y) ⊃ E24(y)
 P31(x,y) ⊃ P12(x,y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P31 has modified</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P31</skos:notation>
+        <skos:prefLabel xml:lang="en">P31 has modified</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -2968,8 +2974,8 @@ P31(x,y) ⊃ P12(x,y)</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P12i_was_present_at"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E24_Physical_Man-Made_Thing"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E11_Modification"/>
-        <rdfs:label xml:lang="en">P31 was modified by</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P31i</skos:notation>
+        <skos:prefLabel xml:lang="en">P31 was modified by</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -2982,8 +2988,8 @@ P31(x,y) ⊃ P12(x,y)</rdfs:comment>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E7_Activity"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E55_Type"/>
         <rdfs:comment xml:lang="en">Scope note:
-This property identifies the technique or method that was employed in   an activity. 
-These techniques should be drawn from an external E55 Type hierarchy of consistent terminology of general techniques or methods such as embroidery, oil-painting, carbon dating, etc. Specific documented techniques should be described as instances of E29 Design or Procedure. This property identifies the technique that was employed in an act of modification. 
+This property identifies the technique or method that was employed in   an activity.
+These techniques should be drawn from an external E55 Type hierarchy of consistent terminology of general techniques or methods such as embroidery, oil-painting, carbon dating, etc. Specific documented techniques should be described as instances of E29 Design or Procedure. This property identifies the technique that was employed in an act of modification.
 
 
 Examples:
@@ -2993,8 +2999,8 @@ In First Order Logic:
 P32(x,y) ⊃ E7(x)
 P32(x,y) ⊃ E55(y)
 P32(x,y) ⊃ P125(x,y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P32 used general technique</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P32</skos:notation>
+        <skos:prefLabel xml:lang="en">P32 used general technique</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -3005,8 +3011,8 @@ P32(x,y) ⊃ P125(x,y)</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P125i_was_type_of_object_used_in"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E55_Type"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E7_Activity"/>
-        <rdfs:label xml:lang="en">P32 was technique of</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P32i</skos:notation>
+        <skos:prefLabel xml:lang="en">P32 was technique of</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -3033,8 +3039,8 @@ In First Order Logic:
 P33(x,y) ⊃ E7(x)
 P33(x,y) ⊃ E29(y)
 P33(x,y) ⊃ P16(x,y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P33 used specific technique</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P33</skos:notation>
+        <skos:prefLabel xml:lang="en">P33 used specific technique</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -3045,8 +3051,8 @@ P33(x,y) ⊃ P16(x,y)</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P16i_was_used_for"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E29_Design_or_Procedure"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E7_Activity"/>
-        <rdfs:label xml:lang="en">P33 was used by</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P33i</skos:notation>
+        <skos:prefLabel xml:lang="en">P33 was used by</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -3069,8 +3075,8 @@ In First Order Logic:
 P34(x,y) ⊃ E14(x)
 P34(x,y) ⊃ E18(y)
 P34(x,y) ⊃ P140(x,y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P34 concerned</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P34</skos:notation>
+        <skos:prefLabel xml:lang="en">P34 concerned</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -3081,8 +3087,8 @@ P34(x,y) ⊃ P140(x,y)</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P140i_was_attributed_by"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E18_Physical_Thing"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E14_Condition_Assessment"/>
-        <rdfs:label xml:lang="en">P34 was assessed by</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P34i</skos:notation>
+        <skos:prefLabel xml:lang="en">P34 was assessed by</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -3104,8 +3110,8 @@ In First Order Logic:
 P35(x,y) ⊃E14(x)
 P35(x,y) ⊃ E3(y)
 P35(x,y) ⊃ P141(x,y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P35 has identified</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P35</skos:notation>
+        <skos:prefLabel xml:lang="en">P35 has identified</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -3116,8 +3122,8 @@ P35(x,y) ⊃ P141(x,y)</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P141i_was_assigned_by"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E3_Condition_State"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E14_Condition_Assessment"/>
-        <rdfs:label xml:lang="en">P35 was identified by</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P35i</skos:notation>
+        <skos:prefLabel xml:lang="en">P35 was identified by</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -3141,8 +3147,8 @@ In First Order Logic:
 P37(x,y) ⊃ E15(x)
 P37(x,y) ⊃ E42(y)
 P37(x,y) ⊃ P141(x,y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P37 assigned</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P37</skos:notation>
+        <skos:prefLabel xml:lang="en">P37 assigned</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -3153,8 +3159,8 @@ P37(x,y) ⊃ P141(x,y)</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P141i_was_assigned_by"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E42_Identifier"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E15_Identifier_Assignment"/>
-        <rdfs:label xml:lang="en">P37 was assigned by</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P37i</skos:notation>
+        <skos:prefLabel xml:lang="en">P37 was assigned by</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -3178,8 +3184,8 @@ In First Order Logic:
 P38(x,y) ⊃ E15(x)
 P38(x,y) ⊃ E42(y)
 P38(x,y) ⊃ P141(x,y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P38 deassigned</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P38</skos:notation>
+        <skos:prefLabel xml:lang="en">P38 deassigned</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -3190,8 +3196,8 @@ P38(x,y) ⊃ P141(x,y)</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P141i_was_assigned_by"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E42_Identifier"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E15_Identifier_Assignment"/>
-        <rdfs:label xml:lang="en">P38 was deassigned by</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P38i</skos:notation>
+        <skos:prefLabel xml:lang="en">P38 was deassigned by</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -3213,8 +3219,8 @@ In First Order Logic:
 P39(x,y) ⊃ E16(x)
 P39(x,y) ⊃ E1(y)
 P39(x,y) ⊃ P140(x,y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P39 measured</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P39</skos:notation>
+        <skos:prefLabel xml:lang="en">P39 measured</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -3225,8 +3231,8 @@ P39(x,y) ⊃ P140(x,y)</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P140i_was_attributed_by"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E1_CRM_Entity"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E16_Measurement"/>
-        <rdfs:label xml:lang="en">P39 was measured by</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P39i</skos:notation>
+        <skos:prefLabel xml:lang="en">P39 was measured by</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -3251,8 +3257,8 @@ In First Order Logic:
 P40(x,y) ⊃ E16(x)
 P40(x,y)⊃ E54(y)
 P40(x,y) ⊃ P141(x,y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P40 observed dimension</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P40</skos:notation>
+        <skos:prefLabel xml:lang="en">P40 observed dimension</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -3263,8 +3269,8 @@ P40(x,y) ⊃ P141(x,y)</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P141i_was_assigned_by"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E54_Dimension"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E16_Measurement"/>
-        <rdfs:label xml:lang="en">P40 was observed in</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P40i</skos:notation>
+        <skos:prefLabel xml:lang="en">P40 was observed in</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -3287,8 +3293,8 @@ In First Order Logic:
 P41(x,y) ⊃ E17(x)
 P41(x,y) ⊃ E1(y)
 P41(x,y) ⊃ P140(x,y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P41 classified</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P41</skos:notation>
+        <skos:prefLabel xml:lang="en">P41 classified</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -3299,8 +3305,8 @@ P41(x,y) ⊃ P140(x,y)</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P140i_was_attributed_by"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E1_CRM_Entity"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E17_Type_Assignment"/>
-        <rdfs:label xml:lang="en">P41 was classified by</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P41i</skos:notation>
+        <skos:prefLabel xml:lang="en">P41 was classified by</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -3325,8 +3331,8 @@ In First Order Logic:
 P42(x,y) ⊃ E17(x)
 P42(x,y)⊃ E55(y)
 P42(x,y) ⊃ P141(x,y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P42 assigned</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P42</skos:notation>
+        <skos:prefLabel xml:lang="en">P42 assigned</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -3337,8 +3343,8 @@ P42(x,y) ⊃ P141(x,y)</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P141i_was_assigned_by"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E55_Type"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E17_Type_Assignment"/>
-        <rdfs:label xml:lang="en">P42 was assigned by</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P42i</skos:notation>
+        <skos:prefLabel xml:lang="en">P42 was assigned by</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -3361,8 +3367,8 @@ Examples:
 In First Order Logic:
 P43(x,y) ⊃ E70(x)
 P43(x,y) ⊃ E54(y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P43 has dimension</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P43</skos:notation>
+        <skos:prefLabel xml:lang="en">P43 has dimension</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -3372,8 +3378,8 @@ P43(x,y) ⊃ E54(y)</rdfs:comment>
     <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P43i_is_dimension_of">
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E54_Dimension"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E70_Thing"/>
-        <rdfs:label xml:lang="en">P43 is dimension of</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P43i</skos:notation>
+        <skos:prefLabel xml:lang="en">P43 is dimension of</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -3397,8 +3403,8 @@ Examples:
 In First Order Logic:
 P44(x,y) ⊃ E18(x)
 P44(x,y) ⊃ E3(y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P44 has condition</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P44</skos:notation>
+        <skos:prefLabel xml:lang="en">P44 has condition</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -3408,8 +3414,8 @@ P44(x,y) ⊃ E3(y)</rdfs:comment>
     <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P44i_is_condition_of">
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E3_Condition_State"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E18_Physical_Thing"/>
-        <rdfs:label xml:lang="en">P44 is condition of</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P44i</skos:notation>
+        <skos:prefLabel xml:lang="en">P44 is condition of</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -3433,8 +3439,8 @@ Examples:
 In First Order Logic:
 P45(x,y) ⊃ E18(x)
 P45(x,y) ⊃ E57(y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P45 consists of</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P45</skos:notation>
+        <skos:prefLabel xml:lang="en">P45 consists of</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -3444,8 +3450,8 @@ P45(x,y) ⊃ E57(y)</rdfs:comment>
     <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P45i_is_incorporated_in">
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E57_Material"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E18_Physical_Thing"/>
-        <rdfs:label xml:lang="en">P45 is incorporated in</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P45i</skos:notation>
+        <skos:prefLabel xml:lang="en">P45 is incorporated in</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -3477,8 +3483,8 @@ P46(x,y) ⊃ E18(y)
 P46(x,y) ⊃ P132(x,y)
 P46(x,y) ⊃ (uzw)[E93(u) ∧ P166 (x,u) ∧ E52(z) ∧ P164(u,z) ∧ E93(w) ∧ P166 (y,w) ∧
 P164(w,z) ∧ P10(w,u)]</rdfs:comment>
-        <rdfs:label xml:lang="en">P46 is composed of</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P46</skos:notation>
+        <skos:prefLabel xml:lang="en">P46 is composed of</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -3489,8 +3495,8 @@ P164(w,z) ∧ P10(w,u)]</rdfs:comment>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E18_Physical_Thing"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E18_Physical_Thing"/>
-        <rdfs:label xml:lang="en">P46 forms part of</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P46i</skos:notation>
+        <skos:prefLabel xml:lang="en">P46 forms part of</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -3516,8 +3522,8 @@ In First Order Logic:
 P48(x,y) ⊃ E1(x)
 P48(x,y) ⊃ E42(y)
 P48(x,y) ⊃ P1(x,y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P48 has preferred identifier</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P48</skos:notation>
+        <skos:prefLabel xml:lang="en">P48 has preferred identifier</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -3527,8 +3533,8 @@ P48(x,y) ⊃ P1(x,y)</rdfs:comment>
     <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P48i_is_preferred_identifier_of">
         <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P1i_identifies"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E42_Identifier"/>
-        <rdfs:label xml:lang="en">P48 is preferred identifier of</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P48i</skos:notation>
+        <skos:prefLabel xml:lang="en">P48 is preferred identifier of</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -3552,8 +3558,8 @@ Examples:
 In First Order Logic:
 P49(x,y) ⊃ E18(x)
 P49(x,y) ⊃ E39(y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P49 has former or current keeper</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P49</skos:notation>
+        <skos:prefLabel xml:lang="en">P49 has former or current keeper</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -3563,8 +3569,8 @@ P49(x,y) ⊃ E39(y)</rdfs:comment>
     <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P49i_is_former_or_current_keeper_of">
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E39_Actor"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E18_Physical_Thing"/>
-        <rdfs:label xml:lang="en">P49 is former or current keeper of</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P49i</skos:notation>
+        <skos:prefLabel xml:lang="en">P49 is former or current keeper of</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -3586,8 +3592,8 @@ Examples:
 In First Order Logic:
 P4(x,y) ⊃ E2(x)
 P4(x,y) ⊃ E52(y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P4 has time-span</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P4</skos:notation>
+        <skos:prefLabel xml:lang="en">P4 has time-span</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -3597,8 +3603,8 @@ P4(x,y) ⊃ E52(y)</rdfs:comment>
     <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P4i_is_time-span_of">
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E52_Time-Span"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E2_Temporal_Entity"/>
-        <rdfs:label xml:lang="en">P4 is time-span of</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P4i</skos:notation>
+        <skos:prefLabel xml:lang="en">P4 is time-span of</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -3621,8 +3627,8 @@ In First Order Logic:
 P50(x,y) ⊃ E18(x)
 P50(x,y) ⊃ E39(y)
 P50(x,y) ⊃ P49(x,y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P50 has current keeper</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P50</skos:notation>
+        <skos:prefLabel xml:lang="en">P50 has current keeper</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -3632,8 +3638,8 @@ P50(x,y) ⊃ P49(x,y)</rdfs:comment>
     <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P50i_is_current_keeper_of">
         <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P49i_is_former_or_current_keeper_of"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E18_Physical_Thing"/>
-        <rdfs:label xml:lang="en">P50 is current keeper of</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P50i</skos:notation>
+        <skos:prefLabel xml:lang="en">P50 is current keeper of</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -3655,8 +3661,8 @@ Examples:
 In First Order Logic:
 P51(x,y) ⊃ E18(x)
 P51(x,y) ⊃ E39(y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P51 has former or current owner</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P51</skos:notation>
+        <skos:prefLabel xml:lang="en">P51 has former or current owner</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -3666,8 +3672,8 @@ P51(x,y) ⊃ E39(y)</rdfs:comment>
     <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P51i_is_former_or_current_owner_of">
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E39_Actor"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E18_Physical_Thing"/>
-        <rdfs:label xml:lang="en">P51 is former or current owner of</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P51i</skos:notation>
+        <skos:prefLabel xml:lang="en">P51 is former or current owner of</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -3692,8 +3698,8 @@ P52 (x,y) ⊃ E18(x)
 P52 (x,y) ⊃ E39(y)
 P52(x,y) ⊃ P51(x,y)
 P52(x,y) ⊃ P105(x,y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P52 has current owner</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P52</skos:notation>
+        <skos:prefLabel xml:lang="en">P52 has current owner</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -3704,8 +3710,8 @@ P52(x,y) ⊃ P105(x,y)</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P105i_has_right_on"/>
         <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P51i_is_former_or_current_owner_of"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E18_Physical_Thing"/>
-        <rdfs:label xml:lang="en">P52 is current owner of</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P52i</skos:notation>
+        <skos:prefLabel xml:lang="en">P52 is current owner of</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -3730,8 +3736,8 @@ Examples:
 In First Order Logic:
 P53(x,y) ⊃ E18(x)
 P53(x,y) ⊃ E53(y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P53 has former or current location</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P53</skos:notation>
+        <skos:prefLabel xml:lang="en">P53 has former or current location</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -3741,8 +3747,8 @@ P53(x,y) ⊃ E53(y)</rdfs:comment>
     <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P53i_is_former_or_current_location_of">
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E53_Place"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E18_Physical_Thing"/>
-        <rdfs:label xml:lang="en">P53 is former or current location of</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P53i</skos:notation>
+        <skos:prefLabel xml:lang="en">P53 is former or current location of</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -3760,8 +3766,8 @@ P54 has current permanent location (is current permanent location of) is similar
 
 Examples:
 - silver cup 232 (E22) has current permanent location Shelf 3.1, Store 2, Museum of Oxford (E53)</rdfs:comment>
-        <rdfs:label xml:lang="en">P54 has current permanent location</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P54</skos:notation>
+        <skos:prefLabel xml:lang="en">P54 has current permanent location</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -3771,8 +3777,8 @@ Examples:
     <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P54i_is_current_permanent_location_of">
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E53_Place"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E19_Physical_Object"/>
-        <rdfs:label xml:lang="en">P54 is current permanent location of</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P54i</skos:notation>
+        <skos:prefLabel xml:lang="en">P54 is current permanent location of</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -3797,8 +3803,8 @@ In First Order Logic:
 P55(x,y) ⊃ E19(x)
 P55(x,y) ⊃ E53(y)
 P55(x,y) ⊃ P53(x,y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P55 has current location</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P55</skos:notation>
+        <skos:prefLabel xml:lang="en">P55 has current location</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -3809,8 +3815,8 @@ P55(x,y) ⊃ P53(x,y)</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P53i_is_former_or_current_location_of"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E53_Place"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E19_Physical_Object"/>
-        <rdfs:label xml:lang="en">P55 currently holds</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P55i</skos:notation>
+        <skos:prefLabel xml:lang="en">P55 currently holds</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -3835,8 +3841,8 @@ In First Order Logic:
 P56(x,y) ⊃E19(x)
 P56(x,y) ⊃ E26(y)
 P56(x,y) ⊃ P46(x,y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P56 bears feature</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P56</skos:notation>
+        <skos:prefLabel xml:lang="en">P56 bears feature</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -3847,8 +3853,8 @@ P56(x,y) ⊃ P46(x,y)</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P46i_forms_part_of"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E26_Physical_Feature"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E19_Physical_Object"/>
-        <rdfs:label xml:lang="en">P56 is found on</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P56i</skos:notation>
+        <skos:prefLabel xml:lang="en">P56 is found on</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -3872,8 +3878,8 @@ Examples:
 In First Order Logic:
 P58(x,y) ⊃ E18(x)
 P58(x,y) ⊃ E46(y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P58 has section definition</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P58</skos:notation>
+        <skos:prefLabel xml:lang="en">P58 has section definition</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -3883,8 +3889,8 @@ P58(x,y) ⊃ E46(y)</rdfs:comment>
     <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P58i_defines_section">
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E46_Section_Definition"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E18_Physical_Thing"/>
-        <rdfs:label xml:lang="en">P58 defines section</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P58i</skos:notation>
+        <skos:prefLabel xml:lang="en">P58 defines section</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -3910,8 +3916,8 @@ Examples:
 In First Order Logic:
 P59(x,y) ⊃ E18(x)
 P59(x,y) ⊃ E53(y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P59 has section</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P59</skos:notation>
+        <skos:prefLabel xml:lang="en">P59 has section</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -3922,8 +3928,8 @@ P59(x,y) ⊃ E53(y)</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P157_is_at_rest_relative_to"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E53_Place"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E18_Physical_Thing"/>
-        <rdfs:label xml:lang="en">P59 is located on or within</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P59i</skos:notation>
+        <skos:prefLabel xml:lang="en">P59 is located on or within</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -3946,8 +3952,8 @@ Examples:
 In First Order Logic:
 P5(x,y) ⊃ E3(x)
 P5(x,y) ⊃ E3(y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P5 consists of</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P5</skos:notation>
+        <skos:prefLabel xml:lang="en">P5 consists of</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -3958,8 +3964,8 @@ P5(x,y) ⊃ E3(y)</rdfs:comment>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E3_Condition_State"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E3_Condition_State"/>
-        <rdfs:label xml:lang="en">P5 forms part of</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P5i</skos:notation>
+        <skos:prefLabel xml:lang="en">P5 forms part of</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -3985,8 +3991,8 @@ P62(x,y) ⊃ E1(y)
 P62(x,y,z) ⊃ [P62(x,y) ∧ E55(z)]
 
 Properties: P62.1 mode of depiction: E55 Type</rdfs:comment>
-        <rdfs:label xml:lang="en">P62 depicts</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P62</skos:notation>
+        <skos:prefLabel xml:lang="en">P62 depicts</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -3996,8 +4002,8 @@ Properties: P62.1 mode of depiction: E55 Type</rdfs:comment>
     <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P62i_is_depicted_by">
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E1_CRM_Entity"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E24_Physical_Man-Made_Thing"/>
-        <rdfs:label xml:lang="en">P62 is depicted by</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P62i</skos:notation>
+        <skos:prefLabel xml:lang="en">P62 is depicted by</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -4025,8 +4031,8 @@ Examples:
 In First Order Logic: P65(x,y) ⊃ E24(x)
 P65(x,y) ⊃ E36(y)
 P65(x,y) ⊃ P128(x,y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P65 shows visual item</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P65</skos:notation>
+        <skos:prefLabel xml:lang="en">P65 shows visual item</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -4037,8 +4043,8 @@ P65(x,y) ⊃ P128(x,y)</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P128i_is_carried_by"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E36_Visual_Item"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E24_Physical_Man-Made_Thing"/>
-        <rdfs:label xml:lang="en">P65 is shown by</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P65i</skos:notation>
+        <skos:prefLabel xml:lang="en">P65 is shown by</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -4061,8 +4067,8 @@ P67(x,y) ⊃ E1(y)
 P67(x,y,z) ⊃ [P67(x,y) ∧ E55(z)]
 
 Properties: P67.1 has type: E55 Type</rdfs:comment>
-        <rdfs:label xml:lang="en">P67 refers to</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P67</skos:notation>
+        <skos:prefLabel xml:lang="en">P67 refers to</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -4072,8 +4078,8 @@ Properties: P67.1 has type: E55 Type</rdfs:comment>
     <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P67i_is_referred_to_by">
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E1_CRM_Entity"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E89_Propositional_Object"/>
-        <rdfs:label xml:lang="en">P67 is referred to by</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P67i</skos:notation>
+        <skos:prefLabel xml:lang="en">P67 is referred to by</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -4099,8 +4105,8 @@ In First Order Logic:
 P68(x,y) ⊃ E29(x)
 P68(x,y) ⊃ E57(y)
 P68(x,y) ⊃ P67(x,y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P68 foresees use of</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P68</skos:notation>
+        <skos:prefLabel xml:lang="en">P68 foresees use of</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -4111,8 +4117,8 @@ P68(x,y) ⊃ P67(x,y)</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P67i_is_referred_to_by"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E57_Material"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E29_Design_or_Procedure"/>
-        <rdfs:label xml:lang="en">P68 use foreseen by</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P68i</skos:notation>
+        <skos:prefLabel xml:lang="en">P68 use foreseen by</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -4129,8 +4135,8 @@ The P69.1 has type property of P69 has association with allows the nature of the
 The property can typically be used to model the decomposition of the description of a complete workflow into a series of separate procedures.
 
 Examples:
-- Procedure for glass blowing (E29) has association with procedure for glass heating (E29) 
-- The set of instructions for performing Macbeth in Max Reinhardt&apos;s production in 1916 in Berlin at Deutsches Theater (E29) has association with the scene design drawing by Ernst Stern reproduced at http://www.glopad.org/pi/fr/record/digdoc/1003814 (E29) has type has part (E55) 
+- Procedure for glass blowing (E29) has association with procedure for glass heating (E29)
+- The set of instructions for performing Macbeth in Max Reinhardt&apos;s production in 1916 in Berlin at Deutsches Theater (E29) has association with the scene design drawing by Ernst Stern reproduced at http://www.glopad.org/pi/fr/record/digdoc/1003814 (E29) has type has part (E55)
 - Preparation of parchment (E29) has association with soaking and unhairing of skin (E29) has type &apos;has part&apos; (E55). Preparation of parchment (E29) has association with stretching of skin (E29) has type &apos;has part&apos; (E55). Stretching of skin (E29) has association with soaking and unhairing of skin (E29) has type &apos;follows&apos; (E55).
 - The plan for reassembling the temples at Abu Simbel (E29) has association with the plan for
 storing and transporting the blocks (E29) has type &apos;follows&apos; (E55)&apos;.
@@ -4142,8 +4148,8 @@ P69(x,y,z) ⊃ [P69(x,y) ∧ E55(z)]
 P69(x,y) ⊃P69(y,x)
 
 Properties: P69.1 has type: E55 Type</rdfs:comment>
-        <rdfs:label xml:lang="en">P69 has association with</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P69</skos:notation>
+        <skos:prefLabel xml:lang="en">P69 has association with</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -4153,8 +4159,8 @@ Properties: P69.1 has type: E55 Type</rdfs:comment>
     <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P69i_is_associated_with">
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E29_Design_or_Procedure"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E29_Design_or_Procedure"/>
-        <rdfs:label xml:lang="en">P69 is associated with</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P69i</skos:notation>
+        <skos:prefLabel xml:lang="en">P69 is associated with</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -4178,8 +4184,8 @@ In First Order Logic:
 P70 (x,y) ⊃ E31(x)
 P70 (x,y) ⊃ E1(y)
 P70(x,y) ⊃ P67(x,y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P70 documents</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P70</skos:notation>
+        <skos:prefLabel xml:lang="en">P70 documents</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -4190,8 +4196,8 @@ P70(x,y) ⊃ P67(x,y)</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P67i_is_referred_to_by"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E1_CRM_Entity"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E31_Document"/>
-        <rdfs:label xml:lang="en">P70 is documented in</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P70i</skos:notation>
+        <skos:prefLabel xml:lang="en">P70 is documented in</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -4213,8 +4219,8 @@ In First Order Logic:
 P71(x,y) ⊃ E32(x)
 P71(x,y) ⊃ E1(y)
 P71(x,y) ⊃ P67(x,y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P71 lists</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P71</skos:notation>
+        <skos:prefLabel xml:lang="en">P71 lists</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -4225,8 +4231,8 @@ P71(x,y) ⊃ P67(x,y)</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P67i_is_referred_to_by"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E1_CRM_Entity"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E32_Authority_Document"/>
-        <rdfs:label xml:lang="en">P71 is listed in</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P71i</skos:notation>
+        <skos:prefLabel xml:lang="en">P71 is listed in</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -4248,8 +4254,8 @@ Examples:
 In First Order Logic:
 P72(x,y) ⊃ E33(x)
 P72(x,y) ⊃ E56(y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P72 has language</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P72</skos:notation>
+        <skos:prefLabel xml:lang="en">P72 has language</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -4259,8 +4265,8 @@ P72(x,y) ⊃ E56(y)</rdfs:comment>
     <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P72i_is_language_of">
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E56_Language"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E33_Linguistic_Object"/>
-        <rdfs:label xml:lang="en">P72 is language of</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P72i</skos:notation>
+        <skos:prefLabel xml:lang="en">P72 is language of</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -4284,8 +4290,8 @@ In First Order Logic:
 P73(x,y) ⊃ E33(x)
 P73(x,y) ⊃ E33(y)
 P73(x,y) ⊃ P130(y,x)</rdfs:comment>
-        <rdfs:label xml:lang="en">P73 has translation</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P73</skos:notation>
+        <skos:prefLabel xml:lang="en">P73 has translation</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -4296,8 +4302,8 @@ P73(x,y) ⊃ P130(y,x)</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P130i_features_are_also_found_on"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E33_Linguistic_Object"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E33_Linguistic_Object"/>
-        <rdfs:label xml:lang="en">P73 is translation of</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P73i</skos:notation>
+        <skos:prefLabel xml:lang="en">P73 is translation of</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -4319,8 +4325,8 @@ Examples:
 In First Order Logic:
 P74(x,y) ⊃ E39(x)
 P74(x,y) ⊃ E53(y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P74 has current or former residence</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P74</skos:notation>
+        <skos:prefLabel xml:lang="en">P74 has current or former residence</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -4330,8 +4336,8 @@ P74(x,y) ⊃ E53(y)</rdfs:comment>
     <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P74i_is_current_or_former_residence_of">
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E53_Place"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E39_Actor"/>
-        <rdfs:label xml:lang="en">P74 is current or former residence of</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P74i</skos:notation>
+        <skos:prefLabel xml:lang="en">P74 is current or former residence of</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -4351,8 +4357,8 @@ Examples:
 In First Order Logic:
 P75(x,y) ⊃ E39(x)
 P75(x,y) ⊃ E30(y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P75 possesses</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P75</skos:notation>
+        <skos:prefLabel xml:lang="en">P75 possesses</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -4362,8 +4368,8 @@ P75(x,y) ⊃ E30(y)</rdfs:comment>
     <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P75i_is_possessed_by">
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E30_Right"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E39_Actor"/>
-        <rdfs:label xml:lang="en">P75 is possessed by</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P75i</skos:notation>
+        <skos:prefLabel xml:lang="en">P75 is possessed by</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -4383,8 +4389,8 @@ Examples:
 In First Order Logic:
 P76(x,y) ⊃ E39(x)
 P76(x,y) ⊃ E51(y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P76 has contact point</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P76</skos:notation>
+        <skos:prefLabel xml:lang="en">P76 has contact point</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -4394,8 +4400,8 @@ P76(x,y) ⊃ E51(y)</rdfs:comment>
     <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P76i_provides_access_to">
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E51_Contact_Point"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E39_Actor"/>
-        <rdfs:label xml:lang="en">P76 provides access to</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P76i</skos:notation>
+        <skos:prefLabel xml:lang="en">P76 provides access to</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -4417,8 +4423,8 @@ In First Order Logic:
 P78(x,y) ⊃ E52(x)
 P78(x,y) ⊃ E49(y)
 P78(x,y) ⊃ P1(x,y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P78 is identified by</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P78</skos:notation>
+        <skos:prefLabel xml:lang="en">P78 is identified by</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -4429,8 +4435,8 @@ P78(x,y) ⊃ P1(x,y)</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P1i_identifies"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E49_Time_Appellation"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E52_Time-Span"/>
-        <rdfs:label xml:lang="en">P78 identifies</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P78i</skos:notation>
+        <skos:prefLabel xml:lang="en">P78 identifies</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -4448,14 +4454,14 @@ The related E53 Place should be seen as an approximation of the geographical are
 A period can take place at multiple locations.
 It is a shortcut of the more fully developed path from E4 Period through P161 has spatial projection, E53 Place, P89 falls within (contains) to E53 Place. Describe in words.
 
-Examples 
+Examples
 - the period &quot;Révolution française&quot; (E4) took place at France (E53)
 
 In First Order Logic:
 P7(x,y) ⊃ E4(x)
 P7(x,y) ⊃ E53(y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P7 took place at</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P7</skos:notation>
+        <skos:prefLabel xml:lang="en">P7 took place at</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -4465,8 +4471,8 @@ P7(x,y) ⊃ E53(y)</rdfs:comment>
     <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P7i_witnessed">
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E53_Place"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E4_Period"/>
-        <rdfs:label xml:lang="en">P7 witnessed</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P7i</skos:notation>
+        <skos:prefLabel xml:lang="en">P7 witnessed</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -4488,8 +4494,8 @@ Examples:
 In First Order Logic:
 P83(x,y) ⊃ E52(x)
 P83(x,y) ⊃ E54(y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P83 had at least duration</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P83</skos:notation>
+        <skos:prefLabel xml:lang="en">P83 had at least duration</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -4499,8 +4505,8 @@ P83(x,y) ⊃ E54(y)</rdfs:comment>
     <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P83i_was_minimum_duration_of">
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E54_Dimension"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E52_Time-Span"/>
-        <rdfs:label xml:lang="en">P83 was minimum duration of</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P83i</skos:notation>
+        <skos:prefLabel xml:lang="en">P83 was minimum duration of</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -4522,8 +4528,8 @@ Examples:
 In First Order Logic:
 P84(x,y) ⊃ E52(x)
 P84(x,y) ⊃ E54(y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P84 had at most duration</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P84</skos:notation>
+        <skos:prefLabel xml:lang="en">P84 had at most duration</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -4533,8 +4539,8 @@ P84(x,y) ⊃ E54(y)</rdfs:comment>
     <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P84i_was_maximum_duration_of">
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E54_Dimension"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E52_Time-Span"/>
-        <rdfs:label xml:lang="en">P84 was maximum duration of</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P84i</skos:notation>
+        <skos:prefLabel xml:lang="en">P84 was maximum duration of</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -4558,8 +4564,8 @@ Examples:
 In First Order Logic:
 P86(x,y) ⊃ E52(x)
 P86(x,y) ⊃ E52(y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P86 falls within</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P86</skos:notation>
+        <skos:prefLabel xml:lang="en">P86 falls within</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -4570,8 +4576,8 @@ P86(x,y) ⊃ E52(y)</rdfs:comment>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E52_Time-Span"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E52_Time-Span"/>
-        <rdfs:label xml:lang="en">P86 contains</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P86i</skos:notation>
+        <skos:prefLabel xml:lang="en">P86 contains</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -4590,8 +4596,8 @@ Examples of Place Appellations used to identify Places include instances of E48 
 
 Examples:
 - the location of the Duke of Wellington&apos;s House (E53) is identified by &quot;No 1 London&quot; (E45)</rdfs:comment>
-        <rdfs:label xml:lang="en">P87 is identified by</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P87</skos:notation>
+        <skos:prefLabel xml:lang="en">P87 is identified by</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -4602,8 +4608,8 @@ Examples:
         <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P1i_identifies"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E44_Place_Appellation"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E53_Place"/>
-        <rdfs:label xml:lang="en">P87 identifies</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P87i</skos:notation>
+        <skos:prefLabel xml:lang="en">P87 identifies</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -4627,8 +4633,8 @@ Examples:
 In First Order Logic:
 P89(x,y) ⊃ E53(x)
 P89(x,y) ⊃ E53(y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P89 falls within</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P89</skos:notation>
+        <skos:prefLabel xml:lang="en">P89 falls within</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -4639,8 +4645,8 @@ P89(x,y) ⊃ E53(y)</rdfs:comment>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E53_Place"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E53_Place"/>
-        <rdfs:label xml:lang="en">P89 contains</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P89i</skos:notation>
+        <skos:prefLabel xml:lang="en">P89 contains</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -4664,8 +4670,8 @@ Examples:
 In First Order Logic:
 P8(x,y) ⊃ E4(x)
 P8(x,y) ⊃ E18(y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P8 took place on or within</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P8</skos:notation>
+        <skos:prefLabel xml:lang="en">P8 took place on or within</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -4675,8 +4681,8 @@ P8(x,y) ⊃ E18(y)</rdfs:comment>
     <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P8i_witnessed">
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E18_Physical_Thing"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E4_Period"/>
-        <rdfs:label xml:lang="en">P8 witnessed</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P8i</skos:notation>
+        <skos:prefLabel xml:lang="en">P8 witnessed</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -4696,8 +4702,8 @@ Examples:
 In First Order Logic:
 P91(x,y) ⊃ E54(x)
 P91(x,y) ⊃ E58(y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P91 has unit</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P91</skos:notation>
+        <skos:prefLabel xml:lang="en">P91 has unit</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -4707,8 +4713,8 @@ P91(x,y) ⊃ E58(y)</rdfs:comment>
     <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P91i_is_unit_of">
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E58_Measurement_Unit"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E54_Dimension"/>
-        <rdfs:label xml:lang="en">P91 is unit of</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P91i</skos:notation>
+        <skos:prefLabel xml:lang="en">P91 is unit of</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -4732,8 +4738,8 @@ In First Order Logic:
 P92(x,y) ⊃ E63(x)
 P92(x,y) ⊃ E77(y)
 P92(x,y) ⊃ P12(x,y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P92 brought into existence</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P92</skos:notation>
+        <skos:prefLabel xml:lang="en">P92 brought into existence</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -4744,8 +4750,8 @@ P92(x,y) ⊃ P12(x,y)</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P12i_was_present_at"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E77_Persistent_Item"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E63_Beginning_of_Existence"/>
-        <rdfs:label xml:lang="en">P92 was brought into existence by</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P92i</skos:notation>
+        <skos:prefLabel xml:lang="en">P92 was brought into existence by</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -4769,8 +4775,8 @@ In First Order Logic:
 P93 (x,y) ⊃ E64(x)
 P93 (x,y) ⊃ E77(y)
 P93(x,y) ⊃ P12(x,y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P93 took out of existence</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P93</skos:notation>
+        <skos:prefLabel xml:lang="en">P93 took out of existence</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -4781,8 +4787,8 @@ P93(x,y) ⊃ P12(x,y)</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P12i_was_present_at"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E77_Persistent_Item"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E64_End_of_Existence"/>
-        <rdfs:label xml:lang="en">P93 was taken out of existence by</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P93i</skos:notation>
+        <skos:prefLabel xml:lang="en">P93 was taken out of existence by</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -4806,8 +4812,8 @@ In First Order Logic:
 P94(x,y) ⊃ E65(x)
 P94(x,y) ⊃ E28(y)
 P94(x,y) ⊃ P92(x,y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P94 has created</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P94</skos:notation>
+        <skos:prefLabel xml:lang="en">P94 has created</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -4818,8 +4824,8 @@ P94(x,y) ⊃ P92(x,y)</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P92i_was_brought_into_existence_by"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E65_Creation"/>
-        <rdfs:label xml:lang="en">P94 was created by</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P94i</skos:notation>
+        <skos:prefLabel xml:lang="en">P94 was created by</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -4841,8 +4847,8 @@ In First Order Logic:
 P95(x,y) ⊃ E66(x)
 P95(x,y) ⊃ E74(y)
 P95(x,y) ⊃ P92(x,y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P95 has formed</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P95</skos:notation>
+        <skos:prefLabel xml:lang="en">P95 has formed</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -4853,8 +4859,8 @@ P95(x,y) ⊃ P92(x,y)</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P92i_was_brought_into_existence_by"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E74_Group"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E66_Formation"/>
-        <rdfs:label xml:lang="en">P95 was formed by</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P95i</skos:notation>
+        <skos:prefLabel xml:lang="en">P95 was formed by</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -4877,8 +4883,8 @@ In First Order Logic:
 P96(x,y) ⊃ E67(x)
 P96(x,y) ⊃ E21(y)
 P96(x,y) ⊃ P11(x,y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P96 by mother</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P96</skos:notation>
+        <skos:prefLabel xml:lang="en">P96 by mother</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -4889,8 +4895,8 @@ P96(x,y) ⊃ P11(x,y)</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P11i_participated_in"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E21_Person"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E67_Birth"/>
-        <rdfs:label xml:lang="en">P96 gave birth</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P96i</skos:notation>
+        <skos:prefLabel xml:lang="en">P96 gave birth</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -4914,8 +4920,8 @@ Examples:
 In First Order Logic:
 P97(x,y) ⊃ E67(x)
 P97(x,y) ⊃ E21(y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P97 from father</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P97</skos:notation>
+        <skos:prefLabel xml:lang="en">P97 from father</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -4925,8 +4931,8 @@ P97(x,y) ⊃ E21(y)</rdfs:comment>
     <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P97i_was_father_for">
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E21_Person"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E67_Birth"/>
-        <rdfs:label xml:lang="en">P97 was father for</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P97i</skos:notation>
+        <skos:prefLabel xml:lang="en">P97 was father for</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -4950,8 +4956,8 @@ In First Order Logic:
 P98(x,y) ⊃ E67(x)
 P98(x,y) ⊃ E21(y)
 P98(x,y) ⊃ P92(x,y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P98 brought into life</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P98</skos:notation>
+        <skos:prefLabel xml:lang="en">P98 brought into life</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -4962,8 +4968,8 @@ P98(x,y) ⊃ P92(x,y)</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P92i_was_brought_into_existence_by"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E21_Person"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E67_Birth"/>
-        <rdfs:label xml:lang="en">P98 was born</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P98i</skos:notation>
+        <skos:prefLabel xml:lang="en">P98 was born</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -4987,8 +4993,8 @@ P99(x,y) ⊃ E68(x)
 P99(x,y) ⊃ E74(y)
 P99(x,y) ⊃ P11(x,y)
 P99(x,y) ⊃ P93(x,y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P99 dissolved</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P99</skos:notation>
+        <skos:prefLabel xml:lang="en">P99 dissolved</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -5000,8 +5006,8 @@ P99(x,y) ⊃ P93(x,y)</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P93i_was_taken_out_of_existence_by"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E74_Group"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E68_Dissolution"/>
-        <rdfs:label xml:lang="en">P99 was dissolved by</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P99i</skos:notation>
+        <skos:prefLabel xml:lang="en">P99 was dissolved by</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -5027,8 +5033,8 @@ In First Order Logic:
 P9(x,y) ⊃ E4(x)
 P9(x,y) ⊃ E4(y)
 P9(x,y) ⊃ P10(y,x)</rdfs:comment>
-        <rdfs:label xml:lang="en">P9 consists of</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P9</skos:notation>
+        <skos:prefLabel xml:lang="en">P9 consists of</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -5039,8 +5045,8 @@ P9(x,y) ⊃ P10(y,x)</rdfs:comment>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E4_Period"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E4_Period"/>
-        <rdfs:label xml:lang="en">P9 forms part of</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P9i</skos:notation>
+        <skos:prefLabel xml:lang="en">P9 forms part of</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -5091,8 +5097,8 @@ P3(x,y) ⊃ E62(y)
 P3(x,y,z) ⊃ [P3(x,y) ∧ E55(z)]
 
 Properties: P3.1 has type: E55 Type</rdfs:comment>
-        <rdfs:label xml:lang="en">P3 has note</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P3</skos:notation>
+        <skos:prefLabel xml:lang="en">P3 has note</skos:prefLabel>
     </owl:DatatypeProperty>
     
 
@@ -5114,8 +5120,8 @@ Examples:
 In First Order Logic:
 P57(x,y) ⊃ E19(x)
 P57(x,y) ⊃ E60(y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P57 has number of parts</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P57</skos:notation>
+        <skos:prefLabel xml:lang="en">P57 has number of parts</skos:prefLabel>
     </owl:DatatypeProperty>
     
 
@@ -5137,8 +5143,8 @@ In First Order Logic:
 P79 (x,y) ⊃ E52 (x)
 P79 (x,y) ⊃ E62(y)
 P79(x,y) ⊃ P3(x,y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P79 beginning is qualified by</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P79</skos:notation>
+        <skos:prefLabel xml:lang="en">P79 beginning is qualified by</skos:prefLabel>
     </owl:DatatypeProperty>
     
 
@@ -5160,8 +5166,8 @@ In First Order Logic:
 P80(x,y) ⊃ E52(x)
 P80(x,y) ⊃ E62(y)
 P80(x,y) ⊃ P3(x,y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P80 end is qualified by</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P80</skos:notation>
+        <skos:prefLabel xml:lang="en">P80 end is qualified by</skos:prefLabel>
     </owl:DatatypeProperty>
     
 
@@ -5181,8 +5187,8 @@ Examples:
 In First Order Logic:
 P81 (x,y) ⊃ E52(x)
 P81 (x,y) ⊃ E61(y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P81 ongoing throughout</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P81</skos:notation>
+        <skos:prefLabel xml:lang="en">P81 ongoing throughout</skos:prefLabel>
     </owl:DatatypeProperty>
     
 
@@ -5202,8 +5208,8 @@ Examples:
 In First Order Logic:
 P82 (x,y) ⊃ E52(x)
 P82 (x,y) ⊃ E61(y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P82 at some time within</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P82</skos:notation>
+        <skos:prefLabel xml:lang="en">P82 at some time within</skos:prefLabel>
     </owl:DatatypeProperty>
     
 
@@ -5233,8 +5239,8 @@ Examples:
 In First Order Logic:
 P90(x,y) ⊃ E54(x)
 P90(x,y) ⊃ E60(y)</rdfs:comment>
-        <rdfs:label xml:lang="en">P90 has value</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P90</skos:notation>
+        <skos:prefLabel xml:lang="en">P90 has value</skos:prefLabel>
     </owl:DatatypeProperty>
     
 
@@ -5270,7 +5276,7 @@ The recording of the donor and/or recipient is optional. It is possible that in 
 4. the receipt of custody from an unknown source
 5. the declared loss of an object
 
-The distinction between the legal responsibility for custody and the actual physical possession of the object should be expressed using the property P2 has type (is type of). A specific case of transfer of custody is theft. The sense of physical possession requires that the object of custody is in the hands of the keeper at least with a part representative for the whole. The way, in which a representative part is defined, should ensure that it is unambiguous who keeps a part and who the whole and should be consistent with the identity criteria of the kept instance of E18 Physical Thing. For instance, in the case of a set of cutlery we may require the majority of pieces having been in the hands of the actor regardless which individual pieces are kept over time. 
+The distinction between the legal responsibility for custody and the actual physical possession of the object should be expressed using the property P2 has type (is type of). A specific case of transfer of custody is theft. The sense of physical possession requires that the object of custody is in the hands of the keeper at least with a part representative for the whole. The way, in which a representative part is defined, should ensure that it is unambiguous who keeps a part and who the whole and should be consistent with the identity criteria of the kept instance of E18 Physical Thing. For instance, in the case of a set of cutlery we may require the majority of pieces having been in the hands of the actor regardless which individual pieces are kept over time.
 
 The interpretation of the museum notion of &quot;accession&quot; differs between institutions. The CRM therefore models legal ownership and physical custody separately. Institutions will then model their specific notions of accession and deaccession as combinations of these.
 
@@ -5280,8 +5286,8 @@ Examples:
 
 In First Order Logic:
 E10(x) ⊃ E7(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E10 Transfer of Custody</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E10</skos:notation>
+        <skos:prefLabel xml:lang="en">E10 Transfer of Custody</skos:prefLabel>
     </owl:Class>
     
 
@@ -5313,8 +5319,8 @@ Examples:
 
 In First Order Logic:
 E11(x) ⊃ E7(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E11 Modification</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E11</skos:notation>
+        <skos:prefLabel xml:lang="en">E11 Modification</skos:prefLabel>
     </owl:Class>
     
 
@@ -5347,8 +5353,8 @@ Examples:
 In First Order Logic:
 E12(x) ⊃ E11(x)
 E12(x) ⊃ E63(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E12 Production</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E12</skos:notation>
+        <skos:prefLabel xml:lang="en">E12 Production</skos:prefLabel>
     </owl:Class>
     
 
@@ -5373,10 +5379,10 @@ In particular, the class describes the actions of people making propositions and
 Examples:
 - the assessment of the current ownership of Martin Doerr&apos;s silver cup in February 1997
 
-In First Order Logic: 
+In First Order Logic:
 E13(x) ⊃ E7(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E13 Attribute Assignment</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E13</skos:notation>
+        <skos:prefLabel xml:lang="en">E13 Attribute Assignment</skos:prefLabel>
     </owl:Class>
     
 
@@ -5407,8 +5413,8 @@ Examples:
 
 In First Order Logic:
 E14(x) ⊃ E13(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E14 Condition Assessment</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E14</skos:notation>
+        <skos:prefLabel xml:lang="en">E14 Condition Assessment</skos:prefLabel>
     </owl:Class>
     
 
@@ -5437,8 +5443,8 @@ Examples:
 
 In First Order Logic:
 E15(x) ⊃ E13(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E15 Identifier Assignment</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E15</skos:notation>
+        <skos:prefLabel xml:lang="en">E15 Identifier Assignment</skos:prefLabel>
     </owl:Class>
     
 
@@ -5472,8 +5478,8 @@ Examples:
 
 In First Order Logic:
 E16(x) ⊃ E13(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E16 Measurement</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E16</skos:notation>
+        <skos:prefLabel xml:lang="en">E16 Measurement</skos:prefLabel>
     </owl:Class>
     
 
@@ -5505,8 +5511,8 @@ Examples:
 
 In First Order Logic:
 E17(x) ⊃ E13(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E17 Type Assignment</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E17</skos:notation>
+        <skos:prefLabel xml:lang="en">E17 Type Assignment</skos:prefLabel>
     </owl:Class>
     
 
@@ -5554,8 +5560,8 @@ Examples:
 In First Order Logic:
 E18(x) ⊃ E72(x)
 E18(x) ⊃ E92(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E18 Physical Thing</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E18</skos:notation>
+        <skos:prefLabel xml:lang="en">E18 Physical Thing</skos:prefLabel>
     </owl:Class>
     
 
@@ -5594,8 +5600,8 @@ Examples:
 
 In First Order Logic:
 E19(x) ⊃ E18(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E19 Physical Object</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E19</skos:notation>
+        <skos:prefLabel xml:lang="en">E19 Physical Object</skos:prefLabel>
     </owl:Class>
     
 
@@ -5610,23 +5616,23 @@ E19(x) ⊃ E18(x)</rdfs:comment>
                 <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">Scope note:	
-This class comprises all things in the universe of discourse of the CIDOC Conceptual Reference Model. 
+        <rdfs:comment xml:lang="en">Scope note:
+This class comprises all things in the universe of discourse of the CIDOC Conceptual Reference Model.
 
 It is an abstract concept providing for three general properties:
 1.Identification by name or appellation, and in particular by a preferred identifier
-2.Classification by type, allowing further refinement of the specific subclass an instance belongs to 
+2.Classification by type, allowing further refinement of the specific subclass an instance belongs to
 3.Attachment of free text for the expression of anything not captured by formal properties
 
-With the exception of E59 Primitive Value, all other classes within the CRM are directly or indirectly specialisations of E1 CRM Entity. 
+With the exception of E59 Primitive Value, all other classes within the CRM are directly or indirectly specialisations of E1 CRM Entity.
 
 Examples:
 the earthquake in Lisbon 1755 (E5)
 
-In First Order Logic: 
+In First Order Logic:
 E1(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E1 CRM Entity</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E1</skos:notation>
+        <skos:prefLabel xml:lang="en">E1 CRM Entity</skos:prefLabel>
     </owl:Class>
     
 
@@ -5648,8 +5654,8 @@ Examples:
 
 In First Order Logic:
 E20(x) ⊃ E19(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E20 Biological Object</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E20</skos:notation>
+        <skos:prefLabel xml:lang="en">E20 Biological Object</skos:prefLabel>
     </owl:Class>
     
 
@@ -5683,8 +5689,8 @@ Examples:
 In First Order Logic:
 E21(x) ⊃ E20(x)
 E21(x) ⊃ E39(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E21 Person</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E21</skos:notation>
+        <skos:prefLabel xml:lang="en">E21 Person</skos:prefLabel>
     </owl:Class>
     
 
@@ -5707,8 +5713,8 @@ Examples:
 In First Order Logic:
 E22(x) ⊃ E19(x)
 E22(x) ⊃ E24(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E22 Man-Made Object</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E22</skos:notation>
+        <skos:prefLabel xml:lang="en">E22 Man-Made Object</skos:prefLabel>
     </owl:Class>
     
 
@@ -5737,8 +5743,8 @@ Examples:
 In First Order Logic:
 E24(x) ⊃ E18(x)
 E24(x) ⊃ E71(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E24 Physical Man-Made Thing</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E24</skos:notation>
+        <skos:prefLabel xml:lang="en">E24 Physical Man-Made Thing</skos:prefLabel>
     </owl:Class>
     
 
@@ -5760,8 +5766,8 @@ Examples:
 In First Order Logic:
 E25(x) ⊃ E26(x)
 E25(x) ⊃ E24(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E25 Man-Made Feature</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E25</skos:notation>
+        <skos:prefLabel xml:lang="en">E25 Man-Made Feature</skos:prefLabel>
     </owl:Class>
     
 
@@ -5793,8 +5799,8 @@ Examples:
 
 In First Order Logic:
 E26(x) ⊃ E18(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E26 Physical Feature</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E26</skos:notation>
+        <skos:prefLabel xml:lang="en">E26 Physical Feature</skos:prefLabel>
     </owl:Class>
     
 
@@ -5804,9 +5810,9 @@ E26(x) ⊃ E18(x)</rdfs:comment>
     <owl:Class rdf:about="http://erlangen-crm.org/current/E27_Site">
         <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E26_Physical_Feature"/>
         <rdfs:comment xml:lang="en">Scope note:
-This class comprises pieces of land or sea floor. 
+This class comprises pieces of land or sea floor.
 
-In contrast to the purely geometric notion of E53 Place, this class describes constellations of matter on the surface of the Earth or other celestial body, which can be represented by photographs, paintings and maps. 
+In contrast to the purely geometric notion of E53 Place, this class describes constellations of matter on the surface of the Earth or other celestial body, which can be represented by photographs, paintings and maps.
 
 Instances of E27 Site are composed of relatively immobile material items and features in a particular configuration at a particular location.
 
@@ -5819,8 +5825,8 @@ Examples:
 
 In First Order Logic:
 E27(x)⊃ E26(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E27 Site</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E27</skos:notation>
+        <skos:prefLabel xml:lang="en">E27 Site</skos:prefLabel>
     </owl:Class>
     
 
@@ -5851,8 +5857,8 @@ Examples:
 
 In First Order Logic:
 E28(x) ⊃ E71(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E28 Conceptual Object</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E28</skos:notation>
+        <skos:prefLabel xml:lang="en">E28 Conceptual Object</skos:prefLabel>
     </owl:Class>
     
 
@@ -5882,8 +5888,8 @@ Examples:
 
 In First Order Logic:
 E29(x) ⊃ E73(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E29 Design or Procedure</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E29</skos:notation>
+        <skos:prefLabel xml:lang="en">E29 Design or Procedure</skos:prefLabel>
     </owl:Class>
     
 
@@ -5911,8 +5917,8 @@ Examples:
 
 In First Order Logic:
 E2(x) ⊃ E1(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E2 Temporal Entity</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E2</skos:notation>
+        <skos:prefLabel xml:lang="en">E2 Temporal Entity</skos:prefLabel>
     </owl:Class>
     
 
@@ -5938,8 +5944,8 @@ Examples:
 
 In First Order Logic:
 E30(x) ⊃ E89(x</rdfs:comment>
-        <rdfs:label xml:lang="en">E30 Right</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E30</skos:notation>
+        <skos:prefLabel xml:lang="en">E30 Right</skos:prefLabel>
     </owl:Class>
     
 
@@ -5965,8 +5971,8 @@ Examples:
 
 In First Order Logic:
 E31(x) ⊃ E73(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E31 Document</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E31</skos:notation>
+        <skos:prefLabel xml:lang="en">E31 Document</skos:prefLabel>
     </owl:Class>
     
 
@@ -5985,8 +5991,8 @@ Examples:
 
 In First Order Logic:
 E32(x) ⊃ E31(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E32 Authority Document</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E32</skos:notation>
+        <skos:prefLabel xml:lang="en">E32 Authority Document</skos:prefLabel>
     </owl:Class>
     
 
@@ -6021,8 +6027,8 @@ Examples:
 
 In First Order Logic:
 E33(x) ⊃ E73(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E33 Linguistic Object</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E33</skos:notation>
+        <skos:prefLabel xml:lang="en">E33 Linguistic Object</skos:prefLabel>
     </owl:Class>
     
 
@@ -6047,8 +6053,8 @@ Examples:
 In First Order Logic:
 E34(x) ⊃ E33(x)
 E34(x) ⊃ E37(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E34 Inscription</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E34</skos:notation>
+        <skos:prefLabel xml:lang="en">E34 Inscription</skos:prefLabel>
     </owl:Class>
     
 
@@ -6074,8 +6080,8 @@ Examples:
 In First Order Logic:
 E35(x) ⊃ E33(x)
 E35(x) ⊃ E41(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E35 Title</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E35</skos:notation>
+        <skos:prefLabel xml:lang="en">E35 Title</skos:prefLabel>
     </owl:Class>
     
 
@@ -6099,8 +6105,8 @@ Examples:
 
 In First Order Logic:
 E36(x) ⊃ E73(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E36 Visual Item</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E36</skos:notation>
+        <skos:prefLabel xml:lang="en">E36 Visual Item</skos:prefLabel>
     </owl:Class>
     
 
@@ -6115,14 +6121,14 @@ This class comprises symbols, signs, signatures or short texts applied to instan
 This class specifically excludes features that have no semantic significance, such as scratches or tool marks. These should be documented as instances of E25 Man-Made Feature.
 
 Examples:
- Minoan double axe mark 
+ Minoan double axe mark
  ©
  
 
 In First Order Logic:
 E37(x) ⊃ E36(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E37 Mark</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E37</skos:notation>
+        <skos:prefLabel xml:lang="en">E37 Mark</skos:prefLabel>
     </owl:Class>
     
 
@@ -6142,8 +6148,8 @@ Examples:
 
 In First Order Logic:
 E38(x) ⊃ E36(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E38 Image</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E38</skos:notation>
+        <skos:prefLabel xml:lang="en">E38 Image</skos:prefLabel>
     </owl:Class>
     
 
@@ -6164,8 +6170,8 @@ Examples:
 
 In First Order Logic:
 E39(x) ⊃ E77(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E39 Actor</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E39</skos:notation>
+        <skos:prefLabel xml:lang="en">E39 Actor</skos:prefLabel>
     </owl:Class>
     
 
@@ -6197,8 +6203,8 @@ Examples:
 
 In First Order Logic:
 E3(x) ⊃ E2(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E3 Condition State</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E3</skos:notation>
+        <skos:prefLabel xml:lang="en">E3 Condition State</skos:prefLabel>
     </owl:Class>
     
 
@@ -6225,8 +6231,8 @@ Examples:
 
 In First Order Logic:
 E40(x) ⊃ E74(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E40 Legal Body</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E40</skos:notation>
+        <skos:prefLabel xml:lang="en">E40 Legal Body</skos:prefLabel>
     </owl:Class>
     
 
@@ -6236,26 +6242,26 @@ E40(x) ⊃ E74(x)</rdfs:comment>
     <owl:Class rdf:about="http://erlangen-crm.org/current/E41_Appellation">
         <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
         <rdfs:comment xml:lang="en">Scope note:
-This class comprises signs, either meaningful or not, or arrangements of signs following a specific syntax, that are used or can be used to refer to and identify a specific instance of some class or category within a certain context. 
+This class comprises signs, either meaningful or not, or arrangements of signs following a specific syntax, that are used or can be used to refer to and identify a specific instance of some class or category within a certain context.
 
-Instances of E41 Appellation do not identify things by their meaning, even if they happen to have one, but instead by convention, tradition, or agreement. Instances of E41 Appellation are cultural constructs; as such, they have a context, a history, and a use in time and space by some group of users. A given instance of E41 Appellation can have alternative forms, i.e., other instances of E41 Appellation that are always regarded as equivalent independent from the thing it denotes. 
+Instances of E41 Appellation do not identify things by their meaning, even if they happen to have one, but instead by convention, tradition, or agreement. Instances of E41 Appellation are cultural constructs; as such, they have a context, a history, and a use in time and space by some group of users. A given instance of E41 Appellation can have alternative forms, i.e., other instances of E41 Appellation that are always regarded as equivalent independent from the thing it denotes.
 
 Specific subclasses of E41 Appellation should be used when instances of E41 Appellation of a characteristic form are used for particular objects. Instances of E49 Time Appellation, for example, which take the form of instances of E50 Date, can be easily recognised.
 
-E41 Appellation should not be confused with the act of naming something. Cf. E15 Identifier Assignment 
+E41 Appellation should not be confused with the act of naming something. Cf. E15 Identifier Assignment
 
 Examples:
-- &quot;Martin&quot; 
+- &quot;Martin&quot;
 - &quot;the Forth Bridge&quot;
 - &quot;the Merchant of Venice&quot; (E35)
 - &quot;Spigelia marilandica (L.) L.&quot; [not the species, just the name]
-- &quot;information science&quot; [not the science itself, but the name through which we refer to it in an English-speaking context] 
+- &quot;information science&quot; [not the science itself, but the name through which we refer to it in an English-speaking context]
 - “安” [Chinese &quot;an&quot;, meaning &quot;peace&quot;]
 
 In First Order Logic:
 E41(x) ⊃ E90(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E41 Appellation</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E41</skos:notation>
+        <skos:prefLabel xml:lang="en">E41 Appellation</skos:prefLabel>
     </owl:Class>
     
 
@@ -6279,8 +6285,8 @@ the French rules]
 
 In First Order Logic:
 E42(x) ⊃ E41(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E42 Identifier</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E42</skos:notation>
+        <skos:prefLabel xml:lang="en">E42 Identifier</skos:prefLabel>
     </owl:Class>
     
 
@@ -6305,8 +6311,8 @@ Examples:
 
 In First Order Logic:
 E44(x) ⊃ E41(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E44 Place Appellation</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E44</skos:notation>
+        <skos:prefLabel xml:lang="en">E44 Place Appellation</skos:prefLabel>
     </owl:Class>
     
 
@@ -6328,8 +6334,8 @@ Examples:
 In First Order Logic:
 E45(x) ⊃ E44(x)
 E45(x) ⊃ E51(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E45 Address</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E45</skos:notation>
+        <skos:prefLabel xml:lang="en">E45 Address</skos:prefLabel>
     </owl:Class>
     
 
@@ -6357,8 +6363,8 @@ Examples:
 
 In First Order Logic:
 E46(x) ⊃ E44(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E46 Section Definition</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E46</skos:notation>
+        <skos:prefLabel xml:lang="en">E46 Section Definition</skos:prefLabel>
     </owl:Class>
     
 
@@ -6378,8 +6384,8 @@ Examples:
 
 In First Order Logic:
 E47(x) ⊃ E44(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E47 Spatial Coordinates</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E47</skos:notation>
+        <skos:prefLabel xml:lang="en">E47 Spatial Coordinates</skos:prefLabel>
     </owl:Class>
     
 
@@ -6401,8 +6407,8 @@ Examples:
 
 In First Order Logic:
 E48(x) ⊃ E44(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E48 Place Name</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E48</skos:notation>
+        <skos:prefLabel xml:lang="en">E48 Place Name</skos:prefLabel>
     </owl:Class>
     
 
@@ -6425,8 +6431,8 @@ Examples:
 
 In First Order Logic:
 E49(x) ⊃ E41(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E49 Time Appellation</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E49</skos:notation>
+        <skos:prefLabel xml:lang="en">E49 Time Appellation</skos:prefLabel>
     </owl:Class>
     
 
@@ -6469,11 +6475,11 @@ Examples:
 Sturm und Drang
 Cubism
 
-In First Order Logic: 
+In First Order Logic:
 E4(x) ⊃ E2(x)
 E4(x) ⊃ E92(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E4 Period</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E4</skos:notation>
+        <skos:prefLabel xml:lang="en">E4 Period</skos:prefLabel>
     </owl:Class>
     
 
@@ -6495,8 +6501,8 @@ Examples:
 
 In First Order Logic:
 E50(x) ⊃ E49(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E50 Date</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E50</skos:notation>
+        <skos:prefLabel xml:lang="en">E50 Date</skos:prefLabel>
     </owl:Class>
     
 
@@ -6521,8 +6527,8 @@ Examples:
 
 In First Order Logic:
 E51(x) ⊃ E41(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E51 Contact Point</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E51</skos:notation>
+        <skos:prefLabel xml:lang="en">E51 Contact Point</skos:prefLabel>
     </owl:Class>
     
 
@@ -6567,8 +6573,8 @@ Examples:
 
 In First Order Logic:
 E52(x) ⊃ E1(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E52 Time-Span</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E52</skos:notation>
+        <skos:prefLabel xml:lang="en">E52 Time-Span</skos:prefLabel>
     </owl:Class>
     
 
@@ -6600,8 +6606,8 @@ Examples:
 
 In First Order Logic:
 E53(x) ⊃ E1(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E53 Place</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E53</skos:notation>
+        <skos:prefLabel xml:lang="en">E53 Place</skos:prefLabel>
     </owl:Class>
     
 
@@ -6636,8 +6642,8 @@ Examples:
 
 In First Order Logic:
 E54(x) ⊃ E1(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E54 Dimension</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E54</skos:notation>
+        <skos:prefLabel xml:lang="en">E54 Dimension</skos:prefLabel>
     </owl:Class>
     
 
@@ -6669,8 +6675,8 @@ Examples:
 
 In First Order Logic:
 E55(x) ⊃ E28(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E55 Type</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E55</skos:notation>
+        <skos:prefLabel xml:lang="en">E55 Type</skos:prefLabel>
     </owl:Class>
     
 
@@ -6695,8 +6701,8 @@ Examples:
 
 In First Order Logic:
 E56(x) ⊃ E55(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E56 Language</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E56</skos:notation>
+        <skos:prefLabel xml:lang="en">E56 Language</skos:prefLabel>
     </owl:Class>
     
 
@@ -6723,8 +6729,8 @@ Examples:
 
 In First Order Logic:
 E57(x) ⊃ E55(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E57 Material</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E57</skos:notation>
+        <skos:prefLabel xml:lang="en">E57 Material</skos:prefLabel>
     </owl:Class>
     
 
@@ -6757,8 +6763,8 @@ Examples:
 
 In First Order Logic:
 E58(x) ⊃ E55(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E58 Measurement Unit</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E58</skos:notation>
+        <skos:prefLabel xml:lang="en">E58 Measurement Unit</skos:prefLabel>
     </owl:Class>
     
 
@@ -6790,8 +6796,8 @@ Examples:
 
 In First Order Logic:
 E5(x) ⊃ E4(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E5 Event</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E5</skos:notation>
+        <skos:prefLabel xml:lang="en">E5 Event</skos:prefLabel>
     </owl:Class>
     
 
@@ -6819,8 +6825,8 @@ Examples:
 
 In First Order Logic:
 E63(x) ⊃ E5(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E63 Beginning of Existence</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E63</skos:notation>
+        <skos:prefLabel xml:lang="en">E63 Beginning of Existence</skos:prefLabel>
     </owl:Class>
     
 
@@ -6847,8 +6853,8 @@ Examples:
 
 In First Order Logic:
 E64(x) ⊃ E5(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E64 End of Existence</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E64</skos:notation>
+        <skos:prefLabel xml:lang="en">E64 End of Existence</skos:prefLabel>
     </owl:Class>
     
 
@@ -6874,8 +6880,8 @@ Examples:
 In First Order Logic:
 E65(x) ⊃ E7(x)
 E65(x) ⊃ E63(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E65 Creation</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E65</skos:notation>
+        <skos:prefLabel xml:lang="en">E65 Creation</skos:prefLabel>
     </owl:Class>
     
 
@@ -6891,7 +6897,7 @@ E65(x) ⊃ E63(x)</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="http://erlangen-crm.org/current/E74_Group"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">Scope note: 
+        <rdfs:comment xml:lang="en">Scope note:
 This class comprises events that result in the formation of a formal or informal E74 Group of people,
 such as a club, society, association, corporation or nation.
 
@@ -6908,8 +6914,8 @@ Examples:
 In First Order Logic:
 E66(x) ⊃ E7(x)
 E66(x) ⊃ E63(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E66 Formation</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E66</skos:notation>
+        <skos:prefLabel xml:lang="en">E66 Formation</skos:prefLabel>
     </owl:Class>
     
 
@@ -6940,8 +6946,8 @@ Examples:
 
 In First Order Logic:
 E67(x) ⊃ E63(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E67 Birth</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E67</skos:notation>
+        <skos:prefLabel xml:lang="en">E67 Birth</skos:prefLabel>
     </owl:Class>
     
 
@@ -6967,8 +6973,8 @@ Examples:
 
 In First Order Logic:
 E68(x) ⊃ E64(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E68 Dissolution</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E68</skos:notation>
+        <skos:prefLabel xml:lang="en">E68 Dissolution</skos:prefLabel>
     </owl:Class>
     
 
@@ -6993,8 +6999,8 @@ Examples:
 
 In First Order Logic:
 E69(x) ⊃ E64(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E69 Death</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E69</skos:notation>
+        <skos:prefLabel xml:lang="en">E69 Death</skos:prefLabel>
     </owl:Class>
     
 
@@ -7026,8 +7032,8 @@ Examples:
 
 In First Order Logic:
 E6(x) ⊃ E64(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E6 Destruction</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E6</skos:notation>
+        <skos:prefLabel xml:lang="en">E6 Destruction</skos:prefLabel>
     </owl:Class>
     
 
@@ -7037,7 +7043,7 @@ E6(x) ⊃ E64(x)</rdfs:comment>
     <owl:Class rdf:about="http://erlangen-crm.org/current/E70_Thing">
         <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E77_Persistent_Item"/>
         <rdfs:comment xml:lang="en">Scope note:
-This general class comprises discrete, identifiable, instances of E77 Persistent Item that are documented as single units, that either consist of matter or depend on being carried by matter and are characterized by relative stability. 
+This general class comprises discrete, identifiable, instances of E77 Persistent Item that are documented as single units, that either consist of matter or depend on being carried by matter and are characterized by relative stability.
 
 They may be intellectual products or physical things. They may for instance have a solid physical form, an electronic encoding, or they may be a logical concept or structure.
 
@@ -7051,8 +7057,8 @@ Examples:
 
 In First Order Logic:
 E70(x) ⊃ E77(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E70 Thing</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E70</skos:notation>
+        <skos:prefLabel xml:lang="en">E70 Thing</skos:prefLabel>
     </owl:Class>
     
 
@@ -7074,8 +7080,8 @@ Examples:
 
 In First Order Logic:
 E71(x) ⊃ E70(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E71 Man-Made Thing</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E71</skos:notation>
+        <skos:prefLabel xml:lang="en">E71 Man-Made Thing</skos:prefLabel>
     </owl:Class>
     
 
@@ -7107,8 +7113,8 @@ Examples:
 
 In First Order Logic:
 E72(x) ⊃ E70(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E72 Legal Object</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E72</skos:notation>
+        <skos:prefLabel xml:lang="en">E72 Legal Object</skos:prefLabel>
     </owl:Class>
     
 
@@ -7132,11 +7138,11 @@ Examples:
 - the Maxwell Equations
 - The Getty AAT as published as Linked Open Data, accessed 1/10/2014
 
-In First Order Logic: 
-E73(x) ⊃ E89(x)  
+In First Order Logic:
+E73(x) ⊃ E89(x)
 E73(x) ⊃ E90(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E73 Information Object</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E73</skos:notation>
+        <skos:prefLabel xml:lang="en">E73 Information Object</skos:prefLabel>
     </owl:Class>
     
 
@@ -7173,7 +7179,7 @@ E73(x) ⊃ E90(x)</rdfs:comment>
 This class comprises any gatherings or organizations of E39 Actors that act collectively or in a similar way due to any form of unifying relationship. In the wider sense this class also comprises official positions which used to be regarded in certain contexts as one actor, independent of the current holder
 of the office, such as the president of a country. In such cases, it may happen that the Group never had more than one member. A joint pseudonym (i.e., a name that seems indicative of an individual but that is actually used as a persona by two or more people) is a particular case of E74 Group..
 
-A gathering of people becomes an E74 Group when it exhibits organizational characteristics usually typified by a set of ideas or beliefs held in common, or actions performed together. These might be communication, creating some common artifact, a common purpose such as study, worship, business, sports, etc. Nationality can be modelled as membership in an E74 Group (cf. HumanML markup). Married couples and other concepts of family are regarded as particular examples of E74 Group. 
+A gathering of people becomes an E74 Group when it exhibits organizational characteristics usually typified by a set of ideas or beliefs held in common, or actions performed together. These might be communication, creating some common artifact, a common purpose such as study, worship, business, sports, etc. Nationality can be modelled as membership in an E74 Group (cf. HumanML markup). Married couples and other concepts of family are regarded as particular examples of E74 Group.
 
 Examples:
 - the impressionists
@@ -7183,14 +7189,14 @@ Examples:
 - Exxon-Mobil
 - King Solomon and his wives
 - the President of the Swiss Confederation
-- Nicolas Bourbaki 
+- Nicolas Bourbaki
 - Betty Crocker
 - Ellery Queen
 
 In First Order Logic:
 E74(x) ⊃ E39(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E74 Group</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E74</skos:notation>
+        <skos:prefLabel xml:lang="en">E74 Group</skos:prefLabel>
     </owl:Class>
     
 
@@ -7212,8 +7218,8 @@ Examples:
 
 In First Order Logic:
 E75(x) ⊃ E41(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E75 Conceptual Object Appellation</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E75</skos:notation>
+        <skos:prefLabel xml:lang="en">E75 Conceptual Object Appellation</skos:prefLabel>
     </owl:Class>
     
 
@@ -7225,7 +7231,7 @@ E75(x) ⊃ E41(x)</rdfs:comment>
         <rdfs:comment xml:lang="en">Scope note:
 This class comprises items that have a persistent identity, sometimes known as &quot;endurants&quot; in philosophy.
 
-They can be repeatedly recognized within the duration of their existence by identity criteria rather than by continuity or observation. Persistent Items can be either physical entities, such as people, animals or things, or conceptual entities such as ideas, concepts, products of the imagination or common names. 
+They can be repeatedly recognized within the duration of their existence by identity criteria rather than by continuity or observation. Persistent Items can be either physical entities, such as people, animals or things, or conceptual entities such as ideas, concepts, products of the imagination or common names.
 
 The criteria that determine the identity of an item are often difficult to establish -; the decision depends largely on the judgement of the observer. For example, a building is regarded as no longer existing if it is dismantled and the materials reused in a different configuration. On the other hand, human beings go through radical and profound changes during their life-span, affecting both material composition and form, yet preserve their identity by other criteria. Similarly, inanimate objects may be subject to exchange of parts and matter. The class E77 Persistent Item does not take any position about the nature of the applicable identity criteria and if actual knowledge about identity of an instance of this class exists. There may be cases, where the identity of an E77 Persistent Item is not decidable by a certain state of knowledge.
 The main classes of objects that fall outside the scope the E77 Persistent Item class are temporal objects such as periods, events and acts, and descriptive properties.
@@ -7239,8 +7245,8 @@ Examples:
 
 In First Order Logic:
 E77(x) ⊃ E1(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E77 Persistent Item</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E77</skos:notation>
+        <skos:prefLabel xml:lang="en">E77 Persistent Item</skos:prefLabel>
     </owl:Class>
     
 
@@ -7269,8 +7275,8 @@ Examples:
 
 In First Order Logic:
 E78(x) ⊃ E24(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E78 Collection</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E78</skos:notation>
+        <skos:prefLabel xml:lang="en">E78 Collection</skos:prefLabel>
     </owl:Class>
     
 
@@ -7302,8 +7308,8 @@ Examples:
 
 In First Order Logic:
 E79(x) ⊃ E11(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E79 Part Addition</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E79</skos:notation>
+        <skos:prefLabel xml:lang="en">E79 Part Addition</skos:prefLabel>
     </owl:Class>
     
 
@@ -7335,8 +7341,8 @@ Examples:
 
 In First Order Logic:
 E7(x) ⊃ E5(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E7 Activity</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E7</skos:notation>
+        <skos:prefLabel xml:lang="en">E7 Activity</skos:prefLabel>
     </owl:Class>
     
 
@@ -7368,8 +7374,8 @@ Examples:
 
 In First Order Logic:
 E80(x) ⊃ E11(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E80 Part Removal</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E80</skos:notation>
+        <skos:prefLabel xml:lang="en">E80 Part Removal</skos:prefLabel>
     </owl:Class>
     
 
@@ -7402,8 +7408,8 @@ Examples:
 In First Order Logic:
 E81(x) ⊃ E63(x)
 E81(x) ⊃ E64(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E81 Transformation</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E81</skos:notation>
+        <skos:prefLabel xml:lang="en">E81 Transformation</skos:prefLabel>
     </owl:Class>
     
 
@@ -7429,8 +7435,8 @@ Examples:
 
 In First Order Logic:
 E82(x) ⊃ E41(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E82 Actor Appellation</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E82</skos:notation>
+        <skos:prefLabel xml:lang="en">E82 Actor Appellation</skos:prefLabel>
     </owl:Class>
     
 
@@ -7456,8 +7462,8 @@ Examples:
 
 In First Order Logic:
 E83(x) ⊃ E65(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E83 Type Creation</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E83</skos:notation>
+        <skos:prefLabel xml:lang="en">E83 Type Creation</skos:prefLabel>
     </owl:Class>
     
 
@@ -7478,8 +7484,8 @@ Examples:
 
 In First Order Logic:
 E84(x) ⊃ E22(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E84 Information Carrier</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E84</skos:notation>
+        <skos:prefLabel xml:lang="en">E84 Information Carrier</skos:prefLabel>
     </owl:Class>
     
 
@@ -7512,8 +7518,8 @@ Examples:
 
 In First Order Logic:
 E85(x) ⊃ E7(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E85 Joining</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E85</skos:notation>
+        <skos:prefLabel xml:lang="en">E85 Joining</skos:prefLabel>
     </owl:Class>
     
 
@@ -7546,8 +7552,8 @@ Examples:
 
 In First Order Logic:
 E86(x) ⊃ E7(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E86 Leaving</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E86</skos:notation>
+        <skos:prefLabel xml:lang="en">E86 Leaving</skos:prefLabel>
     </owl:Class>
     
 
@@ -7574,8 +7580,8 @@ Examples:
 
 In First Order Logic:
 E87(x) ⊃ E7(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E87 Curation Activity</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E87</skos:notation>
+        <skos:prefLabel xml:lang="en">E87 Curation Activity</skos:prefLabel>
     </owl:Class>
     
 
@@ -7616,8 +7622,8 @@ Examples:
 
 In First Order Logic:
 E89(x) ⊃ E28(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E89 Propositional Object</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E89</skos:notation>
+        <skos:prefLabel xml:lang="en">E89 Propositional Object</skos:prefLabel>
     </owl:Class>
     
 
@@ -7652,8 +7658,8 @@ Examples:
 
 In First Order Logic:
 E8(x) ⊃ E7(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E8 Acquisition</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E8</skos:notation>
+        <skos:prefLabel xml:lang="en">E8 Acquisition</skos:prefLabel>
     </owl:Class>
     
 
@@ -7670,27 +7676,27 @@ E8(x) ⊃ E7(x)</rdfs:comment>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Scope note:
-This class comprises identifiable symbols and any aggregation of symbols, such as characters, identifiers, traffic signs, emblems, texts, data sets, images, musical scores, multimedia objects, computer program code or mathematical formulae that have an objectively recognizable structure and that are documented as single units. 
+This class comprises identifiable symbols and any aggregation of symbols, such as characters, identifiers, traffic signs, emblems, texts, data sets, images, musical scores, multimedia objects, computer program code or mathematical formulae that have an objectively recognizable structure and that are documented as single units.
 
 It includes sets of signs of any nature, which may serve to designate something, or to communicate some propositional content.
 
-An instance of E90 Symbolic Object does not depend on a specific physical carrier, which can include human memory, and it can exist on one or more carriers simultaneously. An instance of E90 Symbolic Object may or may not have a specific meaning, for example an arbitrary character string. 
+An instance of E90 Symbolic Object does not depend on a specific physical carrier, which can include human memory, and it can exist on one or more carriers simultaneously. An instance of E90 Symbolic Object may or may not have a specific meaning, for example an arbitrary character string.
 
-In some cases, the content of an instance of E90 Symbolic Object may completely be represented by a serialized digital content model, such as a sequence of ASCII-encoded characters, an XML or HTML document, or a TIFF image. The property P3 has note allows for the description of this content model. In order to disambiguate which symbolic level is the carrier of the meaning, the property P3.1 has type can be used to specify the encoding (e.g. &quot;bit&quot;, &quot;Latin character&quot;, RGB pixel). 
+In some cases, the content of an instance of E90 Symbolic Object may completely be represented by a serialized digital content model, such as a sequence of ASCII-encoded characters, an XML or HTML document, or a TIFF image. The property P3 has note allows for the description of this content model. In order to disambiguate which symbolic level is the carrier of the meaning, the property P3.1 has type can be used to specify the encoding (e.g. &quot;bit&quot;, &quot;Latin character&quot;, RGB pixel).
 
 Examples:
-- &apos;ecognizabl&apos; 
-- The &quot;no-smoking&quot; sign (E36) 
-- &quot;BM000038850.JPG&quot; (E75) 
-- image BM000038850.JPG from the Clayton Herbarium in London (E38) 
+- &apos;ecognizabl&apos;
+- The &quot;no-smoking&quot; sign (E36)
+- &quot;BM000038850.JPG&quot; (E75)
+- image BM000038850.JPG from the Clayton Herbarium in London (E38)
 - The distribution of form, tone and colour found on Leonardo da Vinci&apos;s painting named &quot;Mona Lisa&quot; in daylight (E38)
 - The Italian text of Dante&apos;s &quot;Divina Commedia&quot; as found in the authoritative critical edition La Commedia secondo l&apos;antica vulgata a cura di Giorgio Petrocchi, Milano: Mondadori, 1966-67 (= Le Opere di Dante Alighieri, Edizione Nazionale a cura della Società Dantesca Italiana, VII, 1-4) (E33)
 
 In First Order Logic:
 E90(x) ⊃ E28(x)
 E90(x) ⊃ E72(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E90 Symbolic Object</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E90</skos:notation>
+        <skos:prefLabel xml:lang="en">E90 Symbolic Object</skos:prefLabel>
     </owl:Class>
     
 
@@ -7710,8 +7716,8 @@ Examples:
 
 In First Order Logic:
 E92(x) ⊃ E1(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E92 Spacetime Volume</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E92</skos:notation>
+        <skos:prefLabel xml:lang="en">E92 Spacetime Volume</skos:prefLabel>
     </owl:Class>
     
 
@@ -7720,16 +7726,16 @@ E92(x) ⊃ E1(x)</rdfs:comment>
 
     <owl:Class rdf:about="http://erlangen-crm.org/current/E93_Presence">
         <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E92_Spacetime_Volume"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scope note: 
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scope note:
 This class comprises instances of E92 Spacetime Volume that result from intersection of instances of
-E92 Spacetime Volume with an instance of E52 Time-Span. The identity of an instance of this class is determined by the identities of the constituing spacetime volume and the time-span. 
+E92 Spacetime Volume with an instance of E52 Time-Span. The identity of an instance of this class is determined by the identities of the constituing spacetime volume and the time-span.
 
 This class can be used to define temporal snapshots at a particular time-span, such as the extent of the Roman Empire at 33 B.C., or the extent occupied by a museum object at rest in an exhibit. In particular, it can be used to define the spatial projection of a spacetime volume during a particular time-span, such as the maximal spatial extent of a flood at some particular hour, or all areas covered by the Poland within the 20th century AD.
 
 In First Order Logic:
 E93(x) ⊃ E92(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E93 Spacetime Snapshot</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E93</skos:notation>
+        <skos:prefLabel xml:lang="en">E93 Spacetime Snapshot</skos:prefLabel>
     </owl:Class>
     
 
@@ -7767,8 +7773,8 @@ Examples:
 
 In First Order Logic:
 E9(x) ⊃ E7(x)</rdfs:comment>
-        <rdfs:label xml:lang="en">E9 Move</rdfs:label>
         <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E9</skos:notation>
+        <skos:prefLabel xml:lang="en">E9 Move</skos:prefLabel>
     </owl:Class>
     
 
