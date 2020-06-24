@@ -17,14 +17,16 @@
      xmlns:bibframe="http://id.loc.gov/ontologies/bibframe/">
     <owl:Ontology rdf:about="http://www.univ-tours.fr/ipato">
         <owl:imports rdf:resource="http://erlangen-crm.org/current/"/>
-        <terms:contributor xml:lang="en">Damien Vurpillot
+        <terms:contributor xml:lang="en">Perrine Thuringer
+Damien Vurpillot
 Johann Forte
-CESR -- University of Tours, France</terms:contributor>
+at ARD Intelligence des Patrimoines program, CESR University of Tours, France</terms:contributor>
         <terms:creator xml:lang="en">Developed by:
-Emilio M. Sanfilippo and Perrine Thuringer
-CESR -- University of Tours, France</terms:creator>
+Emilio M. Sanfilippo
+Le Studium Loire Valley Institute for Advanced Studies, and
+ARD Intelligence des Patrimoines program, CESR University of Tours, France</terms:creator>
         <rdfs:comment xml:lang="en">Instances in the A-box are added for testing purposes</rdfs:comment>
-        <rdfs:comment xml:lang="en">This ontology is developed at the ARD Intelligence des Patrimoines program at the CESR University of Tours. The ontology is built on the Erlangen release of CIDOC-CRM v.6.2 but it also covers modeling elements for specific application purposes. These are either taken from existing resources (e.g., Dublin Core, FOAF, DBpedia, etc.) or are newly inserted.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This ontology is developed at the ARD Intelligence des Patrimoines program at the CESR University of Tours. The ontology is built on the Erlangen release of CIDOC-CRM v.6.2 but it also covers modeling elements for specific application purposes. These are either taken from existing resources (e.g., Dublin Core, FOAF, DBpedia, etc.) or are newly created.</rdfs:comment>
         <owl:versionInfo xml:lang="en">Status: unstable, work in progress</owl:versionInfo>
     </owl:Ontology>
     
@@ -41,42 +43,17 @@ CESR -- University of Tours, France</terms:creator>
     
 
 
-    <!-- http://purl.org/dc/elements/1.1/date -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
-    
-
-
     <!-- http://purl.org/dc/terms/contributor -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor">
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/dc/terms</rdfs:isDefinedBy>
+    </owl:AnnotationProperty>
     
 
 
     <!-- http://purl.org/dc/terms/creator -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator">
-        <rdfs:range rdf:resource="http://erlangen-crm.org/current/E1_CRM_Entity"/>
-        <rdfs:range rdf:resource="http://erlangen-crm.org/current/E71_Man-Made_Thing"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.org/dc/terms/identifier -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/identifier">
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E1_CRM_Entity"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.org/dc/terms/title -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title">
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E1_CRM_Entity"/>
-    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
     
 
 
@@ -160,12 +137,44 @@ CESR -- University of Tours, France</terms:creator>
     
 
 
+    <!-- http://purl.org/cerif/frapo/hasFundingAgency -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/cerif/frapo/hasFundingAgency">
+        <owl:inverseOf rdf:resource="http://purl.org/cerif/frapo/isFundingAgencyFor"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Project"/>
+        <rdfs:range rdf:resource="http://www.univ-tours.fr/ipato#FundingAgency"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In the specific case of the IPATO, hasFundingAgency relates a project to the corresponding funding agency</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://sparontologies.github.io/frapo/current/frapo.html</rdfs:isDefinedBy>
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An object property linking something to a funding agency that provides funding for it</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.org/cerif/frapo/isEmployedBy -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/cerif/frapo/isEmployedBy">
-        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
-        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E21_Person"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://erlangen-crm.org/current/E40_Legal_Body"/>
+                    <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Organization"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://sparontologies.github.io/frapo/current/frapo.html</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/cerif/frapo/isFundingAgencyFor -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/cerif/frapo/isFundingAgencyFor">
+        <rdfs:domain rdf:resource="http://www.univ-tours.fr/ipato#FundingAgency"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Project"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In the specific case of the IPATO, hasFundingAgency relates a project to the corresponding funding agency</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://sparontologies.github.io/frapo/current/frapo.html</rdfs:isDefinedBy>
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An object property linking a funding agency to an entity for which it provides funding</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -381,12 +390,11 @@ CESR -- University of Tours, France</terms:creator>
     
 
 
-    <!-- http://www.univ-tours.fr/ipato#has_funding_agency -->
+    <!-- http://www.univ-tours.fr/ipato#has_catalog -->
 
-    <owl:ObjectProperty rdf:about="http://www.univ-tours.fr/ipato#has_funding_agency">
-        <owl:inverseOf rdf:resource="http://www.univ-tours.fr/ipato#isFundingAgencyFor"/>
+    <owl:ObjectProperty rdf:about="http://www.univ-tours.fr/ipato#has_catalog">
         <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Project"/>
-        <rdfs:range rdf:resource="http://www.univ-tours.fr/ipato#FundingAgency"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
     </owl:ObjectProperty>
     
 
@@ -422,6 +430,16 @@ CESR -- University of Tours, France</terms:creator>
         <owl:inverseOf rdf:resource="http://www.univ-tours.fr/ipato#participates_in_project"/>
         <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Project"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E39_Actor"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This relation has been introduced to explicitly link projects to their participating actors. We do not assume an ontological committment on projects with respect to CIDOC&apos;s taxonomy, e.g., whether they are events or persistent items. This is the reason why has_project_participant is not directly related to the CIDOC&apos;s relation P11_had_participant (which also assumes that a temporal entity is already over)</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.univ-tours.fr/ipato#has_research_area -->
+
+    <owl:ObjectProperty rdf:about="http://www.univ-tours.fr/ipato#has_research_area">
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Project"/>
+        <rdfs:range rdf:resource="http://www.univ-tours.fr/ipato#Research_Area"/>
     </owl:ObjectProperty>
     
 
@@ -436,29 +454,13 @@ CESR -- University of Tours, France</terms:creator>
     
 
 
-    <!-- http://www.univ-tours.fr/ipato#has_scientific_domain -->
-
-    <owl:ObjectProperty rdf:about="http://www.univ-tours.fr/ipato#has_scientific_domain">
-        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Project"/>
-        <rdfs:range rdf:resource="http://www.univ-tours.fr/ipato#Scientific_domain"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#isFundingAgencyFor -->
-
-    <owl:ObjectProperty rdf:about="http://www.univ-tours.fr/ipato#isFundingAgencyFor">
-        <rdfs:domain rdf:resource="http://www.univ-tours.fr/ipato#FundingAgency"/>
-        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Project"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://www.univ-tours.fr/ipato#is_about -->
 
     <owl:ObjectProperty rdf:about="http://www.univ-tours.fr/ipato#is_about">
         <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Project"/>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E1_CRM_Entity"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CIDOC&apos;s relation P129_is_about has a different intended meaning; for this reason, P129 and is_about are not equivalent</rdfs:comment>
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This relation is used to link a project to the entities it is about. In the context of cultural heritage, a project could be about manuscripts, statues, paintings, etc.</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -468,6 +470,7 @@ CESR -- University of Tours, France</terms:creator>
     <owl:ObjectProperty rdf:about="http://www.univ-tours.fr/ipato#is_associated_to">
         <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Project"/>
         <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Group"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This relation is used to link a project to a group of agents, e.g., the project Renumar is_associated_to a research group at the CESR University of Tours</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -656,8 +659,18 @@ http://id.loc.gov/ontologies/bibframe.html#</rdfs:comment>
     <!-- http://purl.org/dc/terms/description -->
 
     <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/description">
-        <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E1_CRM_Entity"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://erlangen-crm.org/current/E1_CRM_Entity"/>
+                    <rdf:Description rdf:about="http://www.univ-tours.fr/ipato#Research_Area"/>
+                    <rdf:Description rdf:about="http://www.w3.org/ns/dcat#Catalog"/>
+                    <rdf:Description rdf:about="http://www.w3.org/ns/dcat#Dataset"/>
+                    <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Project"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/dc/terms</rdfs:isDefinedBy>
     </owl:DatatypeProperty>
     
@@ -671,7 +684,19 @@ http://id.loc.gov/ontologies/bibframe.html#</rdfs:comment>
 
     <!-- http://purl.org/dc/terms/title -->
 
-    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/title"/>
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/title">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://erlangen-crm.org/current/E1_CRM_Entity"/>
+                    <rdf:Description rdf:about="http://www.w3.org/ns/dcat#Catalog"/>
+                    <rdf:Description rdf:about="http://www.w3.org/ns/dcat#Dataset"/>
+                    <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Project"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
     
 
 
@@ -774,7 +799,7 @@ http://id.loc.gov/ontologies/bibframe.html#</rdfs:comment>
     <!-- http://xmlns.com/foaf/0.1/firstName -->
 
     <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/firstName">
-        <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E39_Actor"/>
+        <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E21_Person"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://xmlns.com/foaf/spec/</rdfs:isDefinedBy>
     </owl:DatatypeProperty>
@@ -784,9 +809,18 @@ http://id.loc.gov/ontologies/bibframe.html#</rdfs:comment>
     <!-- http://xmlns.com/foaf/0.1/lastName -->
 
     <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/lastName">
-        <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E39_Actor"/>
+        <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E21_Person"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://xmlns.com/foaf/spec/</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/mbox -->
+
+    <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/mbox">
+        <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E39_Actor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
     </owl:DatatypeProperty>
     
 
@@ -796,7 +830,7 @@ http://id.loc.gov/ontologies/bibframe.html#</rdfs:comment>
     <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/name">
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E39_Actor"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://xmlns.com/foaf/spec/</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://xmlns.com/foaf/spec/</rdfs:isDefinedBy>
     </owl:DatatypeProperty>
     
 
@@ -887,12 +921,6 @@ http://id.loc.gov/ontologies/bibframe.html#</rdfs:comment>
 
     <rdf:Description rdf:about="http://erlangen-crm.org/current/E39_Actor">
         <owl:equivalentClass rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://xmlns.com/foaf/0.1/name"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
     </rdf:Description>
     
 
@@ -1790,18 +1818,20 @@ ville, ainsi qu&apos;un certain nombre d&apos;acte complémentaires (lettres pat
     
 
 
+    <!-- http://www.univ-tours.fr/ipato#Research_Area -->
+
+    <owl:Class rdf:about="http://www.univ-tours.fr/ipato#Research_Area">
+        <rdfs:comment>check this with Eurovoc</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://www.univ-tours.fr/ipato#Sampling -->
 
     <owl:Class rdf:about="http://www.univ-tours.fr/ipato#Sampling">
         <rdfs:subClassOf rdf:resource="http://www.ics.forth.gr/isl/CRMsci/S4_Observation"/>
         <skos:prefLabel>Sampling</skos:prefLabel>
     </owl:Class>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#Scientific_domain -->
-
-    <owl:Class rdf:about="http://www.univ-tours.fr/ipato#Scientific_domain"/>
     
 
 
@@ -1861,13 +1891,96 @@ ville, ainsi qu&apos;un certain nombre d&apos;acte complémentaires (lettres pat
 
     <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person">
         <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E20_Biological_Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://xmlns.com/foaf/0.1/firstName"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://xmlns.com/foaf/0.1/lastName"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://xmlns.com/foaf/0.1/mbox"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://xmlns.com/foaf/0.1/name"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
 
     <!-- http://xmlns.com/foaf/0.1/Project -->
 
-    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Project"/>
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Project">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/cerif/frapo/hasFundingAgency"/>
+                <owl:someValuesFrom rdf:resource="http://www.univ-tours.fr/ipato#FundingAgency"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.univ-tours.fr/ipato#has_catalog"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.univ-tours.fr/ipato#has_project_participant"/>
+                <owl:someValuesFrom rdf:resource="http://erlangen-crm.org/current/E39_Actor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.univ-tours.fr/ipato#has_research_area"/>
+                <owl:someValuesFrom rdf:resource="http://www.univ-tours.fr/ipato#Research_Area"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.univ-tours.fr/ipato#is_about"/>
+                <owl:someValuesFrom rdf:resource="http://erlangen-crm.org/current/E1_CRM_Entity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.univ-tours.fr/ipato#is_coordinated_by"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://erlangen-crm.org/current/E21_Person"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.univ-tours.fr/ipato#has_role"/>
+                                <owl:hasValue rdf:resource="http://www.univ-tours.fr/ipato#project_coordinator"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.univ-tours.fr/ipato#is_associated_to"/>
+                <owl:allValuesFrom rdf:resource="http://xmlns.com/foaf/0.1/Group"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dc/terms/title"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
     
 
 
@@ -2772,7 +2885,6 @@ ville, ainsi qu&apos;un certain nombre d&apos;acte complémentaires (lettres pat
         <edited_by rdf:resource="http://www.univ-tours.fr/ipato#Casimir_Chevalier"/>
         <edited_by rdf:resource="http://www.univ-tours.fr/ipato#Lea_Dupuis"/>
         <terms:created rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">1560-11-28</terms:created>
-        <terms:identifier>BB_6</terms:identifier>
     </owl:NamedIndividual>
     
 
@@ -2812,6 +2924,12 @@ ville, ainsi qu&apos;un certain nombre d&apos;acte complémentaires (lettres pat
     
 
 
+    <!-- http://www.univ-tours.fr/ipato#0-test -->
+
+    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#0-test"/>
+    
+
+
     <!-- https://schema.org/editor -->
 
     <owl:NamedIndividual rdf:about="https://schema.org/editor">
@@ -2831,13 +2949,6 @@ ville, ainsi qu&apos;un certain nombre d&apos;acte complémentaires (lettres pat
      -->
 
     <rdf:Description rdf:about="http://purl.org/dc/terms/creator">
-        <rdfs:isDefinedBy xml:lang="en">http://purl.org/dc/terms</rdfs:isDefinedBy>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://purl.org/dc/terms/identifier">
-        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/dc/terms</rdfs:isDefinedBy>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://purl.org/dc/terms/title">
-        <skos:prefLabel xml:lang="en">title</skos:prefLabel>
         <rdfs:isDefinedBy xml:lang="en">http://purl.org/dc/terms</rdfs:isDefinedBy>
     </rdf:Description>
     
