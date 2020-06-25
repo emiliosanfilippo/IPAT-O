@@ -21,7 +21,7 @@
     Emilio M. Sanfilippo
     Le Studium Loire Valley Institute for Advanced Studies, and
     ARD Intelligence des Patrimoines program, CESR University of Tours, France</terms:creator>
-        <rdfs:comment xml:lang="en">This ontology is developed at the ARD Intelligence des Patrimoines program at the CESR University of Tours. The ontology is built on the Erlangen release of CIDOC-CRM v.6.2 but it also covers modeling elements for specific application purposes. These are either taken from existing resources (e.g., Dublin Core, FOAF, DBpedia, etc.) or are newly created.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This ontology module is developed at the ARD Intelligence des Patrimoines program at the CESR University of Tours. It represents modelling elements relevant in the scope of natural science and natural heritage projects</rdfs:comment>
         <owl:versionInfo xml:lang="en">Status: unstable, work in progress</owl:versionInfo>
     </owl:Ontology>
     
