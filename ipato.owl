@@ -179,15 +179,6 @@ ARD Intelligence des Patrimoines program, CESR University of Tours, France</term
     
 
 
-    <!-- http://purl.org/dc/terms/creator -->
-
-    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/creator">
-        <owl:inverseOf rdf:resource="http://www.univ-tours.fr/ipato#created_by"/>
-        <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E39_Actor"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://purl.org/dc/terms/language -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/language">
@@ -204,7 +195,6 @@ ARD Intelligence des Patrimoines program, CESR University of Tours, France</term
     <!-- http://purl.org/dc/terms/subject -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/subject">
-        <owl:equivalentProperty rdf:resource="http://www.univ-tours.fr/ipato#has_act_form"/>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/dc/terms</rdfs:isDefinedBy>
     </owl:ObjectProperty>
     
@@ -299,15 +289,6 @@ ARD Intelligence des Patrimoines program, CESR University of Tours, France</term
     <!-- http://www.univ-tours.fr/ipato#created_by -->
 
     <owl:ObjectProperty rdf:about="http://www.univ-tours.fr/ipato#created_by">
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://erlangen-crm.org/current/E31_Document"/>
-                    <rdf:Description rdf:about="http://erlangen-crm.org/current/E84_Information_Carrier"/>
-                    <rdf:Description rdf:about="http://purl.org/vocab/frbr/core#Expression"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E39_Actor"/>
         <skos:prefLabel xml:lang="en">created by</skos:prefLabel>
     </owl:ObjectProperty>
@@ -693,17 +674,6 @@ http://id.loc.gov/ontologies/bibframe.html#</rdfs:comment>
     <!-- http://purl.org/dc/terms/description -->
 
     <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/description">
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://erlangen-crm.org/current/E1_CRM_Entity"/>
-                    <rdf:Description rdf:about="http://www.univ-tours.fr/ipato#Research_Area"/>
-                    <rdf:Description rdf:about="http://www.w3.org/ns/dcat#Catalog"/>
-                    <rdf:Description rdf:about="http://www.w3.org/ns/dcat#Dataset"/>
-                    <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Project"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/dc/terms</rdfs:isDefinedBy>
     </owl:DatatypeProperty>
@@ -745,16 +715,6 @@ http://id.loc.gov/ontologies/bibframe.html#</rdfs:comment>
     <!-- http://purl.org/dc/terms/title -->
 
     <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/title">
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://erlangen-crm.org/current/E1_CRM_Entity"/>
-                    <rdf:Description rdf:about="http://www.w3.org/ns/dcat#Catalog"/>
-                    <rdf:Description rdf:about="http://www.w3.org/ns/dcat#Dataset"/>
-                    <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Project"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -2032,14 +1992,14 @@ ville, ainsi qu&apos;un certain nombre d&apos;acte complémentaires (lettres pat
     <owl:Class rdf:about="http://www.w3.org/ns/dcat#Dataset">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/dc/terms/creator"/>
-                <owl:someValuesFrom rdf:resource="http://erlangen-crm.org/current/E39_Actor"/>
+                <owl:onProperty rdf:resource="http://purl.org/dc/terms/subject"/>
+                <owl:someValuesFrom rdf:resource="http://www.univ-tours.fr/ipato#Research_Area"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/dc/terms/subject"/>
-                <owl:someValuesFrom rdf:resource="http://www.univ-tours.fr/ipato#Research_Area"/>
+                <owl:onProperty rdf:resource="http://www.univ-tours.fr/ipato#created_by"/>
+                <owl:someValuesFrom rdf:resource="http://erlangen-crm.org/current/E39_Actor"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2172,17 +2132,7 @@ ville, ainsi qu&apos;un certain nombre d&apos;acte complémentaires (lettres pat
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.univ-tours.fr/ipato#has_project_participant"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://erlangen-crm.org/current/E39_Actor"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.univ-tours.fr/ipato#has_role"/>
-                                <owl:hasValue rdf:resource="http://www.univ-tours.fr/ipato#project_participant"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
+                <owl:someValuesFrom rdf:resource="http://erlangen-crm.org/current/E39_Actor"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2200,17 +2150,7 @@ ville, ainsi qu&apos;un certain nombre d&apos;acte complémentaires (lettres pat
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.univ-tours.fr/ipato#is_coordinated_by"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://erlangen-crm.org/current/E21_Person"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.univ-tours.fr/ipato#has_role"/>
-                                <owl:hasValue rdf:resource="http://www.univ-tours.fr/ipato#project_coordinator"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
+                <owl:someValuesFrom rdf:resource="http://erlangen-crm.org/current/E21_Person"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2262,56 +2202,6 @@ ville, ainsi qu&apos;un certain nombre d&apos;acte complémentaires (lettres pat
         <skos:definition xml:lang="fr">Témoignage écrit par lequel une ou plusieurs personnes attestent un fait, un statut individuel, par exemple, comme connu et avéré, faute d&apos;une preuve écrite.</skos:definition>
         <skos:definition xml:lang="en">Written testimony by which one or more persons attest a fact, or an individual status, for example, as known and proven, in the absence of written evidence.</skos:definition>
         <skos:prefLabel xml:lang="fr">Acte de notoriété</skos:prefLabel>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#Amboise -->
-
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Amboise">
-        <rdf:type rdf:resource="http://dbpedia.org/ontology/City"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#Amboise_AM -->
-
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Amboise_AM">
-        <current:P89_falls_within rdf:resource="http://www.univ-tours.fr/ipato#Amboise"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#Amboise_corps_de_ville -->
-
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Amboise_corps_de_ville">
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E40_Legal_Body"/>
-        <current:P74_has_current_or_former_residence rdf:resource="http://www.univ-tours.fr/ipato#Amboise"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#Angers -->
-
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Angers">
-        <rdf:type rdf:resource="http://dbpedia.org/ontology/City"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#Angers_corps_de_ville -->
-
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Angers_corps_de_ville">
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E40_Legal_Body"/>
-        <current:P74_has_current_or_former_residence rdf:resource="http://www.univ-tours.fr/ipato#Angers"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#Anne_de_Bretagne -->
-
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Anne_de_Bretagne">
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E21_Person"/>
     </owl:NamedIndividual>
     
 
@@ -2426,14 +2316,6 @@ ville, ainsi qu&apos;un certain nombre d&apos;acte complémentaires (lettres pat
     
 
 
-    <!-- http://www.univ-tours.fr/ipato#Casimir_Chevalier -->
-
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Casimir_Chevalier">
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E21_Person"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.univ-tours.fr/ipato#Cautionnement -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Cautionnement">
@@ -2471,15 +2353,6 @@ ville, ainsi qu&apos;un certain nombre d&apos;acte complémentaires (lettres pat
         <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
         <skos:definition xml:lang="fr">Acte par lequel une personne accepte officiellement une transaction, un accord, etc.</skos:definition>
         <skos:prefLabel xml:lang="fr">Consentement</skos:prefLabel>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#Considerable_doubt_about_species -->
-
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Considerable_doubt_about_species">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Classification_judgment"/>
-        <skos:prefLabel>Considerable doubt about the species</skos:prefLabel>
     </owl:NamedIndividual>
     
 
@@ -2545,14 +2418,6 @@ ville, ainsi qu&apos;un certain nombre d&apos;acte complémentaires (lettres pat
         <skos:altLabel xml:lang="en">Political correspondance</skos:altLabel>
         <skos:definition xml:lang="fr">Ensemble des échanges épistolaires qui ont eu lieu entre des autorités politiques différentes via leurs représentants.</skos:definition>
         <skos:prefLabel xml:lang="fr">Correspondance politique</skos:prefLabel>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#David_Rivaud -->
-
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#David_Rivaud">
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E21_Person"/>
     </owl:NamedIndividual>
     
 
@@ -2646,37 +2511,12 @@ ville, ainsi qu&apos;un certain nombre d&apos;acte complémentaires (lettres pat
     
 
 
-    <!-- http://www.univ-tours.fr/ipato#Jerome_Salmon -->
-
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Jerome_Salmon">
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E21_Person"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#Lea_Dupuis -->
-
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Lea_Dupuis">
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E21_Person"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.univ-tours.fr/ipato#Leg -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Leg">
         <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
         <skos:definition xml:lang="fr">Donation régie par prédisposition testamentaire.</skos:definition>
         <skos:prefLabel xml:lang="fr">Leg</skos:prefLabel>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#Low_doubt_about_species -->
-
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Low_doubt_about_species">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Classification_judgment"/>
-        <skos:prefLabel>Low doubt about the species</skos:prefLabel>
     </owl:NamedIndividual>
     
 
@@ -2935,22 +2775,6 @@ ville, ainsi qu&apos;un certain nombre d&apos;acte complémentaires (lettres pat
     
 
 
-    <!-- http://www.univ-tours.fr/ipato#Tours -->
-
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Tours">
-        <rdf:type rdf:resource="http://dbpedia.org/ontology/City"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#Tours_AM -->
-
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Tours_AM">
-        <current:P89_falls_within rdf:resource="http://www.univ-tours.fr/ipato#Tours"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.univ-tours.fr/ipato#Transfert -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Transfert">
@@ -2986,22 +2810,6 @@ ville, ainsi qu&apos;un certain nombre d&apos;acte complémentaires (lettres pat
         <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
         <skos:definition xml:lang="fr">Acte par lequel une personne ou un enesemble de personnes cède de façon onéreuse à une autre personne ou un autre ensemble de personne un bien foncier, mobilier ou immobilier.</skos:definition>
         <skos:prefLabel xml:lang="fr">Vente</skos:prefLabel>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#Vincennes -->
-
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Vincennes">
-        <rdf:type rdf:resource="http://dbpedia.org/ontology/City"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#archive_AD_18 -->
-
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#archive_AD_18">
-        <current:P89_falls_within rdf:resource="http://www.univ-tours.fr/ipato#Bourges"/>
     </owl:NamedIndividual>
     
 
@@ -3048,42 +2856,6 @@ ville, ainsi qu&apos;un certain nombre d&apos;acte complémentaires (lettres pat
     
 
 
-    <!-- http://www.univ-tours.fr/ipato#lettre_631967 -->
-
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#lettre_631967">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Lettre_close"/>
-        <archieved_in rdf:resource="http://www.univ-tours.fr/ipato#Bourges"/>
-        <archieved_in rdf:resource="http://www.univ-tours.fr/ipato#France"/>
-        <archieved_in rdf:resource="http://www.univ-tours.fr/ipato#archive_AD_18"/>
-        <created_by rdf:resource="http://www.univ-tours.fr/ipato#Anne_de_Bretagne"/>
-        <created_by rdf:resource="http://www.univ-tours.fr/ipato#Marchant"/>
-        <created_in rdf:resource="http://www.univ-tours.fr/ipato#Vincennes"/>
-        <edited_by rdf:resource="http://www.univ-tours.fr/ipato#David_Rivaud"/>
-        <has_act_form rdf:resource="http://www.univ-tours.fr/ipato#Correspondance_politique"/>
-        <bibframe:ShelfMark rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">8_G_434</bibframe:ShelfMark>
-        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1513-06-25</terms:created>
-        <skos:prefLabel xml:lang="en">lettre 631967</skos:prefLabel>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#lettre_632985 -->
-
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#lettre_632985">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Lettre"/>
-        <archieved_in rdf:resource="http://www.univ-tours.fr/ipato#France"/>
-        <archieved_in rdf:resource="http://www.univ-tours.fr/ipato#Tours"/>
-        <archieved_in rdf:resource="http://www.univ-tours.fr/ipato#Tours_AM"/>
-        <created_by rdf:resource="http://www.univ-tours.fr/ipato#Angers_corps_de_ville"/>
-        <created_in rdf:resource="http://www.univ-tours.fr/ipato#Tours"/>
-        <edited_by rdf:resource="http://www.univ-tours.fr/ipato#Jerome_Salmon"/>
-        <bibframe:ShelfMark rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">EE_6*</bibframe:ShelfMark>
-        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1568-01-22</terms:created>
-        <skos:prefLabel xml:lang="en">lettre 632985</skos:prefLabel>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.univ-tours.fr/ipato#marriage_contract -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#marriage_contract">
@@ -3113,21 +2885,6 @@ ville, ainsi qu&apos;un certain nombre d&apos;acte complémentaires (lettres pat
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#project_participant">
         <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Role"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#registre_636305 -->
-
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#registre_636305">
-        <archieved_in rdf:resource="http://www.univ-tours.fr/ipato#Amboise"/>
-        <archieved_in rdf:resource="http://www.univ-tours.fr/ipato#Amboise_AM"/>
-        <archieved_in rdf:resource="http://www.univ-tours.fr/ipato#France"/>
-        <created_by rdf:resource="http://www.univ-tours.fr/ipato#Amboise_corps_de_ville"/>
-        <created_in rdf:resource="http://www.univ-tours.fr/ipato#Amboise"/>
-        <edited_by rdf:resource="http://www.univ-tours.fr/ipato#Casimir_Chevalier"/>
-        <edited_by rdf:resource="http://www.univ-tours.fr/ipato#Lea_Dupuis"/>
-        <terms:created rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">1560-11-28</terms:created>
     </owl:NamedIndividual>
     
 
@@ -3167,12 +2924,6 @@ ville, ainsi qu&apos;un certain nombre d&apos;acte complémentaires (lettres pat
     
 
 
-    <!-- http://www.univ-tours.fr/ipato#0-test -->
-
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#0-test"/>
-    
-
-
     <!-- https://schema.org/editor -->
 
     <owl:NamedIndividual rdf:about="https://schema.org/editor">
@@ -3180,20 +2931,6 @@ ville, ainsi qu&apos;un certain nombre d&apos;acte complémentaires (lettres pat
         <rdfs:comment>Imported from schema.org</rdfs:comment>
         <skos:prefLabel xml:lang="en">editor</skos:prefLabel>
     </owl:NamedIndividual>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotations
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    <rdf:Description rdf:about="http://purl.org/dc/terms/creator">
-        <rdfs:isDefinedBy xml:lang="en">http://purl.org/dc/terms</rdfs:isDefinedBy>
-    </rdf:Description>
     
 
 
@@ -3212,14 +2949,6 @@ ville, ainsi qu&apos;un certain nombre d&apos;acte complémentaires (lettres pat
             <rdf:Description rdf:about="http://www.w3.org/ns/dcat#Catalog"/>
             <rdf:Description rdf:about="http://www.w3.org/ns/dcat#Dataset"/>
         </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.univ-tours.fr/ipato#David_Rivaud"/>
-            <rdf:Description rdf:about="http://www.univ-tours.fr/ipato#Jerome_Salmon"/>
-            <rdf:Description rdf:about="http://www.univ-tours.fr/ipato#Lea_Dupuis"/>
-        </owl:distinctMembers>
     </rdf:Description>
 </rdf:RDF>
 
