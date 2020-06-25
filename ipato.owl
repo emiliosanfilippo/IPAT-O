@@ -29,10 +29,10 @@ ARD Intelligence des Patrimoines program, CESR University of Tours, France</term
         <rdfs:comment xml:lang="en">This ontology is developed at the ARD Intelligence des Patrimoines program at the CESR University of Tours. The ontology is built on the Erlangen release of CIDOC-CRM v.6.2 but it also covers modeling elements for specific application purposes. These are either taken from existing resources (e.g., Dublin Core, FOAF, DBpedia, etc.) or are newly created.</rdfs:comment>
         <owl:versionInfo xml:lang="en">Status: unstable, work in progress</owl:versionInfo>
     </owl:Ontology>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Annotation properties
@@ -40,7 +40,7 @@ ARD Intelligence des Patrimoines program, CESR University of Tours, France</term
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
 
 
     <!-- http://purl.org/dc/terms/contributor -->
@@ -48,40 +48,40 @@ ARD Intelligence des Patrimoines program, CESR University of Tours, France</term
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor">
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/dc/terms</rdfs:isDefinedBy>
     </owl:AnnotationProperty>
-    
+
 
 
     <!-- http://purl.org/dc/terms/creator -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#taxRef_identifier -->
 
     <owl:AnnotationProperty rdf:about="http://www.univ-tours.fr/ipato#taxRef_identifier"/>
-    
+
 
 
     <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel"/>
-    
+
 
 
     <!-- http://www.w3.org/2004/02/skos/core#definition -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
-    
+
 
 
     <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel"/>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Datatypes
@@ -89,22 +89,22 @@ ARD Intelligence des Patrimoines program, CESR University of Tours, France</term
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
 
 
     <!-- http://www.w3.org/2001/XMLSchema#date -->
 
     <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
-    
+
 
 
     <!-- http://www.w3.org/2001/XMLSchema#gYearMonth -->
 
     <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#gYearMonth"/>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Object Properties
@@ -112,7 +112,7 @@ ARD Intelligence des Patrimoines program, CESR University of Tours, France</term
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
 
 
     <!-- http://dbpedia.org/ontology/birthPlace -->
@@ -123,7 +123,7 @@ ARD Intelligence des Patrimoines program, CESR University of Tours, France</term
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/ontology/</rdfs:isDefinedBy>
         <skos:prefLabel xml:lang="en">birth place</skos:prefLabel>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://dbpedia.org/ontology/deathPlace -->
@@ -134,7 +134,7 @@ ARD Intelligence des Patrimoines program, CESR University of Tours, France</term
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/ontology/</rdfs:isDefinedBy>
         <skos:prefLabel xml:lang="en">death place</skos:prefLabel>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/cerif/frapo/hasFundingAgency -->
@@ -147,7 +147,7 @@ ARD Intelligence des Patrimoines program, CESR University of Tours, France</term
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://sparontologies.github.io/frapo/current/frapo.html</rdfs:isDefinedBy>
         <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An object property linking something to a funding agency that provides funding for it</skos:definition>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/cerif/frapo/isEmployedBy -->
@@ -164,7 +164,7 @@ ARD Intelligence des Patrimoines program, CESR University of Tours, France</term
         </rdfs:range>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://sparontologies.github.io/frapo/current/frapo.html</rdfs:isDefinedBy>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/cerif/frapo/isFundingAgencyFor -->
@@ -176,7 +176,7 @@ ARD Intelligence des Patrimoines program, CESR University of Tours, France</term
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://sparontologies.github.io/frapo/current/frapo.html</rdfs:isDefinedBy>
         <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An object property linking a funding agency to an entity for which it provides funding</skos:definition>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/dc/terms/language -->
@@ -189,7 +189,7 @@ ARD Intelligence des Patrimoines program, CESR University of Tours, France</term
         <skos:definition xml:lang="en">This relation is used to link an entity, e.g., a catalog, to its corresponding (natural) language</skos:definition>
         <skos:prefLabel xml:lang="en">language</skos:prefLabel>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/dc/terms/subject -->
@@ -197,7 +197,7 @@ ARD Intelligence des Patrimoines program, CESR University of Tours, France</term
     <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/subject">
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/dc/terms</rdfs:isDefinedBy>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://www.ics.forth.gr/isl/CRMsci/O8_observed -->
@@ -209,7 +209,7 @@ ARD Intelligence des Patrimoines program, CESR University of Tours, France</term
         <rdfs:isDefinedBy xml:lang="en">http://www.cidoc-crm.org/crmsci/home-1</rdfs:isDefinedBy>
         <skos:prefLabel xml:lang="en">observed</skos:prefLabel>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://www.ics.forth.gr/isl/CRMsci/O8i_was_observed_by -->
@@ -220,7 +220,7 @@ ARD Intelligence des Patrimoines program, CESR University of Tours, France</term
         <rdfs:isDefinedBy xml:lang="en">http://www.cidoc-crm.org/crmsci/home-1</rdfs:isDefinedBy>
         <skos:prefLabel xml:lang="en">was observed by</skos:prefLabel>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#archieved_in -->
@@ -238,7 +238,7 @@ ARD Intelligence des Patrimoines program, CESR University of Tours, France</term
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E53_Place"/>
         <skos:prefLabel xml:lang="en">archieved in</skos:prefLabel>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#catalog_of -->
@@ -248,17 +248,17 @@ ARD Intelligence des Patrimoines program, CESR University of Tours, France</term
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">catalog of</rdfs:label>
         <skos:prefLabel xml:lang="en">catalog of</skos:prefLabel>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#classification_judgment -->
 
     <owl:ObjectProperty rdf:about="http://www.univ-tours.fr/ipato#classification_judgment">
-        <rdfs:domain rdf:resource="http://www.univ-tours.fr/ipato#Biological_classification_activity"/>
-        <rdfs:range rdf:resource="http://www.univ-tours.fr/ipato#Classification_judgment"/>
+        <rdfs:domain rdf:resource="http://www.univ-tours.fr/ipato#Biological_Classification_Activity"/>
+        <rdfs:range rdf:resource="http://www.univ-tours.fr/ipato#Classification_Type"/>
         <skos:prefLabel xml:lang="en">classification judgment</skos:prefLabel>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#classified_by -->
@@ -267,7 +267,7 @@ ARD Intelligence des Patrimoines program, CESR University of Tours, France</term
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.univ-tours.fr/ipato#AnimalGroup"/>
+                    <rdf:Description rdf:about="http://www.univ-tours.fr/ipato#Group_of_Non_Human_Animals"/>
                     <rdf:Description rdf:about="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
                 </owl:unionOf>
             </owl:Class>
@@ -275,7 +275,7 @@ ARD Intelligence des Patrimoines program, CESR University of Tours, France</term
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E21_Person"/>
         <skos:prefLabel xml:lang="en">classified by</skos:prefLabel>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#coordinates -->
@@ -283,7 +283,7 @@ ARD Intelligence des Patrimoines program, CESR University of Tours, France</term
     <owl:ObjectProperty rdf:about="http://www.univ-tours.fr/ipato#coordinates">
         <owl:inverseOf rdf:resource="http://www.univ-tours.fr/ipato#is_coordinated_by"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#created_by -->
@@ -292,7 +292,7 @@ ARD Intelligence des Patrimoines program, CESR University of Tours, France</term
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E39_Actor"/>
         <skos:prefLabel xml:lang="en">created by</skos:prefLabel>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#created_in -->
@@ -310,7 +310,7 @@ ARD Intelligence des Patrimoines program, CESR University of Tours, France</term
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E53_Place"/>
         <skos:prefLabel xml:lang="en">created in</skos:prefLabel>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#edited -->
@@ -318,7 +318,7 @@ ARD Intelligence des Patrimoines program, CESR University of Tours, France</term
     <owl:ObjectProperty rdf:about="http://www.univ-tours.fr/ipato#edited">
         <owl:inverseOf rdf:resource="http://www.univ-tours.fr/ipato#edited_by"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#edited_by -->
@@ -337,25 +337,25 @@ ARD Intelligence des Patrimoines program, CESR University of Tours, France</term
         <skos:prefLabel xml:lang="en">edited by</skos:prefLabel>
         <skos:prefLabel xml:lang="en">edits</skos:prefLabel>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#establishes_species_of -->
 
     <owl:ObjectProperty rdf:about="http://www.univ-tours.fr/ipato#establishes_species_of">
         <owl:inverseOf rdf:resource="http://www.univ-tours.fr/ipato#species_established_during"/>
-        <rdfs:domain rdf:resource="http://www.univ-tours.fr/ipato#Biological_classification_activity"/>
+        <rdfs:domain rdf:resource="http://www.univ-tours.fr/ipato#Biological_Classification_Activity"/>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.univ-tours.fr/ipato#AnimalGroup"/>
+                    <rdf:Description rdf:about="http://www.univ-tours.fr/ipato#Group_of_Non_Human_Animals"/>
                     <rdf:Description rdf:about="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
         <skos:prefLabel xml:lang="en">establishes species of</skos:prefLabel>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#found_at -->
@@ -373,7 +373,7 @@ ARD Intelligence des Patrimoines program, CESR University of Tours, France</term
         </rdfs:range>
         <skos:prefLabel xml:lang="en">found at</skos:prefLabel>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#has_act_form -->
@@ -388,11 +388,11 @@ ARD Intelligence des Patrimoines program, CESR University of Tours, France</term
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
+        <rdfs:range rdf:resource="http://www.univ-tours.fr/ipato#Forme_De_Acte"/>
         <rdfs:comment>This relation is introduced to match experts&apos; terminology with respect to the RENUMAR project</rdfs:comment>
         <skos:prefLabel xml:lang="en">has act from</skos:prefLabel>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#has_catalog -->
@@ -403,7 +403,7 @@ ARD Intelligence des Patrimoines program, CESR University of Tours, France</term
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has catalog</rdfs:label>
         <skos:prefLabel xml:lang="en">has catalog</skos:prefLabel>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#has_habitat_type -->
@@ -417,18 +417,19 @@ ARD Intelligence des Patrimoines program, CESR University of Tours, France</term
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range rdf:resource="http://www.univ-tours.fr/ipato#Habitat_type"/>
+        <rdfs:range rdf:resource="http://www.univ-tours.fr/ipato#Habitat_Type"/>
         <skos:prefLabel xml:lang="en">has habitat type</skos:prefLabel>
     </owl:ObjectProperty>
-    
 
 
-    <!-- http://www.univ-tours.fr/ipato#has_member -->
 
-    <owl:ObjectProperty rdf:about="http://www.univ-tours.fr/ipato#has_member">
-        <skos:prefLabel xml:lang="en">has member</skos:prefLabel>
+    <!-- http://www.univ-tours.fr/ipato#has_member_of_species -->
+
+    <owl:ObjectProperty rdf:about="http://www.univ-tours.fr/ipato#has_member_of_species">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has member of species</rdfs:label>
+        <skos:prefLabel xml:lang="en">has member of species</skos:prefLabel>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#has_project_participant -->
@@ -439,7 +440,7 @@ ARD Intelligence des Patrimoines program, CESR University of Tours, France</term
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E39_Actor"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This relation has been introduced to explicitly link projects to their participating actors. We do not assume an ontological committment on projects with respect to CIDOC&apos;s taxonomy, e.g., whether they are events or persistent items. This is the reason why has_project_participant is not directly related to the CIDOC&apos;s relation P11_had_participant (which also assumes that a temporal entity is already over)</rdfs:comment>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#has_research_area -->
@@ -448,7 +449,7 @@ ARD Intelligence des Patrimoines program, CESR University of Tours, France</term
         <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Project"/>
         <rdfs:range rdf:resource="http://www.univ-tours.fr/ipato#Research_Area"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#has_role -->
@@ -458,7 +459,7 @@ ARD Intelligence des Patrimoines program, CESR University of Tours, France</term
         <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Role"/>
         <skos:prefLabel xml:lang="en">has role</skos:prefLabel>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#is_about -->
@@ -477,7 +478,7 @@ ARD Intelligence des Patrimoines program, CESR University of Tours, France</term
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CIDOC&apos;s relation P129_is_about has a different intended meaning; for this reason, P129 and is_about are not equivalent</rdfs:comment>
         <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This relation is used to link a resource like a project or a catalog to the entities it is about. For instance, in the context of cultural heritage, a project could be about manuscripts, statues, paintings, etc.</skos:definition>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#is_associated_to -->
@@ -487,7 +488,7 @@ ARD Intelligence des Patrimoines program, CESR University of Tours, France</term
         <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Group"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This relation is used to link a project to a group of agents, e.g., the project Renumar is_associated_to a research group at the CESR University of Tours</rdfs:comment>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#is_coordinated_by -->
@@ -496,7 +497,7 @@ ARD Intelligence des Patrimoines program, CESR University of Tours, France</term
         <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Project"/>
         <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#is_found_with -->
@@ -514,19 +515,19 @@ ARD Intelligence des Patrimoines program, CESR University of Tours, France</term
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://erlangen-crm.org/current/E20_Biological_Object"/>
-                    <rdf:Description rdf:about="http://www.univ-tours.fr/ipato#AnimalGroup"/>
+                    <rdf:Description rdf:about="http://www.univ-tours.fr/ipato#Group_of_Non_Human_Animals"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
         <skos:prefLabel xml:lang="en">is found with</skos:prefLabel>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#participates_in_project -->
 
     <owl:ObjectProperty rdf:about="http://www.univ-tours.fr/ipato#participates_in_project"/>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#sampled -->
@@ -537,14 +538,14 @@ ARD Intelligence des Patrimoines program, CESR University of Tours, France</term
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.univ-tours.fr/ipato#AnimalGroup"/>
+                    <rdf:Description rdf:about="http://www.univ-tours.fr/ipato#Group_of_Non_Human_Animals"/>
                     <rdf:Description rdf:about="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
         <skos:prefLabel xml:lang="en">sampled</skos:prefLabel>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#sampled_by -->
@@ -553,7 +554,7 @@ ARD Intelligence des Patrimoines program, CESR University of Tours, France</term
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.univ-tours.fr/ipato#AnimalGroup"/>
+                    <rdf:Description rdf:about="http://www.univ-tours.fr/ipato#Group_of_Non_Human_Animals"/>
                     <rdf:Description rdf:about="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
                 </owl:unionOf>
             </owl:Class>
@@ -561,7 +562,7 @@ ARD Intelligence des Patrimoines program, CESR University of Tours, France</term
         <rdfs:range rdf:resource="http://erlangen-crm.org/current/E21_Person"/>
         <skos:prefLabel xml:lang="en">sampled by</skos:prefLabel>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#sampled_during -->
@@ -570,7 +571,7 @@ ARD Intelligence des Patrimoines program, CESR University of Tours, France</term
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.univ-tours.fr/ipato#AnimalGroup"/>
+                    <rdf:Description rdf:about="http://www.univ-tours.fr/ipato#Group_of_Non_Human_Animals"/>
                     <rdf:Description rdf:about="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
                 </owl:unionOf>
             </owl:Class>
@@ -578,7 +579,7 @@ ARD Intelligence des Patrimoines program, CESR University of Tours, France</term
         <rdfs:range rdf:resource="http://www.univ-tours.fr/ipato#Sampling"/>
         <skos:prefLabel xml:lang="en">sampled during</skos:prefLabel>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#species_established_during -->
@@ -587,15 +588,15 @@ ARD Intelligence des Patrimoines program, CESR University of Tours, France</term
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.univ-tours.fr/ipato#AnimalGroup"/>
+                    <rdf:Description rdf:about="http://www.univ-tours.fr/ipato#Group_of_Non_Human_Animals"/>
                     <rdf:Description rdf:about="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range rdf:resource="http://www.univ-tours.fr/ipato#Biological_classification_activity"/>
+        <rdfs:range rdf:resource="http://www.univ-tours.fr/ipato#Biological_Classification_Activity"/>
         <skos:prefLabel xml:lang="en">species established during</skos:prefLabel>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://www.w3.org/ns/dcat#dataset -->
@@ -607,10 +608,10 @@ ARD Intelligence des Patrimoines program, CESR University of Tours, France</term
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.w3.org/TR/vocab-dcat-2/</rdfs:isDefinedBy>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.w3.org/ns/dcat.html</rdfs:isDefinedBy>
     </owl:ObjectProperty>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Data properties
@@ -618,7 +619,7 @@ ARD Intelligence des Patrimoines program, CESR University of Tours, France</term
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
 
 
     <!-- http://dbpedia.org/ontology/birthDate -->
@@ -628,7 +629,7 @@ ARD Intelligence des Patrimoines program, CESR University of Tours, France</term
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/ontology/</rdfs:isDefinedBy>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://dbpedia.org/ontology/deathDate -->
@@ -638,7 +639,7 @@ ARD Intelligence des Patrimoines program, CESR University of Tours, France</term
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/ontology/</rdfs:isDefinedBy>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://id.loc.gov/ontologies/bibframe/ShelfMark -->
@@ -649,7 +650,7 @@ ARD Intelligence des Patrimoines program, CESR University of Tours, France</term
 http://id.loc.gov/ontologies/bibframe.html#</rdfs:comment>
         <skos:prefLabel xml:lang="en">shelfmark</skos:prefLabel>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://purl.org/dc/terms/created -->
@@ -658,7 +659,7 @@ http://id.loc.gov/ontologies/bibframe.html#</rdfs:comment>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/dc/terms</rdfs:isDefinedBy>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://purl.org/dc/terms/date -->
@@ -668,7 +669,7 @@ http://id.loc.gov/ontologies/bibframe.html#</rdfs:comment>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/dc/terms</rdfs:isDefinedBy>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://purl.org/dc/terms/description -->
@@ -677,7 +678,7 @@ http://id.loc.gov/ontologies/bibframe.html#</rdfs:comment>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/dc/terms</rdfs:isDefinedBy>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://purl.org/dc/terms/format -->
@@ -686,13 +687,13 @@ http://id.loc.gov/ontologies/bibframe.html#</rdfs:comment>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.dublincore.org/specifications/dublin-core/dcmi-terms/</rdfs:isDefinedBy>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://purl.org/dc/terms/identifier -->
 
     <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/identifier"/>
-    
+
 
 
     <!-- http://purl.org/dc/terms/publisher -->
@@ -700,7 +701,7 @@ http://id.loc.gov/ontologies/bibframe.html#</rdfs:comment>
     <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/publisher">
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.dublincore.org/specifications/dublin-core/dcmi-terms/</rdfs:isDefinedBy>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://purl.org/dc/terms/rights -->
@@ -709,7 +710,7 @@ http://id.loc.gov/ontologies/bibframe.html#</rdfs:comment>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.dublincore.org/specifications/dublin-core/dcmi-terms/</rdfs:isDefinedBy>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://purl.org/dc/terms/title -->
@@ -717,7 +718,7 @@ http://id.loc.gov/ontologies/bibframe.html#</rdfs:comment>
     <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/title">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://schema.org/email -->
@@ -726,7 +727,7 @@ http://id.loc.gov/ontologies/bibframe.html#</rdfs:comment>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://schema.org/</rdfs:isDefinedBy>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://schema.org/url -->
@@ -735,7 +736,7 @@ http://id.loc.gov/ontologies/bibframe.html#</rdfs:comment>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://schema.org</rdfs:isDefinedBy>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#classification_date -->
@@ -743,7 +744,7 @@ http://id.loc.gov/ontologies/bibframe.html#</rdfs:comment>
     <owl:DatatypeProperty rdf:about="http://www.univ-tours.fr/ipato#classification_date">
         <skos:prefLabel xml:lang="en">classification date</skos:prefLabel>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#dataCite_identifier -->
@@ -752,7 +753,7 @@ http://id.loc.gov/ontologies/bibframe.html#</rdfs:comment>
         <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#dataIPAT_identifier -->
@@ -761,7 +762,7 @@ http://id.loc.gov/ontologies/bibframe.html#</rdfs:comment>
         <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#number_of_individuals -->
@@ -770,7 +771,7 @@ http://id.loc.gov/ontologies/bibframe.html#</rdfs:comment>
         <skos:prefLabel xml:lang="en">number of individuals</skos:prefLabel>
         <skos:prefLabel xml:lang="en">status:testing</skos:prefLabel>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#renumar_identifier -->
@@ -779,7 +780,7 @@ http://id.loc.gov/ontologies/bibframe.html#</rdfs:comment>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <skos:prefLabel xml:lang="en">renumar identifier</skos:prefLabel>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#sampling_date -->
@@ -788,7 +789,7 @@ http://id.loc.gov/ontologies/bibframe.html#</rdfs:comment>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <skos:prefLabel xml:lang="en">sampling date</skos:prefLabel>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.w3.org/ns/dcat#accessURL -->
@@ -797,7 +798,7 @@ http://id.loc.gov/ontologies/bibframe.html#</rdfs:comment>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.w3.org/TR/vocab-dcat-2/</rdfs:isDefinedBy>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://xmlns.com/foaf/0.1/firstName -->
@@ -807,7 +808,7 @@ http://id.loc.gov/ontologies/bibframe.html#</rdfs:comment>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://xmlns.com/foaf/spec/</rdfs:isDefinedBy>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://xmlns.com/foaf/0.1/lastName -->
@@ -817,7 +818,7 @@ http://id.loc.gov/ontologies/bibframe.html#</rdfs:comment>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://xmlns.com/foaf/spec/</rdfs:isDefinedBy>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://xmlns.com/foaf/0.1/mbox -->
@@ -826,7 +827,7 @@ http://id.loc.gov/ontologies/bibframe.html#</rdfs:comment>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E39_Actor"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://xmlns.com/foaf/0.1/name -->
@@ -836,7 +837,7 @@ http://id.loc.gov/ontologies/bibframe.html#</rdfs:comment>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://xmlns.com/foaf/spec/</rdfs:isDefinedBy>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/arco/endTime -->
@@ -845,7 +846,7 @@ http://id.loc.gov/ontologies/bibframe.html#</rdfs:comment>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://wit.istc.cnr.it/arco</rdfs:isDefinedBy>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- https://w3id.org/arco/ontology/arco/startTime -->
@@ -854,7 +855,7 @@ http://id.loc.gov/ontologies/bibframe.html#</rdfs:comment>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://wit.istc.cnr.it/arco</rdfs:isDefinedBy>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- https://www.geonames.org/ontology#lat -->
@@ -874,7 +875,7 @@ http://id.loc.gov/ontologies/bibframe.html#</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">latitude</rdfs:label>
         <skos:prefLabel xml:lang="en">latitude</skos:prefLabel>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- https://www.geonames.org/ontology#long -->
@@ -894,7 +895,7 @@ http://id.loc.gov/ontologies/bibframe.html#</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">longitude</rdfs:label>
         <skos:prefLabel xml:lang="en">longitude</skos:prefLabel>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- https://www.geonames.org/ontology#population -->
@@ -904,7 +905,7 @@ http://id.loc.gov/ontologies/bibframe.html#</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">population</rdfs:label>
         <skos:prefLabel xml:lang="en">population</skos:prefLabel>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- https://www.geonames.org/ontology#postalCode -->
@@ -914,10 +915,10 @@ http://id.loc.gov/ontologies/bibframe.html#</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">postal code</rdfs:label>
         <skos:prefLabel xml:lang="en">postal code</skos:prefLabel>
     </owl:DatatypeProperty>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Classes
@@ -925,7 +926,7 @@ http://id.loc.gov/ontologies/bibframe.html#</rdfs:comment>
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
 
 
     <!-- http://dbpedia.org/ontology/City -->
@@ -942,7 +943,7 @@ http://id.loc.gov/ontologies/bibframe.html#</rdfs:comment>
         <skos:prefLabel xml:lang="en">City</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">Ville</skos:prefLabel>
     </owl:Class>
-    
+
 
 
     <!-- http://dbpedia.org/ontology/Country -->
@@ -957,7 +958,7 @@ http://id.loc.gov/ontologies/bibframe.html#</rdfs:comment>
         <skos:prefLabel xml:lang="en">Country</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">Pays</skos:prefLabel>
     </owl:Class>
-    
+
 
 
     <!-- http://dbpedia.org/ontology/Library -->
@@ -971,7 +972,7 @@ http://id.loc.gov/ontologies/bibframe.html#</rdfs:comment>
         <skos:prefLabel xml:lang="en">Library</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">bibliothèque</skos:prefLabel>
     </owl:Class>
-    
+
 
 
     <!-- http://dbpedia.org/ontology/PopulatedPlace -->
@@ -984,7 +985,7 @@ http://id.loc.gov/ontologies/bibframe.html#</rdfs:comment>
         <skos:prefLabel xml:lang="fr">lieu habité</skos:prefLabel>
         <skos:prefLabel xml:lang="en">populated place</skos:prefLabel>
     </owl:Class>
-    
+
 
 
     <!-- http://erlangen-crm.org/current/E1_CRM_Entity -->
@@ -992,7 +993,7 @@ http://id.loc.gov/ontologies/bibframe.html#</rdfs:comment>
     <rdf:Description rdf:about="http://erlangen-crm.org/current/E1_CRM_Entity">
         <rdfs:label xml:lang="en">CRM Entity</rdfs:label>
     </rdf:Description>
-    
+
 
 
     <!-- http://erlangen-crm.org/current/E21_Person -->
@@ -1000,7 +1001,7 @@ http://id.loc.gov/ontologies/bibframe.html#</rdfs:comment>
     <rdf:Description rdf:about="http://erlangen-crm.org/current/E21_Person">
         <owl:equivalentClass rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
     </rdf:Description>
-    
+
 
 
     <!-- http://erlangen-crm.org/current/E39_Actor -->
@@ -1014,7 +1015,7 @@ http://id.loc.gov/ontologies/bibframe.html#</rdfs:comment>
             </owl:Restriction>
         </rdfs:subClassOf>
     </rdf:Description>
-    
+
 
 
     <!-- http://erlangen-crm.org/current/E53_Place -->
@@ -1033,7 +1034,7 @@ http://id.loc.gov/ontologies/bibframe.html#</rdfs:comment>
             </owl:Restriction>
         </rdfs:subClassOf>
     </rdf:Description>
-    
+
 
 
     <!-- http://erlangen-crm.org/current/E70_Thing -->
@@ -1046,7 +1047,7 @@ http://id.loc.gov/ontologies/bibframe.html#</rdfs:comment>
             </owl:Restriction>
         </rdfs:subClassOf>
     </rdf:Description>
-    
+
 
 
     <!-- http://erlangen-crm.org/current/E71_Man-Made_Thing -->
@@ -1059,7 +1060,7 @@ http://id.loc.gov/ontologies/bibframe.html#</rdfs:comment>
             </owl:Restriction>
         </rdfs:subClassOf>
     </rdf:Description>
-    
+
 
 
     <!-- http://erlangen-crm.org/current/E74_Group -->
@@ -1067,7 +1068,7 @@ http://id.loc.gov/ontologies/bibframe.html#</rdfs:comment>
     <rdf:Description rdf:about="http://erlangen-crm.org/current/E74_Group">
         <owl:equivalentClass rdf:resource="http://xmlns.com/foaf/0.1/Group"/>
     </rdf:Description>
-    
+
 
 
     <!-- http://erlangen-crm.org/current/E84_Information_Carrier -->
@@ -1080,7 +1081,7 @@ http://id.loc.gov/ontologies/bibframe.html#</rdfs:comment>
             </owl:Restriction>
         </rdfs:subClassOf>
     </rdf:Description>
-    
+
 
 
     <!-- http://id.loc.gov/ontologies/bibframe/Role -->
@@ -1088,7 +1089,7 @@ http://id.loc.gov/ontologies/bibframe.html#</rdfs:comment>
     <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Role">
         <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E55_Type"/>
     </owl:Class>
-    
+
 
 
     <!-- http://purl.org/vocab/frbr/core#Expression -->
@@ -1105,7 +1106,7 @@ http://id.loc.gov/ontologies/bibframe.html#</rdfs:comment>
 
 https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:isDefinedBy>
     </owl:Class>
-    
+
 
 
     <!-- http://taxref.mnhn.fr/lod/taxon/222308/10.0 -->
@@ -1113,11 +1114,12 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:isDefinedB
     <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/222308/10.0">
         <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
         <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">222308</taxRef_identifier>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lionychus quadrillum</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/222308</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/222308/tab/taxo</rdfs:seeAlso>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Lionychus quadrillum</skos:prefLabel>
+        <skos:prefLabel xml:lang="lat">Lionychus quadrillum</skos:prefLabel>
     </owl:Class>
-    
+
 
 
     <!-- http://taxref.mnhn.fr/lod/taxon/222358/10.0 -->
@@ -1125,11 +1127,12 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:isDefinedB
     <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/222358/10.0">
         <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
         <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">222358</taxRef_identifier>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Calathus rotundicollis</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/222358</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/222358/tab/taxo</rdfs:seeAlso>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Calathus rotundicollis</skos:prefLabel>
+        <skos:prefLabel xml:lang="lat">Calathus rotundicollis</skos:prefLabel>
     </owl:Class>
-    
+
 
 
     <!-- http://taxref.mnhn.fr/lod/taxon/222374/10.0 -->
@@ -1137,11 +1140,12 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:isDefinedB
     <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/222374/10.0">
         <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
         <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">222374</taxRef_identifier>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oxypselaphus obscurus</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/222374/tab/taxo</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/222374?lg%3Den</rdfs:seeAlso>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Oxypselaphus obscurus</skos:prefLabel>
+        <skos:prefLabel xml:lang="lat">Oxypselaphus obscurus</skos:prefLabel>
     </owl:Class>
-    
+
 
 
     <!-- http://taxref.mnhn.fr/lod/taxon/222375/10.0 -->
@@ -1149,11 +1153,12 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:isDefinedB
     <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/222375/10.0">
         <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
         <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">222375</taxRef_identifier>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paranchus albipes</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/222375/tab/taxo</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/222375?lg%3Den</rdfs:seeAlso>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Paranchus albipes</skos:prefLabel>
+        <skos:prefLabel xml:lang="lat">Paranchus albipes</skos:prefLabel>
     </owl:Class>
-    
+
 
 
     <!-- http://taxref.mnhn.fr/lod/taxon/222381/10.0 -->
@@ -1161,11 +1166,12 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:isDefinedB
     <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/222381/10.0">
         <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
         <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">222381</taxRef_identifier>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Platynus livens</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/222381/tab/taxo</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/222381?lg%3Den</rdfs:seeAlso>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Platynus livens</skos:prefLabel>
+        <skos:prefLabel xml:lang="lat">Platynus livens</skos:prefLabel>
     </owl:Class>
-    
+
 
 
     <!-- http://taxref.mnhn.fr/lod/taxon/222391/10.0 -->
@@ -1173,11 +1179,12 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:isDefinedB
     <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/222391/10.0">
         <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
         <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">222391</taxRef_identifier>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Agonum afrum</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/222391</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/222391/tab/taxo</rdfs:seeAlso>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Agonum afrum</skos:prefLabel>
+        <skos:prefLabel xml:lang="lat">Agonum afrum</skos:prefLabel>
     </owl:Class>
-    
+
 
 
     <!-- http://taxref.mnhn.fr/lod/taxon/222395/10.0 -->
@@ -1185,11 +1192,12 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:isDefinedB
     <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/222395/10.0">
         <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
         <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">222395</taxRef_identifier>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Agonum permoestum</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/222395/tab/taxo</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/222395?lg%3Den</rdfs:seeAlso>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Agonum permoestum</skos:prefLabel>
+        <skos:prefLabel xml:lang="lat">Agonum permoestum</skos:prefLabel>
     </owl:Class>
-    
+
 
 
     <!-- http://taxref.mnhn.fr/lod/taxon/222402/10.0 -->
@@ -1197,11 +1205,14 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:isDefinedB
     <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/222402/10.0">
         <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
         <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">222402</taxRef_identifier>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Agonum micans</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/222402/tab/taxo?lg=en</rdfs:seeAlso>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Europhilus micans (Espèce TaxRef CD_NOM = 886465)</skos:altLabel>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Agonum micans</skos:prefLabel>
+        <skos:altLabel xml:lang="lat">Europhilus micans</skos:altLabel>
+        <skos:prefLabel xml:lang="lat">886465
+identifier for alternative label</skos:prefLabel>
+        <skos:prefLabel xml:lang="lat">Agonum micans</skos:prefLabel>
     </owl:Class>
-    
+
 
 
     <!-- http://taxref.mnhn.fr/lod/taxon/222441/10.0 -->
@@ -1209,11 +1220,12 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:isDefinedB
     <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/222441/10.0">
         <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
         <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">222441</taxRef_identifier>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Parophonus maculicornis</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/222441/tab/taxo</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/222441?lg%3Den</rdfs:seeAlso>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Parophonus maculicornis</skos:prefLabel>
+        <skos:prefLabel xml:lang="lat">Parophonus maculicornis</skos:prefLabel>
     </owl:Class>
-    
+
 
 
     <!-- http://taxref.mnhn.fr/lod/taxon/222459/10.0 -->
@@ -1221,12 +1233,15 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:isDefinedB
     <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/222459/10.0">
         <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
         <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">222459</taxRef_identifier>
+        <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">809509
+identifier for alternative label</taxRef_identifier>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harpalus pumilus</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/222459</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/222459/tab/taxo</rdfs:seeAlso>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Argutor vernalis (Espèce TaxRef CD_NOM = 809509)</skos:altLabel>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Harpalus pumilus</skos:prefLabel>
+        <skos:altLabel xml:lang="lat">Argutor vernalis</skos:altLabel>
+        <skos:prefLabel xml:lang="lat">Harpalus pumilus</skos:prefLabel>
     </owl:Class>
-    
+
 
 
     <!-- http://taxref.mnhn.fr/lod/taxon/222466/10.0 -->
@@ -1234,11 +1249,12 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:isDefinedB
     <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/222466/10.0">
         <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
         <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">222466</taxRef_identifier>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pseudoophonus rufipes</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/222466/tab/taxo</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/222466?lg%3Den</rdfs:seeAlso>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Pseudoophonus rufipes</skos:prefLabel>
+        <skos:prefLabel xml:lang="lat">Pseudoophonus rufipes</skos:prefLabel>
     </owl:Class>
-    
+
 
 
     <!-- http://taxref.mnhn.fr/lod/taxon/222508/10.0 -->
@@ -1246,11 +1262,12 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:isDefinedB
     <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/222508/10.0">
         <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
         <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">222508</taxRef_identifier>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Badister bullatus</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/222508/tab/taxo</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/222508?lg%3Den</rdfs:seeAlso>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Badister bullatus</skos:prefLabel>
+        <skos:prefLabel xml:lang="lat">Badister bullatus</skos:prefLabel>
     </owl:Class>
-    
+
 
 
     <!-- http://taxref.mnhn.fr/lod/taxon/222532/10.0 -->
@@ -1258,11 +1275,12 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:isDefinedB
     <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/222532/10.0">
         <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
         <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">222532</taxRef_identifier>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Panagaeus bipustulatus</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/222532/tab/taxo</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/222532?lg%3Den</rdfs:seeAlso>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Panagaeus bipustulatus</skos:prefLabel>
+        <skos:prefLabel xml:lang="lat">Panagaeus bipustulatus</skos:prefLabel>
     </owl:Class>
-    
+
 
 
     <!-- http://taxref.mnhn.fr/lod/taxon/222539/10.0 -->
@@ -1270,11 +1288,12 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:isDefinedB
     <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/222539/10.0">
         <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
         <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">222539</taxRef_identifier>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Poecilus cupreus</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/222539/tab/taxo</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/222539?lg%3Den</rdfs:seeAlso>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Poecilus cupreus</skos:prefLabel>
+        <skos:prefLabel xml:lang="lat">Poecilus cupreus</skos:prefLabel>
     </owl:Class>
-    
+
 
 
     <!-- http://taxref.mnhn.fr/lod/taxon/222557/10.0 -->
@@ -1282,12 +1301,15 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:isDefinedB
     <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/222557/10.0">
         <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
         <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">222557</taxRef_identifier>
+        <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">886474
+identifier for alternative label</taxRef_identifier>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pterostichus niger</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/222557</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/222557/tab/taxo</rdfs:seeAlso>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Platysma nigrum (Espèce TaxRef CD_NOM = 886474)</skos:altLabel>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Pterostichus niger</skos:prefLabel>
+        <skos:altLabel xml:lang="lat">Platysma nigrum</skos:altLabel>
+        <skos:prefLabel xml:lang="lat">Pterostichus niger</skos:prefLabel>
     </owl:Class>
-    
+
 
 
     <!-- http://taxref.mnhn.fr/lod/taxon/222558/10.0 -->
@@ -1295,11 +1317,12 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:isDefinedB
     <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/222558/10.0">
         <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
         <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">222558</taxRef_identifier>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pterostichus melanarius</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/222558</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/222558/tab/taxo?lg=en</rdfs:seeAlso>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Pterostichus melanarius</skos:prefLabel>
+        <skos:prefLabel xml:lang="lat">Pterostichus melanarius</skos:prefLabel>
     </owl:Class>
-    
+
 
 
     <!-- http://taxref.mnhn.fr/lod/taxon/222559/10.0 -->
@@ -1307,11 +1330,12 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:isDefinedB
     <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/222559/10.0">
         <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
         <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">222559</taxRef_identifier>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pterostichus anthracinus</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/222559</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/222559?lg=en</rdfs:seeAlso>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Pterostichus anthracinus</skos:prefLabel>
+        <skos:prefLabel xml:lang="lat">Pterostichus anthracinus</skos:prefLabel>
     </owl:Class>
-    
+
 
 
     <!-- http://taxref.mnhn.fr/lod/taxon/222940/10.0 -->
@@ -1319,11 +1343,12 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:isDefinedB
     <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/222940/10.0">
         <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
         <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">222940</taxRef_identifier>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Asaphidion curtum</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/222940</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/222940/tab/taxo</rdfs:seeAlso>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Asaphidion curtum</skos:prefLabel>
+        <skos:prefLabel xml:lang="lat">Asaphidion curtum</skos:prefLabel>
     </owl:Class>
-    
+
 
 
     <!-- http://taxref.mnhn.fr/lod/taxon/780498/10.0 -->
@@ -1331,12 +1356,15 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:isDefinedB
     <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/780498/10.0">
         <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
         <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">780498</taxRef_identifier>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bembidion tetracolum</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/780498</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/780498/tab/taxo</rdfs:seeAlso>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Ocydromus tetracolus (TaxRef CD_NOM = 222887)</skos:altLabel>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Bembidion tetracolum</skos:prefLabel>
+        <skos:altLabel xml:lang="lat">Ocydromus tetracolus</skos:altLabel>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">222887
+alternative label identifier</skos:prefLabel>
+        <skos:prefLabel xml:lang="lat">Bembidion tetracolum</skos:prefLabel>
     </owl:Class>
-    
+
 
 
     <!-- http://taxref.mnhn.fr/lod/taxon/794280/10.0 -->
@@ -1344,12 +1372,15 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:isDefinedB
     <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/794280/10.0">
         <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
         <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">794280</taxRef_identifier>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bembidion deletum</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/794280</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/794280/tab/taxo</rdfs:seeAlso>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">cydromus deletus (Espèce TaxRef CD_NOM = 222871)</skos:altLabel>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Bembidion deletum</skos:prefLabel>
+        <skos:altLabel xml:lang="lat">Cydromus deletus</skos:altLabel>
+        <skos:prefLabel xml:lang="lat">222871
+identifier for alternative label</skos:prefLabel>
+        <skos:prefLabel xml:lang="lat">Bembidion deletum</skos:prefLabel>
     </owl:Class>
-    
+
 
 
     <!-- http://taxref.mnhn.fr/lod/taxon/794293/10.0 -->
@@ -1357,12 +1388,15 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:isDefinedB
     <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/794293/10.0">
         <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
         <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">794293</taxRef_identifier>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bembidion biguttatum</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/794293</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/794293/tab/taxo</rdfs:seeAlso>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Philochthus biguttatus (Espèce TaxRef CD_NOM = 222903)</skos:altLabel>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Bembidion biguttatum</skos:prefLabel>
+        <skos:altLabel xml:lang="lat">222903
+identifier for alternative label</skos:altLabel>
+        <skos:altLabel xml:lang="lat">Philochthus biguttatus</skos:altLabel>
+        <skos:prefLabel xml:lang="lat">Bembidion biguttatum</skos:prefLabel>
     </owl:Class>
-    
+
 
 
     <!-- http://taxref.mnhn.fr/lod/taxon/794296/10.0 -->
@@ -1370,37 +1404,46 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:isDefinedB
     <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/794296/10.0">
         <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
         <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">794296</taxRef_identifier>
-        <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Philochthus lunulatus (Espèce TaxRef CD_NOM = 8589)</taxRef_identifier>
+        <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">8589
+identifier for alternative label</taxRef_identifier>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bembidion lunulatum</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/794296</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/794296/tab/taxo</rdfs:seeAlso>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Bembidion lunulatum</skos:prefLabel>
+        <skos:altLabel xml:lang="lat">Philochthus lunulatus</skos:altLabel>
+        <skos:prefLabel xml:lang="lat">Bembidion lunulatum</skos:prefLabel>
     </owl:Class>
-    
+
 
 
     <!-- http://taxref.mnhn.fr/lod/taxon/794300/10.0 -->
 
     <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/794300/10.0">
         <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
+        <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">222908
+identifier for alternative label</taxRef_identifier>
         <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">794300</taxRef_identifier>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bembidion gilvipes</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/794300/tab/taxo?lg=en</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/794300?lg%3Den</rdfs:seeAlso>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Trepanes gilvipes (TaxRef CD_NOM = 222908)</skos:altLabel>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Bembidion gilvipes</skos:prefLabel>
+        <skos:altLabel xml:lang="lat">Trepanes gilvipes</skos:altLabel>
+        <skos:prefLabel xml:lang="lat">Bembidion gilvipes</skos:prefLabel>
     </owl:Class>
-    
+
 
 
     <!-- http://taxref.mnhn.fr/lod/taxon/794337/10.0 -->
 
     <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/794337/10.0">
         <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
+        <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">274880
+identifier for alternative label</taxRef_identifier>
         <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">794337</taxRef_identifier>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chlaenius tibialis</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/794337/tab/taxo</rdfs:seeAlso>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Chlaeniellus tibialis (Espèce TaxRef CD_NOM = 274880)</skos:altLabel>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Chlaenius tibialis</skos:prefLabel>
+        <skos:altLabel xml:lang="lat">Chlaeniellus tibialis</skos:altLabel>
+        <skos:prefLabel xml:lang="lat">Chlaenius tibialis</skos:prefLabel>
     </owl:Class>
-    
+
 
 
     <!-- http://taxref.mnhn.fr/lod/taxon/8341/10.0 -->
@@ -1408,11 +1451,12 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:isDefinedB
     <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/8341/10.0">
         <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
         <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">8341</taxRef_identifier>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Omophron limbatum</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/8341/tab/taxo</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/8341?lg%3Den</rdfs:seeAlso>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Omophron limbatum</skos:prefLabel>
+        <skos:prefLabel xml:lang="lat">Omophron limbatum</skos:prefLabel>
     </owl:Class>
-    
+
 
 
     <!-- http://taxref.mnhn.fr/lod/taxon/8526/10.0 -->
@@ -1420,11 +1464,12 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:isDefinedB
     <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/8526/10.0">
         <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
         <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">8526</taxRef_identifier>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Notiophilus biguttatus</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/8526/tab/taxo</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/8526?lg%3Den</rdfs:seeAlso>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Notiophilus biguttatus</skos:prefLabel>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/8526/tab/taxo</skos:prefLabel>
+        <skos:prefLabel xml:lang="lat">Notiophilus biguttatus</skos:prefLabel>
     </owl:Class>
-    
+
 
 
     <!-- http://taxref.mnhn.fr/lod/taxon/8536/10.0 -->
@@ -1432,11 +1477,12 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:isDefinedB
     <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/8536/10.0">
         <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
         <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">8536</taxRef_identifier>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Elaphrus cupreus</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/8536/tab/taxo</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/8536?lg%3Den</rdfs:seeAlso>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Elaphrus cupreus</skos:prefLabel>
+        <skos:prefLabel xml:lang="lat">Elaphrus cupreus</skos:prefLabel>
     </owl:Class>
-    
+
 
 
     <!-- http://taxref.mnhn.fr/lod/taxon/8540/10.0 -->
@@ -1444,37 +1490,44 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:isDefinedB
     <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/8540/10.0">
         <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
         <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">8540</taxRef_identifier>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Loricera pilicornis</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/251340/tab/taxo</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/8540?lg%3Den</rdfs:seeAlso>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Loricera pilicornis</skos:prefLabel>
+        <skos:prefLabel xml:lang="lat">Loricera pilicornis</skos:prefLabel>
     </owl:Class>
-    
+
 
 
     <!-- http://taxref.mnhn.fr/lod/taxon/8558/10.0 -->
 
     <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/8558/10.0">
         <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
+        <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">222959
+identifier for alternative label</taxRef_identifier>
         <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">8558</taxRef_identifier>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dyschirius globosus</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/8558</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/8558/tab/taxo?lg=en</rdfs:seeAlso>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Dyschiriodes globosus (Espèce TaxRef CD_NOM = 222959)</skos:altLabel>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Dyschirius globosus</skos:prefLabel>
+        <skos:altLabel xml:lang="lat">Dyschiriodes globosus</skos:altLabel>
+        <skos:prefLabel xml:lang="lat">Dyschirius globosus</skos:prefLabel>
     </owl:Class>
-    
+
 
 
     <!-- http://taxref.mnhn.fr/lod/taxon/8598/10.0 -->
 
     <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/8598/10.0">
         <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
+        <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">844827
+identifier for alternative label</taxRef_identifier>
         <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">8598</taxRef_identifier>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bembidion assimile</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/8598</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/8598/tab/taxo</rdfs:seeAlso>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Diplocampa assimilis (Espèce TaxRef CD_NOM = 844827)</skos:altLabel>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Bembidion assimile</skos:prefLabel>
+        <skos:altLabel xml:lang="lat">Bembidion assimile</skos:altLabel>
+        <skos:altLabel xml:lang="lat">Diplocampa assimilis</skos:altLabel>
     </owl:Class>
-    
+
 
 
     <!-- http://taxref.mnhn.fr/lod/taxon/8617/10.0 -->
@@ -1482,11 +1535,12 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:isDefinedB
     <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/8617/10.0">
         <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
         <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">8617</taxRef_identifier>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bembidion quadrimaculatum</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/8617/tab/taxo</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/8617?lg%3Den</rdfs:seeAlso>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Bembidion quadrimaculatum</skos:prefLabel>
+        <skos:prefLabel xml:lang="lat">Bembidion quadrimaculatum</skos:prefLabel>
     </owl:Class>
-    
+
 
 
     <!-- http://taxref.mnhn.fr/lod/taxon/8619/10.0 -->
@@ -1494,12 +1548,15 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:isDefinedB
     <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/8619/10.0">
         <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
         <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">8619</taxRef_identifier>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Eupetedromus dentellum (Espèce TaxRef CD_NOM = 887287)</skos:altLabel>
+        <taxRef_identifier xml:lang="lat">887287
+identifier for alternative label</taxRef_identifier>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bembidion dentellum</rdfs:label>
+        <skos:altLabel xml:lang="lat">Eupetedromus dentellum</skos:altLabel>
         <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/8619/tab/taxo</skos:altLabel>
         <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/8619?lg%3Den</skos:altLabel>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Bembidion dentellum</skos:prefLabel>
+        <skos:prefLabel xml:lang="lat">Bembidion dentellum</skos:prefLabel>
     </owl:Class>
-    
+
 
 
     <!-- http://taxref.mnhn.fr/lod/taxon/8816/10.0 -->
@@ -1507,24 +1564,29 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:isDefinedB
     <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/8816/10.0">
         <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
         <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">8816</taxRef_identifier>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Agonum lugens</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/8816</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/8816/tab/taxo</rdfs:seeAlso>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Agonum lugens</skos:prefLabel>
+        <skos:prefLabel xml:lang="lat">Agonum lugens</skos:prefLabel>
     </owl:Class>
-    
+
 
 
     <!-- http://taxref.mnhn.fr/lod/taxon/8838/10.0 -->
 
     <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/8838/10.0">
         <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
-        <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">8838</taxRef_identifier>
+        <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">8838
+identifier for (preferred) label</taxRef_identifier>
+        <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">886466
+identifier for alternative label</taxRef_identifier>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Platynus assimilis</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/8838</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/8838/tab/taxo</rdfs:seeAlso>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Platynus assimile (Espèce TaxRef CD_NOM = 886466)</skos:altLabel>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Platynus assimilis</skos:prefLabel>
+        <skos:altLabel xml:lang="lat">Platynus assimile</skos:altLabel>
+        <skos:prefLabel xml:lang="lat">Platynus assimilis</skos:prefLabel>
     </owl:Class>
-    
+
 
 
     <!-- http://taxref.mnhn.fr/lod/taxon/9103/10.0 -->
@@ -1532,11 +1594,12 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:isDefinedB
     <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/9103/10.0">
         <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
         <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">9103</taxRef_identifier>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pterostichus strenuus</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/9103/tab/taxo</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/9103?lg%3Den</rdfs:seeAlso>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Pterostichus strenuus</skos:prefLabel>
+        <skos:prefLabel xml:lang="lat">Pterostichus strenuus</skos:prefLabel>
     </owl:Class>
-    
+
 
 
     <!-- http://taxref.mnhn.fr/lod/taxon/9136/10.0 -->
@@ -1544,11 +1607,12 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:isDefinedB
     <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/9136/10.0">
         <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
         <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">9136</taxRef_identifier>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pterostichus vernalis</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/9136/tab/taxo</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/9136?lg%3Den</rdfs:seeAlso>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Pterostichus vernalis</skos:prefLabel>
+        <skos:prefLabel xml:lang="lat">Pterostichus vernalis</skos:prefLabel>
     </owl:Class>
-    
+
 
 
     <!-- http://taxref.mnhn.fr/lod/taxon/9231/10.0 -->
@@ -1556,11 +1620,12 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:isDefinedB
     <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/9231/10.0">
         <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
         <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">9231</taxRef_identifier>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Amara similata</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/9231</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/9231/tab/taxo</rdfs:seeAlso>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Amara similata</skos:prefLabel>
+        <skos:prefLabel xml:lang="lat">Amara similata</skos:prefLabel>
     </owl:Class>
-    
+
 
 
     <!-- http://taxref.mnhn.fr/lod/taxon/9291/10.0 -->
@@ -1568,11 +1633,12 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:isDefinedB
     <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/9291/10.0">
         <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
         <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">9291</taxRef_identifier>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anisodactylus binotatus</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/9291/tab/taxo</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/9291?lg%3Den</rdfs:seeAlso>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Anisodactylus binotatus</skos:prefLabel>
+        <skos:prefLabel xml:lang="lat">Anisodactylus binotatus</skos:prefLabel>
     </owl:Class>
-    
+
 
 
     <!-- http://taxref.mnhn.fr/lod/taxon/9304/10.0 -->
@@ -1580,11 +1646,12 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:isDefinedB
     <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/9304/10.0">
         <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
         <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">9304</taxRef_identifier>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harpalus dimidiatus</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/9304/tab/taxo</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/9304?lg%3Den</rdfs:seeAlso>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Harpalus dimidiatus</skos:prefLabel>
+        <skos:prefLabel xml:lang="lat">Harpalus dimidiatus</skos:prefLabel>
     </owl:Class>
-    
+
 
 
     <!-- http://taxref.mnhn.fr/lod/taxon/9316/10.0 -->
@@ -1592,11 +1659,12 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:isDefinedB
     <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/9316/10.0">
         <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
         <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">9316</taxRef_identifier>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harpalus tardus</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/9316/tab/taxo</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/9316?lg%3Den</rdfs:seeAlso>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Harpalus tardus</skos:prefLabel>
+        <skos:prefLabel xml:lang="lat">Harpalus tardus</skos:prefLabel>
     </owl:Class>
-    
+
 
 
     <!-- http://taxref.mnhn.fr/lod/taxon/9327/10.0 -->
@@ -1604,11 +1672,12 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:isDefinedB
     <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/9327/10.0">
         <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
         <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">9327</taxRef_identifier>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harpalus rubripes</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/9327/tab/taxo</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/9327?lg%3Den</rdfs:seeAlso>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Harpalus rubripes</skos:prefLabel>
+        <skos:prefLabel xml:lang="lat">Harpalus rubripes</skos:prefLabel>
     </owl:Class>
-    
+
 
 
     <!-- http://taxref.mnhn.fr/lod/taxon/9371/10.0 -->
@@ -1616,37 +1685,44 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:isDefinedB
     <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/9371/10.0">
         <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
         <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">9371</taxRef_identifier>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oodes helopioides</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/9371/tab/taxo</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/9371?lg%3Den</rdfs:seeAlso>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Oodes helopioides</skos:prefLabel>
+        <skos:prefLabel xml:lang="lat">Oodes helopioides</skos:prefLabel>
     </owl:Class>
-    
+
 
 
     <!-- http://taxref.mnhn.fr/lod/taxon/9380/10.0 -->
 
     <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/9380/10.0">
         <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
+        <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">222523
+identifier for alternative label</taxRef_identifier>
         <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">9380</taxRef_identifier>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chlaenius nigricornis</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/9380/tab/taxo</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/9380?lg%3Den</rdfs:seeAlso>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Chlaeniellus nigricornis (Espèce TaxRef CD_NOM = 222523)</skos:altLabel>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Chlaenius nigricornis</skos:prefLabel>
+        <skos:altLabel xml:lang="lat">Chlaeniellus nigricornis</skos:altLabel>
+        <skos:prefLabel xml:lang="lat">Chlaenius nigricornis</skos:prefLabel>
     </owl:Class>
-    
+
 
 
     <!-- http://taxref.mnhn.fr/lod/taxon/9389/10.0 -->
 
     <owl:Class rdf:about="http://taxref.mnhn.fr/lod/taxon/9389/10.0">
         <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
+        <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">222528
+identifier for alternative label</taxRef_identifier>
         <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">9389</taxRef_identifier>
+        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Chlaenius vestitus</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/9389/tab/taxo?lg=en</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/9389?lg%3Den</rdfs:seeAlso>
-        <skos:altLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Chlaeniellus vestitus (Espèce TaxRef CD_NOM = 222528)</skos:altLabel>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Chlaenius vestitus</skos:prefLabel>
+        <skos:altLabel xml:lang="lat">Chlaeniellus vestitus</skos:altLabel>
+        <skos:prefLabel xml:lang="lat">Chlaenius vestitus</skos:prefLabel>
     </owl:Class>
-    
+
 
 
     <!-- http://www.ics.forth.gr/isl/CRMsci/S4_Observation -->
@@ -1656,7 +1732,7 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:isDefinedB
         <rdfs:comment>This class comprises the activity of gaining scientific knowledge about particular states of physical reality gained by empirical evidence, experiments and by measurements. We define observation in the sense of natural sciences, as a kind of human activity: at some Place and within some Time-Span, certain Physical Things and their behavior and interactions are observed, either directly by human sensory impression, or enhanced with tools and measurement devices. The output of the internal processes of measurement devices that do not require additional human interaction are in general regarded as part of the observation and not as additional inference. Manual recordings may serve as additional evidence. Measurements and witnessing of events are special cases of observations. Observations result in a belief about certain propositions. In this model, the degree of confidence in the observed properties is regarded to be “true” per default, but could be described differently by adding a property P3 has note to an instance of S4 Observation, or by reification of the property O16 observed value. Primary data from measurement devices are regarded in this model to be results of observation and can be interpreted as propositions believed to be true within the (known) tolerances and degree of reliability of the device. Observations represent the transition between reality and propositions in the form of instances of a formal ontology, and can be subject to data evaluation from this point on.</rdfs:comment>
         <rdfs:isDefinedBy>CRMSci</rdfs:isDefinedBy>
     </owl:Class>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#Acte_privé -->
@@ -1665,25 +1741,13 @@ https://sparontologies.github.io/frbr/current/frbr.html#d4e1431</rdfs:isDefinedB
         <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E31_Document"/>
         <rdfs:seeAlso xml:lang="en">https://legal-dictionary.thefreedictionary.com/Private+act</rdfs:seeAlso>
         <skos:altLabel xml:lang="fr">Private act</skos:altLabel>
-        <skos:definition xml:lang="en">a statute exclusively for the settlement of private 
-and personal interests, of which courts do not take 
-judicial notice; - opposed to a general law, which 
+        <skos:definition xml:lang="en">a statute exclusively for the settlement of private
+and personal interests, of which courts do not take
+judicial notice; - opposed to a general law, which
 operates on the whole community</skos:definition>
         <skos:prefLabel xml:lang="fr">Acte privé</skos:prefLabel>
     </owl:Class>
-    
 
-
-    <!-- http://www.univ-tours.fr/ipato#AnimalGroup -->
-
-    <owl:Class rdf:about="http://www.univ-tours.fr/ipato#AnimalGroup">
-        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E77_Persistent_Item"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This class is not subsumed by E74 Group because it does not commit to the agentivity of groups whose members are non-human animals</rdfs:comment>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">status: testing</rdfs:comment>
-        <skos:altLabel xml:lang="en">Group of non-human animals</skos:altLabel>
-        <skos:prefLabel xml:lang="en">Group of animals</skos:prefLabel>
-    </owl:Class>
-    
 
 
     <!-- http://www.univ-tours.fr/ipato#Archive -->
@@ -1691,12 +1755,12 @@ operates on the whole community</skos:definition>
     <owl:Class rdf:about="http://www.univ-tours.fr/ipato#Archive">
         <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E53_Place"/>
     </owl:Class>
-    
 
 
-    <!-- http://www.univ-tours.fr/ipato#Biological_classification_activity -->
 
-    <owl:Class rdf:about="http://www.univ-tours.fr/ipato#Biological_classification_activity">
+    <!-- http://www.univ-tours.fr/ipato#Biological_Classification_Activity -->
+
+    <owl:Class rdf:about="http://www.univ-tours.fr/ipato#Biological_Classification_Activity">
         <rdfs:subClassOf rdf:resource="http://www.ics.forth.gr/isl/CRMsci/S4_Observation"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -1705,7 +1769,7 @@ operates on the whole community</skos:definition>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="http://erlangen-crm.org/current/E20_Biological_Object"/>
-                            <rdf:Description rdf:about="http://www.univ-tours.fr/ipato#AnimalGroup"/>
+                            <rdf:Description rdf:about="http://www.univ-tours.fr/ipato#Group_of_Non_Human_Animals"/>
                         </owl:unionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
@@ -1713,17 +1777,17 @@ operates on the whole community</skos:definition>
         </rdfs:subClassOf>
         <skos:prefLabel>Biological Classification Activity</skos:prefLabel>
     </owl:Class>
-    
 
 
-    <!-- http://www.univ-tours.fr/ipato#Classification_judgment -->
 
-    <owl:Class rdf:about="http://www.univ-tours.fr/ipato#Classification_judgment">
+    <!-- http://www.univ-tours.fr/ipato#Classification_Type -->
+
+    <owl:Class rdf:about="http://www.univ-tours.fr/ipato#Classification_Type">
         <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E55_Type"/>
         <rdfs:comment xml:lang="en">This class has been added to represent natural heritage data, in particular, scientific judgments about the confidence of animal classification</rdfs:comment>
         <skos:prefLabel xml:lang="en">Classification Judgment</skos:prefLabel>
     </owl:Class>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#Expédition_notariale -->
@@ -1731,16 +1795,16 @@ operates on the whole community</skos:definition>
     <owl:Class rdf:about="http://www.univ-tours.fr/ipato#Expédition_notariale">
         <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E31_Document"/>
         <skos:altLabel xml:lang="fr">Notarial deed</skos:altLabel>
-        <skos:definition xml:lang="fr">Acte notarié qui est adressé à un particulier et qui témoigne de l&apos;accord 
+        <skos:definition xml:lang="fr">Acte notarié qui est adressé à un particulier et qui témoigne de l&apos;accord
 passé devant le notaire.</skos:definition>
         <skos:prefLabel xml:lang="fr">Expédition notariale</skos:prefLabel>
     </owl:Class>
-    
 
 
-    <!-- http://www.univ-tours.fr/ipato#Forme_de_acte -->
 
-    <owl:Class rdf:about="http://www.univ-tours.fr/ipato#Forme_de_acte">
+    <!-- http://www.univ-tours.fr/ipato#Forme_De_Acte -->
+
+    <owl:Class rdf:about="http://www.univ-tours.fr/ipato#Forme_De_Acte">
         <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E55_Type"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -1766,7 +1830,7 @@ passé devant le notaire.</skos:definition>
         <skos:altLabel xml:lang="en">Subject of Document</skos:altLabel>
         <skos:prefLabel xml:lang="fr">Forme de l&apos;acte</skos:prefLabel>
     </owl:Class>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#French_Department -->
@@ -1775,7 +1839,7 @@ passé devant le notaire.</skos:definition>
         <rdfs:subClassOf rdf:resource="http://dbpedia.org/ontology/PopulatedPlace"/>
         <owl:disjointWith rdf:resource="http://www.univ-tours.fr/ipato#French_Region"/>
     </owl:Class>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#French_Region -->
@@ -1783,7 +1847,7 @@ passé devant le notaire.</skos:definition>
     <owl:Class rdf:about="http://www.univ-tours.fr/ipato#French_Region">
         <rdfs:subClassOf rdf:resource="http://dbpedia.org/ontology/PopulatedPlace"/>
     </owl:Class>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#FundingAgency -->
@@ -1792,17 +1856,45 @@ passé devant le notaire.</skos:definition>
         <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://sparontologies.github.io/frapo/current/frapo.html</rdfs:isDefinedBy>
     </owl:Class>
-    
 
 
-    <!-- http://www.univ-tours.fr/ipato#Habitat_type -->
 
-    <owl:Class rdf:about="http://www.univ-tours.fr/ipato#Habitat_type">
+    <!-- http://www.univ-tours.fr/ipato#Group_of_Non_Human_Animals -->
+
+    <owl:Class rdf:about="http://www.univ-tours.fr/ipato#Group_of_Non_Human_Animals">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E77_Persistent_Item"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This class is not subsumed by E74 Group because it does not commit to the agentivity of groups whose members are non-human animals</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">status: testing</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Group of animals</rdfs:label>
+        <skos:altLabel xml:lang="en">Group of non-human animals</skos:altLabel>
+        <skos:prefLabel xml:lang="en">Group of animals</skos:prefLabel>
+    </owl:Class>
+
+
+
+    <!-- http://www.univ-tours.fr/ipato#Group_of_Terrestrial_Macro_Arthropod -->
+
+    <owl:Class rdf:about="http://www.univ-tours.fr/ipato#Group_of_Terrestrial_Macro_Arthropod">
+        <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Group_of_Non_Human_Animals"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.univ-tours.fr/ipato#has_member_of_species"/>
+                <owl:someValuesFrom rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Group of terrestrial macro-arthropod</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://www.univ-tours.fr/ipato#Habitat_Type -->
+
+    <owl:Class rdf:about="http://www.univ-tours.fr/ipato#Habitat_Type">
         <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E55_Type"/>
         <rdfs:comment xml:lang="en">This class has been added to represent environmental habitats for representing natural heritage data</rdfs:comment>
         <skos:prefLabel xml:lang="en">Habitat Type</skos:prefLabel>
     </owl:Class>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#Lettre -->
@@ -1812,7 +1904,7 @@ passé devant le notaire.</skos:definition>
         <skos:definition xml:lang="fr">Acte épistolaire de nature privée.</skos:definition>
         <skos:prefLabel xml:lang="fr">Lettre</skos:prefLabel>
     </owl:Class>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#Lettre_close -->
@@ -1822,7 +1914,7 @@ passé devant le notaire.</skos:definition>
         <skos:definition xml:lang="fr">Lettre du roi à une autorité collective comme à un individu, exprimant un ordre, et expédiée fermée du sceau du secret de cire rouge et présentant certains caractères diplomatiques nettement caractérisés (petite dimension, propos courts, précédés de l&apos;expression &quot;De par le roy&quot;, formule de corroboration, ni d&apos;annonce de sceau).</skos:definition>
         <skos:prefLabel xml:lang="fr">Lettre close</skos:prefLabel>
     </owl:Class>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#Lettre_de_cachet -->
@@ -1831,15 +1923,15 @@ passé devant le notaire.</skos:definition>
         <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E31_Document"/>
         <skos:altLabel xml:lang="fr">lettre close</skos:altLabel>
         <skos:altLabel xml:lang="fr">lettre fermée</skos:altLabel>
-        <skos:definition xml:lang="fr">Une lettre de cachet  est, sous l’Ancien Régime 
-en France, une lettre servant à la 
-transmission d’un ordre particulier du roi, 
-permettant par exemple l&apos;incarcération sans jugement, 
-l&apos;exil ou encore l&apos;internement de personnes jugées 
+        <skos:definition xml:lang="fr">Une lettre de cachet  est, sous l’Ancien Régime
+en France, une lettre servant à la
+transmission d’un ordre particulier du roi,
+permettant par exemple l&apos;incarcération sans jugement,
+l&apos;exil ou encore l&apos;internement de personnes jugées
 indésirables par le pouvoir.</skos:definition>
         <skos:prefLabel xml:lang="fr">Lettre de cachet</skos:prefLabel>
     </owl:Class>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#Lettres_patentes -->
@@ -1849,7 +1941,7 @@ indésirables par le pouvoir.</skos:definition>
         <skos:definition xml:lang="fr">Terme générique pour désigner un acte de chancellerie, dans lequel souverain rend public une décision, un droit, un privilège, ou une action particulière.</skos:definition>
         <skos:prefLabel xml:lang="fr">Lettres patentes</skos:prefLabel>
     </owl:Class>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#Minute_notariale -->
@@ -1859,51 +1951,7 @@ indésirables par le pouvoir.</skos:definition>
         <skos:definition xml:lang="fr">Classe générique qui désigne tout acte issu de l&apos;écrit notarial.</skos:definition>
         <skos:prefLabel xml:lang="fr">Minute notariale</skos:prefLabel>
     </owl:Class>
-    
 
-
-    <!-- http://www.univ-tours.fr/ipato#OWLClass_00000003 -->
-
-    <owl:Class rdf:about="http://www.univ-tours.fr/ipato#OWLClass_00000003">
-        <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#AnimalGroup"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.univ-tours.fr/ipato#has_member"/>
-                <owl:someValuesFrom rdf:resource="http://taxref.mnhn.fr/lod/taxon/222391/10.0"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.univ-tours.fr/ipato#has_member"/>
-                <owl:allValuesFrom rdf:resource="http://taxref.mnhn.fr/lod/taxon/222391/10.0"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">status:testing</rdfs:comment>
-        <skos:prefLabel>Group of Agonum afrum</skos:prefLabel>
-    </owl:Class>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato#OWLClass_00000004 -->
-
-    <owl:Class rdf:about="http://www.univ-tours.fr/ipato#OWLClass_00000004">
-        <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#AnimalGroup"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.univ-tours.fr/ipato#has_member"/>
-                <owl:someValuesFrom rdf:resource="http://taxref.mnhn.fr/lod/taxon/222358/10.0"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.univ-tours.fr/ipato#has_member"/>
-                <owl:allValuesFrom rdf:resource="http://taxref.mnhn.fr/lod/taxon/222358/10.0"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">status:testing</rdfs:comment>
-        <skos:prefLabel>Group of Calathus rotundicollis</skos:prefLabel>
-    </owl:Class>
-    
 
 
     <!-- http://www.univ-tours.fr/ipato#Registre -->
@@ -1913,18 +1961,18 @@ indésirables par le pouvoir.</skos:definition>
         <skos:definition xml:lang="fr">Classe générique pour désigner toute archive sous forme de cahier.</skos:definition>
         <skos:prefLabel xml:lang="fr">Registre</skos:prefLabel>
     </owl:Class>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#Registre_de_délibération -->
 
     <owl:Class rdf:about="http://www.univ-tours.fr/ipato#Registre_de_délibération">
         <rdfs:subClassOf rdf:resource="http://www.univ-tours.fr/ipato#Registre"/>
-        <skos:definition xml:lang="fr">Cahier qui enregistre et fait foi tous les actes de délibération d&apos;un corps de 
+        <skos:definition xml:lang="fr">Cahier qui enregistre et fait foi tous les actes de délibération d&apos;un corps de
 ville, ainsi qu&apos;un certain nombre d&apos;acte complémentaires (lettres patentes ou closes, morceaux de comptabilité...)</skos:definition>
         <skos:prefLabel xml:lang="fr">Registre de délibération</skos:prefLabel>
     </owl:Class>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#Registre_particulier_de_comptes -->
@@ -1934,7 +1982,7 @@ ville, ainsi qu&apos;un certain nombre d&apos;acte complémentaires (lettres pat
         <skos:definition xml:lang="fr">Cahier qui enregistre et fait foi tous les actes de la comptabilité d&apos;une autorité (un corps de ville, un chapitre...) pour une année ou une partie d&apos;année, ou pour seulement une partie des comptes (recettes, dépenses...)</skos:definition>
         <skos:prefLabel xml:lang="fr">Registre particulier de comptes</skos:prefLabel>
     </owl:Class>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#Research_Area -->
@@ -1942,7 +1990,7 @@ ville, ainsi qu&apos;un certain nombre d&apos;acte complémentaires (lettres pat
     <owl:Class rdf:about="http://www.univ-tours.fr/ipato#Research_Area">
         <rdfs:comment>Testing class to be mapped to Eurovoc</rdfs:comment>
     </owl:Class>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#Sampling -->
@@ -1951,7 +1999,7 @@ ville, ainsi qu&apos;un certain nombre d&apos;acte complémentaires (lettres pat
         <rdfs:subClassOf rdf:resource="http://www.ics.forth.gr/isl/CRMsci/S4_Observation"/>
         <skos:prefLabel>Sampling</skos:prefLabel>
     </owl:Class>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod -->
@@ -1959,9 +2007,10 @@ ville, ainsi qu&apos;un certain nombre d&apos;acte complémentaires (lettres pat
     <owl:Class rdf:about="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod">
         <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E20_Biological_Object"/>
         <rdfs:comment xml:lang="en">This class and all its subclasses have been included in the ontology for the representation of natural heritage data</rdfs:comment>
-        <skos:prefLabel>Terrestrial macro-arthropod</skos:prefLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Terrestrial macro-arthropod</rdfs:label>
+        <skos:prefLabel xml:lang="en">Terrestrial macro-arthropod</skos:prefLabel>
     </owl:Class>
-    
+
 
 
     <!-- http://www.w3.org/ns/dcat#Catalog -->
@@ -1984,7 +2033,7 @@ ville, ainsi qu&apos;un certain nombre d&apos;acte complémentaires (lettres pat
         <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A curated collection of metadata about resources (e.g., datasets and data services in the context of a data catalog)</skos:definition>
         <skos:prefLabel xml:lang="en">Catalog</skos:prefLabel>
     </owl:Class>
-    
+
 
 
     <!-- http://www.w3.org/ns/dcat#Dataset -->
@@ -2049,7 +2098,7 @@ ville, ainsi qu&apos;un certain nombre d&apos;acte complémentaires (lettres pat
         <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A collection of data, published or curated by a single agent, and available for access or download in one or more representations.</skos:definition>
         <skos:prefLabel xml:lang="en">Dataset</skos:prefLabel>
     </owl:Class>
-    
+
 
 
     <!-- http://xmlns.com/foaf/0.1/Agent -->
@@ -2057,7 +2106,7 @@ ville, ainsi qu&apos;un certain nombre d&apos;acte complémentaires (lettres pat
     <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Agent">
         <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E77_Persistent_Item"/>
     </owl:Class>
-    
+
 
 
     <!-- http://xmlns.com/foaf/0.1/Group -->
@@ -2065,7 +2114,7 @@ ville, ainsi qu&apos;un certain nombre d&apos;acte complémentaires (lettres pat
     <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Group">
         <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E39_Actor"/>
     </owl:Class>
-    
+
 
 
     <!-- http://xmlns.com/foaf/0.1/Organization -->
@@ -2073,7 +2122,7 @@ ville, ainsi qu&apos;un certain nombre d&apos;acte complémentaires (lettres pat
     <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Organization">
         <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E39_Actor"/>
     </owl:Class>
-    
+
 
 
     <!-- http://xmlns.com/foaf/0.1/Person -->
@@ -2111,7 +2160,7 @@ ville, ainsi qu&apos;un certain nombre d&apos;acte complémentaires (lettres pat
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
-    
+
 
 
     <!-- http://xmlns.com/foaf/0.1/Project -->
@@ -2167,10 +2216,10 @@ ville, ainsi qu&apos;un certain nombre d&apos;acte complémentaires (lettres pat
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Project</rdfs:label>
     </owl:Class>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Individuals
@@ -2178,133 +2227,133 @@ ville, ainsi qu&apos;un certain nombre d&apos;acte complémentaires (lettres pat
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#Accord -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Accord">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_De_Acte"/>
         <skos:altLabel xml:lang="en">Contract</skos:altLabel>
         <skos:definition xml:lang="en">A deed by which at least two individuals, acting in their own name or as representatives of a group of persons, agree on a negotiation of any kind (commercial, financial, legal, etc.).</skos:definition>
         <skos:definition xml:lang="fr">Acte par lequel au moins deux individus, agissant en leur nom propre ou comme représentants d&apos;un groupe de personnes, s&apos;entendent sur une négociation de quelque nature qu&apos;elle soit (commerciale, financière, juridique, etc.).</skos:definition>
         <skos:prefLabel xml:lang="fr">Accord</skos:prefLabel>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#Acte_de_notoriété -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Acte_de_notoriété">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_De_Acte"/>
         <skos:altLabel xml:lang="en">Act of renoun</skos:altLabel>
         <skos:altLabel xml:lang="en">Deed of notoriety</skos:altLabel>
         <skos:definition xml:lang="fr">Témoignage écrit par lequel une ou plusieurs personnes attestent un fait, un statut individuel, par exemple, comme connu et avéré, faute d&apos;une preuve écrite.</skos:definition>
         <skos:definition xml:lang="en">Written testimony by which one or more persons attest a fact, or an individual status, for example, as known and proven, in the absence of written evidence.</skos:definition>
         <skos:prefLabel xml:lang="fr">Acte de notoriété</skos:prefLabel>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#Assignation_à_comparaître -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Assignation_à_comparaître">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_De_Acte"/>
         <skos:altLabel xml:lang="en">Summons to appear</skos:altLabel>
         <skos:definition xml:lang="en">A deed by which a person is formally summoned before a legal body, whether local, in the context of seigniorial justice for example, or at the level of the kingdom in the case of a summons to appear before a Parliament.</skos:definition>
         <skos:definition xml:lang="fr">Acte par lequel une personne est formellement convoquée devant une instance juridique qu&apos;elle soit locale, dans le cadre de la justice seigneuriale par exemple, ou à l&apos;échelle du royaume s&apos;il s&apos;agit d&apos;une convocation devant un Parlement.</skos:definition>
         <skos:prefLabel xml:lang="fr">Assignation à comparaître</skos:prefLabel>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#Association -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Association">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_De_Acte"/>
         <skos:altLabel xml:lang="en">Collaboration</skos:altLabel>
         <skos:definition xml:lang="en">Acte par lequel au moins deux individus mettent en commun des moyens fonciers et/ou matériels pour la réalisation d&apos;une entreprise, le plus souvent commerciale.</skos:definition>
         <skos:definition xml:lang="en">Deed by which at least two individuals pool property and/or material resources to carry out a venture, most often a commercial one.</skos:definition>
         <skos:prefLabel xml:lang="fr">Association</skos:prefLabel>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#Aveu -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Aveu">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_De_Acte"/>
         <skos:altLabel xml:lang="en">Declaration</skos:altLabel>
         <skos:definition xml:lang="en">Declaration of possession of land or real estate attached to a fief formulated by a vassal to his suzerain.</skos:definition>
         <skos:definition xml:lang="en">Déclaration de possession d&apos;un bien foncier ou immobilier rattaché à un fief formulée par un vassal à son suzerain.</skos:definition>
         <skos:prefLabel xml:lang="fr">Aveu</skos:prefLabel>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#Bail -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Bail">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_De_Acte"/>
         <skos:altLabel xml:lang="en">Lease</skos:altLabel>
         <skos:definition xml:lang="en">Contract by which one of the parties (called lessor), landowner or real estate owner, undertakes to transfer the occupation of his movable or immovable property to a third party (the lessee) for a limited period of time in return for the payment of a rent.</skos:definition>
         <skos:definition xml:lang="fr">Contrat par lequel l&apos;une des parties (appelée bailleur), propriétaire foncier ou immobilier, s&apos;engage à céder pour un temps délimité, l&apos;occupation de son bien mobilier ou immobilier à une tierce personne (le prenneur) moyennant le versement d&apos;un loyer.</skos:definition>
         <skos:prefLabel xml:lang="fr">Bail</skos:prefLabel>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#Bail_perpétuel -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Bail_perpétuel">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_De_Acte"/>
         <skos:definition xml:lang="fr">Contrat illimité dans le temps par lequel l&apos;une des parties (appelée bailleur), propriétaire foncier ou immobilier, s&apos;engage à céder l&apos;occupation d&apos;un bien à une tierce personne (le prenneur) et qui définit les modalités financières et matérielles de l&apos;occupation et de la gestion du bien.</skos:definition>
         <skos:prefLabel xml:lang="fr">Bail perpétuel</skos:prefLabel>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#Bail_à_cens -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Bail_à_cens">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_De_Acte"/>
         <skos:altLabel xml:lang="en">Cens lease</skos:altLabel>
         <skos:definition xml:lang="en">Contract by which one of the parties (called the lessor), owner of land or property, undertakes to transfer the occupation of his property to a third person (the lessee) in return for the payment of a cens.</skos:definition>
         <skos:definition xml:lang="fr">Contrat par lequel l&apos;une des parties (appelée bailleur), propriétaire foncier ou immobilier, s&apos;engage à céder l&apos;occupation de son bien à une tierce personne (le prenneur) moyennant le versement d&apos;un cens.</skos:definition>
         <skos:prefLabel xml:lang="fr">Bail à cens</skos:prefLabel>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#Bail_à_ferme -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Bail_à_ferme">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_De_Acte"/>
         <skos:definition xml:lang="en">Contract by which one of the parties (called the lessor), a land or property owner, undertakes to transfer the occupation of a property placed under the lease system to a third party (the lessee) and which defines the financial and material terms and conditions for the occupation and management of the property.</skos:definition>
         <skos:definition xml:lang="fr">Contrat par lequel l&apos;une des parties (appelée bailleur), propriétaire foncier ou immobilier, s&apos;engage à céder l&apos;occupation d&apos;un bien placé sous le régime de l&apos;affermage à une tierce personne (le prenneur) et qui définit les modalités financières et matérielles de l&apos;occupation et de la gestion du bien.</skos:definition>
         <skos:prefLabel xml:lang="fr">Bail à ferme</skos:prefLabel>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#Bail_à_métairie -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Bail_à_métairie">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_De_Acte"/>
         <skos:definition xml:lang="fr">Contrat par lequel l&apos;une des parties (appelée bailleur), propriétaire foncier ou immobilier, s&apos;engage à céder l&apos;occupation d&apos;un bien placé sous le régime de la métairie à une tierce personne (le prenneur) et qui définit les modalités financières et matérielles de l&apos;occupation et de la gestion du bien.</skos:definition>
         <skos:prefLabel xml:lang="fr">Bail à métairie</skos:prefLabel>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#Bail_à_rente -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Bail_à_rente">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_De_Acte"/>
         <skos:definition xml:lang="fr">Contrat d’aliénation d’un immeuble (généralement une terre ou une maison) sur lequel le bailleur se réserve le droit de percevoir une partie des revenus, sous la forme d’une redevance (la rente) annuelle et perpétuelle</skos:definition>
         <skos:prefLabel xml:lang="fr">Bail à rente</skos:prefLabel>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#Bourges -->
@@ -2313,184 +2362,184 @@ ville, ainsi qu&apos;un certain nombre d&apos;acte complémentaires (lettres pat
         <rdf:type rdf:resource="http://dbpedia.org/ontology/City"/>
         <current:P89_falls_within rdf:resource="http://www.univ-tours.fr/ipato#France"/>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#Cautionnement -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Cautionnement">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_De_Acte"/>
         <skos:definition xml:lang="fr">Acte par lequel une personne se porte financièrement garante d&apos;une seconde, pour une somme précise et définie, dans le cadre d&apos;une transaction commerciale, le plus souvent.</skos:definition>
         <skos:prefLabel xml:lang="fr">Cautionnement</skos:prefLabel>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#Cession -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Cession">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_De_Acte"/>
         <skos:altLabel xml:lang="en">Transfer</skos:altLabel>
         <skos:definition xml:lang="fr">Acte par lequel une personne transfère gratuitement à une autre un bien foncier, un bien meuble ou immeuble, un ou plusieurs droits, etc.</skos:definition>
         <skos:prefLabel xml:lang="fr">Cession</skos:prefLabel>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#Compte -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Compte">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_De_Acte"/>
         <skos:definition xml:lang="fr">Document qui liste de façon plus ou moins détaillée des sommes d&apos;argent reçues et/ou dépensées dans un cadre spécifique généralement précisée en début et qui sert à de sfins de vérification et de gestion comptable et financière.</skos:definition>
         <skos:prefLabel xml:lang="fr">Compte</skos:prefLabel>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#Consentement -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Consentement">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_De_Acte"/>
         <skos:definition xml:lang="fr">Acte par lequel une personne accepte officiellement une transaction, un accord, etc.</skos:definition>
         <skos:prefLabel xml:lang="fr">Consentement</skos:prefLabel>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#Constitution_de_rente -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Constitution_de_rente">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_De_Acte"/>
         <skos:definition xml:lang="fr">Acte par lequel une personne assujetti un bien foncier ou immobilier à une rente, c&apos;est-à-dire à une redevance généralement annuelle due par l&apos;occupant du bien à son propriétaire.</skos:definition>
         <skos:prefLabel xml:lang="fr">Constitution de rente</skos:prefLabel>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#Contrat -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Contrat">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_De_Acte"/>
         <skos:altLabel xml:lang="en">Contract</skos:altLabel>
         <skos:definition xml:lang="fr">Acte juridique établissant les modalités de toutes transaction ou de relation entre personnes.</skos:definition>
         <skos:prefLabel xml:lang="fr">Contrat</skos:prefLabel>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#Contrat_apprentissage -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Contrat_apprentissage">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_De_Acte"/>
         <skos:altLabel xml:lang="en">Apprenticeship contract</skos:altLabel>
         <skos:definition xml:lang="fr">Acte établissant les modalités temporelles, morales, matérielles et financières de la prise en charge par un artisan établi d&apos;un apprenti.</skos:definition>
         <skos:prefLabel xml:lang="fr">Contrat d&apos;apprentissage</skos:prefLabel>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#Contrat_mariage -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Contrat_mariage">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_De_Acte"/>
         <skos:altLabel xml:lang="en">Marriage contract</skos:altLabel>
         <skos:definition xml:lang="en">Acte établissant les modalités morales, matérielles et financières d&apos;une union maritale entre deux personnes.</skos:definition>
         <skos:prefLabel xml:lang="fr">Contrat de mariage</skos:prefLabel>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#Correspondance_administrative -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Correspondance_administrative">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_De_Acte"/>
         <skos:altLabel xml:lang="en">Administrative correspondance</skos:altLabel>
         <skos:altLabel xml:lang="fr">Ensemble des échanges épistolaires entre des personnes d&apos;une même autorité administrative pour le bon fonctionnement de l&apos;autorité en question.</skos:altLabel>
         <skos:prefLabel xml:lang="fr">Correspondance administrative</skos:prefLabel>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#Correspondance_politique -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Correspondance_politique">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_De_Acte"/>
         <skos:altLabel xml:lang="en">Political correspondance</skos:altLabel>
         <skos:definition xml:lang="fr">Ensemble des échanges épistolaires qui ont eu lieu entre des autorités politiques différentes via leurs représentants.</skos:definition>
         <skos:prefLabel xml:lang="fr">Correspondance politique</skos:prefLabel>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#Don -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Don">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_De_Acte"/>
         <skos:altLabel xml:lang="en">Deed of gift</skos:altLabel>
         <skos:definition xml:lang="fr">Acte témoignant d&apos;une donation.</skos:definition>
         <skos:prefLabel xml:lang="fr">Don</skos:prefLabel>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#Donation -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Donation">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_De_Acte"/>
         <skos:definition xml:lang="fr">Acte par lequel une personne cède de façon gratuite à une autre personne ou à un ensemble de personnes un bien, des droits, une charge, etc.</skos:definition>
         <skos:prefLabel xml:lang="fr">Donation</skos:prefLabel>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#Délibération_de_corps_de_ville -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Délibération_de_corps_de_ville">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_De_Acte"/>
         <skos:definition xml:lang="fr">Ensemble des débats et des prises de décision qui ont lieu au sein d&apos;une autorité municipale à l&apos;occasion des conseils du corps de ville.</skos:definition>
         <skos:prefLabel xml:lang="fr">Délibération de corps de ville</skos:prefLabel>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#Déposition -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Déposition">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_De_Acte"/>
         <skos:definition xml:lang="fr">Acte par lequel une personne fournit à une autorité judiciaire ou juridique son témoignange sur un fait.</skos:definition>
         <skos:prefLabel xml:lang="fr">Déposition</skos:prefLabel>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#Echange -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Echange">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_De_Acte"/>
         <skos:definition xml:lang="fr">Transaction par laquelle deux personnes se donnent mutuellement un ou plusieurs biens ou droits fonciers, mobiliers et/ou immobiliers de valeurs équivalentes, sans engagement de numéraire sauf dans le cas d&apos;une compensation en cas d&apos;inégalité de valeur.</skos:definition>
         <skos:prefLabel xml:lang="fr">Echange</skos:prefLabel>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#Ecrits_du_for_privé -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Ecrits_du_for_privé">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_De_Acte"/>
         <skos:definition xml:lang="fr">Document non officiel livrant de sinformations sur l&apos;individualité de la personne rédactrice.</skos:definition>
         <skos:prefLabel xml:lang="fr">Ecrits du for privé</skos:prefLabel>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#Fondation -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Fondation">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_De_Acte"/>
         <skos:definition xml:lang="fr">Document par lequel une personne commande à une communauté religieuse régulière ou séculière la prononciation d&apos;une ou plusieurs messes, le plus souvent pour le salut post mortem de son âme et/ou pour le souvenir de ses proches défunts, en échange d&apos;une contrepartie financière pouvant prendre plusieurs formes.</skos:definition>
         <skos:prefLabel xml:lang="fr">Fondation</skos:prefLabel>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#France -->
@@ -2498,37 +2547,37 @@ ville, ainsi qu&apos;un certain nombre d&apos;acte complémentaires (lettres pat
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#France">
         <rdf:type rdf:resource="http://dbpedia.org/ontology/Country"/>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#Inventaire_après_décès -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Inventaire_après_décès">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_De_Acte"/>
         <skos:definition xml:lang="fr">Liste des biens mobiliers, le plus souvent, détenus par une personne décédée dans sa ou ses résidences à des fins de partage ultérieur.</skos:definition>
         <skos:prefLabel xml:lang="fr">Inventaire après décès</skos:prefLabel>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#Leg -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Leg">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_De_Acte"/>
         <skos:definition xml:lang="fr">Donation régie par prédisposition testamentaire.</skos:definition>
         <skos:prefLabel xml:lang="fr">Leg</skos:prefLabel>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#Mandement_de_paiement -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Mandement_de_paiement">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_De_Acte"/>
         <skos:definition xml:lang="fr">Acte par lequel une personne ordonne le payement d&apos;une somme précise.</skos:definition>
         <skos:prefLabel xml:lang="fr">Mandement de paiement</skos:prefLabel>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#Marchant -->
@@ -2538,17 +2587,17 @@ ville, ainsi qu&apos;un certain nombre d&apos;acte complémentaires (lettres pat
         <has_role rdf:resource="http://www.univ-tours.fr/ipato#Notary"/>
         <has_role rdf:resource="http://www.univ-tours.fr/ipato#Royal_Secretary"/>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#Marché -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Marché">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_De_Acte"/>
         <skos:definition xml:lang="fr">Acte par lequel une personne passe commande auprès d&apos;un artiste ou d&apos;un artisan.</skos:definition>
         <skos:prefLabel xml:lang="fr">Marché</skos:prefLabel>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#Millimetre -->
@@ -2558,26 +2607,26 @@ ville, ainsi qu&apos;un certain nombre d&apos;acte complémentaires (lettres pat
         <skos:altLabel>mm</skos:altLabel>
         <skos:prefLabel xml:lang="en">millimetre</skos:prefLabel>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#Métayage -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Métayage">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_De_Acte"/>
         <skos:definition xml:lang="fr">Acte par lequel un propriétaire foncier place la gestion agricole de sa terre sous le régime de la métairie.</skos:definition>
         <skos:prefLabel xml:lang="fr">Métayage</skos:prefLabel>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#No_doubt_about_species -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#No_doubt_about_species">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Classification_judgment"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Classification_Type"/>
         <skos:prefLabel>No doubt about the species</skos:prefLabel>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#Notary -->
@@ -2585,156 +2634,156 @@ ville, ainsi qu&apos;un certain nombre d&apos;acte complémentaires (lettres pat
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Notary">
         <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Role"/>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#Obligation -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Obligation">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_De_Acte"/>
         <skos:definition xml:lang="fr">Acte par lequel une personne s&apos;engage officiellement à peyer une somme d&apos;argent définie en prenant un bien ou plusieurs biens fonciers ou immeubles de valeur équivalente à la dette comme garantie de payement.</skos:definition>
         <skos:prefLabel xml:lang="fr">Obligation</skos:prefLabel>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#Ordonnance -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Ordonnance">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_De_Acte"/>
         <skos:definition xml:lang="fr">Acte de chancellerie qui étend les effets d&apos;une délibération royale ou princière à tout un territoire.</skos:definition>
         <skos:prefLabel xml:lang="fr">Ordonnance</skos:prefLabel>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#Partage -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Partage">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_De_Acte"/>
         <skos:definition xml:lang="fr">Acte par lequel au moins deux personnes se divisent un bien foncier ou immobilier, ou un ensemble de bien comme, par exemple, dans le cadre d&apos;une succession.</skos:definition>
         <skos:prefLabel xml:lang="fr">Partage</skos:prefLabel>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#Plaidoyer -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Plaidoyer">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_De_Acte"/>
         <skos:definition xml:lang="fr">Acte établissant l&apos;argumentaire d&apos;une personne devant une instance juridique.</skos:definition>
         <skos:prefLabel xml:lang="fr">Plaidoyer</skos:prefLabel>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#Procuration -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Procuration">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_De_Acte"/>
         <skos:definition xml:lang="fr">Acte par lequel une personne délègue à une autre personne tout ou partie de ses droits pour la représenter devant toute instance officielle.</skos:definition>
         <skos:prefLabel xml:lang="fr">Procuration</skos:prefLabel>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#Procès-verbal -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Procès-verbal">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_De_Acte"/>
         <skos:prefLabel xml:lang="fr">Procès-verbal</skos:prefLabel>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#Prolongation_de_réméré -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Prolongation_de_réméré">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_De_Acte"/>
         <skos:definition xml:lang="fr">Acte par lequel l&apos;acheteur d&apos;un bien, le plus souvent foncier, accorde à son vendeur l&apos;extension dans le temps de sa faculté de récupérer de façon onéreuse le bien vendu, au-delà de la clause initialement contractualisée.</skos:definition>
         <skos:prefLabel xml:lang="fr">Prolongation de réméré</skos:prefLabel>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#Promesse -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Promesse">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_De_Acte"/>
         <skos:definition xml:lang="fr">Acte par lequel une personne s&apos;engage officiellement auprès d&apos;une autre personne pour une transaction gratuite ou onéreuse.</skos:definition>
         <skos:prefLabel xml:lang="fr">Promesse</skos:prefLabel>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#Promesse_de_vente -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Promesse_de_vente">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_De_Acte"/>
         <skos:definition xml:lang="fr">Acte par lequel un vendeur s&apos;engage auprès d&apos;un acheteur à lui vendre un bien immobilier, principalement.</skos:definition>
         <skos:prefLabel xml:lang="fr">Promesse de vente</skos:prefLabel>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#Provision_office -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Provision_office">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_De_Acte"/>
         <skos:definition xml:lang="fr">Acte délivré par me pouvoir royal par lequel une personne est officiellement investie d&apos;un charge ou d&apos;une fonction délivrée</skos:definition>
         <skos:prefLabel xml:lang="fr">Provision d&apos;office</skos:prefLabel>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#Quittance -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Quittance">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_De_Acte"/>
         <skos:definition xml:lang="fr">Document attestant du verseent ou de la réception d&apos;une somme d&apos;argent, le plus souvent.</skos:definition>
         <skos:prefLabel xml:lang="fr">Quittance</skos:prefLabel>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#Ratification -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Ratification">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_De_Acte"/>
         <skos:definition xml:lang="fr">Acte par lequel une personne valide la signature d&apos;un acte initialement contracté par une tierce personne la représentant auprès d&apos;une instance juridique.</skos:definition>
         <skos:prefLabel xml:lang="fr">Ratification</skos:prefLabel>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#Reconnaissance -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Reconnaissance">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_De_Acte"/>
         <skos:definition xml:lang="fr">Acte par lequel une personne reconnait quelque chose.</skos:definition>
         <skos:prefLabel xml:lang="fr">Reconnaissance</skos:prefLabel>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#Reconnaissance_de_dette -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Reconnaissance_de_dette">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_De_Acte"/>
         <skos:definition xml:lang="fr">Acte par lequel une personne agissant en son nom propre ou pour le compte d&apos;un groupe de personnes atteste devoir à une autre personne une somme qui luia été prêtée ou qui reste à payer sur un marché.</skos:definition>
         <skos:prefLabel xml:lang="fr">Reconnaissance de dette</skos:prefLabel>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#Renonciation -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Renonciation">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_De_Acte"/>
         <skos:definition xml:lang="fr">Acte par lequel une personne renonce définitivement à un droit, un bien ou une fonction, par exemple.</skos:definition>
         <skos:prefLabel xml:lang="fr">Renonciation</skos:prefLabel>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#Royal_Secretary -->
@@ -2742,76 +2791,76 @@ ville, ainsi qu&apos;un certain nombre d&apos;acte complémentaires (lettres pat
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Royal_Secretary">
         <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Role"/>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#Révocation -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Révocation">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_De_Acte"/>
         <skos:definition xml:lang="fr">Acte par lequel une personne détentrice d&apos;une charge ou d&apos;une fonction en signifie son abandon définitif.</skos:definition>
         <skos:prefLabel xml:lang="fr">Révocation</skos:prefLabel>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#Sentence -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Sentence">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_De_Acte"/>
         <skos:definition xml:lang="fr">Acte par lequel une instance juridique rend son jugement officiel à l&apos;encontre d&apos;une des parties mises en cause.</skos:definition>
         <skos:prefLabel xml:lang="fr">Sentence</skos:prefLabel>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#Testament -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Testament">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_De_Acte"/>
         <skos:definition xml:lang="fr">Document officiel par lequel une personne fait part de ses dernières volontés. Un testament peu faire l&apos;objet de plusieurs versions.</skos:definition>
         <skos:prefLabel xml:lang="fr">Testament</skos:prefLabel>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#Transfert -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Transfert">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_De_Acte"/>
         <skos:prefLabel xml:lang="fr">Transfert</skos:prefLabel>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#Transfert_de_dette -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Transfert_de_dette">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_De_Acte"/>
         <skos:definition xml:lang="fr">Acte par lequel une personne détentrice des droits de recouvrement d&apos;une dette auprès d&apos;une autre personne ou groupe de personnes cède gratuitement ses droits à un tiers.</skos:definition>
         <skos:prefLabel xml:lang="fr">Transfert de dette</skos:prefLabel>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#Transfert_de_rente -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Transfert_de_rente">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_De_Acte"/>
         <skos:definition xml:lang="fr">Acte par lequel une personne détentrice des droits de propriété d&apos;une rente assujettie à un bien foncier ou immobilier cède gratuitement ses droits à une autre personne.</skos:definition>
         <skos:prefLabel xml:lang="fr">Transfert de rente</skos:prefLabel>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#Vente -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#Vente">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_De_Acte"/>
         <skos:definition xml:lang="fr">Acte par lequel une personne ou un enesemble de personnes cède de façon onéreuse à une autre personne ou un autre ensemble de personne un bien foncier, mobilier ou immobilier.</skos:definition>
         <skos:prefLabel xml:lang="fr">Vente</skos:prefLabel>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#centimetre -->
@@ -2819,7 +2868,7 @@ ville, ainsi qu&apos;un certain nombre d&apos;acte complémentaires (lettres pat
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#centimetre">
         <rdf:type rdf:resource="http://erlangen-crm.org/current/E58_Measurement_Unit"/>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#depth -->
@@ -2827,25 +2876,25 @@ ville, ainsi qu&apos;un certain nombre d&apos;acte complémentaires (lettres pat
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#depth">
         <rdf:type rdf:resource="http://erlangen-crm.org/current/E55_Type"/>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#dry_channel -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#dry_channel">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Habitat_type"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Habitat_Type"/>
         <skos:prefLabel>dry_channel</skos:prefLabel>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#hardwood -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#hardwood">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Habitat_type"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Habitat_Type"/>
         <skos:prefLabel>hardwood</skos:prefLabel>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#height -->
@@ -2853,24 +2902,24 @@ ville, ainsi qu&apos;un certain nombre d&apos;acte complémentaires (lettres pat
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#height">
         <rdf:type rdf:resource="http://erlangen-crm.org/current/E55_Type"/>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#marriage_contract -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#marriage_contract">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_de_acte"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Forme_De_Acte"/>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#meadow -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#meadow">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Habitat_type"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Habitat_Type"/>
         <skos:prefLabel>meadow</skos:prefLabel>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#project_coordinator -->
@@ -2878,7 +2927,7 @@ ville, ainsi qu&apos;un certain nombre d&apos;acte complémentaires (lettres pat
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#project_coordinator">
         <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Role"/>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#project_participant -->
@@ -2886,34 +2935,48 @@ ville, ainsi qu&apos;un certain nombre d&apos;acte complémentaires (lettres pat
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#project_participant">
         <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Role"/>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#shore -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#shore">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Habitat_type"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Habitat_Type"/>
         <skos:prefLabel>shore</skos:prefLabel>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#soft_shrubby_wood -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#soft_shrubby_wood">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Habitat_type"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Habitat_Type"/>
         <skos:prefLabel>soft_shrubby_wood</skos:prefLabel>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.univ-tours.fr/ipato#softwood -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#softwood">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Habitat_type"/>
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Habitat_Type"/>
         <skos:prefLabel>softwood</skos:prefLabel>
     </owl:NamedIndividual>
-    
+
+
+
+    <!-- http://taxref.mnhn.fr/lod/taxon/8540/10.0 -->
+
+    <owl:NamedIndividual rdf:about="http://taxref.mnhn.fr/lod/taxon/8540/10.0">
+        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
+        <taxRef_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">8540</taxRef_identifier>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Loricera pilicornis</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/251340/tab/taxo</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://inpn.mnhn.fr/espece/cd_nom/8540?lg%3Den</rdfs:seeAlso>
+        <skos:prefLabel xml:lang="lat">Loricera pilicornis</skos:prefLabel>
+  </owl:NamedIndividual>
+
+
 
 
     <!-- http://www.univ-tours.fr/ipato#width -->
@@ -2921,7 +2984,7 @@ ville, ainsi qu&apos;un certain nombre d&apos;acte complémentaires (lettres pat
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato#width">
         <rdf:type rdf:resource="http://erlangen-crm.org/current/E55_Type"/>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://schema.org/editor -->
@@ -2931,10 +2994,10 @@ ville, ainsi qu&apos;un certain nombre d&apos;acte complémentaires (lettres pat
         <rdfs:comment>Imported from schema.org</rdfs:comment>
         <skos:prefLabel xml:lang="en">editor</skos:prefLabel>
     </owl:NamedIndividual>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // General axioms
@@ -2955,4 +3018,3 @@ ville, ainsi qu&apos;un certain nombre d&apos;acte complémentaires (lettres pat
 
 
 <!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
-
