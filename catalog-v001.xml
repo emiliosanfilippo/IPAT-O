@@ -2,12 +2,12 @@
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
     <uri id="Imports Wizard Entry" name="http://www.univ-tours.fr/ipato/natheritage" uri="ipato_nat_heritage_module.owl"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1593176284624" name="http://erlangen-crm.org/current/" uri="erlangen_cidoc.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1593176284624" name="http://erlangen-crm.org/current/CRMarchaeo/" uri="CRM_Extensions/CRMarchaeo_v1.3.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1593176284624" name="http://www.ics.forth.gr/isl/CRMgeo/" uri="CRM_Extensions/CRMgeo_v1_2.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1593176284624" name="http://www.ics.forth.gr/isl/CRMsci/" uri="CRM_Extensions/CRMsci.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1593176284624" name="duplicate:http://www.univ-tours.fr/ipato" uri="ipato.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1593176284624" name="duplicate:http://www.univ-tours.fr/ipato" uri="ipato_26june_backup.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1593176284624" name="http://www.univ-tours.fr/ipato/natheritage" uri="ipato_nat_heritage_module.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1593176644493" name="http://erlangen-crm.org/current/" uri="cidoc_erlangen_modified.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1593176644493" name="http://erlangen-crm.org/current/CRMarchaeo/" uri="CRM_Extensions/CRMarchaeo_v1.3.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1593176644493" name="http://www.ics.forth.gr/isl/CRMgeo/" uri="CRM_Extensions/CRMgeo_v1_2.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1593176644493" name="http://www.ics.forth.gr/isl/CRMsci/" uri="CRM_Extensions/CRMsci.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1593176644493" name="duplicate:http://www.univ-tours.fr/ipato" uri="ipato.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1593176644493" name="duplicate:http://www.univ-tours.fr/ipato" uri="ipato_26june_backup.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1593176644493" name="http://www.univ-tours.fr/ipato/natheritage" uri="ipato_nat_heritage_module.owl"/>
     </group>
 </catalog>
