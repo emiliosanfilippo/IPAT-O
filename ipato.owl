@@ -664,14 +664,7 @@ http://id.loc.gov/ontologies/bibframe.html#</rdfs:comment>
     <!-- https://www.geonames.org/ontology#lat -->
 
     <owl:DatatypeProperty rdf:about="https://www.geonames.org/ontology#lat">
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://erlangen-crm.org/current/E27_Site"/>
-                    <rdf:Description rdf:about="http://erlangen-crm.org/current/E53_Place"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
+        <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E53_Place"/>
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:unionOf rdf:parseType="Collection">
@@ -691,14 +684,7 @@ http://id.loc.gov/ontologies/bibframe.html#</rdfs:comment>
     <!-- https://www.geonames.org/ontology#long -->
 
     <owl:DatatypeProperty rdf:about="https://www.geonames.org/ontology#long">
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://erlangen-crm.org/current/E27_Site"/>
-                    <rdf:Description rdf:about="http://erlangen-crm.org/current/E53_Place"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
+        <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E53_Place"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="en">longitude of a resource (decimal degrees)</rdfs:comment>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.geonames.org/ontology/ontology_v3.2.rdf</rdfs:isDefinedBy>
