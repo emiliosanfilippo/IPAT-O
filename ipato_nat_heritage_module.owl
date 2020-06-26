@@ -1688,9 +1688,9 @@ identifier for alternative label</taxRef_identifier>
         <found_at rdf:resource="http://www.univ-tours.fr/ipato/natheritage#test_site_2018_BD_01t"/>
         <has_member_of_species rdf:resource="http://taxref.mnhn.fr/lod/taxon/222358/10.0"/>
         <sampled_by rdf:resource="http://www.univ-tours.fr/ipato/natheritage#test_Sébastien_DAMOISEAU"/>
-        <classification_date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-12</classification_date>
+        <classification_date rdf:datatype="http://www.w3.org/2001/XMLSchema#gYearMonth">2018-12</classification_date>
         <number_of_individuals rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</number_of_individuals>
-        <sampling_date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-8-23</sampling_date>
+        <sampling_date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-08-23</sampling_date>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This group of insect is represented by using modeling shortcuts only, in particular, without using classes/relations for activites</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -1718,7 +1718,7 @@ identifier for alternative label</taxRef_identifier>
         <current:P14_carried_out_by rdf:resource="http://www.univ-tours.fr/ipato/natheritage#test_Sébastien_DAMOISEAU"/>
         <CRMsci:O8_observed rdf:resource="http://www.univ-tours.fr/ipato/natheritage#test_2018_BD_02"/>
         <sampled rdf:resource="http://www.univ-tours.fr/ipato/natheritage#test_insect002"/>
-        <sampling_date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-8-23</sampling_date>
+        <sampling_date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-08-23</sampling_date>
     </owl:NamedIndividual>
     
 
