@@ -183,13 +183,21 @@
     
 
 
-    <!-- http://www.univ-tours.fr/ipato/natheritage#attributes_classification_judgment -->
+    <!-- http://www.univ-tours.fr/ipato/natheritage#Classification_judgment -->
 
-    <owl:ObjectProperty rdf:about="http://www.univ-tours.fr/ipato/natheritage#attributes_classification_judgment">
-        <rdfs:domain rdf:resource="http://www.univ-tours.fr/ipato/natheritage#Biological_Classification_Activity"/>
+    <owl:ObjectProperty rdf:about="http://www.univ-tours.fr/ipato/natheritage#Classification_judgment">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://erlangen-crm.org/current/E20_Biological_Object"/>
+                    <rdf:Description rdf:about="http://www.univ-tours.fr/ipato/natheritage#Biological_Classification_Activity"/>
+                    <rdf:Description rdf:about="http://www.univ-tours.fr/ipato/natheritage#Group_of_Non_Human_Animals"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.univ-tours.fr/ipato/natheritage#Classification_Judgment"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">attributes classification judgment</rdfs:label>
-        <skos:prefLabel xml:lang="en">attributes classification judgment</skos:prefLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">classification judgment</rdfs:label>
+        <skos:prefLabel xml:lang="en">classification judgment</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -382,6 +390,7 @@
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://www.univ-tours.fr/ipato/natheritage#Sampling_Activity"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sampled during</rdfs:label>
         <skos:prefLabel xml:lang="en">sampled during</skos:prefLabel>
         <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sampled during</skos:prefLabel>
     </owl:ObjectProperty>
@@ -426,7 +435,15 @@
     <!-- http://www.univ-tours.fr/ipato/natheritage#classification_date -->
 
     <owl:DatatypeProperty rdf:about="http://www.univ-tours.fr/ipato/natheritage#classification_date">
-        <rdfs:domain rdf:resource="http://www.univ-tours.fr/ipato/natheritage#Biological_Classification_Activity"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://erlangen-crm.org/current/E20_Biological_Object"/>
+                    <rdf:Description rdf:about="http://www.univ-tours.fr/ipato/natheritage#Biological_Classification_Activity"/>
+                    <rdf:Description rdf:about="http://www.univ-tours.fr/ipato/natheritage#Group_of_Non_Human_Animals"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:unionOf rdf:parseType="Collection">
@@ -437,6 +454,7 @@
                 </owl:unionOf>
             </rdfs:Datatype>
         </rdfs:range>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">classification date</rdfs:label>
         <skos:prefLabel xml:lang="en">classification date</skos:prefLabel>
     </owl:DatatypeProperty>
     
@@ -445,6 +463,7 @@
     <!-- http://www.univ-tours.fr/ipato/natheritage#number_of_individuals -->
 
     <owl:DatatypeProperty rdf:about="http://www.univ-tours.fr/ipato/natheritage#number_of_individuals">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">number of individuals</rdfs:label>
         <skos:prefLabel xml:lang="en">number of individuals</skos:prefLabel>
         <skos:prefLabel xml:lang="en">status:testing</skos:prefLabel>
     </owl:DatatypeProperty>
@@ -454,7 +473,15 @@
     <!-- http://www.univ-tours.fr/ipato/natheritage#sampling_date -->
 
     <owl:DatatypeProperty rdf:about="http://www.univ-tours.fr/ipato/natheritage#sampling_date">
-        <rdfs:domain rdf:resource="http://www.univ-tours.fr/ipato/natheritage#Sampling_Activity"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://erlangen-crm.org/current/E20_Biological_Object"/>
+                    <rdf:Description rdf:about="http://www.univ-tours.fr/ipato/natheritage#Group_of_Non_Human_Animals"/>
+                    <rdf:Description rdf:about="http://www.univ-tours.fr/ipato/natheritage#Sampling_Activity"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:unionOf rdf:parseType="Collection">
@@ -465,6 +492,7 @@
                 </owl:unionOf>
             </rdfs:Datatype>
         </rdfs:range>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sampling date</rdfs:label>
         <skos:prefLabel xml:lang="en">sampling date</skos:prefLabel>
     </owl:DatatypeProperty>
     
@@ -656,7 +684,7 @@
         <rdfs:subClassOf rdf:resource="http://www.ics.forth.gr/isl/CRMsci/S4_Observation"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.univ-tours.fr/ipato/natheritage#attributes_classification_judgment"/>
+                <owl:onProperty rdf:resource="http://www.univ-tours.fr/ipato/natheritage#Classification_judgment"/>
                 <owl:someValuesFrom rdf:resource="http://www.univ-tours.fr/ipato/natheritage#Classification_Judgment"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1539,24 +1567,12 @@ identifier for alternative label</taxRef_identifier>
     
 
 
-    <!-- http://www.univ-tours.fr/ipato/natheritage#test_biological_classification001 -->
-
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato/natheritage#test_biological_classification001">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato/natheritage#Biological_Classification_Activity"/>
-        <current:P14_carried_out_by rdf:resource="http://www.univ-tours.fr/ipato/natheritage#test_Olivier_DENUX"/>
-        <attributes_classification_judgment rdf:resource="http://www.univ-tours.fr/ipato/natheritage#No_Dubt_About_Species"/>
-        <establishes_species_of rdf:resource="http://www.univ-tours.fr/ipato/natheritage#test_group001"/>
-        <classification_date rdf:datatype="http://www.w3.org/2001/XMLSchema#gYearMonth">2018-12</classification_date>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.univ-tours.fr/ipato/natheritage#test_biological_classification002 -->
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato/natheritage#test_biological_classification002">
         <rdf:type rdf:resource="http://www.univ-tours.fr/ipato/natheritage#Biological_Classification_Activity"/>
         <current:P14_carried_out_by rdf:resource="http://www.univ-tours.fr/ipato/natheritage#test_Olivier_DENUX"/>
-        <attributes_classification_judgment rdf:resource="http://www.univ-tours.fr/ipato/natheritage#No_Dubt_About_Species"/>
+        <Classification_judgment rdf:resource="http://www.univ-tours.fr/ipato/natheritage#No_Dubt_About_Species"/>
         <establishes_species_of rdf:resource="http://www.univ-tours.fr/ipato/natheritage#test_insect002"/>
         <classification_date rdf:datatype="http://www.w3.org/2001/XMLSchema#gYearMonth">2018-12</classification_date>
     </owl:NamedIndividual>
@@ -1567,12 +1583,15 @@ identifier for alternative label</taxRef_identifier>
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato/natheritage#test_group001">
         <rdf:type rdf:resource="http://www.univ-tours.fr/ipato/natheritage#Group_of_Terrestrial_Macro_Arthropod"/>
+        <Classification_judgment rdf:resource="http://www.univ-tours.fr/ipato/natheritage#No_Dubt_About_Species"/>
+        <classified_by rdf:resource="http://www.univ-tours.fr/ipato/natheritage#test_Olivier_DENUX"/>
         <found_at rdf:resource="http://www.univ-tours.fr/ipato/natheritage#test_site_2018_BD_01t"/>
         <has_member_of_species rdf:resource="http://taxref.mnhn.fr/lod/taxon/222358/10.0"/>
         <sampled_by rdf:resource="http://www.univ-tours.fr/ipato/natheritage#test_Sébastien_DAMOISEAU"/>
-        <sampled_during rdf:resource="http://www.univ-tours.fr/ipato/natheritage#test_sampling001"/>
-        <species_established_during rdf:resource="http://www.univ-tours.fr/ipato/natheritage#test_biological_classification001"/>
+        <classification_date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-12</classification_date>
         <number_of_individuals rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</number_of_individuals>
+        <sampling_date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-8-23</sampling_date>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This group of insect is represented by using modeling shortcuts only, in particular, without using classes/relations for activites</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -1581,23 +1600,13 @@ identifier for alternative label</taxRef_identifier>
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato/natheritage#test_insect002">
         <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
+        <classified_by rdf:resource="http://www.univ-tours.fr/ipato/natheritage#test_Olivier_DENUX"/>
         <found_at rdf:resource="http://www.univ-tours.fr/ipato/natheritage#test_2018_BD_02"/>
         <of_species rdf:resource="http://taxref.mnhn.fr/lod/taxon/222539/10.0"/>
         <sampled_by rdf:resource="http://www.univ-tours.fr/ipato/natheritage#test_Sébastien_DAMOISEAU"/>
         <sampled_during rdf:resource="http://www.univ-tours.fr/ipato/natheritage#test_sampling002"/>
         <species_established_during rdf:resource="http://www.univ-tours.fr/ipato/natheritage#test_biological_classification002"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.univ-tours.fr/ipato/natheritage#test_sampling001 -->
-
-    <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato/natheritage#test_sampling001">
-        <rdf:type rdf:resource="http://www.univ-tours.fr/ipato/natheritage#Sampling_Activity"/>
-        <current:P14_carried_out_by rdf:resource="http://www.univ-tours.fr/ipato/natheritage#test_Sébastien_DAMOISEAU"/>
-        <CRMsci:O8_observed rdf:resource="http://www.univ-tours.fr/ipato/natheritage#test_site_2018_BD_01t"/>
-        <sampled rdf:resource="http://www.univ-tours.fr/ipato/natheritage#test_group001"/>
-        <sampling_date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-8-23</sampling_date>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The representation of this insect sample is done by using classes/relations for activites</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -1618,7 +1627,6 @@ identifier for alternative label</taxRef_identifier>
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato/natheritage#test_site_2018_BD_01t">
         <rdf:type rdf:resource="http://erlangen-crm.org/current/E27_Site"/>
-        <CRMsci:O8i_was_observed_by rdf:resource="http://www.univ-tours.fr/ipato/natheritage#test_sampling001"/>
         <has_habitat_type rdf:resource="http://www.univ-tours.fr/ipato/natheritage#Hardwood"/>
         <is_found_with rdf:resource="http://www.univ-tours.fr/ipato/natheritage#test_group001"/>
         <terms:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">2018_BD_01t</terms:identifier>
