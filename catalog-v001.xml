@@ -2,14 +2,14 @@
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
     <uri id="Imports Wizard Entry" name="http://www.univ-tours.fr/ipato/natheritage" uri="ipato_nat_heritage_module.owl"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1593183638079" name="duplicate:http://erlangen-crm.org/current/" uri="backup_ontologies/cidoc_erlangen_original.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1593183638079" name="duplicate:http://erlangen-crm.org/current/" uri="backup_ontologies/cidoc_erlangen_light_backup_26june.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1593183638079" name="http://erlangen-crm.org/current/CRMarchaeo/" uri="CRM_Extensions/CRMarchaeo_v1.3.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1593183638079" name="http://erlangen-crm.org/current/light" uri="cidoc_erlangen_light.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1593183638079" name="http://www.ics.forth.gr/isl/CRMgeo/" uri="CRM_Extensions/CRMgeo_v1_2.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1593183638079" name="http://www.ics.forth.gr/isl/CRMsci/" uri="CRM_Extensions/CRMsci.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1593183638079" name="http://www.univ-tours.fr/ipato" uri="ipato.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1593183638079" name="http://www.univ-tours.fr/ipato/natheritage" uri="ipato_nat_heritage_module.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1593183638079" name="shadowed:http://www.univ-tours.fr/ipato" uri="backup_ontologies/ipato_26june_backup.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1593184148248" name="duplicate:http://erlangen-crm.org/current/" uri="backup_ontologies/cidoc_erlangen_original.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1593184148248" name="duplicate:http://erlangen-crm.org/current/" uri="backup_ontologies/cidoc_erlangen_light_backup_26june.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1593184148248" name="http://erlangen-crm.org/current/CRMarchaeo/" uri="CRM_Extensions/CRMarchaeo_v1.3.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1593184148248" name="http://erlangen-crm.org/current/light" uri="cidoc_erlangen_light.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1593184148248" name="http://www.ics.forth.gr/isl/CRMgeo/" uri="CRM_Extensions/CRMgeo_v1_2.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1593184148248" name="http://www.ics.forth.gr/isl/CRMsci/" uri="CRM_Extensions/CRMsci.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1593184148248" name="http://www.univ-tours.fr/ipato" uri="ipato.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1593184148248" name="http://www.univ-tours.fr/ipato/natheritage" uri="ipato_nat_heritage_module.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1593184148248" name="shadowed:http://www.univ-tours.fr/ipato" uri="backup_ontologies/ipato_26june_backup.owl"/>
     </group>
 </catalog>
