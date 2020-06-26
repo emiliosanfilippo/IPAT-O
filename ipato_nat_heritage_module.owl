@@ -1750,7 +1750,6 @@ identifier for alternative label</taxRef_identifier>
         <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="http://erlangen-crm.org/current/E53_Place"/>
             <rdf:Description rdf:about="http://erlangen-crm.org/current/E55_Type"/>
-            <rdf:Description rdf:about="http://erlangen-crm.org/current/E77_Persistent_Item"/>
             <rdf:Description rdf:about="http://www.ics.forth.gr/isl/CRMsci/S4_Observation"/>
         </owl:members>
     </rdf:Description>
