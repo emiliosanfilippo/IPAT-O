@@ -931,22 +931,6 @@ Properties: P130.1 kind of similarity: E55 Type</rdfs:comment>
     <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P132_overlaps_with">
         <owl:inverseOf rdf:resource="http://erlangen-crm.org/current/P132_overlaps_with"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://erlangen-crm.org/current/E18_Physical_Thing"/>
-                    <rdf:Description rdf:about="http://erlangen-crm.org/current/E4_Period"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://erlangen-crm.org/current/E18_Physical_Thing"/>
-                    <rdf:Description rdf:about="http://erlangen-crm.org/current/E4_Period"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
         <rdfs:comment xml:lang="en">Scope note:
 This symmetric property associates two instances of E92 Spacetime Volume that have some of their extent in common.
 
