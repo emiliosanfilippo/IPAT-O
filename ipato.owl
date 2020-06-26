@@ -600,6 +600,8 @@ http://id.loc.gov/ontologies/bibframe.html#</rdfs:comment>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E21_Person"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://xmlns.com/foaf/spec/</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">first name</rdfs:label>
+        <skos:prefLabel xml:lang="en">first name</skos:prefLabel>
     </owl:DatatypeProperty>
 
 
@@ -610,6 +612,8 @@ http://id.loc.gov/ontologies/bibframe.html#</rdfs:comment>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E21_Person"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://xmlns.com/foaf/spec/</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">last name</rdfs:label>
+        <skos:prefLabel xml:lang="en">last name</skos:prefLabel>
     </owl:DatatypeProperty>
 
 
@@ -619,6 +623,8 @@ http://id.loc.gov/ontologies/bibframe.html#</rdfs:comment>
     <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/mbox">
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E39_Actor"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mail box</rdfs:label>
+        <skos:prefLabel xml:lang="en">mail box</skos:prefLabel>
     </owl:DatatypeProperty>
 
 
@@ -629,6 +635,8 @@ http://id.loc.gov/ontologies/bibframe.html#</rdfs:comment>
         <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E39_Actor"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://xmlns.com/foaf/spec/</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">name</rdfs:label>
+        <skos:prefLabel xml:lang="en">name</skos:prefLabel>
     </owl:DatatypeProperty>
 
 
