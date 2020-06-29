@@ -1647,6 +1647,7 @@ identifier for alternative label</taxRef_identifier>
         <CRMsci:O8i_was_observed_by rdf:resource="http://www.univ-tours.fr/ipato/natheritage#test_sampling002"/>
         <has_habitat_type rdf:resource="http://www.univ-tours.fr/ipato/natheritage#Hardwood"/>
         <is_found_with rdf:resource="http://www.univ-tours.fr/ipato/natheritage#test_insect002"/>
+        <terms:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">2018_BD_02</terms:identifier>
     </owl:NamedIndividual>
     
 
@@ -1700,10 +1701,8 @@ identifier for alternative label</taxRef_identifier>
 
     <owl:NamedIndividual rdf:about="http://www.univ-tours.fr/ipato/natheritage#test_insect002">
         <rdf:type rdf:resource="http://www.univ-tours.fr/ipato#Terrestrial_Macro_Arthropod"/>
-        <classified_by rdf:resource="http://www.univ-tours.fr/ipato/natheritage#test_Olivier_DENUX"/>
         <found_at rdf:resource="http://www.univ-tours.fr/ipato/natheritage#test_2018_BD_02"/>
         <of_species rdf:resource="http://taxref.mnhn.fr/lod/taxon/222539/10.0"/>
-        <sampled_by rdf:resource="http://www.univ-tours.fr/ipato/natheritage#test_Sébastien_DAMOISEAU"/>
         <sampled_during rdf:resource="http://www.univ-tours.fr/ipato/natheritage#test_sampling002"/>
         <species_established_during rdf:resource="http://www.univ-tours.fr/ipato/natheritage#test_biological_classification002"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The representation of this insect sample is done by using classes/relations for activites</rdfs:comment>
