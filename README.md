@@ -3,7 +3,7 @@ OWL ontology for cultural and natural heritage developed in the context of the p
 
 The ontologies are currently under development. Reuse is NOT recommended at this stage.
 
-For info:
+For info:<br/>
 emiliosanfilippo -- at -- gmail dot com; <br/>
 perrine dot thuringer --at -- univ-tours dot fr; <br/>
 damien dot vurpillot -- at -- univ-tours dot fr.
