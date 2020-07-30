@@ -11,10 +11,3 @@ damien dot vurpillot -- at -- univ-tours dot fr.
 # CRM Extensions
 
 The CRM Extensions folder stores CIDOC CRM extensions found at http://www.cidoc-crm.org/collaboration_resources. Differently from the official releases, we re-engineer the extensions in OWL and align them to the Erlangen formalization of CIDOC v.6.2.
-
-
-# SPARQL Generate mappings
-
-The folder stores SPARQL Generate mappings between projects-based datasets and the IPAT-O.
-
-Status: testing.  
